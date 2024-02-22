@@ -5,7 +5,12 @@ module.exports = {
     `./src/components/**/*.{js,jsx,ts,tsx}`,
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'top-union': "url('/src/images/bg-top.png')",
+        'bottom-union': "url('src/images/bg-bottom.png')"
+      }
+    },
   },
   plugins: [],
 }

@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #101010;
+    background-image: url('../images/bg-top.png'), url('../images/bg-bottom.png');
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    padding-bottom: 300px;
+}
+
+/* header, button {
+    border-image-source: linear-gradient(180deg, rgba(255, 255, 255, 0.23) 0%, rgba(255, 255, 255, 0) 100%);
+    border-color: transparent;
+} */
