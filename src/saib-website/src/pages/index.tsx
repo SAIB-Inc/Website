@@ -1,9 +1,14 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Button, IconButton } from "@mui/material"
+import { Button, IconButton, Link } from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu';
 import MainLayout from '../components/main-layout'
+import SvgIcon from "@mui/material";
+import XIcon from '@mui/icons-material/X';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -11,36 +16,30 @@ const IndexPage: React.FC<PageProps> = () => {
       <div className="px-6">
         <div className="max-w-[1200px] m-auto mt-[24px]">
           <header className="flex justify-between text-white p-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent rounded-[24px] backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
-            <div className="flex gap-2 items-center">
-              <div className="w-[40px] md:w-max">
-                <StaticImage src="../images/saib-logo.svg" alt="SAIB logo" placeholder="none" />
-              </div>
-              <div className="hidden md:block">
-                <StaticImage src="../images/saib.svg" alt="SAIB text" placeholder="none" />
-              </div>
+            <div className="w-[100px] md:w-fit">
+              <StaticImage src="../images/saib-logo.svg" alt="SAIB logo" placeholder="none" />
             </div>
-            <ul className="flex gap-6 items-center text-[18px] hidden xl:flex">
+            <ul className="flex gap-2 md:gap-6 items-center">
               <li>
-                <a href="#">About</a>
+                <a href="#">
+                  <FacebookIcon className="md:!hidden" />
+                  <FacebookIcon className="!hidden md:!block" fontSize="large" />
+                </a>
               </li>
               <li>
-                <a href="#">Blog</a>
+                <a href="#">
+                  <XIcon className="md:!hidden" />
+                  <XIcon className="!hidden md:!block" fontSize="large" />
+                </a>
               </li>
               <li>
-                <a href="#">Integrations</a>
+                <a href="#">
+                  <LinkedInIcon className="md:!hidden" />
+                  <LinkedInIcon className="!hidden md:!block" fontSize="large" />
+                </a>
               </li>
             </ul>
-            <Button variant="contained" className="!rounded-[50px] !hidden xl:!block !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal">Get Started</Button>
-            <div className="xl:hidden">
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="menu"
-              >
-                <MenuIcon />
-              </IconButton>
-            </div>
+            <Button variant="contained" className="!rounded-[50px] !hidden xl:!block !py-[12px] !px-[24px] h-fit !text-[18px] !normal-case !font-poppins !font-normal">Get Started</Button>
           </header>
 
           <main className="mt-16 md:mt-[180px] xl:mt-[169px]">
@@ -52,7 +51,6 @@ const IndexPage: React.FC<PageProps> = () => {
 
             <div className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
               <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">What we can do for you</h2>
-
               <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
                 <div className="flex items-center gap-3 px-4">
                   <div className="w-[64px]">
