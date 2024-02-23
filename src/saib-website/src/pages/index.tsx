@@ -201,6 +201,30 @@ const IndexPage: React.FC<PageProps> = () => {
               </div>
             </section>
           </main>
+
+          <footer className="flex flex-col xl:flex-row xl: justify-between p-4 gap-4 justify-center items-center mt-[130px] xl:mt-[226px] text-white rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
+            <div className="md:w-fit">
+              <StaticImage src="../images/saib-logo.svg" alt="SAIB logo" placeholder="none" />
+            </div>
+            <div>&copy; 2024 SAIB Inc. All Rights Reserved.</div>
+            <ul className="flex gap-6 items-center">
+              <li>
+                <a href="#">
+                  <FacebookIcon fontSize="large" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <XIcon fontSize="large" />
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <LinkedInIcon fontSize="large" />
+                </a>
+              </li>
+            </ul>
+          </footer>
         </div>
       </div>
     </MainLayout>
