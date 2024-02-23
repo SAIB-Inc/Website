@@ -147,6 +147,35 @@ const IndexPage: React.FC<PageProps> = () => {
             </section>
 
             <section className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
+              <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">History</h2>
+              <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
+
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[248px]">
+                    <a href="https://cardanofoundation.org" target="_blank">
+                      <StaticImage height={68} width={248} placeholder="none" src="../images/partners/cf.svg" alt="" />
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-[14px] mt-2 text-center">Swiss foundation supporting evolution of the Cardano cryptocurrency.</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[140px] mt-[40px]">
+                    <a href="https://www.dcspark.io/" target="_blank">
+                      <StaticImage height={28} width={140} placeholder="none" src="../images/partners/dc-spark.svg" alt="" />
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-[14px] mt-2 text-center">Building high-quality crypto products that unify the user experience within blockchain ecosystems..</p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <section className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
               <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">Our Team</h2>
               <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
                 <div className="flex flex-col items-center gap-3 px-4">
