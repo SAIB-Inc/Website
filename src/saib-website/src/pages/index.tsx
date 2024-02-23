@@ -3,27 +3,11 @@ import type { HeadFC, PageProps } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button, IconButton } from "@mui/material"
 import MenuIcon from '@mui/icons-material/Menu';
-
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#4F37EA'
-    },
-    secondary: {
-      main: '#D714E8'
-    },
-  },
-});
+import MainLayout from '../components/main-layout'
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <>
-      {/* <div className="absolute top-0 right-0">
-        <StaticImage src="../images/bg-top.png" alt="" placeholder="none" />
-      </div> */}
-      
+    <MainLayout>
       <div className="px-6">
         <div className="max-w-[1200px] m-auto mt-[24px]">
           <header className="flex justify-between text-white p-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent rounded-[24px] backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
@@ -46,10 +30,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 <a href="#">Integrations</a>
               </li>
             </ul>
-            {/* <button className="hidden xl:block text-[18px] bg-[#4F37EA] py-[12px] px-[24px] rounded-[50px] border-[1px] border-solid border-transparent">Get Started</button> */}
-            <ThemeProvider theme={theme}>
-              <Button variant="contained" className="!rounded-[50px] !hidden xl:!block !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal">Get Started</Button>
-            </ThemeProvider>
+            <Button variant="contained" className="!rounded-[50px] !hidden xl:!block !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal">Get Started</Button>
             <div className="xl:hidden">
               <IconButton
                 size="large"
@@ -66,10 +47,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="max-w-[630px] m-auto text-center text-white">
               <h1 className="font-bold text-[55px] md:text-[105px] xl:text-[120px] leading-[55px] md:leading-[105px] xl:leading-[120px]">Softwarez, <span className="font-normal font-['Poppins']">at its</span> <span className="text-[#4F37EA]">best</span><span className="font-sans">.</span></h1>
               <p className="mt-6 leading-[27px] text-[18px] px-4">We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano.</p>
-              {/* <button className="text-[18px] bg-[#4F37EA] py-[12px] px-[24px] rounded-[50px] border-[1px] border-solid border-transparent mt-6">Let's talk</button> */}
-              <ThemeProvider theme={theme}>
-                <Button variant="contained" className="!rounded-[50px] !hidden xl:!block !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6">Let's talk</Button>
-              </ThemeProvider>
+              <Button variant="contained" className="!rounded-[50px] !hidden xl:!block !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6">Let's talk</Button>
             </div>
 
             <div className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
@@ -130,14 +108,10 @@ const IndexPage: React.FC<PageProps> = () => {
           </main>
         </div>
       </div>
-      {/* <div className="absolute bottom-0 left-0">
-        <StaticImage src="../images/bg-bottom.png" alt="" />
-      </div> */}
-    </>
-
+    </MainLayout>
   );
 }
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>Home Page</title>
+export const Head: HeadFC = () => <title>SAIB | Softwarez, At It's Best</title>
