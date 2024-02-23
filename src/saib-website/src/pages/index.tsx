@@ -20,19 +20,19 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
             <ul className="flex gap-2 md:gap-6 items-center">
               <li>
-                <a href="#">
+                <a href="https://www.facebook.com/saibllc" target="_blank">
                   <FacebookIcon className="md:!hidden" />
                   <FacebookIcon className="!hidden md:!block" fontSize="large" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://twitter.com/saibdev" target="_blank">
                   <XIcon className="md:!hidden" />
                   <XIcon className="!hidden md:!block" fontSize="large" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.linkedin.com/company/saibllc" target="_blank">
                   <LinkedInIcon className="md:!hidden" />
                   <LinkedInIcon className="!hidden md:!block" fontSize="large" />
                 </a>
@@ -209,17 +209,17 @@ const IndexPage: React.FC<PageProps> = () => {
             <div>&copy; 2024 SAIB Inc. All Rights Reserved.</div>
             <ul className="flex gap-6 items-center">
               <li>
-                <a href="#">
+                <a href="https://www.facebook.com/saibllc" target="_blank">
                   <FacebookIcon fontSize="large" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://twitter.com/saibdev" target="_blank">
                   <XIcon fontSize="large" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.linkedin.com/company/saibllc" target="_blank">
                   <LinkedInIcon fontSize="large" />
                 </a>
               </li>
