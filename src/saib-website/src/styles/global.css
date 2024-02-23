@@ -2,6 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes backgroundPulse {
+    0%,
+    100% {
+        background-size: 60%, 60%;
+    }
+
+    50% {
+        background-size: 55%, 55%;
+    }
+}
+
 body {
     font-family: "Poppins", sans-serif;
     background-color: #101010;
@@ -9,4 +20,5 @@ body {
     background-position: right top, left bottom;
     background-repeat: no-repeat, no-repeat;
     padding-bottom: 300px;
+    animation: backgroundPulse 60s infinite ease-in-out;
 }
