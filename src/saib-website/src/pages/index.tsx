@@ -13,10 +13,10 @@ const IndexPage: React.FC<PageProps> = () => {
           <header className="flex justify-between text-white p-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent rounded-[24px] backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
             <div className="flex gap-2 items-center">
               <div className="w-[40px] md:w-max">
-                <StaticImage src="../images/saib-logo.png" alt="SAIB logo" placeholder="none" />
+                <StaticImage src="../images/saib-logo.svg" alt="SAIB logo" placeholder="none" />
               </div>
               <div className="hidden md:block">
-                <StaticImage src="../images/saib.png" alt="SAIB text" placeholder="none" />
+                <StaticImage src="../images/saib.svg" alt="SAIB text" placeholder="none" />
               </div>
             </div>
             <ul className="flex gap-6 items-center text-[18px] hidden xl:flex">
@@ -56,7 +56,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
                 <div className="flex items-center gap-3 px-4">
                   <div className="w-[64px]">
-                    <StaticImage placeholder="none" src="../images/frontend.png" alt="" />
+                    <StaticImage height={64} width={64} placeholder="none" src="../images/frontend.svg" alt="" />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold">Frontend Development</h3>
@@ -66,7 +66,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex items-center gap-3 px-4">
                   <div className="w-[64px]">
-                    <StaticImage placeholder="none" src="../images/backend.png" alt="" />
+                    <StaticImage height={64} width={64} placeholder="none" src="../images/backend.svg" alt="" />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold">Backend Development</h3>
@@ -76,7 +76,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex items-center gap-3 px-4">
                   <div className="w-[64px]">
-                    <StaticImage placeholder="none" src="../images/software-development.png" alt="" />
+                    <StaticImage height={64} width={64} placeholder="none" src="../images/software-development.svg" alt="" />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold">Software Development</h3>
@@ -86,7 +86,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex items-center gap-3 px-4">
                   <div className="w-[64px]">
-                    <StaticImage placeholder="none" src="../images/blockchain.png" alt="" />
+                    <StaticImage height={64} width={64} placeholder="none" src="../images/blockchain.svg" alt="" />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold">Blockchain Development</h3>
@@ -95,8 +95,8 @@ const IndexPage: React.FC<PageProps> = () => {
                 </div>
 
                 <div className="flex items-center gap-3 px-4">
-                  <div className="w-[64px]">
-                    <StaticImage placeholder="none" src="../images/smart-contract.png" alt="" />
+                  <div className="w-[64px] h-[64px]">
+                    <StaticImage height={64} width={64} placeholder="none" src="../images/smart-contract.svg" alt="" />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold">Smart Contract Solutions</h3>
