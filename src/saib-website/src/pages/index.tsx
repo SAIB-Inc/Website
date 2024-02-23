@@ -104,6 +104,78 @@ const IndexPage: React.FC<PageProps> = () => {
             </section>
 
             <section className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
+              <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">Building with</h2>
+              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
+
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[106px]">
+                    <StaticImage height={72} width={106} placeholder="none" src="../images/partners/txpipe.svg" alt="" />
+                  </div>
+                  <div>
+                    <h3 className="text-[24px] font-bold text-center">
+                      <a href="https://txpipe.io" target="_blank">TxPipe</a>
+                    </h3>
+                    <p className="text-[14px] mt-2 text-center">Open-source software for a decentralized world.</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[72px]">
+                    <StaticImage height={72} width={72} placeholder="none" src="../images/partners/coinecta.jpg" alt="" />
+                  </div>
+                  <div>
+                    <h3 className="text-[24px] font-bold text-center">
+                      <a href="https://coinecta.fi" target="_blank">Coinecta</a>
+                    </h3>
+                    <p className="text-[14px] mt-2 text-center">Coinecta is a next-generation Cardano-based token launch platform, striving to be the platform of choice for innovative blockchain projects.</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[150px] mt-[34px]">
+                    <StaticImage height={36} width={150} placeholder="none" src="../images/partners/crashr.svg" alt="" />
+                  </div>
+                  <div>
+                    <h3 className="text-[24px] font-bold text-center">
+                      <a href="https://beta.crashr.io/about" target="_blank">CRASHR</a>
+                    </h3>
+                    <p className="text-[14px] mt-2 text-center">Crashr bridges traders and users on one unified platform. We call it web3 commerce.</p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <section className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
+              <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">History</h2>
+              <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
+
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[248px]">
+                    <a href="https://cardanofoundation.org" target="_blank">
+                      <StaticImage height={68} width={248} placeholder="none" src="../images/partners/cf.svg" alt="" />
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-[14px] mt-2 text-center">Swiss foundation supporting evolution of the Cardano cryptocurrency.</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[140px] mt-[40px]">
+                    <a href="https://www.dcspark.io/" target="_blank">
+                      <StaticImage height={28} width={140} placeholder="none" src="../images/partners/dc-spark.svg" alt="" />
+                    </a>
+                  </div>
+                  <div>
+                    <p className="text-[14px] mt-2 text-center">Building high-quality crypto products that unify the user experience within blockchain ecosystems..</p>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <section className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
               <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">Our Team</h2>
               <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
                 <div className="flex flex-col items-center gap-3 px-4">
@@ -187,7 +259,7 @@ const IndexPage: React.FC<PageProps> = () => {
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold text-center">Alphonzo M. Escolar</h3>
-                    <p className="text-[14px] mt-2 text-center">Frontend Developer</p>
+                    <p className="text-[14px] mt-2 text-center">Software Engineer</p>
                   </div>
                   <div className="flex gap-2">
                     <a href="https://twitter.com/fonz_dev" target="_blank">
