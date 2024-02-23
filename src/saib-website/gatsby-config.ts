@@ -29,7 +29,18 @@ const config: GatsbyConfig = {
         },
       ],
     },
-  },]
+  },
+  {
+    resolve: `gatsby-plugin-manifest`,
+    options: {
+      name: "SAIB Inc.",
+      short_name: "SAIB Inc.",
+      start_url: "/",
+      display: "standalone",
+      icon: "src/images/saib-icon.svg",
+      crossOrigin: `use-credentials`,
+    },
+  }]
 };
 
 export default config;

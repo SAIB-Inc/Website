@@ -2,9 +2,7 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button, IconButton, Link } from "@mui/material"
-import MenuIcon from '@mui/icons-material/Menu';
 import MainLayout from '../components/main-layout'
-import SvgIcon from "@mui/material";
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -112,4 +110,22 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage
 
-export const Head: HeadFC = () => <title>SAIB | Softwarez, At It's Best</title>
+export const Head: HeadFC = () => {
+  return (
+    <>
+      <title>SAIB | Softwarez, At It's Best</title>
+      <meta name="description" content="" />
+      <meta property="og:title" content="SAIB | Softwarez, At It's Best" />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content="" />
+      <meta property="og:image" content="" />
+      <meta property="og:image:alt" content="" />
+      <meta property="og:description" content="" />
+      <meta name="twitter:card" content="summary_large_image"></meta>
+      <meta name="twitter:url" content="" />
+      <meta name="twitter:site" content="@saibdev" />
+      <meta name="twitter:creator" content="@saibdev" />
+      <meta name="theme-color" content="" />
+    </>
+  )
+}

@@ -14,9 +14,11 @@ const theme = createTheme({
 
 const MainLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
   return (
-    <ThemeProvider theme={theme}>
-      {children}
-    </ThemeProvider>
+    <>
+      <ThemeProvider theme={theme}>
+        {children}
+      </ThemeProvider>
+    </>
   );
 };;
 
