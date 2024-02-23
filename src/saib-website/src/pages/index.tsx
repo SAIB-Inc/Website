@@ -217,14 +217,13 @@ export const Head: HeadFC = () => {
       <meta property="og:title" content="SAIB | Softwarez, At It's Best - Where Software Meets Perfection" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="" />
-      <meta property="og:image" content="" />
-      <meta property="og:image:alt" content="" />
-      <meta property="og:description" content="" />
+      <meta property="og:image" content="https://raw.githubusercontent.com/SAIB-Inc/Assets/main/saib-mission.png" />
+      <meta property="og:image:alt" content="Softwarez, At It's Best" />
+      <meta property="og:description" content="SAIB Website" />
       <meta name="twitter:card" content="summary_large_image"></meta>
-      <meta name="twitter:url" content="" />
+      <meta name="twitter:url" content="https://twitter.com/saibdev" />
       <meta name="twitter:site" content="@saibdev" />
       <meta name="twitter:creator" content="@saibdev" />
-      <meta name="theme-color" content="" />
     </>
   )
 }
