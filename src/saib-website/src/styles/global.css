@@ -5,11 +5,11 @@
 @keyframes backgroundPulse {
     0%,
     100% {
-        background-size: 60%, 60%;
+        background-size: 40%;
     }
 
     50% {
-        background-size: 55%, 55%;
+        background-size: 30%;
     }
 }
 
@@ -19,6 +19,25 @@ body {
     background-image: url('../images/bg-top.png'), url('../images/bg-bottom.png');
     background-position: right top, left bottom;
     background-repeat: no-repeat, no-repeat;
+    background-attachment: fixed;
     padding-bottom: 300px;
+    background-size: 40%;
     animation: backgroundPulse 60s infinite ease-in-out;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-size: 70%;
+        animation: backgroundPulse 60s infinite ease-in-out;
+    }
+    @keyframes backgroundPulse {
+        0%,
+        100% {
+            background-size: 80%;
+        }
+    
+        50% {
+            background-size: 70%;
+        }
+    }
 }

@@ -6,6 +6,7 @@ import MainLayout from '../components/main-layout'
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { GitHub } from "@mui/icons-material"
 
 
 const IndexPage: React.FC<PageProps> = () => {
@@ -47,7 +48,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <Button variant="contained" className="!rounded-[50px] !hidden xl:!block !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6">Let's talk</Button>
             </div>
 
-            <div className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
+            <section className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
               <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">What we can do for you</h2>
               <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
                 <div className="flex items-center gap-3 px-4">
@@ -100,7 +101,105 @@ const IndexPage: React.FC<PageProps> = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
+
+            <section className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
+              <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">Our Team</h2>
+              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[123px] rounded-full overflow-hidden">
+                    <StaticImage height={256} width={256} placeholder="none" src="../images/team/Clark.png" alt="" />
+                  </div>
+                  <div>
+                    <h3 className="text-[24px] font-bold text-center">Clark Alesna</h3>
+                    <p className="text-[14px] mt-2 text-center">CEO & Founder</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <a href="https://twitter.com/clarkalesna" target="_blank">
+                      <XIcon />
+                    </a>
+                    <a href="https://www.linkedin.com/in/clarkalesna" target="_blank">
+                      <LinkedInIcon />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[123px] rounded-full overflow-hidden">
+                    <StaticImage height={256} width={256} placeholder="none" src="../images/team/Misia.png" alt="" />
+                  </div>
+                  <div>
+                    <h3 className="text-[24px] font-bold text-center">Misai Legara</h3>
+                    <p className="text-[14px] mt-2 text-center">Head of Administration</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <a href="https://twitter.com/iammisai" target="_blank">
+                      <XIcon />
+                    </a>
+                    <a href="https://www.linkedin.com/in/misai-legara/" target="_blank">
+                      <LinkedInIcon />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[123px] rounded-full overflow-hidden">
+                    <StaticImage height={256} width={256} placeholder="none" src="../images/team/RJ.png" alt="" />
+                  </div>
+                  <div>
+                    <h3 className="text-[24px] font-bold text-center">Reza Jhay Lanlale</h3>
+                    <p className="text-[14px] mt-2 text-center">Lead Engineer</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <a href="https://twitter.com/rjlacanlale" target="_blank">
+                      <XIcon />
+                    </a>
+                    <a href="https://www.linkedin.com/in/reza-jhay-lacanlale-6b8b62107/" target="_blank">
+                      <LinkedInIcon />
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3 px-4 xl:hidden">
+                  <div className="w-[123px] rounded-full overflow-hidden">
+                    <StaticImage height={256} width={256} placeholder="none" src="../images/team/Fonz.png" alt="" />
+                  </div>
+                  <div>
+                    <h3 className="text-[24px] font-bold text-center">Alphonzo M. Escolar</h3>
+                    <p className="text-[14px] mt-2 text-center">Frontend Developer</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <a href="https://twitter.com/fonz_dev" target="_blank">
+                      <XIcon />
+                    </a>
+                    <a href="https://github.com/phonz-dev" target="_blank">
+                      <GitHub />
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+              <div className="flex flex-col items-center mt-[45px] md:mt-[75px] xl:mt-16 min-[375px]:hidden xl:block">
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[123px] rounded-full overflow-hidden">
+                    <StaticImage height={256} width={256} placeholder="none" src="../images/team/Fonz.png" alt="" />
+                  </div>
+                  <div>
+                    <h3 className="text-[24px] font-bold text-center">Alphonzo M. Escolar</h3>
+                    <p className="text-[14px] mt-2 text-center">Frontend Developer</p>
+                  </div>
+                  <div className="flex gap-2">
+                    <a href="https://twitter.com/fonz_dev" target="_blank">
+                      <XIcon />
+                    </a>
+                    <a href="https://github.com/phonz-dev" target="_blank">
+                      <GitHub />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </section>
           </main>
         </div>
       </div>
@@ -113,9 +212,9 @@ export default IndexPage
 export const Head: HeadFC = () => {
   return (
     <>
-      <title>SAIB | Softwarez, At It's Best</title>
+      <title>SAIB · Softwarez, At It's Best - Where Software Meets Perfection</title>
       <meta name="description" content="" />
-      <meta property="og:title" content="SAIB | Softwarez, At It's Best" />
+      <meta property="og:title" content="SAIB | Softwarez, At It's Best - Where Software Meets Perfection" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="" />
       <meta property="og:image" content="" />
