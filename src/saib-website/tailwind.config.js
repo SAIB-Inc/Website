@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        'poppins': ["Poppins", "sans-serif"]
+      },
       backgroundImage: {
         'top-union': "url('/src/images/bg-top.png')",
         'bottom-union': "url('src/images/bg-bottom.png')"
