@@ -114,15 +114,17 @@ export const Head: HeadFC = () => {
   return (
     <>
       <title>SAIB | Softwarez, At It's Best</title>
-      <meta name="description" content="" />
+      <meta name="description" content="SAIB Website" />
       <meta property="og:title" content="SAIB | Softwarez, At It's Best" />
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="" />
-      <meta property="og:image" content="" />
-      <meta property="og:image:alt" content="" />
-      <meta property="og:description" content="" />
+      <meta property="og:url" content="http://localhost:8000/" />
+      <meta property="og:image" content="/images/saib-inc.png" />
+      <meta property="og:image:alt" content="SAIB logo" />
+      <meta property="og:image:width" content="400" />
+      <meta property="og:image:height" content="300" />
+      <meta property="og:description" content="SAIB Website" />
       <meta name="twitter:card" content="summary_large_image"></meta>
-      <meta name="twitter:url" content="" />
+      <meta name="twitter:url" content="https://twitter.com/saibdev" />
       <meta name="twitter:site" content="@saibdev" />
       <meta name="twitter:creator" content="@saibdev" />
       <meta name="theme-color" content="" />
