@@ -22,13 +22,13 @@ body {
     background-attachment: fixed;
     padding-bottom: 100px;
     background-size: 40%;
-    animation: backgroundPulse 60s infinite ease-in-out;
+    animation: backgroundPulse 40s infinite ease-in-out;
 }
 
 @media screen and (max-width: 768px) {
     body {
         background-size: 70%;
-        animation: backgroundPulse 60s infinite ease-in-out;
+        animation: backgroundPulse 40s infinite ease-in-out;
     }
     @keyframes backgroundPulse {
         0%,
