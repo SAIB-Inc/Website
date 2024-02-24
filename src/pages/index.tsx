@@ -16,7 +16,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <div className="max-w-[1200px] m-auto mt-[24px]">
           <header className="flex justify-between text-white p-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent rounded-[24px] backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
             <div className="w-[100px] md:w-fit">
-              <StaticImage src="../images/saib-logo.svg" alt="SAIB logo" placeholder="none" />
+              <StaticImage src="../images/saib-logo.svg" alt="SAIB logo" placeholder="none" quality={100} />
             </div>
             <ul className="flex gap-2 md:gap-6 items-center">
               <li>
@@ -109,7 +109,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[106px]">
-                    <StaticImage height={72} width={106} placeholder="none" src="../images/partners/txpipe.svg" alt="" />
+                    <StaticImage placeholder="none" src="../images/partners/txpipe.svg" alt="" quality={100} />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold text-center">
@@ -121,7 +121,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[72px]">
-                    <StaticImage height={72} width={72} placeholder="none" src="../images/partners/coinecta.jpg" alt="" />
+                    <StaticImage placeholder="none" src="../images/partners/coinecta.jpg" alt="" quality={100} />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold text-center">
@@ -133,7 +133,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[150px] mt-[34px]">
-                    <StaticImage height={36} width={150} placeholder="none" src="../images/partners/crashr.svg" alt="" />
+                    <StaticImage placeholder="none" src="../images/partners/crashr.svg" alt="" quality={100} />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold text-center">
@@ -153,7 +153,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[248px]">
                     <a href="https://cardanofoundation.org" target="_blank">
-                      <StaticImage height={68} width={248} placeholder="none" src="../images/partners/cf.svg" alt="" />
+                      <StaticImage quality={100} placeholder="none" src="../images/partners/cf.svg" alt="" />
                     </a>
                   </div>
                   <div>
@@ -164,7 +164,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[140px] mt-[40px]">
                     <a href="https://www.dcspark.io/" target="_blank">
-                      <StaticImage height={28} width={140} placeholder="none" src="../images/partners/dc-spark.svg" alt="" />
+                      <StaticImage quality={100} placeholder="none" src="../images/partners/dc-spark.svg" alt="" />
                     </a>
                   </div>
                   <div>
@@ -181,7 +181,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage height={256} width={256} placeholder="none" src="../images/team/Clark.png" alt="" />
+                    <StaticImage quality={100} placeholder="none" src="../images/team/Clark.png" alt="" />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold text-center">Clark Alesna</h3>
@@ -199,7 +199,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage height={256} width={256} placeholder="none" src="../images/team/Ben.png" alt="" />
+                    <StaticImage quality={100} placeholder="none" src="../images/team/Ben.png" alt="" />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold text-center">Ben Jules Dico</h3>
@@ -214,7 +214,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage height={256} width={256} placeholder="none" src="../images/team/Jon.png" alt="" />
+                    <StaticImage quality={100} placeholder="none" src="../images/team/Jon.png" alt="" />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold text-center">Perkins Jon Ong, Ph.D.</h3>
@@ -232,7 +232,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage height={256} width={256} placeholder="none" src="../images/team/Misia.png" alt="" />
+                    <StaticImage quality={100} placeholder="none" src="../images/team/Misia.png" alt="" />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold text-center">Misai Legara</h3>
@@ -250,7 +250,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage height={256} width={256} placeholder="none" src="../images/team/RJ.png" alt="" />
+                    <StaticImage quality={100} placeholder="none" src="../images/team/RJ.png" alt="" />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold text-center">Reza Jhay Lanlale</h3>
@@ -268,7 +268,7 @@ const IndexPage: React.FC<PageProps> = () => {
 
                 <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage height={256} width={256} placeholder="none" src="../images/team/Fonz.png" alt="" />
+                    <StaticImage placeholder="none" src="../images/team/Fonz.png" alt="" quality={100} />
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold text-center">Alphonzo M. Escolar</h3>
