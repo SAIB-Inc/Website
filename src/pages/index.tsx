@@ -254,7 +254,7 @@ Creating decentralized smart contracts for secure, trustless efficiency.</p>
                     <StaticImage quality={100} placeholder="none" src="../images/team/RJ.png" alt="" />
                   </div>
                   <div>
-                    <h3 className="text-[24px] font-bold text-center">Reza Jhay Lanlale</h3>
+                    <h3 className="text-[24px] font-bold text-center">Reza Jhay Lacanlale</h3>
                     <p className="text-[14px] mt-2 text-center">Senior Software Engineer</p>
                   </div>
                   <div className="flex gap-2">
