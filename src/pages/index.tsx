@@ -121,6 +121,30 @@ Creating decentralized smart contracts for secure, trustless efficiency.</p>
                 </div>
 
                 <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[106px] md:mt-[47px]">
+                    <StaticImage placeholder="none" src="../images/partners/utxo-rpc-logo.svg" alt="" quality={100} />
+                  </div>
+                  <div>
+                    <h3 className="text-[24px] font-bold text-center">
+                      <a href="https://utxorpc.org" target="_blank">UTxoRPC</a>
+                    </h3>
+                    <p className="text-[14px] mt-2 text-center">Interact with UTxO-based blockchains using a shared specification with focus on developer experience and performance.</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3 px-4">
+                  <div className="w-[106px] md:mt-[44px] xl:mt-[43px]">
+                    <StaticImage placeholder="none" src="../images/partners/demeter.svg" alt="" quality={100} />
+                  </div>
+                  <div>
+                    <h3 className="text-[24px] font-bold text-center">
+                      <a href="https://demeter.run" target="_blank">Demeter</a>
+                    </h3>
+                    <p className="text-[14px] mt-2 text-center">Build and deploy dApps on a single platform with Demeter – effortlessly scale to support millions of users.</p>
+                  </div>
+                </div>
+
+                <div className="flex flex-col items-center gap-3 px-4">
                   <div className="w-[72px]">
                     <StaticImage placeholder="none" src="../images/partners/coinecta.jpg" alt="" quality={100} />
                   </div>
@@ -133,7 +157,7 @@ Creating decentralized smart contracts for secure, trustless efficiency.</p>
                 </div>
 
                 <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[150px] mt-[34px]">
+                  <div className="w-[150px] md:mt-[36px]">
                     <StaticImage placeholder="none" src="../images/partners/crashr.svg" alt="" quality={100} />
                   </div>
                   <div>
