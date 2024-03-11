@@ -1,7 +1,7 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-import { Button, IconButton, Link } from "@mui/material"
+import { Button } from "@mui/material"
 import MainLayout from '../components/main-layout'
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/Facebook';
@@ -97,9 +97,172 @@ const IndexPage: React.FC<PageProps> = () => {
                   </div>
                   <div>
                     <h3 className="text-[24px] font-bold">Smart Contracts</h3>
-                    <p className="text-[14px] mt-2">
-Creating decentralized smart contracts for secure, trustless efficiency.</p>
+                    <p className="text-[14px] mt-2">Creating decentralized smart contracts for secure, trustless efficiency.</p>
                   </div>
+                </div>
+              </div>
+            </section>
+
+            <section className="mt-[130px] xl:mt-[226px] text-white py-8 px-2 xl:p-[60px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
+              <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">Technologies</h2>
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-2 gap-y-4 justify-items-start w-full justify-between align-center mt-[45px] md:mt-[75px] xl:mt-16">
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage alt="" placeholder="none" src="../images/technologies/dotnet-logo.svg" />
+                  </div>
+                  <p>Dotnet</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage alt="" placeholder="none" src="../images/technologies/c-sharp-logo.svg" />
+                  </div>
+                  <p>C-Sharp</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage alt="" placeholder="none" src="../images/technologies/f-sharp-logo.svg" />
+                  </div>
+                  <p>F-Sharp</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="h-[65]">
+                    <StaticImage width={50} alt="" placeholder="none" src="../images/technologies/haskell.svg" />
+                  </div>
+                  <p>Haskell</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/scala-spiral-white.svg" />
+                  </div>
+                  <p>Scala</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage alt="" placeholder="none" src="../images/technologies/python.svg" />
+                  </div>
+                  <p>Python</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage alt="" placeholder="none" src="../images/technologies/nodejs.svg" />
+                  </div>
+                  <p>NodeJS</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage alt="" placeholder="none" src="../images/technologies/javascript-logo.png" />
+                  </div>
+                  <p>JavaScript</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage alt="" placeholder="none" src="../images/technologies/ts-logo.png" />
+                  </div>
+                  <p>TypeScript</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage alt="" placeholder="none" src="../images/technologies/cardano.svg" />
+                  </div>
+                  <p>Cardano</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/aiken.svg" />
+                  </div>
+                  <p>Aiken</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/demeter.svg" />
+                  </div>
+                  <p>Demeter</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/kubernetes.svg" />
+                  </div>
+                  <p>Kubernetes</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/docker.svg" />
+                  </div>
+                  <p>Docker</p>
+                </div>
+
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/aws-white.svg" />
+                  </div>
+                  <p>AWS</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/azure-logo.svg" />
+                  </div>
+                  <p>Azure</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/google-cloud.svg" />
+                  </div>
+                  <p>Google Cloud</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/postgresql-logo.png" />
+                  </div>
+                  <p>PostgresSQL</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/mysql-logo.svg" />
+                  </div>
+                  <p>MySQL</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/ms-sql.svg" />
+                  </div>
+                  <p>MS SQL</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div>
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/mongo-db.svg" />
+                  </div>
+                  <p>MongoDb</p>
+                </div>
+
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/linux-logo.svg" />
+                  </div>
+                  <p>Linux</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/windows.svg" />
+                  </div>
+                  <p>Windows</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-[50px]">
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/apple-white.svg" />
+                  </div>
+                  <p>Mac</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div>
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/android.svg" />
+                  </div>
+                  <p>Android</p>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div>
+                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/ios.svg" />
+                  </div>
+                  <p>iOS</p>
                 </div>
               </div>
             </section>
