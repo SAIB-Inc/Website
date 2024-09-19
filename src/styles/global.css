@@ -15,14 +15,30 @@
 
 body {
     font-family: "Poppins", sans-serif;
+}
+
+.backgroundImage {
     background-color: #101010;
     background-image: url('../images/bg-top.png'), url('../images/bg-bottom.png');
     background-position: right top, left bottom;
     background-repeat: no-repeat, no-repeat;
     background-attachment: fixed;
-    padding-bottom: 100px;
     background-size: 40%;
     animation: backgroundPulse 40s infinite ease-in-out;
+}
+
+.backgroundImage2 {
+    background-image: url('../images/saib_bg2.png');
+    background-position: right -150px bottom -150px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 550px;
+}
+
+.backgroundImage3 {
+    background-image: url('../images/saib_bg.png');
+    background-position: right -950px bottom -600px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 1800px;
 }
 
 @media screen and (max-width: 768px) {

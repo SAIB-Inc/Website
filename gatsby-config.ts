@@ -18,6 +18,22 @@ const config: GatsbyConfig = {
     __key: "images"
   },
   {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: "technologies",
+      path: "./src/images/technologies/"
+    },
+    __key: "technologies"
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: "team",
+      path: "./src/images/team/"
+    },
+    __key: "team"
+  },
+  {
     resolve: `gatsby-omni-font-loader`,
     options: {
       enableListener: true,
