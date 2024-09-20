@@ -50,12 +50,12 @@ const Team: React.FC = () => {
   ];
 
   return (
-    <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
+    <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
       {teamMembers.map((member, index) => {
         const profileImg = member.profileImg;
 
         return (
-          <div key={index} className="flex flex-col items-center gap-3 px-4">
+          <div key={index} className="flex flex-col items-center gap-3 p-[48px] w-full rounded-[24px] bg-[#000000]/10 border-[1px] border-[#232323] border-transparent backdrop-blur-md">
             <div className="w-[123px] rounded-full overflow-hidden">
               {profileImg ? (
                 <GatsbyImage image={profileImg} alt={member.name} />
@@ -71,10 +71,10 @@ const Team: React.FC = () => {
             </div>
             <div className="flex gap-2">
               <a href="" target="_blank" rel="noopener noreferrer">
-                <XIcon />
+                <XIcon className='w-[32px] h-[32px]'/>
               </a>
               <a href="" target="_blank" rel="noopener noreferrer">
-                <LinkedInIcon />
+                <LinkedInIcon className='w-[32px] h-[32px]'/>
               </a>
             </div>
           </div>
