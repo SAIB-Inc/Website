@@ -16,7 +16,8 @@ module.exports = {
       colors: {
         'blue1': 'rgba(51, 122, 234, 1)',
         'blue2': 'rgba(79, 55, 234, 1)',
-        'purple': 'rgba(143, 38, 233, 1)' 
+        'purple': 'rgba(143, 38, 233, 1)',
+        'white-tint': 'rgba(255, 255, 255, 0.02)', 
       }
     },
   },

@@ -39,17 +39,22 @@ const TechnologyCards: React.FC = () => {
   const blockchain = ['Cardano', 'Demeter'];
   const os = ['Android', 'iOS', 'Linus', 'Windows', 'Mac'];
   const db = ['MS SQL', 'MongoDB', 'PostgreSQL', 'MySQL'];
-  const cointainer = ['Docker', 'Kubernetes'];
+  const container = ['Docker', 'Kubernetes'];
   const webApp = ['Dotnet', 'NodeJS'];
 
   return (
-    <div className='flex flex-wrap grid grid-cols-6 gap-[15px]'>
-      {technologies.allFile.edges.map(({ node }) => (
-          <div id={ node.id } className='text-[16px] w-full h-[126px] flex flex-col items-center justify-center rounded-xl font-bold gap-[8px] border border-[#D4D4D4] !text-[18px] bg-[#F3F3F3]/70 backdrop-blur-md shadow-md'>
-            <img alt='' src={node.publicURL} className='w-[48px] h-[48px]'/>
-            <p>{node.name}</p>
-          </div>
-      ))}
+    <div className='flex justify-center'>
+      <div className='w-[300px] text-center p-6 rounded-xl bg-[#F3F3F3] border border-1 border-[#D4D4D4] shadow-md'>
+        <h2 className='!text-xl mb-4 font-bold'>Languages</h2>
+        <div className='flex flex-col gap-2'>
+          {technologies.allFile.edges.filter(({ node }) => languages.includes(node.name)).map(({ node }) => (
+            <div id={ node.id } className='flex items-center gap-[15px] font-bold'>
+              <img alt='' src={node.publicURL} className='w-[40px] h-[40px]'/>
+              <p>{node.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

@@ -50,18 +50,18 @@ const Team: React.FC = () => {
   ];
 
   return (
-    <div className="grid sm:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
+    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
       {teamMembers.map((member, index) => {
         const profileImg = member.profileImg;
 
         return (
-          <div key={index} className="flex flex-col items-center gap-3 p-[48px] w-full rounded-[24px] bg-[#000000]/10 border-[1px] border-[#232323] border-transparent backdrop-blur-md">
+          <div key={index} className="flex flex-col items-center gap-3 p-[48px] w-full bg-[#151515] border border-[#232323] rounded-xl">
             <div className="w-[123px] rounded-full overflow-hidden">
               {profileImg ? (
                 <GatsbyImage image={profileImg} alt={member.name} />
               ) : (
                 <div className="bg-gray-200 w-full h-full flex items-center justify-center rounded-full">
-                  <span>No Image</span> {/* You can replace this with a placeholder image */}
+                  <span>No Image</span>
                 </div>
               )}
             </div>
