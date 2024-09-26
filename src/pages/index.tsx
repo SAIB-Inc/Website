@@ -59,6 +59,8 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="flex items-center justify-center w-full mt-[24px]">
               <Button href="https://calendly.com/saibdev" target="_blank" variant="contained" className="!rounded-[50px] !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6">Get Started</Button>
             </div>
+          </div>
+          <div className="max-w-[2500px] overflow-hidden m-auto">
             <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
               <p className="tracking-tighter">Technologies</p>
             </div>

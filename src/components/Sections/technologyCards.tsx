@@ -76,26 +76,39 @@ const TechnologyCards: React.FC = () => {
 
   const row1 = [
     ...categorizedTechnologies.languages,
-    ...categorizedTechnologies.webApp
+    ...categorizedTechnologies.webApp,
+    ...categorizedTechnologies.blockchain,
+    ...categorizedTechnologies.container
   ];
 
   const row2 = [
     ...categorizedTechnologies.os,
-    ...categorizedTechnologies.cloud
+    ...categorizedTechnologies.cloud,
+    ...categorizedTechnologies.webApp,
+    ...categorizedTechnologies.db,
   ]
 
   const row3 = [
-    ...categorizedTechnologies.db,
     ...categorizedTechnologies.blockchain,
-    ...categorizedTechnologies.container
+    ...categorizedTechnologies.languages,
+    ...categorizedTechnologies.container,
+    ...categorizedTechnologies.webApp,
   ]
 
+  const row4 = [
+    ...categorizedTechnologies.db,
+    ...categorizedTechnologies.cloud,
+    ...categorizedTechnologies.blockchain,
+    ...categorizedTechnologies.os,
+  ]
+
+
   return (
-    <div className="overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)] sm:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]">
+    <div className="overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)] pb-[150px]">
       <div className='flex'>
         <div className='flex items-center space-x-16 animate-infinite-scroll'>
           {[...row1, ...row1].map((tech) => (
-            <div key={tech.id} className='text-[16px] min-w-[150px] h-[126px] flex flex-col items-center justify-center rounded-xl font-bold gap-[8px] border border-[#D4D4D4] !text-[18px] bg-[#F3F3F3]/70 backdrop-blur-md shadow-md'>
+            <div key={tech.id} className='text-[16px] min-w-[200px] h-[126px] flex flex-col items-center justify-center rounded-xl font-bold gap-[8px] border border-[#D4D4D4] !text-[18px] bg-[#F3F3F3]/70 backdrop-blur-md shadow-md'>
               <img alt='' src={tech.publicURL} className='w-[48px] h-[48px]' />
               <p>{tech.name}</p>
             </div>
@@ -105,7 +118,7 @@ const TechnologyCards: React.FC = () => {
       <div className='flex mt-[30px]'>
         <div className='flex items-center space-x-16 animate-infinite-scroll-reverse'>
           {[...row2, ...row2].map((tech) => (
-            <div key={tech.id} className='text-[16px] min-w-[150px] h-[126px] flex flex-col items-center justify-center rounded-xl font-bold gap-[8px] border border-[#D4D4D4] !text-[18px] bg-[#F3F3F3]/70 backdrop-blur-md shadow-md'>
+            <div key={tech.id} className='text-[16px] min-w-[200px] h-[126px] flex flex-col items-center justify-center rounded-xl font-bold gap-[8px] border border-[#D4D4D4] !text-[18px] bg-[#F3F3F3]/70 backdrop-blur-md shadow-md'>
               <img alt='' src={tech.publicURL} className='w-[48px] h-[48px]' />
               <p>{tech.name}</p>
             </div>
@@ -115,7 +128,17 @@ const TechnologyCards: React.FC = () => {
       <div className='flex mt-[30px]'>
         <div className='flex items-center space-x-16 animate-infinite-scroll'>
           {[...row3, ...row3].map((tech) => (
-            <div key={tech.id} className='text-[16px] min-w-[150px] h-[126px] flex flex-col items-center justify-center rounded-xl font-bold gap-[8px] border border-[#D4D4D4] !text-[18px] bg-[#F3F3F3]/70 backdrop-blur-md shadow-md'>
+            <div key={tech.id} className='text-[16px] min-w-[200px] h-[126px] flex flex-col items-center justify-center rounded-xl font-bold gap-[8px] border border-[#D4D4D4] !text-[18px] bg-[#F3F3F3]/70 backdrop-blur-md shadow-md'>
+              <img alt='' src={tech.publicURL} className='w-[48px] h-[48px]' />
+              <p>{tech.name}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className='flex mt-[30px]'>
+        <div className='flex items-center space-x-16 animate-infinite-scroll-reverse'>
+          {[...row4, ...row4].map((tech) => (
+            <div key={tech.id} className='text-[16px] min-w-[200px] h-[126px] flex flex-col items-center justify-center rounded-xl font-bold gap-[8px] border border-[#D4D4D4] !text-[18px] bg-[#F3F3F3]/70 backdrop-blur-md shadow-md'>
               <img alt='' src={tech.publicURL} className='w-[48px] h-[48px]' />
               <p>{tech.name}</p>
             </div>
