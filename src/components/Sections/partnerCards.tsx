@@ -1,29 +1,27 @@
 import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import XIcon from '@mui/icons-material/X';
+import Levvy from '../../images/partners/Levvy';
 
 const PartnerCards: React.FC = () => {
 
   const partnerImages = useStaticQuery(graphql`
       query {
-          Demeter: file(relativePath: {eq: "partners/demeter.svg"}) {
-            publicURL
-          }
-          TxPipe: file(relativePath: {eq: "partners/txpipe.svg"}) {
-            publicURL
-          }
-          UtxoRPC: file(relativePath: {eq: "partners/utxo-rpc.svg"}) {
-            publicURL
-          }
-          Coinecta: file(relativePath: {eq: "partners/coinecta.svg"}) {
-            publicURL   
-          }
-          Crashr: file(relativePath: {eq: "partners/crashr.svg"}) {
-            publicURL
-          }
-          Levvy: file(relativePath: {eq: "partners/levvy.svg"}) {
-            publicURL
-          }
+        Demeter: file(relativePath: {eq: "partners/demeter.svg"}) {
+          publicURL
+        }
+        TxPipe: file(relativePath: {eq: "partners/txpipe.svg"}) {
+          publicURL
+        }
+        UtxoRPC: file(relativePath: {eq: "partners/utxo-rpc.svg"}) {
+          publicURL
+        }
+        Coinecta: file(relativePath: {eq: "partners/coinecta.svg"}) {
+          publicURL   
+        }
+        Crashr: file(relativePath: {eq: "partners/crashr.svg"}) {
+          publicURL
+        }
       }
   `);
 
@@ -71,7 +69,6 @@ const PartnerCards: React.FC = () => {
     {
       name: "Levvy",
       title: "Effortless lending, instant liquidity. Maximize liquidity & earnings lending and borrowing tokens or NFTs.",
-      image: partnerImages.Levvy.publicURL,
       className: 'w-[200px]',
       webLink: "https://levvy.fi",
       xLink: "https://x.com/levvyfinance"
@@ -85,7 +82,10 @@ const PartnerCards: React.FC = () => {
           <div key={index} className="flex flex-col items-center gap-[20px] py-[48px] px-[24px] w-full bg-[#151515] border border-[#232323] rounded-xl h-[420px] bg-white-tint backdrop-blur-md">
             <div className='min-h-[100px] flex items-center justify-center'>
               <a href={datum.webLink} target="_blank" rel="noopener noreferrer">
-                <img src={datum.image} className={datum.className} />
+                {datum.name === 'Levvy' ?
+                  <Levvy />
+                  : <img src={datum.image} className={datum.className} />
+                }
               </a>
             </div>
             <div className='h-[150px]'>

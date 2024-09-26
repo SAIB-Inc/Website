@@ -29,14 +29,14 @@ const Header: React.FC = () => {
           </a>
         </li>
       </ul>
-      <Button 
-        href="https://calendly.com/saibdev" 
-        target="_blank" 
-        variant="contained" 
+      <Button
+        href="https://calendly.com/saibdev"
+        target="_blank"
+        variant="contained"
         className=" sm:!rounded-[24px] md:!rounded-[50px] sm:!py-[12px] sm:!px-[24px] sm:h-fit max-[360px]:!text-[8px] !text-[10px] min-[460px]:!text-[14px] md:!text-[18px] !normal-case !font-poppins !font-normal text-center"
-        >
-          Let's Talk!
-        </Button>
+      >
+        Let's Talk!
+      </Button>
     </header>
   );
 };

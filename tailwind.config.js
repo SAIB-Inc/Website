@@ -7,12 +7,17 @@ module.exports = {
   theme: {
     extend: {
       animation: {
-        'infinite-scroll': 'infinite-scroll 5s linear infinite',
+        'infinite-scroll': 'infinite-scroll 20s linear infinite',
+        'infinite-scroll-reverse': 'infinite-scroll-reverse 30s linear infinite',
       },
       keyframes: {
         'infinite-scroll': {
           from: { transform: 'translateX(0)' },
-          to: { transform: 'translateX(-100%)' },
+          to: { transform: 'translateX(calc(-50% - 30px))' },
+        },
+        'infinite-scroll-reverse': {
+          from: { transform: 'translateX(calc(-50% - 30px))' },
+          to: { transform: 'translateX(0)' },
         },
       },
       fontFamily: {

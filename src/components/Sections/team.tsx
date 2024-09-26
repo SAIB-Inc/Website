@@ -191,13 +191,13 @@ const Team: React.FC = () => {
               <p className="text-[14px] mt-2 text-center">{member.role}</p>
             </div>
             <div className="flex gap-2">
-              {member.X && 
+              {member.X &&
                 <a href={member.X} target="_blank" rel="noopener noreferrer">
-                  <XIcon className='w-[32px] h-[32px]'/>
+                  <XIcon className='w-[32px] h-[32px]' />
                 </a>
               }
               <a href={member.linkedIn} target="_blank" rel="noopener noreferrer">
-                <LinkedInIcon className='w-[32px] h-[32px]'/>
+                <LinkedInIcon className='w-[32px] h-[32px]' />
               </a>
             </div>
           </div>
