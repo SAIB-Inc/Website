@@ -17,7 +17,7 @@ const IndexPage: React.FC<PageProps> = () => {
     <MainLayout>
       <div className="backgroundImage pt-6">
         <div className="max-w-[1200px] m-auto pb-[226px] px-6 ">
-          <Header />
+          <Header/>
           <div className="flex flex-col items-center justify-center mt-16 md:mt-[180px] xl:mt-[169px] m-auto max-w-[630px] text-center text-white">
             <h1 className="font-bold text-[50px] min-[360px]:text-[60px] min-[420px]:text-[70px] min-[520px]:text-[90px] min-[600px]:text-[105px] xl:text-[120px] leading-[55px] min-[360px]:leading-[65px] min-[520px]:leading-[90px] md:leading-[105px] xl:leading-[120px]">
               Softwarez, <span className="font-normal font-['Poppins']">at its</span> <span className="text-[#4F37EA]">best</span><span className="font-sans">.</span>
@@ -55,7 +55,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="max-[330px]:mt-[38rem] max-[420px]:mt-[33rem] max-lg:mt-[25rem] mt-[20rem] m-auto max-w-[500px] text-[28px] min-[390px]:text-[35px] min-[500px]:text-[52px] text-center !p-0 mb-[50px]">
               <p className="tracking-tighter">Empowering Your <span className="bg-gradient-to-r from-blue1 via-blue2 to-purple inline-block text-transparent bg-clip-text font-bold w-full">Digital Presence</span></p>
             </div>
-            <MainCards />
+            <MainCards/>
             <div className="flex items-center justify-center w-full mt-[24px]">
               <Button href="https://calendly.com/saibdev" target="_blank" variant="contained" className="!rounded-[50px] !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6">Get Started</Button>
             </div>
@@ -64,30 +64,40 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
               <p className="tracking-tighter">Technologies</p>
             </div>
-            <TechnologyCards />
+            <TechnologyCards/>
           </div>
         </div>
         <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-2 xl:p-[80px] max-xl:mx-[20px]">
           <h2 className="text-[36px] md:text-[52px] font-bold leading-[62px] text-center">Our Team</h2>
-          <Team />
+          <Team/>
         </div>
         <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-2 xl:p-[80px] max-xl:mx-[20px]">
           <h2 className="text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center">Building With</h2>
-          <PartnerCards />
+          <PartnerCards/>
         </div>
         <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-2 xl:p-[80px] max-xl:mx-[20px]">
           <h2 className="text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center">History</h2>
           <div className="max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:gap-[40px] flex gap-[20px] justify-evenly mt-[55px] sm:mt-[45px]">
-            <StaticImage
-              alt=""
-              src="../images/partners/Cardano Foundation.svg"
-              className="w-[200px] h-[50px] sm:w-[260px] sm:h-[70px]"
-            />
-            <StaticImage
-              alt=""
-              src="../images/partners/dc-spark.svg"
-              className="w-[200px] h-[40px] sm:w-[350px] sm:h-[70px]"
-            />
+            <div className="flex flex-col items-center text-center gap-[15px] max-w-[500px]">
+              <a href="https://cardanofoundation.org" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  alt=""
+                  src="../images/partners/Cardano Foundation.svg"
+                  className="w-[200px] h-[50px] sm:w-[260px] sm:h-[70px]"
+                />
+              </a>
+              <p>Swiss foundation supporting evolution of the Cardano cryptocurrency.</p>
+            </div>
+            <div className="flex flex-col items-center text-center gap-[15px] max-w-[500px]">
+              <a href="https://www.dcspark.io" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  alt=""
+                  src="../images/partners/dc-spark.svg"
+                  className="w-[200px] h-[40px] sm:w-[350px] sm:h-[70px]"
+                />
+              </a>
+              <p>Building high-quality crypto products that unify the user experience within blockchain ecosystems.</p>
+            </div>
           </div>
         </div>
         <div className="bg-white h-[237px] relative backgroundImage3 mt-[130px]">
@@ -103,7 +113,7 @@ const IndexPage: React.FC<PageProps> = () => {
             </Button>
           </div>
         </div>
-        <Footer />
+        <Footer/>
       </div>
     </MainLayout>
   );

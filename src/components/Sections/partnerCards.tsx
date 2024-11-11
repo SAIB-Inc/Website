@@ -79,25 +79,20 @@ const PartnerCards: React.FC = () => {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
       {partnersData.map((datum, index) => {
         return (
-          <div key={index} className="flex flex-col items-center gap-[20px] py-[48px] px-[24px] w-full bg-[#151515] border border-[#232323] rounded-xl h-[420px] bg-white-tint backdrop-blur-md">
+          <a href={datum.webLink} target="_blank" rel="noopener noreferrer">
+          <div key={index} className="flex flex-col items-center gap-[20px] py-[48px] px-[24px] w-full bg-[#151515] border border-[#232323] rounded-xl h-[380px] bg-white-tint backdrop-blur-md">
             <div className='min-h-[100px] flex items-center justify-center'>
-              <a href={datum.webLink} target="_blank" rel="noopener noreferrer">
                 {datum.name === 'Levvy' ?
                   <Levvy />
                   : <img src={datum.image} className={datum.className} />
                 }
-              </a>
             </div>
             <div className='h-[150px]'>
               <h3 className="text-[24px] font-bold text-center">{datum.name}</h3>
               <p className="text-[12px] sm:text-[14px] mt-2 text-center">{datum.title}</p>
             </div>
-            <div className="">
-              <a href={datum.xLink} target="_blank" rel="noopener noreferrer">
-                <XIcon className='w-[32px] h-[32px]' />
-              </a>
-            </div>
           </div>
+          </a>
         );
       })}
     </div>
