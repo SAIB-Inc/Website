@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Levvy = () => {
+const Levvy = ({ width = 180, height = 90 }) => {
     return (<div className="mr-auto">
-        <svg width="200" height="90" viewBox="0 0 128 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width={width} height={height} viewBox="0 0 128 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clipPath="url(#clip0_62_778)">
                 <g clipPath="url(#clip1_62_778)">
                     <g clipPath="url(#clip2_62_778)">

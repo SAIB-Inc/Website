@@ -22,7 +22,7 @@ const Footer: React.FC = () => {
         variant="contained"
         className="!rounded-[50px] !py-[16px] !px-[32px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto"
       >
-        Get Started
+        Learn More
       </Button>
       <ul className="flex gap-4 items-center justify-center">
         <li>

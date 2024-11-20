@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
-const MainCards: React.FC = () => {
+const MainCards = () => {
+  const [hoveredCard, setHoveredCard] = useState<number | null>(null);
+
   const cardIcons = useStaticQuery(graphql`
         query {
             Frontend: file(relativePath: {eq: "icons/frontend.svg"}) {
@@ -55,17 +57,6 @@ const MainCards: React.FC = () => {
     },
   ];
 
-  const cardOrder = [0, 1, 2, 3, 4];
-  const [activeCard, setActiveCard] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveCard((prev) => (prev + 1) % cardOrder.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div className="grid grid-cols-6 gap-4">
       {data.map((card, index) => {
@@ -74,9 +65,11 @@ const MainCards: React.FC = () => {
         return (
           <div
             key={index}
-            className={`col-span-6 ${colSpan} rounded-[24px] p-[32px] xl:p-[48px] border-[1px] border-gray-tint flex flex-col gap-y-[10px] transition-all duration-500 ${activeCard === cardOrder.indexOf(index)
+            onMouseEnter={() => setHoveredCard(index)}
+            onMouseLeave={() => setHoveredCard(null)}
+            className={`col-span-6 ${colSpan} rounded-[24px] p-[24px] sm:p-[30px] xl:p-[48px] border-[1px] border-gray-tint flex flex-col gap-y-[10px] transition-all duration-500 shadow-md cursor-pointer ${hoveredCard === index
                 ? 'bg-[#4F37EA] text-white -translate-y-1 scale-105'
-                : 'bg-white text-black'
+                : 'bg-[#F3F3F3]/70 text-black'
               }`}
           >
             <img
@@ -84,15 +77,15 @@ const MainCards: React.FC = () => {
               src={card.icon}
               className="w-[40px] h-[40px]"
               style={{
-                filter: activeCard === cardOrder.indexOf(index)
+                filter: hoveredCard === index
                   ? 'brightness(0) invert(1)'
                   : 'none'
               }}
             />
-            <p className="text-[30px] xl:text-[45px] tracking-tighter font-bold">
+            <p className="text-[24px] sm:text-[30px] xl:text-[45px] tracking-tighter font-bold">
               {card.title}
             </p>
-            <p className="text-[18px]">{card.description}</p>
+            <p className="text-[16px] sm:text-[18px]">{card.description}</p>
           </div>
         );
       })}

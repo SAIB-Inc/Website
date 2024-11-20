@@ -4,6 +4,14 @@ import { graphql, useStaticQuery } from 'gatsby';
 import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+interface memberType {
+  name: string,
+  role: string,
+  profileImage: any,
+  linkedIn?: string,
+  X?: string | null
+}
+
 const Team: React.FC = () => {
   const team = useStaticQuery(graphql`
     query {
@@ -18,6 +26,21 @@ const Team: React.FC = () => {
         }
       }
       RJ: file(relativePath: {eq: "team/RJ.png"}) {
+        childImageSharp {
+          gatsbyImageData(width: 200)
+        }
+      }
+      Ben: file(relativePath: {eq: "team/Ben.png"}) {
+        childImageSharp {
+          gatsbyImageData(width: 200)
+        }
+      }
+      Bern: file(relativePath: {eq: "team/Bern.png"}) {
+        childImageSharp {
+          gatsbyImageData(width: 200)
+        }
+      }
+      Clarisse: file(relativePath: {eq: "team/Clarisse.png"}) {
         childImageSharp {
           gatsbyImageData(width: 200)
         }
@@ -80,117 +103,208 @@ const Team: React.FC = () => {
     }
   `);
 
-  const teamMembers = [
+  const KeyTeam: memberType[] = [
     {
       name: "Clark Alesna",
       role: "CEO & Software Engineer",
-      profileImg: getImage(team.Clark),
+      profileImage: getImage(team.Clark),
       linkedIn: "https://www.linkedin.com/in/clarkalesna",
       X: "https://x.com/clarkalesna"
     },
     {
       name: "Misai Legara",
       role: "Head of Administration",
-      profileImg: getImage(team.Misai),
+      profileImage: getImage(team.Misai),
       linkedIn: "https://www.linkedin.com/in/misai-legara/",
       X: "https://x.com/iammisai"
     },
     {
       name: "Reza Jhay Lacanlale",
       role: "Senior Software Engineer",
-      profileImg: getImage(team.RJ),
+      profileImage: getImage(team.RJ),
       linkedIn: "https://www.linkedin.com/in/reza-jhay-lacanlale-6b8b62107/",
       X: "https://x.com/rjlacanlale"
     },
     {
-      name: "Christian Gantuangco",
+      name: "Ben Jules Dico",
+      role: "Chief Marketing Officer",
+      profileImage: getImage(team.Ben),
+      X: "https://x.com/Benjdico"
+    },
+    {
+      name: "Bern Villacura",
+      role: "Chief of Staff",
+      profileImage: getImage(team.Bern),
+      linkedIn: "https://www.linkedin.com/in/barbiebern/"
+    },
+    {
+      name: "Roxanne Alesna",
+      role: "Administrative Assistant",
+      profileImage: getImage(team.Clarisse),
+      linkedIn: "https://www.linkedin.com/in/roxanne-alesna-33a10b331"
+    },
+  ]
+
+  const frontendDevs: memberType[] = [
+    {
+      name: "Ivanne Bayer",
       role: "Developer",
-      profileImg: getImage(team.Tan),
-      linkedIn: "https://www.linkedin.com/in/christan-gantuangco/",
+      profileImage: getImage(team.Ivan),
+      linkedIn: "https://www.linkedin.com/in/ivanne-bayer-a23b30302/",
     },
     {
       name: "Kiefer Gallego",
       role: "Developer",
-      profileImg: getImage(team.Kief),
+      profileImage: getImage(team.Kief),
       linkedIn: "https://www.linkedin.com/in/kiefer-gallego/",
-    },
-    {
-      name: "Kathea Mayol",
-      role: "Developer",
-      profileImg: getImage(team.Kath),
-      linkedIn: "https://www.linkedin.com/in/kathea-mayol/",
-    },
-    {
-      name: "Rico Quiblat",
-      role: "Developer",
-      profileImg: getImage(team.Rico),
-      linkedIn: "https://www.linkedin.com/in/rico-miles-quiblat-34a6b7298/",
-    },
-    {
-      name: "John Taboada",
-      role: "Developer",
-      profileImg: getImage(team.Chow),
-      linkedIn: "https://www.linkedin.com/in/john-quinnvic-taboada-8801b9275/",
-    },
-    {
-      name: "Wendell Tamayo",
-      role: "Developer",
-      profileImg: getImage(team.Windz),
-      linkedIn: "https://www.linkedin.com/in/wendell-mor-tamayo-41388b298/",
-    },
-    {
-      name: "Ivanne Bayer",
-      role: "Developer",
-      profileImg: getImage(team.Ivan),
-      linkedIn: "https://www.linkedin.com/in/ivanne-bayer-a23b30302/",
-    },
+    }
+  ]
+
+  const backendDevs: memberType[] = [
     {
       name: "John Alexis Buot",
       role: "Developer",
-      profileImg: getImage(team.Lex),
+      profileImage: getImage(team.Lex),
       linkedIn: "https://www.linkedin.com/in/laplace-xd/",
     },
     {
       name: "Caitlin Lindsay",
       role: "Developer",
-      profileImg: getImage(team.Cait),
+      profileImage: getImage(team.Cait),
       linkedIn: "https://www.linkedin.com/in/caitlin-mariel-lindsay-7341a3323/",
+    },
+    {
+      name: "Kathea Mayol",
+      role: "Developer",
+      profileImage: getImage(team.Kath),
+      linkedIn: "https://www.linkedin.com/in/kathea-mayol/",
+    },
+    {
+      name: "Wendell Tamayo",
+      role: "Developer",
+      profileImage: getImage(team.Windz),
+      linkedIn: "https://www.linkedin.com/in/wendell-mor-tamayo-41388b298/",
+    },
+  ]
+
+  const blockchainDevs: memberType[] = [
+    {
+      name: "Christian Gantuangco",
+      role: "Developer",
+      profileImage: getImage(team.Tan),
+      linkedIn: "https://www.linkedin.com/in/christan-gantuangco/",
+    },
+    {
+      name: "Rico Quiblat",
+      role: "Developer",
+      profileImage: getImage(team.Rico),
+      linkedIn: "https://www.linkedin.com/in/rico-miles-quiblat-34a6b7298/",
+    },
+    {
+      name: "John Taboada",
+      role: "Developer",
+      profileImage: getImage(team.Chow),
+      linkedIn: "https://www.linkedin.com/in/john-quinnvic-taboada-8801b9275/",
     },
   ];
 
-  return (
-    <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
-      {teamMembers.map((member, index) => {
-        const profileImg = member.profileImg;
+  const memberCard = (
+    index: number,
+    profileImg: any,
+    name: string,
+    role: string,
+    linkedIn?: string | null,
+    X?: string | null
+  ) => {
+    return (
+      <div key={index} className="flex flex-col items-center gap-3 p-[24px] bg-[#F3F3F3]/70 backdrop-blur-md shadow-md rounded-xl">
+        <div className="w-[123px] max-h-[123px] rounded-full overflow-hidden grayscale">
+          {profileImg ? (
+            <GatsbyImage image={profileImg} alt={name} className="h-[123px]" />
+          ) : (
+            <div className="bg-gray-200 w-[123px] h-[123px] rounded-full flex items-center justify-center rounded-full">
+              <span>No Image</span>
+            </div>
+          )}
+        </div>
+        <div className='grow'>
+          <h3 className="text-[18px] font-bold text-center">{name}</h3>
+          <p className="text-[14px] mt-2 text-center">{role}</p>
+        </div>
+        <div className="flex gap-2">
+          {X &&
+            <a href={X} target="_blank" rel="noopener noreferrer">
+              <XIcon className='w-[24px] h-[24px]' />
+            </a>
+          }
+          {linkedIn &&
+            <a href={linkedIn} target="_blank" rel="noopener noreferrer">
+              <LinkedInIcon className='w-[24px] h-[24px]' />
+            </a>
+          }
+        </div>
+      </div>
+    )
+  }
 
-        return (
-          <div key={index} className="flex flex-col items-center gap-3 py-[48px] px-[24px] bg-white-tint backdrop-blur-md border border-[#232323] rounded-xl h-[380px]">
-            <div className="w-[123px] rounded-full overflow-hidden grayscale">
-              {profileImg ? (
-                <GatsbyImage image={profileImg} alt={member.name} />
-              ) : (
-                <div className="bg-gray-200 w-[123px] h-[123px] rounded-full flex items-center justify-center rounded-full">
-                  <span>No Image</span>
-                </div>
-              )}
-            </div>
-            <div className='grow'>
-              <h3 className="text-[24px] font-bold text-center">{member.name}</h3>
-              <p className="text-[14px] mt-2 text-center">{member.role}</p>
-            </div>
-            <div className="flex gap-2">
-              {member.X &&
-                <a href={member.X} target="_blank" rel="noopener noreferrer">
-                  <XIcon className='w-[32px] h-[32px]' />
-                </a>
-              }
-              <a href={member.linkedIn} target="_blank" rel="noopener noreferrer">
-                <LinkedInIcon className='w-[32px] h-[32px]' />
-              </a>
-            </div>
-          </div>
-        );
-      })}
+  return (
+    <div className=''>
+      <p className='text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Executives</p>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        {KeyTeam.map((member, index) => {
+          const profileImg = member.profileImage;
+          const name = member.name;
+          const role = member.role;
+          const linkedin = member.linkedIn ?? null;
+          const X = member.X ?? null;
+
+          return (
+            memberCard(index, profileImg, name, role, linkedin, X)
+          );
+        })}
+      </div>
+      <p className='text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Frontend Developers</p>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        {frontendDevs.map((member, index) => {
+          const profileImg = member.profileImage;
+          const name = member.name;
+          const role = member.role;
+          const linkedin = member.linkedIn;
+          const X = member.X ?? null;
+
+          return (
+            memberCard(index, profileImg, name, role, linkedin, X)
+          );
+        })}
+      </div>
+      <p className='text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Backend Developers</p>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        {backendDevs.map((member, index) => {
+          const profileImg = member.profileImage;
+          const name = member.name;
+          const role = member.role;
+          const linkedin = member.linkedIn;
+          const X = member.X ?? null;
+
+          return (
+            memberCard(index, profileImg, name, role, linkedin, X)
+          );
+        })}
+      </div>
+      <p className='text-[28px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Blockchain Developers</p>
+      <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
+        {blockchainDevs.map((member, index) => {
+          const profileImg = member.profileImage;
+          const name = member.name;
+          const role = member.role;
+          const linkedin = member.linkedIn;
+          const X = member.X ?? null;
+
+          return (
+            memberCard(index, profileImg, name, role, linkedin, X)
+          );
+        })}
+      </div>
     </div>
   );
 };

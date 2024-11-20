@@ -41,6 +41,46 @@ body {
     background-size: 1800px;
 }
 
+.backgroundImage4 {
+    background-image: url('../images/saib_bg2.png'), url('../images/saib_bg2.png');
+    background-position: right -450px bottom -400px, left -400px top -900px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 1000px;
+}
+
+.backgroundImage5 {
+    background-image: url('../images/bg-top.png'), url('../images/bg-bottom.png');
+    background-position: right top, left bottom;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 40%;
+}
+
+.backgroundImage6 {
+    background-image: url('../images/saib_bg2.png'), url('../images/saib_bg2.png');
+    background-position: right -320px bottom -290px, top -500px left 180px;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 550px;
+}
+
+.backgroundImage7 {
+    background-image: 
+        url('../images/saib_bg2.png'),  
+        url('../images/saib_bg.png'), 
+        url('../images/saib_bg.png'),
+        url('../images/saib_bg2.png'),
+        url('../images/saib_bg2.png'),
+        url('../images/saib_bg.png');
+    background-position: 
+        left -550px top 800px,
+        right -420px top 1100px, 
+        left -550px top 1800px,
+        right -520px top 2100px,
+        left -350px top 2800px,
+        right -560px top 3200px;
+    background-repeat: no-repeat;
+    background-size: 40%;
+}
+
 .menuImage {
     background-color: #101010;
     background-image: url('../images/bg-top.png'), url('../images/bg-bottom.png');
@@ -94,7 +134,7 @@ body {
 @media screen and (max-width: 640px) {
     .backgroundImage2 {
         background-image: url('../images/saib_bg2.png'), url('../images/saib_bg.png');
-        background-position: right -150px bottom -500px, right 210px bottom 230px;
+        background-position: right -150px bottom -550px, right 210px bottom 220px;
         background-repeat: no-repeat, no-repeat;
         background-size: 550px;
     }   
