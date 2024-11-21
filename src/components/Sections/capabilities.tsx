@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 
-const MainCards = () => {
+const Capabilities = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null);
 
   const cardIcons = useStaticQuery(graphql`
@@ -93,4 +93,4 @@ const MainCards = () => {
   );
 };
 
-export default MainCards;
+export default Capabilities;

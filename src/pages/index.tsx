@@ -6,9 +6,9 @@ import MainLayout from '../components/main-layout'
 import Header from "../components/header"
 import Team from "../components/Sections/team"
 import Footer from "../components/footer"
-import TechnologyCards from "../components/Sections/technologyCards"
-import MainCards from "../components/Sections/mainCards"
-import PartnerCards from "../components/Sections/partnerCards"
+import Technologies from "../components/Sections/technologies"
+import Capabilities from "../components/Sections/capabilities"
+import Partners from "../components/Sections/partners"
 import Testimonials from "../components/Sections/testimonials"
 import Offer from "../components/Sections/offer"
 import Projects from "../components/Sections/projects"
@@ -58,7 +58,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="max-[330px]:mt-[38rem] max-[420px]:mt-[33rem] max-lg:mt-[25rem] mt-[20rem] m-auto max-w-[500px] text-[28px] min-[390px]:text-[35px] min-[500px]:text-[52px] text-center !p-0 mb-[50px]">
               <p className="tracking-tighter">Empowering Your <span className="bg-gradient-to-r from-blue1 via-blue2 to-purple inline-block text-transparent bg-clip-text font-bold w-full">Digital Presence</span></p>
             </div>
-            <MainCards />
+            <Capabilities />
             <div className="flex items-center justify-center w-full mt-[24px]">
               <Button href="https://calendly.com/saibdev" target="_blank" variant="contained" className="!rounded-[50px] !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6">Explore More</Button>
             </div>
@@ -79,7 +79,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
               <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Technologies</p>
             </div>
-            <TechnologyCards />
+            <Technologies />
           </div>
         </div>
         <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] bg-white/80 backdrop-blur-md !text-black rounded-[24px]">
@@ -92,7 +92,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <div className="m-auto max-w-[450px] font-bold text-center !p-0 mb-[50px]">
             <h2 className="sm:h-[65px] text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Building With</h2>
           </div>
-          <PartnerCards />
+          <Partners />
         </div>
         <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] bg-white/80 backdrop-blur-md !text-black rounded-[24px]">
           <div className="m-auto max-w-[370px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">

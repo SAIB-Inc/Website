@@ -27,7 +27,7 @@ interface CategoryData {
   webApp: TechnologyNode[];
 }
 
-const TechnologyCards: React.FC = () => {
+const Technologies: React.FC = () => {
   const technologies: TechnologyData = useStaticQuery(graphql`
     query {
       allFile(filter: { relativeDirectory: { eq: "technologies" } }) {
@@ -137,4 +137,4 @@ const TechnologyCards: React.FC = () => {
   );
 };
 
-export default TechnologyCards;
+export default Technologies;

@@ -4,7 +4,7 @@ import { Card } from '@mui/material';
 import Levvy from '../../images/partners/Levvy';
 import { Language, X } from '@mui/icons-material';
 
-const PartnerCards: React.FC = () => {
+const Partners: React.FC = () => {
 
   const partnerImages = useStaticQuery(graphql`
       query {
@@ -186,4 +186,4 @@ const PartnerCards: React.FC = () => {
   );
 };
 
-export default PartnerCards;
+export default Partners;
