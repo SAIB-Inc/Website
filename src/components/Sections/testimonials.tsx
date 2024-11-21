@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Star, Language, X } from '@mui/icons-material';
+import { Card } from '@mui/material';
+import { Star, Language, X, FormatQuote } from '@mui/icons-material';
 import Levvy from '../../images/partners/Levvy';
 
 const Testimonials = () => {
@@ -33,7 +34,7 @@ const Testimonials = () => {
     {
       name: "Crashr",
       logo: logos.Crashr.publicURL,
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      comment: "Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       webLinks: [
         {
           link: "https://www.crashr.io",
@@ -50,7 +51,7 @@ const Testimonials = () => {
     {
       name: "UtxORPC",
       logo: logos.UtxORPC.publicURL,
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      comment: "Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       webLinks: [
         {
           link: "https://utxorpc.org",
@@ -63,7 +64,7 @@ const Testimonials = () => {
     {
       name: "Demeter",
       logo: logos.Demeter.publicURL,
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      comment: "Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       webLinks: [
         {
           link: "https://demeter.run",
@@ -79,7 +80,7 @@ const Testimonials = () => {
     },
     {
       name: "Levvy",
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      comment: "Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       webLinks: [
         {
           link: "https://levvy.fi",
@@ -96,7 +97,7 @@ const Testimonials = () => {
     {
       name: "Coinecta",
       logo: logos.Coinecta.publicURL,
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      comment: "Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       webLinks: [
         {
           link: "https://coinecta.fi",
@@ -113,7 +114,7 @@ const Testimonials = () => {
     {
       name: "TxPipe",
       logo: logos.TxPipe.publicURL,
-      comment: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      comment: "Lorem ipsum dolor sit amet, conse adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       webLinks: [
         {
           link: "https://txpipe.io",
@@ -133,14 +134,9 @@ const Testimonials = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1024);
     };
-
-    // Set initial value
     handleResize();
-
-    // Add event listener
     window.addEventListener('resize', handleResize);
 
-    // Cleanup
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
@@ -154,7 +150,7 @@ const Testimonials = () => {
           return nextIndex > (isMobile ? testimonials.length - 1 : maxIndex) ? 0 : nextIndex;
         });
         setTimeout(() => setIsAnimating(false), 300);
-      }, 2000);
+      }, 5000);
     }
     return () => clearInterval(interval);
   }, [isPaused, isMobile]);
@@ -171,11 +167,11 @@ const Testimonials = () => {
   return (
     <div className="w-full flex flex-col items-center">
       <div className="w-full max-w-[1300px]"
-           onMouseEnter={() => setIsPaused(true)}
-           onMouseLeave={() => setIsPaused(false)}>
+        onMouseEnter={() => setIsPaused(true)}
+        onMouseLeave={() => setIsPaused(false)}>
         <div className="relative overflow-hidden">
           <div
-            className="flex transition-transform duration-300 ease-in-out h-[910px] lg:h-[580px] min-[1120px]:h-[500px]"
+            className="flex transition-transform duration-300 ease-in-out h-full"
             style={{
               transform: `translateX(-${currentIndex * (isMobile ? 100 : 50)}%)`,
             }}
@@ -183,9 +179,31 @@ const Testimonials = () => {
             {testimonials.map((datum, index) => (
               <div key={index} className={`${isMobile ? 'min-w-full' : 'min-w-[50%]'} p-6`}>
                 <div className={`p-[2px] rounded-lg ${datum.backgroundGradient}`}>
-                  <div className="bg-white rounded-lg flex flex-col justify-between h-full backdrop-blur-md">
+                  <Card
+                    sx={{
+                      bgcolor: 'white',
+                      borderRadius: '8px',
+                      display: 'flex',
+                      flexDirection: 'column',
+                      justifyContent: 'between',
+                      height: '100%',
+                      backdropFilter: 'blur(8px)'
+                    }}
+                  >
                     <div className="px-8 pt-[40px] flex flex-col gap-[20px]">
-                      <p className="text-justify text-gray-700 text-[18px]">"{datum.comment}"</p>
+                      <p className="relative text-justify text-gray-700 text-[14px] sm:text-[18px]">
+                        <FormatQuote sx={{ 
+                          transform: 'scaleX(-1)',
+                          fontSize: 24,
+                          marginTop: -1,
+                          marginRight: 1
+                        }} />
+                        {datum.comment}
+                        <FormatQuote sx={{ 
+                          fontSize: 24,
+                          marginLeft: 1
+                        }} />
+                      </p>
                     </div>
                     <div>
                       <div className='flex justify-between items-center mt-[20px] px-8 pt-8 pb-6'>
@@ -197,7 +215,9 @@ const Testimonials = () => {
                               rel="noopener noreferrer"
                               href={links.link}
                             >
-                              {React.createElement(links.linkLogo, { className: '!text-[24px] hover:text-gray-500 transition-colors duration-500 ease-in-out' })}
+                              {React.createElement(links.linkLogo, {
+                                className: '!text-[24px] hover:text-gray-500 transition-colors duration-500 ease-in-out'
+                              })}
                             </a>
                           ))}
                         </div>
@@ -212,26 +232,25 @@ const Testimonials = () => {
                       </div>
                       <div className={`flex justify-center items-center py-2 ${datum.backgroundGradient} rounded-b-lg`}>
                         {datum.name === 'Levvy' ?
-                          <Levvy width={100} height={46}/>
+                          <Levvy width={100} height={46} />
                           : <img src={datum.logo} alt="Company logo" className="w-[100px] h-[46px]" />
                         }
                       </div>
                     </div>
-                  </div>
+                  </Card>
                 </div>
               </div>
             ))}
           </div>
         </div>
-        <div className="flex justify-center items-center  lg:mt-8 gap-4">
+        <div className="flex justify-center items-center lg:mt-8 gap-4">
           <div className="flex gap-2">
             {Array.from({ length: isMobile ? testimonials.length : maxIndex + 1 }).map((_, index) => (
               <button
                 key={index}
                 onClick={() => handleDotClick(index)}
-                className={`w-3 h-3 rounded-full transition-colors ${
-                  currentIndex === index ? 'bg-blue-600' : 'bg-gray-300'
-                }`}
+                className={`w-3 h-3 rounded-full transition-colors ${currentIndex === index ? 'bg-blue-600' : 'bg-gray-300'
+                  }`}
                 aria-label={`Go to slide ${index + 1}`}
               />
             ))}

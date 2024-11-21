@@ -67,7 +67,7 @@ const MainCards = () => {
             key={index}
             onMouseEnter={() => setHoveredCard(index)}
             onMouseLeave={() => setHoveredCard(null)}
-            className={`col-span-6 ${colSpan} rounded-[24px] p-[24px] sm:p-[30px] xl:p-[48px] border-[1px] border-gray-tint flex flex-col gap-y-[10px] transition-all duration-500 shadow-md cursor-pointer ${hoveredCard === index
+            className={`col-span-6 ${colSpan} rounded-[24px] p-[24px] sm:p-[30px] xl:p-[48px] border-[1px] border-gray-tint flex flex-col gap-y-[10px] transition-all duration-500 shadow-md cursor-pointer backdrop-blur-md ${hoveredCard === index
                 ? 'bg-[#4F37EA] text-white -translate-y-1 scale-105'
                 : 'bg-[#F3F3F3]/70 text-black'
               }`}

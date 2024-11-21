@@ -42,27 +42,6 @@ body {
 }
 
 .backgroundImage4 {
-    background-image: url('../images/saib_bg2.png'), url('../images/saib_bg2.png');
-    background-position: right -450px bottom -400px, left -400px top -900px;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 1000px;
-}
-
-.backgroundImage5 {
-    background-image: url('../images/bg-top.png'), url('../images/bg-bottom.png');
-    background-position: right top, left bottom;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 40%;
-}
-
-.backgroundImage6 {
-    background-image: url('../images/saib_bg2.png'), url('../images/saib_bg2.png');
-    background-position: right -320px bottom -290px, top -500px left 180px;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 550px;
-}
-
-.backgroundImage7 {
     background-image: 
         url('../images/saib_bg2.png'),  
         url('../images/saib_bg.png'), 
@@ -89,29 +68,30 @@ body {
     background-size: 500px, 1000px;
 }
 
-@media screen and (max-width: 768px) {
-    body {
-        background-size: 70%;
-        animation: backgroundPulse 40s infinite ease-in-out;
-    }
-    @keyframes backgroundPulse {
-        0%,
-        100% {
-            background-size: 80%;
-        }
-    
-        50% {
-            background-size: 70%;
-        }
-    }
-}
-
 @media screen and (max-width: 1460px) {
     .backgroundImage3 {
         background-image: url('../images/saib_bg.png');
         background-position: right -1350px bottom -600px;
         background-repeat: no-repeat, no-repeat;
         background-size: 1800px;
+    }
+    .backgroundImage4 {
+        background-image: 
+            url('../images/saib_bg2.png'),  
+            url('../images/saib_bg.png'), 
+            url('../images/saib_bg.png'),
+            url('../images/saib_bg2.png'),
+            url('../images/saib_bg2.png'),
+            url('../images/saib_bg.png');
+        background-position: 
+            left -480px top 300px,
+            right -570px top 700px, 
+            left -480px top 1500px,
+            right -520px top 1700px,
+            left -450px top 2700px,
+            right -460px top 3000px;
+        background-repeat: no-repeat;
+        background-size: 650px;
     }
 }
 
@@ -131,11 +111,67 @@ body {
     }
 }
 
+@media screen and (max-width: 768px) {
+    body {
+        background-size: 70%;
+        animation: backgroundPulse 40s infinite ease-in-out;
+    }
+    @keyframes backgroundPulse {
+        0%,
+        100% {
+            background-size: 80%;
+        }
+    
+        50% {
+            background-size: 70%;
+        }
+    }
+
+    .backgroundImage4 {
+        background-image: 
+            url('../images/saib_bg2.png'),  
+            url('../images/saib_bg.png'), 
+            url('../images/saib_bg.png'),
+            url('../images/saib_bg2.png'),
+            url('../images/saib_bg2.png'),
+            url('../images/saib_bg.png');
+        background-position: 
+            left -600px top 300px,
+            right -550px top 700px, 
+            left -480px top 1500px,
+            right -520px top 1800px,
+            left -350px top 2700px,
+            right -560px top 3400px;
+        background-repeat: no-repeat;
+        background-size: 650px;
+    }
+}
+
 @media screen and (max-width: 640px) {
     .backgroundImage2 {
         background-image: url('../images/saib_bg2.png'), url('../images/saib_bg.png');
         background-position: right -150px bottom -550px, right 210px bottom 220px;
         background-repeat: no-repeat, no-repeat;
         background-size: 550px;
-    }   
+    }
+    
+    .backgroundImage4 {
+        background-image: 
+            url('../images/saib_bg2.png'),  
+            url('../images/saib_bg.png'), 
+            url('../images/saib_bg.png'),
+            url('../images/saib_bg2.png'),
+            url('../images/saib_bg2.png'),
+            url('../images/saib_bg.png');
+        background-position: 
+            left -600px top 300px,
+            right -590px top 700px, 
+            left -580px top 1500px,
+            right -560px top 1600px,
+            left -350px top 2700px,
+            right -560px top 3400px;
+        background-repeat: no-repeat;
+        background-size: 650px;
+    }
 }
+

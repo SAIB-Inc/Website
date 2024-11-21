@@ -88,7 +88,7 @@ const Offer = () => {
   }, []);
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) => 
+    setCurrentIndex((prevIndex) =>
       Math.min(prevIndex + 1, offerCards.length - cardsToDisplay)
     );
   };
@@ -96,12 +96,12 @@ const Offer = () => {
   const handlePrev = () => {
     setCurrentIndex((prevIndex) => Math.max(prevIndex - 1, 0));
   };
-  
+
   const isNextDisabled = currentIndex >= offerCards.length - cardsToDisplay;
   const isPrevDisabled = currentIndex <= 0;
-  
+
   return (
-    <div className="relative px-4 md:px-12">
+    <div className="relative px-4 md:px-6">
       <div className="overflow-hidden h-[580px]">
         <div
           className="flex transition-transform duration-500 ease-in-out"
@@ -112,36 +112,39 @@ const Offer = () => {
           {offerCards.map((datum, index) => (
             <div
               key={index}
-              className={`w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-2`}
+              className={`w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-2 `}
             >
               <div
                 className="p-[2px] rounded-[24px] bg-gradient-to-r from-blue1 via-blue2 to-purple"
               >
                 <div
-                  className={`h-[560px] rounded-[24px] p-[24px] flex flex-col gap-y-[10px] shadow-md text-black transition-all duration-500 justify-between backdrop-blur-md bg-white`}
+                  className={`h-[530px] sm:h-[510px] lg:h-[560px] rounded-[24px] p-[24px] flex flex-col gap-y-[10px] shadow-md text-black transition-all duration-500 justify-between backdrop-blur-md bg-white`}
                 >
                   <div>
-                    <div className="flex items-center justify-center h-[120px]">
+                    <div className="flex items-center justify-center h-[100px] sm:h-[120px]">
                       {React.createElement(datum.Icon, { className: '!text-[50px] text-[#4F37EA]' })}
                     </div>
-                    <div className="flex flex-col gap-[15px] h-[180px] text-gray-600 text-[18px]">
+                    <div className="flex flex-col gap-[15px] h-[180px] text-[18px]">
                       <div className="flex flex-col items-center justify-center gap-[10px] h-[100px]">
                         <p className="text-[22px] sm:text-[24px] text-left font-semibold">{datum.Title}</p>
                       </div>
-                      <ul className='list-disc px-[40px]'>
+                      <ul className='list-disc px-[40px] max-[520px]:block flex flex-col justify-center items-center md:block'>
                         {datum.DescriptionList.map((item, idx) => (
-                          <li key={idx} className='max-[380px]:text-[14px] max-md:text-[18px] text-[16px] mt-[10px] xl:mt-[20px]'>{item}</li>
+                          <li key={idx} className='max-[380px]:text-[14px] max-md:text-[18px] text-[18px] mt-[10px] xl:mt-[20px]'>{item}</li>
                         ))}
                       </ul>
                     </div>
                   </div>
-                  <Button
-                    href="/"
-                    variant="contained"
-                    className="!rounded-[18px] !py-[10px] !px-[10px] text-[18px] !normal-case !font-poppins !font-normal !text-white tracking-tight hover:!text-purple hover:!bg-white"
-                  >
-                    {datum.ButtonTitle}
-                  </Button>
+                  <div className="flex justify-center items-center">
+                    <Button
+                      href="/"
+                      variant="contained"
+                      className="w-[220px] md:w-[250px] lg:w-[280px] !rounded-[18px] !py-[10px] !px-[10px] text-[18px] !normal-case !font-poppins !font-normal !text-white tracking-tight hover:!text-purple hover:!bg-white"
+                    >
+                      {datum.ButtonTitle}
+                    </Button>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -173,7 +176,7 @@ const Offer = () => {
         </button>
       </div>
     </div>
-  );  
+  );
 };
 
 export default Offer;

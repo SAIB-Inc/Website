@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Card } from '@mui/material';
 import XIcon from '@mui/icons-material/X';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
@@ -217,7 +218,16 @@ const Team: React.FC = () => {
     X?: string | null
   ) => {
     return (
-      <div key={index} className="flex flex-col items-center gap-3 p-[24px] bg-[#F3F3F3]/70 backdrop-blur-md shadow-md rounded-xl">
+      <Card key={index} sx={{ 
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        gap: '12px',
+        padding: '24px',
+        backgroundColor: 'rgba(243, 243, 243, 0.7)',
+        backdropFilter: 'blur(8px)',
+        borderRadius: '12px'
+      }}>
         <div className="w-[123px] max-h-[123px] rounded-full overflow-hidden grayscale">
           {profileImg ? (
             <GatsbyImage image={profileImg} alt={name} className="h-[123px]" />
@@ -234,22 +244,22 @@ const Team: React.FC = () => {
         <div className="flex gap-2">
           {X &&
             <a href={X} target="_blank" rel="noopener noreferrer">
-              <XIcon className='w-[24px] h-[24px]' />
+              <XIcon className='w-[24px] h-[24px] hover:text-gray-500 transition-colors duration-500 ease-in-out' />
             </a>
           }
           {linkedIn &&
             <a href={linkedIn} target="_blank" rel="noopener noreferrer">
-              <LinkedInIcon className='w-[24px] h-[24px]' />
+              <LinkedInIcon className='w-[24px] h-[24px] hover:text-gray-500 transition-colors duration-500 ease-in-out' />
             </a>
           }
         </div>
-      </div>
+      </Card>
     )
   }
 
   return (
     <div className=''>
-      <p className='text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Executives</p>
+      <p className='text-[24px] sm:text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Executives</p>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {KeyTeam.map((member, index) => {
           const profileImg = member.profileImage;
@@ -263,7 +273,7 @@ const Team: React.FC = () => {
           );
         })}
       </div>
-      <p className='text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Frontend Developers</p>
+      <p className='text-[24px] sm:text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Frontend Developers</p>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {frontendDevs.map((member, index) => {
           const profileImg = member.profileImage;
@@ -277,7 +287,7 @@ const Team: React.FC = () => {
           );
         })}
       </div>
-      <p className='text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Backend Developers</p>
+      <p className='text-[24px] sm:text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Backend Developers</p>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {backendDevs.map((member, index) => {
           const profileImg = member.profileImage;
@@ -291,7 +301,7 @@ const Team: React.FC = () => {
           );
         })}
       </div>
-      <p className='text-[28px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Blockchain Developers</p>
+      <p className='text-[24px] sm:text-[28px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Blockchain Developers</p>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {blockchainDevs.map((member, index) => {
           const profileImg = member.profileImage;

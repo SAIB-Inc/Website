@@ -38,9 +38,9 @@ const IndexPage: React.FC<PageProps> = () => {
             </Button>
           </div>
         </div>
-        <div className="bg-white w-full backgroundImage7">
+        <div className="bg-white w-full backgroundImage4">
           <div className="max-w-[1200px] m-auto relative p-6 pt-6 pb-[120px]">
-            <div className="absolute top-[-100px] p-[24px] sm:p-[48px] w-full left-1/2 right-1/2 transform -translate-x-1/2 bg-white/70 backdrop-blur-md transparent rounded-3xl shadow-lg backgroundImage2 z-10">
+            <div className="absolute top-[-100px] p-[24px] py-[35px] sm:p-[48px] w-full left-1/2 right-1/2 transform -translate-x-1/2 bg-white/70 backdrop-blur-md transparent rounded-3xl shadow-lg backgroundImage2 z-10">
               <div className="max-w-[600px] lg:max-w-[780px] max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:gap-[15px]">
                 <p className="text-[30px] sm:text-[52px] font-bold font-['Poppins'] tracking-tight max-sm:leading-[35px]">We make <span className="bg-gradient-to-br from-blue1 via-blue2 to-purple inline-block text-transparent bg-clip-text">Cardano</span> Software!</p>
                 <p className="text-[#101010] text-[18px] ">We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano.</p>
@@ -64,39 +64,39 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
           </div>
           <div className="max-w-[1200px] sm:h-[100vh] m-auto mb-[200px]">
-            <div className="mt-[10rem] m-auto max-w-[500px] text-[40px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
+            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
               <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">What We <span className="">Offer</span></p>
             </div>
             <Offer />
           </div>
-          <div className="max-w-[1200px] overflow-hidden m-auto">
-            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
+          <div className="max-w-[1200px] mb-[200px] overflow-hidden m-auto">
+            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
               <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Testimonials</p>
             </div>
             <Testimonials />
           </div>
-          <div className="max-w-[2500px] h-[100vh] overflow-hidden m-auto h-[100vh]">
-            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
+          <div className="max-w-[2500px] overflow-hidden m-auto mb-[200px]">
+            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
               <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Technologies</p>
             </div>
             <TechnologyCards />
           </div>
         </div>
-        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[40px] lg:p-[80px] max-xl:mx-[20px] bg-white/80 backdrop-blur-md !text-black rounded-[24px] backgroundImage42">
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] bg-white/80 backdrop-blur-md !text-black rounded-[24px]">
           <div className="m-auto max-w-[370px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
             <h2 className="text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Our Team</h2>
           </div>
           <Team />
         </div>
-        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[40px] lg:p-[80px] max-xl:mx-[20px] bg-white/80 backdrop-blur-md !text-black rounded-[24px]">
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] bg-white/80 backdrop-blur-md !text-black rounded-[24px]">
           <div className="m-auto max-w-[450px] font-bold text-center !p-0 mb-[50px]">
-            <h2 className="text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Building With</h2>
+            <h2 className="sm:h-[65px] text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Building With</h2>
           </div>
           <PartnerCards />
         </div>
-        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[40px] lg:p-[80px] max-xl:mx-[20px] bg-white/80 backdrop-blur-md !text-black rounded-[24px]">
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] bg-white/80 backdrop-blur-md !text-black rounded-[24px]">
           <div className="m-auto max-w-[370px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
-            <h2 className="text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Projects</h2>
+            <h2 className="sm:h-[65px] text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Projects</h2>
           </div>
           <Projects />
         </div>

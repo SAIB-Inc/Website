@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
+import { Card } from '@mui/material';
 import Levvy from '../../images/partners/Levvy';
 import { Language, X } from '@mui/icons-material';
 
@@ -48,7 +49,7 @@ const PartnerCards: React.FC = () => {
       name: "TxPipe",
       title: "Open-source software for a decentralized world.",
       image: partnerImages.TxPipe.publicURL,
-      className: 'w-[70px]',
+      className: 'w-[200px]',
       backgroundGradient: 'bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500',
       webLinks: [
         {
@@ -80,7 +81,7 @@ const PartnerCards: React.FC = () => {
       name: "Coinecta",
       title: "A next-generation Cardano-based token launch platform, striving to be the platform of choice for innovative blockchain projects.",
       image: partnerImages.Coinecta.publicURL,
-      className: 'w-[80px]',
+      className: 'w-[200px]',
       backgroundGradient: 'bg-gradient-to-t from-[#F2994A] to-[#FDE7C6] to-70%',
       webLinks: [
         {
@@ -135,28 +136,34 @@ const PartnerCards: React.FC = () => {
     <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
       {partnersData.map((datum, index) => {
         return (
-          <div 
+          <Card 
             key={index}
-            className="flex flex-col gap-[20px] w-full bg-[#F3F3F3] shadow-md rounded-xl h-[380px]"
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '20px',
+              width: '100%',
+              bgcolor: '#F3F3F3',
+              borderRadius: '12px',
+              height: '380px',
+            }}
           >
             <a
               target="_blank"
               rel="noopener noreferrer"
               href={datum.webLinks[0].link}
               className={`min-h-[100px] h-[150px] flex items-center justify-center w-full py-[48px] px-[24px] rounded-t-xl ${datum.backgroundGradient}`}
-              >
+            >
               {datum.name === 'Levvy' ?
                 <Levvy />
                 : <img src={datum.image} className={datum.className} />
               }
             </a>
-            <div className='h-[150px] px-[24px] '>
+            <div className='h-[150px] px-[24px]'>
               <h3 className="text-[24px] font-bold text-center">{datum.name}</h3>
               <p className="text-[12px] sm:text-[14px] mt-2 text-center">{datum.title}</p>
             </div>
-            <div
-              className='flex px-6 py-4 gap-2'
-            >
+            <div className='flex px-6 py-4 gap-3'>
               {datum.webLinks.map((links, index) => {
                 return (
                   <a
@@ -165,12 +172,14 @@ const PartnerCards: React.FC = () => {
                     rel="noopener noreferrer"
                     href={links.link}
                   >
-                    {React.createElement(links.linkLogo, { className: '!text-[22px] hover:text-gray-500 transition-colors duration-500 ease-in-out' })}
+                    {React.createElement(links.linkLogo, { 
+                      className: '!text-[22px] hover:text-gray-500 transition-colors duration-500 ease-in-out' 
+                    })}
                   </a>
                 )
               })}
             </div>
-          </div>
+          </Card>
         );
       })}
     </div>
