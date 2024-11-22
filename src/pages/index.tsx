@@ -40,10 +40,10 @@ const IndexPage: React.FC<PageProps> = () => {
         </div>
         <div className="bg-white w-full backgroundImage4">
           <div className="max-w-[1200px] m-auto relative p-6">
-            <div className="absolute top-[-115px] p-[24px] py-[35px] sm:p-[40px] w-full left-1/2 right-1/2 transform -translate-x-1/2 bg-white/70 backdrop-blur-md transparent rounded-3xl shadow-lg backgroundImage2 z-10">
-              <div className="max-w-[600px] lg:max-w-[780px] max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:gap-[15px]">
+            <div className="absolute top-[-70px] md:top-[-115px] p-[24px] py-[35px] sm:p-[30px] w-full left-1/2 right-1/2 transform -translate-x-1/2 bg-white/70 backdrop-blur-md transparent rounded-3xl shadow-lg backgroundImage2 z-10">
+              <div className="max-w-[580px] lg:max-w-[780px] max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:gap-[15px]">
                 <p className="text-[30px] md:text-[40px] lg:text-[52px] font-bold font-['Poppins'] tracking-tight max-sm:leading-[35px] leading-none">We make <span className="bg-gradient-to-br from-blue1 via-blue2 to-purple inline-block text-transparent bg-clip-text">Cardano</span> Software!</p>
-                <p className="text-[#101010] text-[18px] mt-[26px]">We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano.</p>
+                <p className="text-[#101010] text-[18px] mt-[15px]">We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano.</p>
                 <Button
                   href="https://calendly.com/saibdev"
                   target="_blank"
@@ -54,7 +54,7 @@ const IndexPage: React.FC<PageProps> = () => {
                 </Button>
               </div>
             </div>
-            <div className="max-w-[1200px] h-[115px] p-6 absolute top-[-115px] z-0 w-full left-1/2 right-1/2 transform -translate-x-1/2 rounded-t-3xl bg-gradient-to-l from-black via-purple to-blue1 backdrop-blur-md" />
+            <div className="max-w-[1200px] h-[70px] md:h-[115px] p-6 absolute top-[-70px] md:top-[-115px] z-0 w-full left-1/2 right-1/2 transform -translate-x-1/2 rounded-t-3xl bg-gradient-to-l from-black via-purple to-blue1 backdrop-blur-md" />
           </div>
           <div className="max-w-[1200px] m-auto mb-[200px] p-6">
             <div className="max-[330px]:mt-[38rem] max-[420px]:mt-[33rem] max-lg:mt-[20rem] mt-[20rem] m-auto max-w-[500px] text-[28px] min-[390px]:text-[35px] min-[500px]:text-[52px] text-center !p-0 mb-[50px]">
@@ -66,7 +66,7 @@ const IndexPage: React.FC<PageProps> = () => {
             </div>
           </div>
           <div className="max-w-[1200px] xl:h-[100vh] m-auto mb-[180px]">
-            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[20px]">
+            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
               <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">What We <span className="">Offer</span></p>
             </div>
             <Offer />

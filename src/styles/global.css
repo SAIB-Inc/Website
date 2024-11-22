@@ -90,7 +90,7 @@ body {
 @media screen and (max-width: 855px) {
     .backgroundImage2 {
         background-image: url('../images/saib_bg2.png');
-        background-position: right -300px bottom -300px;
+        background-position: right -300px bottom -320px;
         background-repeat: no-repeat, no-repeat;
         background-size: 550px;
     }
