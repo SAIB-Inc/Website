@@ -3,503 +3,144 @@ import type { HeadFC, PageProps } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import { Button } from "@mui/material"
 import MainLayout from '../components/main-layout'
-import XIcon from '@mui/icons-material/X';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { GitHub } from "@mui/icons-material"
+import Header from "../components/header"
+import Team from "../components/Sections/team"
+import Footer from "../components/footer"
+import Technologies from "../components/Sections/technologies"
+import Capabilities from "../components/Sections/capabilities"
+import Partners from "../components/Sections/partners"
+import Testimonials from "../components/Sections/testimonials"
+import Offer from "../components/Sections/offer"
+import Projects from "../components/Sections/projects"
+
 
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <MainLayout>
-      <div className="px-6">
-        <div className="max-w-[1200px] m-auto mt-[24px]">
-          <header className="flex justify-between text-white p-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent rounded-[24px] backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
-            <div className="w-[100px] md:w-fit">
-              <StaticImage src="../images/saib-logo.svg" alt="SAIB logo" placeholder="none" quality={100} />
-            </div>
-            <ul className="flex gap-2 md:gap-6 items-center">
-              <li>
-                <a href="https://www.facebook.com/saibllc" target="_blank">
-                  <FacebookIcon className="md:!hidden" />
-                  <FacebookIcon className="!hidden md:!block" fontSize="large" />
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/saibdev" target="_blank">
-                  <XIcon className="md:!hidden" />
-                  <XIcon className="!hidden md:!block" fontSize="large" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/saibllc" target="_blank">
-                  <LinkedInIcon className="md:!hidden" />
-                  <LinkedInIcon className="!hidden md:!block" fontSize="large" />
-                </a>
-              </li>
-            </ul>
-            <Button href="https://calendly.com/saibdev" target="_blank" variant="contained" className="!rounded-[50px] !hidden xl:!block !py-[12px] !px-[24px] h-fit !text-[18px] !normal-case !font-poppins !font-normal">Let's Talk!</Button>
-          </header>
-
-          <main className="mt-16 md:mt-[180px] xl:mt-[169px]">
-            <div className="max-w-[630px] m-auto text-center text-white">
-              <h1 className="font-bold text-[55px] md:text-[105px] xl:text-[120px] leading-[55px] md:leading-[105px] xl:leading-[120px]">Softwarez, <span className="font-normal font-['Poppins']">at its</span> <span className="text-[#4F37EA]">best</span><span className="font-sans">.</span></h1>
-              <p className="mt-6 leading-[27px] text-[18px] px-4 text-justify">SAIB Inc. leads in innovation from the Philippines, fueled by our founders' passion for technology and blockchain. Expert in a wide array of tech advancements, Our capabilities shine brightly in blockchain solutions, among a diverse portfolio of tech expertise. <br />  <br />  <b>Our goal</b>: To leverage technology in crafting transformative solutions that drive business success.</p>
-              <Button href="https://calendly.com/saibdev" target="_blank" variant="contained" className="!rounded-[50px] !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6">Let's Talk!</Button>
-            </div>
-
-            <section className="mt-[130px] xl:mt-[226px] text-white py-8 px-2 xl:p-[60px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
-              <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">Empowering Your Digital Presence</h2>
-              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
-                <div className="flex items-center gap-3 px-4">
-                  <div className="w-[64px]">
-                    <StaticImage height={64} width={64} placeholder="none" src="../images/frontend.svg" alt="" />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold">Frontend Excellence</h3>
-                    <p className="text-[14px] mt-2">Transforming ideas into stunning, intuitive web experiences that captivate and engage.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 px-4">
-                  <div className="w-[64px]">
-                    <StaticImage height={64} width={64} placeholder="none" src="../images/backend.svg" alt="" />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold">Backend Reliability</h3>
-                    <p className="text-[14px] mt-2">Powering your platforms with secure, efficient, and scalable server solutions.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 px-4">
-                  <div className="w-[64px]">
-                    <StaticImage height={64} width={64} placeholder="none" src="../images/software-development.svg" alt="" />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold">Software Innovation</h3>
-                    <p className="text-[14px] mt-2">Developing bespoke software solutions that drive growth and enhance productivity.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 px-4">
-                  <div className="w-[64px]">
-                    <StaticImage height={64} width={64} placeholder="none" src="../images/blockchain.svg" alt="" />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold">Blockchain Mastery</h3>
-                    <p className="text-[14px] mt-1">Leveraging blockchain technology to deliver decentralized, transparent, and secure applications.</p>
-                  </div>
-                </div>
-
-                <div className="flex items-center gap-3 px-4">
-                  <div className="w-[64px] h-[64px]">
-                    <StaticImage height={64} width={64} placeholder="none" src="../images/smart-contract.svg" alt="" />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold">Smart Contracts</h3>
-                    <p className="text-[14px] mt-2">Creating decentralized smart contracts for secure, trustless efficiency.</p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <section className="mt-[130px] xl:mt-[226px] text-white py-8 px-2 xl:p-[60px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
-              <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">Technologies</h2>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-x-2 gap-y-4 justify-items-start w-full justify-between align-center mt-[45px] md:mt-[75px] xl:mt-16">
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage alt="" placeholder="none" src="../images/technologies/dotnet-logo.svg" />
-                  </div>
-                  <p>Dotnet</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage alt="" placeholder="none" src="../images/technologies/c-sharp-logo.svg" />
-                  </div>
-                  <p>C-Sharp</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage alt="" placeholder="none" src="../images/technologies/f-sharp-logo.svg" />
-                  </div>
-                  <p>F-Sharp</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="h-[65]">
-                    <StaticImage width={50} alt="" placeholder="none" src="../images/technologies/haskell.svg" />
-                  </div>
-                  <p>Haskell</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/scala-spiral-white.svg" />
-                  </div>
-                  <p>Scala</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage alt="" placeholder="none" src="../images/technologies/python.svg" />
-                  </div>
-                  <p>Python</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage alt="" placeholder="none" src="../images/technologies/nodejs.svg" />
-                  </div>
-                  <p>NodeJS</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage alt="" placeholder="none" src="../images/technologies/javascript-logo.png" />
-                  </div>
-                  <p>JavaScript</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage alt="" placeholder="none" src="../images/technologies/ts-logo.png" />
-                  </div>
-                  <p>TypeScript</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage alt="" placeholder="none" src="../images/technologies/cardano.svg" />
-                  </div>
-                  <p>Cardano</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/aiken.svg" />
-                  </div>
-                  <p>Aiken</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/demeter.svg" />
-                  </div>
-                  <p>Demeter</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/kubernetes.svg" />
-                  </div>
-                  <p>Kubernetes</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/docker.svg" />
-                  </div>
-                  <p>Docker</p>
-                </div>
-
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/aws-white.svg" />
-                  </div>
-                  <p>AWS</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/azure-logo.svg" />
-                  </div>
-                  <p>Azure</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/google-cloud.svg" />
-                  </div>
-                  <p>Google Cloud</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/postgresql-logo.png" />
-                  </div>
-                  <p>PostgresSQL</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/mysql-logo.svg" />
-                  </div>
-                  <p>MySQL</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/ms-sql.svg" />
-                  </div>
-                  <p>MS SQL</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div>
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/mongo-db.svg" />
-                  </div>
-                  <p>MongoDb</p>
-                </div>
-
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/linux-logo.svg" />
-                  </div>
-                  <p>Linux</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/windows.svg" />
-                  </div>
-                  <p>Windows</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-[50px]">
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/apple-white.svg" />
-                  </div>
-                  <p>Mac</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div>
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/android.svg" />
-                  </div>
-                  <p>Android</p>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div>
-                    <StaticImage height={50} alt="" placeholder="none" src="../images/technologies/ios.svg" />
-                  </div>
-                  <p>iOS</p>
-                </div>
-              </div>
-            </section>
-
-            <section className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
-              <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">Building with</h2>
-              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[106px]">
-                    <StaticImage placeholder="none" src="../images/partners/txpipe.svg" alt="" quality={100} />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-center">
-                      <a href="https://txpipe.io" target="_blank">TxPipe</a>
-                    </h3>
-                    <p className="text-[14px] mt-2 text-center">Open-source software for a decentralized world.</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[106px] md:mt-[47px]">
-                    <StaticImage placeholder="none" src="../images/partners/utxo-rpc-logo.svg" alt="" quality={100} />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-center">
-                      <a href="https://utxorpc.org" target="_blank">UTxoRPC</a>
-                    </h3>
-                    <p className="text-[14px] mt-2 text-center">Interact with UTxO-based blockchains using a shared specification with focus on developer experience and performance.</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[106px] md:mt-[44px] xl:mt-[43px]">
-                    <StaticImage placeholder="none" src="../images/partners/demeter.svg" alt="" quality={100} />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-center">
-                      <a href="https://demeter.run" target="_blank">Demeter</a>
-                    </h3>
-                    <p className="text-[14px] mt-2 text-center">Build and deploy dApps on a single platform with Demeter – effortlessly scale to support millions of users.</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[72px]">
-                    <StaticImage placeholder="none" src="../images/partners/coinecta.jpg" alt="" quality={100} />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-center">
-                      <a href="https://coinecta.fi" target="_blank">Coinecta</a>
-                    </h3>
-                    <p className="text-[14px] mt-2 text-center">Coinecta is a next-generation Cardano-based token launch platform, striving to be the platform of choice for innovative blockchain projects.</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[150px] md:mt-[36px]">
-                    <StaticImage placeholder="none" src="../images/partners/crashr.svg" alt="" quality={100} />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-center">
-                      <a href="https://beta.crashr.io/about" target="_blank">CRASHR</a>
-                    </h3>
-                    <p className="text-[14px] mt-2 text-center">Crashr bridges traders and users on one unified platform. We call it web3 commerce.</p>
-                  </div>
-                </div>
-
-              </div>
-            </section>
-
-            <section className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
-              <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">History</h2>
-              <div className="grid md:grid-cols-2 xl:grid-cols-2 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[248px]">
-                    <a href="https://cardanofoundation.org" target="_blank">
-                      <StaticImage quality={100} placeholder="none" src="../images/partners/cf.svg" alt="" />
-                    </a>
-                  </div>
-                  <div>
-                    <p className="text-[14px] mt-2 text-center">Swiss foundation supporting evolution of the Cardano cryptocurrency.</p>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[140px] mt-[40px]">
-                    <a href="https://www.dcspark.io/" target="_blank">
-                      <StaticImage quality={100} placeholder="none" src="../images/partners/dc-spark.svg" alt="" />
-                    </a>
-                  </div>
-                  <div>
-                    <p className="text-[14px] mt-2 text-center">Building high-quality crypto products that unify the user experience within blockchain ecosystems..</p>
-                  </div>
-                </div>
-
-              </div>
-            </section>
-
-            <section className="mt-[130px] xl:mt-[226px] text-white py-16 px-2 xl:p-[80px] rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
-              <h2 className="text-[36px] leading-[45px] md:text-[52px] font-bold xl:leading-[62px] text-center">Our Team</h2>
-              <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-10 mt-[45px] md:mt-[75px] xl:mt-16">
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage quality={100} placeholder="none" src="../images/team/Clark.png" alt="" />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-center">Clark Alesna</h3>
-                    <p className="text-[14px] mt-2 text-center">CEO & Software Engineer</p>
-                  </div>
-                  <div className="flex gap-2">
-                    <a href="https://twitter.com/clarkalesna" target="_blank">
-                      <XIcon />
-                    </a>
-                    <a href="https://www.linkedin.com/in/clarkalesna" target="_blank">
-                      <LinkedInIcon />
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage quality={100} placeholder="none" src="../images/team/Ben.png" alt="" />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-center">Ben Jules Dico</h3>
-                    <p className="text-[14px] mt-2 text-center">Chief Marketing Officer</p>
-                  </div>
-                  <div className="flex gap-2">
-                    <a href="https://twitter.com/Benjdico" target="_blank">
-                      <XIcon />
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage quality={100} placeholder="none" src="../images/team/Jon.png" alt="" />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-center">Perkins Jon Ong, Ph.D.</h3>
-                    <p className="text-[14px] mt-2 text-center">Chief Scientist</p>
-                  </div>
-                  <div className="flex gap-2">
-                    <a href="https://twitter.com/clarkalesna" target="_blank">
-                      <XIcon />
-                    </a>
-                    <a href="https://www.linkedin.com/in/clarkalesna" target="_blank">
-                      <LinkedInIcon />
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage quality={100} placeholder="none" src="../images/team/Misia.png" alt="" />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-center">Misai Legara</h3>
-                    <p className="text-[14px] mt-2 text-center">Head of Administration</p>
-                  </div>
-                  <div className="flex gap-2">
-                    <a href="https://twitter.com/iammisai" target="_blank">
-                      <XIcon />
-                    </a>
-                    <a href="https://www.linkedin.com/in/misai-legara/" target="_blank">
-                      <LinkedInIcon />
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage quality={100} placeholder="none" src="../images/team/RJ.png" alt="" />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-center">Reza Jhay Lacanlale</h3>
-                    <p className="text-[14px] mt-2 text-center">Senior Software Engineer</p>
-                  </div>
-                  <div className="flex gap-2">
-                    <a href="https://twitter.com/rjlacanlale" target="_blank">
-                      <XIcon />
-                    </a>
-                    <a href="https://www.linkedin.com/in/reza-jhay-lacanlale-6b8b62107/" target="_blank">
-                      <LinkedInIcon />
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex flex-col items-center gap-3 px-4">
-                  <div className="w-[123px] rounded-full overflow-hidden">
-                    <StaticImage placeholder="none" src="../images/team/Fonz.png" alt="" quality={100} />
-                  </div>
-                  <div>
-                    <h3 className="text-[24px] font-bold text-center">Alphonzo M. Escolar</h3>
-                    <p className="text-[14px] mt-2 text-center">Software Engineer</p>
-                  </div>
-                  <div className="flex gap-2">
-                    <a href="https://twitter.com/fonz_dev" target="_blank">
-                      <XIcon />
-                    </a>
-                    <a href="https://github.com/phonz-dev" target="_blank">
-                      <GitHub />
-                    </a>
-                  </div>
-                </div>
-
-              </div>
-            </section>
-          </main>
-
-          <footer className="flex flex-col xl:flex-row xl: justify-between p-4 gap-4 justify-center items-center mt-[130px] xl:mt-[226px] text-white rounded-[24px] bg-[#1010108F] border-[1px] border-solid border-transparent backdrop-blur-md shadow-[0_4px_21px_0_#00000040]">
-            <div className="md:w-fit">
-              <StaticImage src="../images/saib-logo.svg" alt="SAIB logo" placeholder="none" />
-            </div>
-            <div>&copy; 2024 SAIB Inc. All Rights Reserved.</div>
-            <ul className="flex gap-6 items-center">
-              <li>
-                <a href="https://www.facebook.com/saibllc" target="_blank">
-                  <FacebookIcon fontSize="large" />
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/saibdev" target="_blank">
-                  <XIcon fontSize="large" />
-                </a>
-              </li>
-              <li>
-                <a href="https://www.linkedin.com/company/saibllc" target="_blank">
-                  <LinkedInIcon fontSize="large" />
-                </a>
-              </li>
-            </ul>
-          </footer>
+      <div className="backgroundImage pt-6">
+        <div className="max-w-[1200px] m-auto px-6 md:h-[100vh] max-md:pb-[226px]">
+          <Header />
+          <div className="flex flex-col items-center justify-center mt-16 md:mt-[180px] xl:mt-[169px] m-auto max-w-[630px] text-center text-white">
+            <h1 className="font-bold text-[50px] min-[360px]:text-[60px] min-[420px]:text-[70px] min-[520px]:text-[90px] min-[600px]:text-[105px] xl:text-[120px] leading-[55px] min-[360px]:leading-[65px] min-[520px]:leading-[90px] md:leading-[105px] xl:leading-[120px]">
+              Softwarez, <span className="font-normal font-['Poppins']">at its</span> <span className="text-[#4F37EA]">best</span><span className="font-sans">.</span>
+            </h1>
+            <p className="mt-6 leading-[27px] text-[18px] px-4 text-center md:w-[700px]">
+              We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano.
+            </p>
+            <Button
+              href="https://calendly.com/saibdev"
+              target="_blank"
+              variant="contained"
+              className="!rounded-[50px] !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6"
+            >
+              Get Started
+            </Button>
+          </div>
         </div>
+        <div className="bg-white w-full backgroundImage4">
+          <div className="max-w-[1200px] m-auto relative p-6">
+            <div className="absolute top-[-70px] md:top-[-115px] p-[24px] py-[35px] sm:p-[30px] w-full left-1/2 right-1/2 transform -translate-x-1/2 bg-white/70 backdrop-blur-md transparent rounded-3xl shadow-lg backgroundImage2 z-10">
+              <div className="max-w-[580px] lg:max-w-[780px] max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:gap-[15px]">
+                <p className="text-[30px] md:text-[40px] lg:text-[52px] font-bold font-['Poppins'] tracking-tight max-sm:leading-[35px] leading-none">We make <span className="bg-gradient-to-br from-blue1 via-blue2 to-purple inline-block text-transparent bg-clip-text">Cardano</span> Software!</p>
+                <p className="text-[#101010] text-[18px] mt-[15px]">We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano.</p>
+                <Button
+                  href="https://calendly.com/saibdev"
+                  target="_blank"
+                  variant="contained"
+                  className="!rounded-[50px] !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6"
+                >
+                  Contact Us
+                </Button>
+              </div>
+            </div>
+            <div className="max-w-[1200px] h-[70px] md:h-[115px] p-6 absolute top-[-70px] md:top-[-115px] z-0 w-full left-1/2 right-1/2 transform -translate-x-1/2 rounded-t-3xl bg-gradient-to-l from-black via-purple to-blue1 backdrop-blur-md" />
+          </div>
+          <div className="max-w-[1200px] m-auto mb-[200px] p-6">
+            <div className="max-[330px]:mt-[38rem] max-[420px]:mt-[33rem] max-lg:mt-[20rem] mt-[20rem] m-auto max-w-[500px] text-[28px] min-[390px]:text-[35px] min-[500px]:text-[52px] text-center !p-0 mb-[50px]">
+              <p className="tracking-tighter">Empowering Your <span className="bg-gradient-to-r from-blue1 via-blue2 to-purple inline-block text-transparent bg-clip-text font-bold w-full">Digital Presence</span></p>
+            </div>
+            <Capabilities />
+            <div className="flex items-center justify-center w-full mt-[24px]">
+              <Button href="https://calendly.com/saibdev" target="_blank" variant="contained" className="!rounded-[50px] !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6">Explore More</Button>
+            </div>
+          </div>
+          <div className="max-w-[1200px] xl:h-[100vh] m-auto mb-[180px]">
+            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
+              <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">What We <span className="">Offer</span></p>
+            </div>
+            <Offer />
+          </div>
+          {/* <div className="max-w-[1200px] mb-[200px] overflow-hidden m-auto">
+            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
+              <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Testimonials</p>
+            </div>
+            <Testimonials />
+          </div> */}
+          <div className="max-w-[2500px] overflow-hidden m-auto mb-[200px]">
+            <div className="mt-[2rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
+              <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Technologies</p>
+            </div>
+            <Technologies />
+          </div>
+        </div>
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
+          <div className="m-auto max-w-[370px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
+            <h2 className="text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center text-white">Our Team</h2>
+          </div>
+          <Team />
+        </div>
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
+          <div className="m-auto max-w-[450px] font-bold text-center !p-0 mb-[50px]">
+            <h2 className="sm:h-[65px] text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center text-white">Building With</h2>
+          </div>
+          <Partners />
+        </div>
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
+          <div className="m-auto max-w-[370px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
+            <h2 className="sm:h-[65px] text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center text-white">Projects</h2>
+          </div>
+          <Projects />
+        </div>
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-2 xl:p-[80px] max-xl:mx-[20px]">
+          <h2 className="text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center">History</h2>
+          <div className="max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:gap-[40px] flex gap-[20px] justify-evenly mt-[55px] sm:mt-[45px]">
+            <div className="flex flex-col items-center text-center gap-[15px] max-w-[500px]">
+              <a href="https://cardanofoundation.org" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  alt=""
+                  src="../images/partners/Cardano Foundation.svg"
+                  className="w-[200px] h-[50px] sm:w-[260px] sm:h-[70px]"
+                />
+              </a>
+              <p>Swiss foundation supporting evolution of the Cardano cryptocurrency.</p>
+            </div>
+            <div className="flex flex-col items-center text-center gap-[15px] max-w-[500px]">
+              <a href="https://www.dcspark.io" target="_blank" rel="noopener noreferrer">
+                <StaticImage
+                  alt=""
+                  src="../images/partners/dc-spark.svg"
+                  className="w-[200px] h-[40px] sm:w-[350px] sm:h-[70px]"
+                />
+              </a>
+              <p>Building high-quality crypto products that unify the user experience within blockchain ecosystems.</p>
+            </div>
+          </div>
+        </div>
+        <div className="bg-white h-[237px] relative backgroundImage3 mt-[130px]">
+          <div className="max-w-[1200px] h-full flex justify-between items-center m-auto max-[855px]:flex-col max-[855px]:items-center max-[855px]:justify-center max-md:text-center max-[855px]:gap-[20px] max-[855px]:text-white max-xl:px-6">
+            <p className="text-[30px] xs:text-[40px] md:text-[46px] lg:text-[55px] font-bold tracking-tight">Start Working with us!</p>
+            <Button
+              href="https://calendly.com/saibdev"
+              target="_blank"
+              variant="contained"
+              className="!rounded-[50px] !py-[12px] !px-[24px] text-[18px] sm:!text-[23px] !normal-case !font-poppins !font-bold !bg-white !text-purple tracking-tight"
+            >
+              Contact Us
+            </Button>
+          </div>
+        </div>
+        <Footer />
       </div>
     </MainLayout>
   );
@@ -517,7 +158,7 @@ export const Head: HeadFC = () => {
       <meta property="og:url" content="https://saib.dev/" />
       <meta property="og:image" content="https://raw.githubusercontent.com/SAIB-Inc/Assets/main/saib-mission.png" />
       <meta property="og:image:alt" content="Softwarez, At It's Best" />
-      <meta property="og:description" content="SAIB Website" />
+      <meta property="og:description" content="We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano." />
       <meta name="twitter:card" content="summary_large_image"></meta>
       <meta name="twitter:url" content="https://twitter.com/saibdev" />
       <meta name="twitter:site" content="@saibdev" />

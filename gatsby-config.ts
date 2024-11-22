@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `SAIB Website`,
-    siteUrl: `https://www.yourdomain.tld`
+    siteUrl: `https://saib.dev/`
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -16,6 +16,22 @@ const config: GatsbyConfig = {
       "path": "./src/images/"
     },
     __key: "images"
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: "technologies",
+      path: "./src/images/technologies/"
+    },
+    __key: "technologies"
+  },
+  {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: "team",
+      path: "./src/images/team/"
+    },
+    __key: "team"
   },
   {
     resolve: `gatsby-omni-font-loader`,
