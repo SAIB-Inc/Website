@@ -19,7 +19,7 @@ const IndexPage: React.FC<PageProps> = () => {
   return (
     <MainLayout>
       <div className="backgroundImage pt-6">
-        <div className="max-w-[1200px] m-auto pb-[226px] px-6 ">
+        <div className="max-w-[1200px] m-auto px-6 md:h-[100vh] max-md:pb-[226px]">
           <Header />
           <div className="flex flex-col items-center justify-center mt-16 md:mt-[180px] xl:mt-[169px] m-auto max-w-[630px] text-center text-white">
             <h1 className="font-bold text-[50px] min-[360px]:text-[60px] min-[420px]:text-[70px] min-[520px]:text-[90px] min-[600px]:text-[105px] xl:text-[120px] leading-[55px] min-[360px]:leading-[65px] min-[520px]:leading-[90px] md:leading-[105px] xl:leading-[120px]">
@@ -39,11 +39,11 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
         <div className="bg-white w-full backgroundImage4">
-          <div className="max-w-[1200px] m-auto relative p-6 pt-6 pb-[120px]">
-            <div className="absolute top-[-100px] p-[24px] py-[35px] sm:p-[48px] w-full left-1/2 right-1/2 transform -translate-x-1/2 bg-white/70 backdrop-blur-md transparent rounded-3xl shadow-lg backgroundImage2 z-10">
+          <div className="max-w-[1200px] m-auto relative p-6">
+            <div className="absolute top-[-115px] p-[24px] py-[35px] sm:p-[40px] w-full left-1/2 right-1/2 transform -translate-x-1/2 bg-white/70 backdrop-blur-md transparent rounded-3xl shadow-lg backgroundImage2 z-10">
               <div className="max-w-[600px] lg:max-w-[780px] max-sm:flex max-sm:flex-col max-sm:items-center max-sm:text-center max-sm:gap-[15px]">
-                <p className="text-[30px] sm:text-[52px] font-bold font-['Poppins'] tracking-tight max-sm:leading-[35px]">We make <span className="bg-gradient-to-br from-blue1 via-blue2 to-purple inline-block text-transparent bg-clip-text">Cardano</span> Software!</p>
-                <p className="text-[#101010] text-[18px] ">We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano.</p>
+                <p className="text-[30px] md:text-[40px] lg:text-[52px] font-bold font-['Poppins'] tracking-tight max-sm:leading-[35px] leading-none">We make <span className="bg-gradient-to-br from-blue1 via-blue2 to-purple inline-block text-transparent bg-clip-text">Cardano</span> Software!</p>
+                <p className="text-[#101010] text-[18px] mt-[26px]">We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano.</p>
                 <Button
                   href="https://calendly.com/saibdev"
                   target="_blank"
@@ -54,7 +54,9 @@ const IndexPage: React.FC<PageProps> = () => {
                 </Button>
               </div>
             </div>
-            <div className="max-w-[1200px] h-[100px] p-6 absolute top-[-100px] z-0 w-full left-1/2 right-1/2 transform -translate-x-1/2 rounded-t-3xl bg-gradient-to-l from-black via-purple to-blue1 backdrop-blur-md" />
+            <div className="max-w-[1200px] h-[115px] p-6 absolute top-[-115px] z-0 w-full left-1/2 right-1/2 transform -translate-x-1/2 rounded-t-3xl bg-gradient-to-l from-black via-purple to-blue1 backdrop-blur-md" />
+          </div>
+          <div className="max-w-[1200px] m-auto mb-[200px] p-6">
             <div className="max-[330px]:mt-[38rem] max-[420px]:mt-[33rem] max-lg:mt-[25rem] mt-[20rem] m-auto max-w-[500px] text-[28px] min-[390px]:text-[35px] min-[500px]:text-[52px] text-center !p-0 mb-[50px]">
               <p className="tracking-tighter">Empowering Your <span className="bg-gradient-to-r from-blue1 via-blue2 to-purple inline-block text-transparent bg-clip-text font-bold w-full">Digital Presence</span></p>
             </div>
@@ -63,40 +65,40 @@ const IndexPage: React.FC<PageProps> = () => {
               <Button href="https://calendly.com/saibdev" target="_blank" variant="contained" className="!rounded-[50px] !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6">Explore More</Button>
             </div>
           </div>
-          <div className="max-w-[1200px] sm:h-[100vh] m-auto mb-[200px]">
-            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
+          <div className="max-w-[1200px] xl:h-[100vh] m-auto max-xl:mb-[80px] mb-[200px]">
+            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[20px]">
               <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">What We <span className="">Offer</span></p>
             </div>
             <Offer />
           </div>
-          <div className="max-w-[1200px] mb-[200px] overflow-hidden m-auto">
+          {/* <div className="max-w-[1200px] mb-[200px] overflow-hidden m-auto">
             <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
               <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Testimonials</p>
             </div>
             <Testimonials />
-          </div>
+          </div> */}
           <div className="max-w-[2500px] overflow-hidden m-auto mb-[200px]">
-            <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
+            <div className="mt-[2rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[30px]">
               <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Technologies</p>
             </div>
             <Technologies />
           </div>
         </div>
-        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] bg-white/80 backdrop-blur-md !text-black rounded-[24px]">
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
           <div className="m-auto max-w-[370px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
-            <h2 className="text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Our Team</h2>
+            <h2 className="text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center text-white">Our Team</h2>
           </div>
           <Team />
         </div>
-        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] bg-white/80 backdrop-blur-md !text-black rounded-[24px]">
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
           <div className="m-auto max-w-[450px] font-bold text-center !p-0 mb-[50px]">
-            <h2 className="sm:h-[65px] text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Building With</h2>
+            <h2 className="sm:h-[65px] text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center text-white">Building With</h2>
           </div>
           <Partners />
         </div>
-        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] bg-white/80 backdrop-blur-md !text-black rounded-[24px]">
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
           <div className="m-auto max-w-[370px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
-            <h2 className="sm:h-[65px] text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">Projects</h2>
+            <h2 className="sm:h-[65px] text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center text-white">Projects</h2>
           </div>
           <Projects />
         </div>

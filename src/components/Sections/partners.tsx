@@ -2,7 +2,7 @@ import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import { Card } from '@mui/material';
 import Levvy from '../../images/partners/Levvy';
-import { Language, X } from '@mui/icons-material';
+import { Language, X, GitHub } from '@mui/icons-material';
 
 const Partners: React.FC = () => {
 
@@ -58,6 +58,10 @@ const Partners: React.FC = () => {
 
         },
         {
+          link: "https://github.com/txpipe",
+          linkLogo: GitHub
+        },
+        {
           link: "https://x.com/txpipe_tools",
           linkLogo: X
         }
@@ -74,6 +78,11 @@ const Partners: React.FC = () => {
           link: "https://utxorpc.org",
           linkLogo: Language,
 
+        },
+        {
+          link: "https://github.com/utxorpc",
+          linkLogo: GitHub,
+
         }
       ]
     },
@@ -82,11 +91,16 @@ const Partners: React.FC = () => {
       title: "A next-generation Cardano-based token launch platform, striving to be the platform of choice for innovative blockchain projects.",
       image: partnerImages.Coinecta.publicURL,
       className: 'w-[200px]',
-      backgroundGradient: 'bg-gradient-to-t from-[#F2994A] to-[#FDE7C6] to-70%',
+      backgroundGradient: 'bg-gradient-to-tl from-[#F2994A] to-[#FDE7C6] to-70%',
       webLinks: [
         {
           link: "https://coinecta.fi",
           linkLogo: Language,
+
+        },
+        {
+          link: "https://github.com/coinecta",
+          linkLogo: GitHub,
 
         },
         {
@@ -117,7 +131,7 @@ const Partners: React.FC = () => {
       name: "Levvy",
       title: "Effortless lending, instant liquidity. Maximize liquidity & earnings lending and borrowing tokens or NFTs.",
       className: 'w-[200px]',
-      backgroundGradient: 'bg-gradient-to-b from-orange-100 via-lime-200 to-emerald-300',
+      backgroundGradient: 'bg-gradient-to-br from-orange-100 via-lime-200 to-emerald-300',
       webLinks: [
         {
           link: "https://levvy.fi",
@@ -138,12 +152,13 @@ const Partners: React.FC = () => {
         return (
           <Card 
             key={index}
+            className='backdrop-blur-md shadow-xl'
             sx={{
               display: 'flex',
               flexDirection: 'column',
               gap: '20px',
               width: '100%',
-              bgcolor: '#F3F3F3',
+              bgcolor: 'rgba(243, 243, 243, 0.85)',
               borderRadius: '12px',
               height: '380px',
             }}

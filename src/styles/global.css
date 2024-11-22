@@ -46,16 +46,12 @@ body {
         url('../images/saib_bg2.png'),  
         url('../images/saib_bg.png'), 
         url('../images/saib_bg.png'),
-        url('../images/saib_bg2.png'),
-        url('../images/saib_bg2.png'),
-        url('../images/saib_bg.png');
+        url('../images/saib_bg2.png');
     background-position: 
         left -550px top 800px,
         right -420px top 1100px, 
         left -550px top 1800px,
-        right -520px top 2100px,
-        left -350px top 2800px,
-        right -560px top 3200px;
+        right -520px top 1800px;
     background-repeat: no-repeat;
     background-size: 40%;
 }
@@ -80,16 +76,12 @@ body {
             url('../images/saib_bg2.png'),  
             url('../images/saib_bg.png'), 
             url('../images/saib_bg.png'),
-            url('../images/saib_bg2.png'),
-            url('../images/saib_bg2.png'),
-            url('../images/saib_bg.png');
+            url('../images/saib_bg2.png');
         background-position: 
             left -480px top 300px,
             right -570px top 700px, 
             left -480px top 1500px,
-            right -520px top 1700px,
-            left -450px top 2700px,
-            right -460px top 3000px;
+            right -520px top 1700px;
         background-repeat: no-repeat;
         background-size: 650px;
     }
@@ -132,25 +124,21 @@ body {
             url('../images/saib_bg2.png'),  
             url('../images/saib_bg.png'), 
             url('../images/saib_bg.png'),
-            url('../images/saib_bg2.png'),
-            url('../images/saib_bg2.png'),
-            url('../images/saib_bg.png');
+            url('../images/saib_bg2.png');
         background-position: 
             left -600px top 300px,
             right -550px top 700px, 
             left -480px top 1500px,
-            right -520px top 1800px,
-            left -350px top 2700px,
-            right -560px top 3400px;
+            right -540px top 1800px;
         background-repeat: no-repeat;
         background-size: 650px;
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 639px) {
     .backgroundImage2 {
         background-image: url('../images/saib_bg2.png'), url('../images/saib_bg.png');
-        background-position: right -150px bottom -550px, right 210px bottom 220px;
+        background-position: right -150px bottom -550px, right 260px bottom 250px;
         background-repeat: no-repeat, no-repeat;
         background-size: 550px;
     }
@@ -160,16 +148,12 @@ body {
             url('../images/saib_bg2.png'),  
             url('../images/saib_bg.png'), 
             url('../images/saib_bg.png'),
-            url('../images/saib_bg2.png'),
-            url('../images/saib_bg2.png'),
-            url('../images/saib_bg.png');
+            url('../images/saib_bg2.png');
         background-position: 
             left -600px top 300px,
             right -590px top 700px, 
             left -580px top 1500px,
-            right -560px top 1600px,
-            left -350px top 2700px,
-            right -560px top 3400px;
+            right -590px top 1600px;
         background-repeat: no-repeat;
         background-size: 650px;
     }

@@ -113,11 +113,16 @@ const Team: React.FC = () => {
       X: "https://x.com/clarkalesna"
     },
     {
-      name: "Misai Legara",
-      role: "Head of Administration",
-      profileImage: getImage(team.Misai),
-      linkedIn: "https://www.linkedin.com/in/misai-legara/",
-      X: "https://x.com/iammisai"
+      name: "Bern Villacura",
+      role: "Chief of Staff",
+      profileImage: getImage(team.Bern),
+      linkedIn: "https://www.linkedin.com/in/barbiebern/"
+    },
+    {
+      name: "Ben Jules Dico",
+      role: "Chief Marketing Officer",
+      profileImage: getImage(team.Ben),
+      X: "https://x.com/Benjdico"
     },
     {
       name: "Reza Jhay Lacanlale",
@@ -127,16 +132,11 @@ const Team: React.FC = () => {
       X: "https://x.com/rjlacanlale"
     },
     {
-      name: "Ben Jules Dico",
-      role: "Chief Marketing Officer",
-      profileImage: getImage(team.Ben),
-      X: "https://x.com/Benjdico"
-    },
-    {
-      name: "Bern Villacura",
-      role: "Chief of Staff",
-      profileImage: getImage(team.Bern),
-      linkedIn: "https://www.linkedin.com/in/barbiebern/"
+      name: "Misai Legara",
+      role: "Head of Administration",
+      profileImage: getImage(team.Misai),
+      linkedIn: "https://www.linkedin.com/in/misai-legara/",
+      X: "https://x.com/iammisai"
     },
     {
       name: "Roxanne Alesna",
@@ -149,13 +149,13 @@ const Team: React.FC = () => {
   const frontendDevs: memberType[] = [
     {
       name: "Ivanne Bayer",
-      role: "Developer",
+      role: "Engineer",
       profileImage: getImage(team.Ivan),
       linkedIn: "https://www.linkedin.com/in/ivanne-bayer-a23b30302/",
     },
     {
       name: "Kiefer Gallego",
-      role: "Developer",
+      role: "Engineer",
       profileImage: getImage(team.Kief),
       linkedIn: "https://www.linkedin.com/in/kiefer-gallego/",
     }
@@ -164,25 +164,25 @@ const Team: React.FC = () => {
   const backendDevs: memberType[] = [
     {
       name: "John Alexis Buot",
-      role: "Developer",
+      role: "Engineer",
       profileImage: getImage(team.Lex),
       linkedIn: "https://www.linkedin.com/in/laplace-xd/",
     },
     {
       name: "Caitlin Lindsay",
-      role: "Developer",
+      role: "Engineer",
       profileImage: getImage(team.Cait),
       linkedIn: "https://www.linkedin.com/in/caitlin-mariel-lindsay-7341a3323/",
     },
     {
       name: "Kathea Mayol",
-      role: "Developer",
+      role: "Engineer",
       profileImage: getImage(team.Kath),
       linkedIn: "https://www.linkedin.com/in/kathea-mayol/",
     },
     {
       name: "Wendell Tamayo",
-      role: "Developer",
+      role: "Engineer",
       profileImage: getImage(team.Windz),
       linkedIn: "https://www.linkedin.com/in/wendell-mor-tamayo-41388b298/",
     },
@@ -191,19 +191,19 @@ const Team: React.FC = () => {
   const blockchainDevs: memberType[] = [
     {
       name: "Christian Gantuangco",
-      role: "Developer",
+      role: "Engineer",
       profileImage: getImage(team.Tan),
       linkedIn: "https://www.linkedin.com/in/christan-gantuangco/",
     },
     {
       name: "Rico Quiblat",
-      role: "Developer",
+      role: "Engineer",
       profileImage: getImage(team.Rico),
       linkedIn: "https://www.linkedin.com/in/rico-miles-quiblat-34a6b7298/",
     },
     {
       name: "John Taboada",
-      role: "Developer",
+      role: "Engineer",
       profileImage: getImage(team.Chow),
       linkedIn: "https://www.linkedin.com/in/john-quinnvic-taboada-8801b9275/",
     },
@@ -218,16 +218,19 @@ const Team: React.FC = () => {
     X?: string | null
   ) => {
     return (
-      <Card key={index} sx={{ 
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '12px',
-        padding: '24px',
-        backgroundColor: 'rgba(243, 243, 243, 0.7)',
-        backdropFilter: 'blur(8px)',
-        borderRadius: '12px'
-      }}>
+      <Card 
+        key={index}
+        className='backdrop-blur-md' 
+        sx={{ 
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '12px',
+          padding: '24px',
+          bgcolor: 'rgba(243, 243, 243, 0.85)',
+          borderRadius: '12px'
+        }}
+      >
         <div className="w-[123px] max-h-[123px] rounded-full overflow-hidden grayscale">
           {profileImg ? (
             <GatsbyImage image={profileImg} alt={name} className="h-[123px]" />
@@ -259,7 +262,7 @@ const Team: React.FC = () => {
 
   return (
     <div className=''>
-      <p className='text-[24px] sm:text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Executives</p>
+      <p className='text-[24px] sm:text-[30px] md mt-[30px] mb-[20px] text-white max-md:text-center'>The Helm</p>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {KeyTeam.map((member, index) => {
           const profileImg = member.profileImage;
@@ -273,7 +276,7 @@ const Team: React.FC = () => {
           );
         })}
       </div>
-      <p className='text-[24px] sm:text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Frontend Developers</p>
+      <p className='text-[24px] sm:text-[30px] md mt-[30px] mb-[20px] text-white max-md:text-center'>The Command Deck</p>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {frontendDevs.map((member, index) => {
           const profileImg = member.profileImage;
@@ -287,7 +290,7 @@ const Team: React.FC = () => {
           );
         })}
       </div>
-      <p className='text-[24px] sm:text-[30px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Backend Developers</p>
+      <p className='text-[24px] sm:text-[30px] md mt-[30px] mb-[20px] text-white max-md:text-center'>The Engine Room</p>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {backendDevs.map((member, index) => {
           const profileImg = member.profileImage;
@@ -301,7 +304,7 @@ const Team: React.FC = () => {
           );
         })}
       </div>
-      <p className='text-[24px] sm:text-[28px] md mt-[30px] mb-[20px] text-[#4F37EA] max-md:text-center'>Blockchain Developers</p>
+      <p className='text-[24px] sm:text-[28px] md mt-[30px] mb-[20px] text-white max-md:text-center'>The Blockchain Lab</p>
       <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-10">
         {blockchainDevs.map((member, index) => {
           const profileImg = member.profileImage;

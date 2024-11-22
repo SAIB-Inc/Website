@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
-import { Card } from '@mui/material';
+import { Card, CardContent, Paper } from '@mui/material';
 import { Star, Language, X, FormatQuote } from '@mui/icons-material';
 import Levvy from '../../images/partners/Levvy';
 
@@ -92,7 +92,7 @@ const Testimonials = () => {
           linkLogo: X
         }
       ],
-      backgroundGradient: 'bg-gradient-to-b from-orange-100 via-lime-200 to-emerald-300'
+      backgroundGradient: 'bg-gradient-to-br from-orange-100 via-lime-200 to-emerald-300'
     },
     {
       name: "Coinecta",
@@ -109,7 +109,7 @@ const Testimonials = () => {
           linkLogo: X
         }
       ],
-      backgroundGradient: 'bg-gradient-to-t from-[#F2994A] to-[#FDE7C6] to-70%'
+      backgroundGradient: 'bg-gradient-to-tl from-[#F2994A] to-[#FDE7C6] to-70%'
     },
     {
       name: "TxPipe",
@@ -150,7 +150,7 @@ const Testimonials = () => {
           return nextIndex > (isMobile ? testimonials.length - 1 : maxIndex) ? 0 : nextIndex;
         });
         setTimeout(() => setIsAnimating(false), 300);
-      }, 5000);
+      }, 3000);
     }
     return () => clearInterval(interval);
   }, [isPaused, isMobile]);
@@ -178,68 +178,79 @@ const Testimonials = () => {
           >
             {testimonials.map((datum, index) => (
               <div key={index} className={`${isMobile ? 'min-w-full' : 'min-w-[50%]'} p-6`}>
-                <div className={`p-[2px] rounded-lg ${datum.backgroundGradient}`}>
-                  <Card
-                    sx={{
-                      bgcolor: 'white',
-                      borderRadius: '8px',
-                      display: 'flex',
-                      flexDirection: 'column',
-                      justifyContent: 'between',
-                      height: '100%',
-                      backdropFilter: 'blur(8px)'
-                    }}
-                  >
+              <Paper 
+                elevation={4} 
+                className={`p-[2px] ${datum.backgroundGradient}`}
+                sx={{
+                  borderRadius: '0.5rem'
+                }}
+              >
+                <Card
+                  sx={{
+                    bgcolor: 'white',
+                    borderRadius: '0.5rem',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                    height: '100%',
+                    backdropFilter: 'blur(8px)',
+                  }}
+                >
+                  <CardContent
+                   sx={{
+                    padding: 0,
+                  }}>
                     <div className="px-8 pt-[40px] flex flex-col gap-[20px]">
                       <p className="relative text-justify text-gray-700 text-[14px] sm:text-[18px]">
-                        <FormatQuote sx={{ 
+                        <FormatQuote sx={{
                           transform: 'scaleX(-1)',
                           fontSize: 24,
                           marginTop: -1,
-                          marginRight: 1
+                          marginRight: 1,
                         }} />
                         {datum.comment}
-                        <FormatQuote sx={{ 
+                        <FormatQuote sx={{
                           fontSize: 24,
-                          marginLeft: 1
+                          marginLeft: 1,
                         }} />
                       </p>
                     </div>
-                    <div>
-                      <div className='flex justify-between items-center mt-[20px] px-8 pt-8 pb-6'>
-                        <div className='flex gap-3'>
-                          {datum.webLinks.map((links, index) => (
-                            <a
-                              key={index}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              href={links.link}
-                            >
-                              {React.createElement(links.linkLogo, {
-                                className: '!text-[24px] hover:text-gray-500 transition-colors duration-500 ease-in-out'
-                              })}
-                            </a>
-                          ))}
-                        </div>
-                        <div className="flex items-center justify-center">
-                          {[...Array(5)].map((_, i) => (
-                            <Star
-                              key={i}
-                              className="text-[24px] text-yellow-400 fill-yellow-400"
-                            />
-                          ))}
-                        </div>
+                  </CardContent>
+                  <div>
+                    <div className='flex justify-between items-center mt-[20px] px-8 pt-8 pb-6'>
+                      <div className='flex gap-3'>
+                        {datum.webLinks.map((links, index) => (
+                          <a
+                            key={index}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={links.link}
+                          >
+                            {React.createElement(links.linkLogo, {
+                              className: '!text-[24px] hover:text-gray-500 transition-colors duration-500 ease-in-out'
+                            })}
+                          </a>
+                        ))}
                       </div>
-                      <div className={`flex justify-center items-center py-2 ${datum.backgroundGradient} rounded-b-lg`}>
-                        {datum.name === 'Levvy' ?
-                          <Levvy width={100} height={46} />
-                          : <img src={datum.logo} alt="Company logo" className="w-[100px] h-[46px]" />
-                        }
+                      <div className="flex items-center justify-center">
+                        {[...Array(5)].map((_, i) => (
+                          <Star
+                            key={i}
+                            className="text-[24px] text-yellow-400 fill-yellow-400"
+                          />
+                        ))}
                       </div>
                     </div>
-                  </Card>
-                </div>
-              </div>
+                    <div className={`flex justify-center items-center py-2 ${datum.backgroundGradient} rounded-b-lg`}>
+                      {datum.name === 'Levvy' ?
+                        <Levvy width={100} height={46} />
+                        : <img src={datum.logo} alt="Company logo" className="w-[100px] h-[46px]" />
+                      }
+                    </div>
+                  </div>
+                </Card>
+              </Paper>
+            </div>
             ))}
           </div>
         </div>

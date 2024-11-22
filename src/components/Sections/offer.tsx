@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Button } from '@mui/material';
-import { ChevronLeft, ChevronRight, Wallet, Paid, Collections, Article, AccountBalance, Web } from '@mui/icons-material';
+import { Button, Card, CardContent, List, ListItem, ListItemIcon, ListItemText, Paper } from '@mui/material';
+import { ChevronLeft, ChevronRight, Wallet, Paid, Collections, Article, AccountBalance, Web, CheckCircle, RocketLaunch, Flare, AutoAwesome } from '@mui/icons-material';
+import { StaticImage } from 'gatsby-plugin-image';
 
 const Offer = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -8,14 +9,22 @@ const Offer = () => {
 
   const offerCards = [
     {
+      Title: 'dApp Development',
+      Icon: Web,
+      DescriptionList: [
+        "Innovative dApp development",
+        "Offchain Development",
+        "Frontend Integration"
+      ],
+      ButtonTitle: 'Develop Now'
+    },
+    {
       Title: 'Smart Contracts',
       Icon: Article,
       DescriptionList: [
         "Aiken Development",
         "PlutusTx Development",
         "Plutarch Development",
-        "Offchain Development",
-        "Frontend Integration"
       ],
       ButtonTitle: 'Build Now'
     },
@@ -38,16 +47,6 @@ const Offer = () => {
         "Ideal for diverse applications"
       ],
       ButtonTitle: 'Create Now'
-    },
-    {
-      Title: 'dApp Development',
-      Icon: Web,
-      DescriptionList: [
-        "Innovative dApp development",
-        "Secure and scalable infrastructure",
-        "Optimized for seamless performance"
-      ],
-      ButtonTitle: 'Develop Now'
     },
     {
       Title: 'Staking Solutions',
@@ -102,6 +101,15 @@ const Offer = () => {
 
   return (
     <div className="relative px-4 md:px-6">
+      <div className="flex flex-col items-center justify-center gap-[10px] mb-10">
+        <div className="flex items-center justify-center gap-[10px]">
+          <StaticImage alt="" src="../../images/technologies/Cardano.svg" className="w-[60px]" />
+          <p className="text-[40px] md:text-[50px]">Cardano</p>
+        </div>
+        <p className="max-sm:text-[14px] text-[18px] text-center max-w-[400px] sm:max-w-[500px] md:max-w-[700px] px-4">
+          We offer development services on the Cardano blockchain, delivering secure, scalable, and innovative solutions tailored to your needs.
+        </p>
+      </div>
       <div className="overflow-hidden h-[580px]">
         <div
           className="flex transition-transform duration-500 ease-in-out"
@@ -112,15 +120,17 @@ const Offer = () => {
           {offerCards.map((datum, index) => (
             <div
               key={index}
-              className={`w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-2 `}
+              className={`w-full md:w-1/2 lg:w-1/3 flex-shrink-0 px-2`}
             >
-              <div
-                className="p-[2px] rounded-[24px] bg-gradient-to-r from-blue1 via-blue2 to-purple"
-              >
-                <div
+              <Paper elevation={4} className="p-[2px] rounded-[24px] bg-gradient-to-r from-blue1 via-blue2 to-purple">
+                <Card
                   className={`h-[530px] sm:h-[510px] lg:h-[560px] rounded-[24px] p-[24px] flex flex-col gap-y-[10px] shadow-md text-black transition-all duration-500 justify-between backdrop-blur-md bg-white`}
                 >
-                  <div>
+                  <CardContent
+                    sx={{
+                      padding:0
+                    }}
+                  >
                     <div className="flex items-center justify-center h-[100px] sm:h-[120px]">
                       {React.createElement(datum.Icon, { className: '!text-[50px] text-[#4F37EA]' })}
                     </div>
@@ -128,27 +138,35 @@ const Offer = () => {
                       <div className="flex flex-col items-center justify-center gap-[10px] h-[100px]">
                         <p className="text-[22px] sm:text-[24px] text-left font-semibold">{datum.Title}</p>
                       </div>
-                      <ul className='list-disc px-[40px] max-[520px]:block flex flex-col justify-center items-center md:block'>
+                      <div className="max-[520px]:block flex flex-col justify-center items-center md:block">
+                      <List
+                      >
                         {datum.DescriptionList.map((item, idx) => (
-                          <li key={idx} className='max-[380px]:text-[14px] max-md:text-[18px] text-[18px] mt-[10px] xl:mt-[20px]'>{item}</li>
+                          <ListItem key={idx} className="max-[380px]:text-[14px] max-md:text-[18px] text-[18px]">
+                            <ListItemIcon sx={{ minWidth: "35px" }}>
+                              <RocketLaunch style={{ color: "#4F37EA", fontSize: "18px" }} />
+                            </ListItemIcon>
+                            <ListItemText primary={item} />
+                          </ListItem>
                         ))}
-                      </ul>
+                      </List>
+                      </div>
                     </div>
-                  </div>
+                  </CardContent>
                   <div className="flex justify-center items-center">
                     <Button
-                      href="/"
+                      href="https://calendly.com/saibdev"
+                      target="_blank"
                       variant="contained"
                       className="w-[220px] md:w-[250px] lg:w-[280px] !rounded-[18px] !py-[10px] !px-[10px] text-[18px] !normal-case !font-poppins !font-normal !text-white tracking-tight hover:!text-purple hover:!bg-white"
                     >
                       {datum.ButtonTitle}
                     </Button>
                   </div>
-
-                </div>
-              </div>
+                </Card>
+              </Paper>
             </div>
-          ))}
+          ))};
         </div>
       </div>
       <div className="flex justify-center items-center gap-4 mt-4">

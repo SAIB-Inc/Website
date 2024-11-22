@@ -52,12 +52,13 @@ const Projects: React.FC = () => {
         return (
           <Card
             key={index}
+            className='backdrop-blur-md'
             sx={{
               display: 'flex',
               flexDirection: 'column',
               gap: '20px',
               width: '100%',
-              bgcolor: 'rgba(243, 243, 243, 0.7)',
+              bgcolor: 'rgba(243, 243, 243, 0.85)',
               backdropFilter: 'blur(8px)',
               borderRadius: '12px',
               height: '380px',
