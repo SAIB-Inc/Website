@@ -57,7 +57,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <div className="max-w-[1200px] h-[115px] p-6 absolute top-[-115px] z-0 w-full left-1/2 right-1/2 transform -translate-x-1/2 rounded-t-3xl bg-gradient-to-l from-black via-purple to-blue1 backdrop-blur-md" />
           </div>
           <div className="max-w-[1200px] m-auto mb-[200px] p-6">
-            <div className="max-[330px]:mt-[38rem] max-[420px]:mt-[33rem] max-lg:mt-[25rem] mt-[20rem] m-auto max-w-[500px] text-[28px] min-[390px]:text-[35px] min-[500px]:text-[52px] text-center !p-0 mb-[50px]">
+            <div className="max-[330px]:mt-[38rem] max-[420px]:mt-[33rem] max-lg:mt-[20rem] mt-[20rem] m-auto max-w-[500px] text-[28px] min-[390px]:text-[35px] min-[500px]:text-[52px] text-center !p-0 mb-[50px]">
               <p className="tracking-tighter">Empowering Your <span className="bg-gradient-to-r from-blue1 via-blue2 to-purple inline-block text-transparent bg-clip-text font-bold w-full">Digital Presence</span></p>
             </div>
             <Capabilities />
@@ -65,7 +65,7 @@ const IndexPage: React.FC<PageProps> = () => {
               <Button href="https://calendly.com/saibdev" target="_blank" variant="contained" className="!rounded-[50px] !py-[12px] !px-[24px] !text-[18px] !normal-case !font-poppins !font-normal !m-auto !mt-6">Explore More</Button>
             </div>
           </div>
-          <div className="max-w-[1200px] xl:h-[100vh] m-auto max-xl:mb-[80px] mb-[200px]">
+          <div className="max-w-[1200px] xl:h-[100vh] m-auto mb-[180px]">
             <div className="mt-[10rem] m-auto max-w-[500px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[20px]">
               <p className="tracking-tighter bg-gradient-to-r from-blue1 via-blue2 to-purple text-transparent bg-clip-text">What We <span className="">Offer</span></p>
             </div>

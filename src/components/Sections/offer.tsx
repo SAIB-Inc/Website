@@ -103,8 +103,8 @@ const Offer = () => {
     <div className="relative px-4 md:px-6">
       <div className="flex flex-col items-center justify-center gap-[10px] mb-10">
         <div className="flex items-center justify-center gap-[10px]">
-          <StaticImage alt="" src="../../images/technologies/Cardano.svg" className="w-[60px]" />
-          <p className="text-[40px] md:text-[50px]">Cardano</p>
+          <StaticImage alt="" src="../../images/technologies/Cardano.svg" className="w-[40px] sm:w-[60px]" />
+          <p className="text-[30px] sm:text-[40px] md:text-[50px]">Cardano</p>
         </div>
         <p className="max-sm:text-[14px] text-[18px] text-center max-w-[400px] sm:max-w-[500px] md:max-w-[700px] px-4">
           We offer development services on the Cardano blockchain, delivering secure, scalable, and innovative solutions tailored to your needs.
