@@ -12,6 +12,7 @@ import Partners from "../components/Sections/partners"
 import Testimonials from "../components/Sections/testimonials"
 import Offer from "../components/Sections/offer"
 import Projects from "../components/Sections/projects"
+import BgBottom from "../images/bg-bottom.png"
 
 
 
@@ -84,25 +85,25 @@ const IndexPage: React.FC<PageProps> = () => {
             <Technologies />
           </div>
         </div>
-        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
           <div className="m-auto max-w-[370px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
             <h2 className="text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center text-white">Our Team</h2>
           </div>
           <Team />
         </div>
-        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px]max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
           <div className="m-auto max-w-[450px] font-bold text-center !p-0 mb-[50px]">
             <h2 className="sm:h-[65px] text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center text-white">Building With</h2>
           </div>
           <Partners />
         </div>
-        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] max-sm:py-[80px] py-16 px-[30px] md:p-[60px] lg:p-[80px] max-xl:mx-[20px] backdrop-blur-md !text-black rounded-[24px]">
           <div className="m-auto max-w-[370px] text-[33px] sm:text-[64px] font-bold text-center !p-0 mb-[50px]">
             <h2 className="sm:h-[65px] text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center text-white">Projects</h2>
           </div>
           <Projects />
         </div>
-        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] text-white max-sm:py-[80px] py-16 px-2 xl:p-[80px] max-xl:mx-[20px]">
+        <div className="max-w-[1200px] m-auto mt-[130px] xl:mt-[100px] max-sm:py-[80px] py-16 px-2 xl:p-[80px] max-xl:mx-[20px]">
           <h2 className="text-[36px] leading-[45px] sm:text-[52px] font-bold xl:leading-[62px] text-center">History</h2>
           <div className="max-lg:flex-col max-lg:items-center max-lg:justify-center max-lg:gap-[40px] flex gap-[20px] justify-evenly mt-[55px] sm:mt-[45px]">
             <div className="flex flex-col items-center text-center gap-[15px] max-w-[500px]">
@@ -151,18 +152,36 @@ export default IndexPage
 export const Head: HeadFC = () => {
   return (
     <>
-      <title>SAIB · Softwarez, At It's Best - Where Software Meets Perfection</title>
-      <meta name="description" content="" />
-      <meta property="og:title" content="SAIB | Softwarez, At It's Best - Where Software Meets Perfection" />
+      <title>SAIB | Global Blockchain & Software Innovation</title>
+      <meta name="description" content="SAIB is a Philippines-based engineering firm delivering global blockchain solutions, digital platforms, and innovative software experiences." />
+      <meta name="robots" content="index, follow" />
+      <link rel="canonical" href="https://saib.dev/" />
+
+      <meta name="theme-color" content="#4F37EA" media="(prefers-color-scheme: light)" />
+      <meta name="theme-color" content="#4F37EA" media="(prefers-color-scheme: dark)" />
+
+      <meta property="og:title" content="SAIB | Global Blockchain & Software Innovation" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://saib.dev/" />
       <meta property="og:image" content="https://raw.githubusercontent.com/SAIB-Inc/Assets/main/saib-mission.png" />
       <meta property="og:image:alt" content="Softwarez, At It's Best" />
       <meta property="og:description" content="We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano." />
-      <meta name="twitter:card" content="summary_large_image"></meta>
-      <meta name="twitter:url" content="https://twitter.com/saibdev" />
-      <meta name="twitter:site" content="@saibdev" />
-      <meta name="twitter:creator" content="@saibdev" />
+
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:url" content="https://saib.dev/" />
+      <meta name="twitter:title" content="SAIB | Global Blockchain & Software Innovation" />
+      <meta name="twitter:description" content="SAIB delivers blockchain-powered platforms, cutting-edge digital products, and transformative software solutions to clients worldwide." />
+      <meta name="twitter:image" content="https://saib.dev/path-to-og-image.jpg" />
+      <meta name="twitter:site" content="https://x.com/saibdev" />
+
+      <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icons/saib-logo-180x180.png" />
+      <link rel="apple-touch-icon" sizes="167x167" href="/images/apple-touch-icons/saib-logo-167x167.png" />
+      <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icons/saib-logo-152x152.png" />
+
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+      <meta name="format-detection" content="telephone=no" />
     </>
   )
 }
