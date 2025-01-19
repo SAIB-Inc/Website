@@ -4,10 +4,22 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#4F37EA'
+      main: '#EBE8FF',
     },
     secondary: {
-      main: '#D714E8'
+      light: '#E7E1FF',
+      main: '#6F03E0',
+    },
+    text: {
+      primary: '#3A376A',
+      secondary: '#6F03E0',
+    },
+  },
+  typography: {
+    button: {
+      fontFamily: ['Poppins', 'serif'].join(','),
+      fontSize: 16,
+      fontWeight: 400,
     },
   },
 });
