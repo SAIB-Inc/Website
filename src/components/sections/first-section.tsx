@@ -18,7 +18,7 @@ const FirstSection: React.FC = () => {
                         <span className='font-bold'>Softwarez,</span> at its
                         <span className='font-bold text-[#6F03E0]'> Best</span>.
                     </p>
-                    <p className='!text-lg mt-4 tracking-wide !leading-relaxed'>
+                    <p className='!text-lg mt-4 tracking-wide !leading-[1.825]'>
                         We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for
                         <span className='!text-[#3A376A] font-bold'> Cardano.</span>
                     </p>
@@ -58,7 +58,7 @@ const FirstSection: React.FC = () => {
                             <span className='text-[#6F03E0] !font-bold'> Cardano</span> Software
                         </h1>
                     </div>
-                    <p className='text-lg !mt-1 tracking-[0.01rem] leading-relaxed'>
+                    <p className='text-lg !mt-2 tracking-[0.01rem] leading-[1.825]'>
                         We specialize in decentralized applications built on the
                         <span className='font-bold text-[#3A376A]'> Cardano</span> blockchain. We focus on creating
                         <span className='font-bold text-[#3A376A]'> secure, scalable,</span> and
@@ -82,7 +82,7 @@ const FirstSection: React.FC = () => {
                         Know More                       
                     </Button>
                 </div>
-                <img alt='first section image 2' src={FirstSectionImage2} className='absolute -top-10 -right-80 w-[686.46px] h-[488px] rounded-xl' />
+                <img alt='first section image 2' src={FirstSectionImage2} className='absolute -top-28 -right-[440px] scale-120 rounded-xl' />
             </div>
         </section>
     )
