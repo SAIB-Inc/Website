@@ -82,7 +82,7 @@ const FirstSection: React.FC = () => {
                         Know More                       
                     </Button>
                 </div>
-                <img alt='first section image 2' src={FirstSectionImage2} className='absolute -top-24 -right-40 w-[572px] h-[488px] rounded-xl' />
+                <img alt='first section image 2' src={FirstSectionImage2} className='absolute -top-10 -right-80 w-[686.46px] h-[488px] rounded-xl' />
             </div>
         </section>
     )
