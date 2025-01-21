@@ -1,37 +1,73 @@
-import { Button, useTheme } from '@mui/material';
-import { StaticImage } from 'gatsby-plugin-image';
-import React from 'react'
+import React from "react"
+import { Box, Button, Typography, useTheme } from "@mui/material";
 
-import FirstSectionImage2 from "../../images/first-section-image2.webp";
-import WaveLine from "../../images/waveLine1.svg"
-import Cursor from "../../images/saib-cursor.svg";
+import FirstSectionImage from "../../images/sections/first-section/first-section-image.webp";
+import FirstSectionImage2 from "../../images/sections/first-section/first-section-image2.webp";
+import LightningBackground from "../../images/sections/first-section/lightning-background";
+import Cursor from "../../images/sections/first-section/saib-cursor.svg";
+import Lightning from "../../images/sections/first-section/lightning.svg"
 
 const FirstSection: React.FC = () => {
     const theme = useTheme()
 
     return (
-        <section className='bg-gradient-to-b from-[#F3F1FF] from-60% to-[#E4E1FA]'>
+        <Box
+            component="section"
+            sx={{
+                background: `linear-gradient(to bottom, ${theme.palette.gradient.main} 60%, ${theme.palette.gradient.dark})`,
+            }}
+        >
             <div className='container mx-auto flex items-center justify-between max-w-[1139px] pt-40'>
                 <div className='w-[779px]'>
-                    <p className='text-[72px] leading-none -tracking-[0.001em] font-medium text-[#3A376A]'>
-                        We are...<br />
-                        <span className='font-bold'>Softwarez,</span> at its
-                        <span className='font-bold text-[#6F03E0]'> Best</span>.
-                    </p>
-                    <p className='!text-lg mt-4 tracking-wide !leading-[1.825]'>
+                    <Typography
+                        component="h2"
+                        variant="h2"
+                        className="-tracking-[0.005em]"
+                    >
+                        We are...
+                        <br />
+                        <Typography
+                            component="span"
+                            variant="h1"
+                        >
+                            Softwarez,
+                        </Typography> {' '}
+                        at its {' '}
+                        <Typography
+                            component="span"
+                            variant="h1"
+                            color="secondary"
+                        >
+                            Best
+                        </Typography>
+                        .
+                    </Typography>
+                    <Typography
+                        component="p"
+                        variant="body1"
+                        className="!mt-4"
+                    >
                         We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for
-                        <span className='!text-[#3A376A] font-bold'> Cardano.</span>
-                    </p>
+                        <Typography
+                            component="span"
+                            variant="body1"
+                            className="!font-bold"
+                        >
+                            {' '}Cardano.
+                        </Typography>
+                    </Typography>
                     <div className='relative'>
                         <Button
                             variant='contained'
                             sx={{
                                 backgroundColor: theme.palette.secondary.main,
+                                fontSize: theme.typography.h6,
                                 color: "white",
                                 borderRadius: "9999px",
-                                fontWeight: "700",
-                                padding: "8px 25px",
+                                padding: "9px 24px",
                                 marginTop: "2.25rem",
+                                height: 44,
+                                width: 163,
                                 textTransform: "capitalize"
                             }}
                         >
@@ -40,51 +76,82 @@ const FirstSection: React.FC = () => {
                         <img src={Cursor} alt='Saib Cursor' className='absolute !left-[155px] top-14' />
                     </div>
                 </div>
-                <StaticImage alt="first section image" src="../../images/first-section-image.svg" />
+                <img alt="first section image" src={FirstSectionImage} />
             </div>
 
-            <div
-                style={{
-                    backgroundImage: `url(${WaveLine})`
-                }}
-                className='bg-no-repeat bg-center bg-[length:100%_auto] w-full h-[20vh] mt-10'
-            />
+            <div className="flex h-[190px] mt-10">
+                <Box 
+                    component="div"
+                    sx={{
+                        backgroundColor: theme.palette.secondary.dark
+                    }}
+                    className="!w-[calc(50%-500px)] !h-[8px] !mt-[27px] !-mr-[5px]" />
+                <LightningBackground className="!relative !-left-60 !-top-[10.6px] !text-[150px] !w-full !max-w-[780px]"/>
+            </div>
 
-            <div className='container mx-auto flex items-center justify-between max-w-[1139px] pt-[70px] pb-36 relative'>
+            <div className='container mx-auto flex items-center justify-between max-w-[1139px] pt-[80px] pb-36 relative'>
                 <div className='space-y-4 w-[715px]'>
                     <div>
-                        <p className='text-[#6F03E0] font-bold'>What we do best...</p>
-                        <h1 className='!font-bold text-5xl tracking-normal '>We make 
-                            <span className='text-[#6F03E0] !font-bold'> Cardano</span> Software
-                        </h1>
+                        <Typography
+                            component="h6"
+                            variant="h6"
+                            color="secondary"
+                        >
+                            What we do best...
+                        </Typography>
+                        <Typography
+                            component="h3"
+                            variant="h3"
+                            className="!mt-2"
+                        >
+                            We make
+                            <Typography
+                                component="span"
+                                variant="h3"
+                                color="secondary"
+                            >
+                                {' '}Cardano{' '}
+                            </Typography>
+                            Software
+                        </Typography>
                     </div>
-                    <p className='text-lg !mt-2 tracking-[0.01rem] leading-[1.825]'>
+                    <Typography
+                        component="p"
+                        variant="body1"
+                        sx={{
+                            letterSpacing: "0.01rem",
+                            marginTop: "0.5rem"
+                        }}
+                    >
                         We specialize in decentralized applications built on the
-                        <span className='font-bold text-[#3A376A]'> Cardano</span> blockchain. We focus on creating
-                        <span className='font-bold text-[#3A376A]'> secure, scalable,</span> and
-                        <span className='font-bold text-[#3A376A]'> sustainable </span>
-                        solutions that leverage Cardano's proof-of-stake protocol to drive innovation in DeFi
-                        <br /> and enterprise blockchain solutions.
-                    </p>
+                        <span className="font-bold"> Cardano </span> blockchain. We focus on creating
+                        <span className="font-bold"> secure, scalable, </span> and
+                        <span className="font-bold"> sustainable </span>
+                        solutions that leverage Cardano's proof-of-stake protocol to drive innovation in DeFi<br /> and enterprise blockchain solutions.
+                    </Typography>
                     <Button
                         variant='outlined'
                         sx={{
                             borderColor: theme.palette.secondary.main,
-                            backgroundColor: "#EBE8FD",
+                            backgroundColor: theme.palette.primary.light,
                             color: theme.palette.text.secondary,
+                            fontSize: theme.typography.h6,
                             borderRadius: "9999px",
                             fontWeight: "700",
-                            padding: "7px 35px",
+                            padding: "8px 30px",
+                            width: 163,
+                            height: 44,
                             textTransform: "capitalize"
                         }}
                         className="!shadow-md !mt-7"
                     >
-                        Know More                       
+                        Know More
                     </Button>
                 </div>
-                <img alt='first section image 2' src={FirstSectionImage2} className='absolute -top-28 -right-[440px] scale-120 rounded-xl' />
+                <img alt="lightning" src={Lightning} className="absolute -top-28 right-12" />
+                <img alt="first section image 2" src={FirstSectionImage2} className="absolute -top-28 -right-[440px] scale-120 rounded-xl" />
             </div>
-        </section>
+        </Box>
     )
 }
 

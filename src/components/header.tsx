@@ -1,8 +1,8 @@
-import { EastRounded } from '@mui/icons-material';
-import { Button, IconButton } from '@mui/material';
-import { StaticImage } from 'gatsby-plugin-image';
-import React from 'react'
+import React from "react";
+import { EastRounded } from "@mui/icons-material";
+import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 
+import Logo from "../images/saib-logo.svg";
 import Facebook from "../images/socials/facebook";
 import LinkdIn from "../images/socials/linkedIn";
 import X from "../images/socials/x";
@@ -14,85 +14,109 @@ const Header: React.FC = () => {
     {
       label: "Facebook",
       icon: Facebook,
-      link: ""
+      link: "https://www.facebook.com/saibllc"
     },
     {
       label: "LinkedIn",
       icon: LinkdIn,
-      link: ""
+      link: "https://www.linkedin.com/company/saibllc/"
     },
     {
       label: "X",
       icon: X,
-      link: ""
+      link: "https://x.com/saibdev"
     },
     {
       label: "Github",
       icon: Github,
-      link: ""
+      link: "https://github.com/SAIB-Inc"
     }
   ]
 
+  const theme = useTheme();
+
   return (
-    <header className='bg-[#F9F7FFE5] p-6 flex shadow-md fixed w-full backdrop-blur-md !z-50'>
-      <div className='w-[1139px] mx-auto flex justify-between items-center'>
-        <StaticImage src='../images/saib-logo.svg' alt='saib-logo' placeholder='none' quality={100} />
-        <ul className='flex gap-[48px] text-[15px] !transition-all'>
-          <li>
-            <a className='!font-medium hover:text-[#6F03E0] hover:!font-bold cursor-pointer !duration-150'>
-              Home
-            </a>
-          </li>
-          <li>
-            <a className='!font-medium hover:text-[#6F03E0] hover:!font-bold cursor-pointer !duration-150'>
-              About
-            </a>
-          </li>
-          <li>
-            <a className='!font-medium hover:text-[#6F03E0] hover:!font-bold cursor-pointer !duration-150'>
-              Services
-            </a>
-          </li>
-          <li>
-            <a className='!font-medium hover:text-[#6F03E0] hover:!font-bold cursor-pointer !duration-150'>
-              Our Work
-            </a>
-          </li>
-          <li>
-            <a className='!font-medium hover:text-[#6F03E0] hover:!font-bold cursor-pointer !duration-150'>
-              Our Team
-            </a>
-          </li>
-        </ul>
-        <div className='flex items-center gap-4'>
-          {socials.map((datum, index) => (
-            <IconButton
-              key={index}
-              href={datum.link}
-              target='_blank'
-              className='!text-white !p-0 shadow-md'
+    <Box
+      component="header"
+      sx={{
+        backgroundColor: theme.palette.background.default,
+        position: "fixed",
+        display: "flex",
+        width: "100%",
+        zIndex: 50,
+        padding: 3,
+
+      }}
+      className="!shadow-md !backdrop-blur-md">
+      <div className="w-[1139px] mx-auto flex justify-between items-center">
+        <img src={Logo} alt="saib-logo" />
+        <ul className="flex gap-[48px] !transition-all">
+          {["Home", "About", "Services", "Our Work", "Our Team"].map((item) => (
+            <Box
+              component="li"
+              key={item}
+              sx={{
+                fontWeight: 500,
+                cursor: "pointer",
+                "& a": {
+                  textDecoration: "none",
+                  color: theme.palette.text.primary,
+                  transition: "color 0.15s ease, font-weight 0.15s ease",
+                  "&:hover": {
+                    color: theme.palette.text.secondary,
+                    fontWeight: "bold",
+                  },
+                },
+              }}
             >
-              {React.createElement(datum.icon, {
-                sx: { fontSize: 32 },
-              })}
-            </IconButton>
+              <Typography
+                component="a"
+                variant="body2"
+                sx={{
+                  fontWeight: "inherit",
+                }}
+              >
+                {item}
+              </Typography>
+            </Box>
           ))}
+        </ul>
+        <div className="flex items-center gap-7">
+          <div className="space-x-4">
+            {socials.map((datum, index) => (
+              <IconButton
+                key={index}
+                href={datum.link}
+                target="_blank"
+                className="!text-white !p-0 shadow-md"
+              >
+                {React.createElement(datum.icon, {
+                  sx: { fontSize: 32 },
+                })}
+              </IconButton>
+            ))}
+          </div>
           <Button
-            variant='outlined'
+            variant="outlined"
             sx={{
-              borderColor: "#6F03E0",
-              color: "#6F03E0",
+              borderColor: theme.palette.secondary.main,
+              color: theme.palette.text.secondary,
               fontSize: "14px",
-              padding: "7px 1.5rem"
+              width: 143,
+              height: 39,
+              padding: "7px 1.5rem",
+              display: "flex",
+              justifyContent: "space-between",
+              borderRadius: "9999px"
             }}
-            className='!rounded-full !border-1 !shadow-md'
+            className="!border-1 !shadow-md"
           >
-            <p className='font-bold capitalize'>Let's Talk</p>
-            <EastRounded />
+            <p className="font-bold capitalize">Let's Talk</p>
+            <EastRounded className="!text-xl" />
           </Button>
         </div>
       </div>
-    </header>
+    </Box>
   )
 }
 

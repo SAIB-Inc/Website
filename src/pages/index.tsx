@@ -1,6 +1,6 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import MainLayout from "../components/mainLayout"
+import MainLayout from "../components/main-layout"
 import Header from "../components/header"
 import FirstSection from "../components/sections/first-section"
 
