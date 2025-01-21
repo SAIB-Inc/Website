@@ -50,17 +50,28 @@ const Header: React.FC = () => {
       className="!shadow-md !backdrop-blur-md">
       <div className="w-[1139px] mx-auto flex justify-between items-center">
         <img src={Logo} alt="saib-logo" />
-        <ul className="flex gap-[48px] !transition-all">
+        <ul className="space-x-[46px]">
           {["Home", "About", "Services", "Our Work", "Our Team"].map((item) => (
             <Box
               component="li"
               key={item}
               sx={{
+                display: "inline-block",
                 cursor: "pointer",
+                color: theme.palette.text.primary,
                 "& a": {
-                  textDecoration: "none",
-                  color: theme.palette.text.primary,
+                  display: "inline-block",
+                  textAlign: "center",
+                  position: "relative",
                   transition: "color 0.15s ease, font-weight 0.15s ease",
+                  "&:before": {
+                    content: `"${item}"`,
+                    fontWeight: "bold",
+                    height: 0,
+                    overflow: "hidden",
+                    visibility: "hidden",
+                    display: "block",
+                  },
                   "&:hover": {
                     color: theme.palette.text.secondary,
                     fontWeight: "bold",

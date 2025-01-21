@@ -137,7 +137,7 @@ const FirstSection: React.FC = () => {
                             color: theme.palette.text.secondary,
                             fontSize: theme.typography.h6,
                             borderRadius: "9999px",
-                            fontWeight: "700",
+                            fontWeight: "bold",
                             padding: "8px 30px",
                             width: 163,
                             height: 44,

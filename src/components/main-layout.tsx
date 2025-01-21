@@ -75,6 +75,10 @@ const theme = createTheme({
     body2: {
       fontSize: "15px",
       fontWeight: 500
+    },
+    button: {
+      fontSize: "14px",
+      fontWeight: 700
     }
   },
 });
