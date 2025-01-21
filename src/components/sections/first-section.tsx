@@ -79,7 +79,7 @@ const FirstSection: React.FC = () => {
                 <img alt="first section image" src={FirstSectionImage} />
             </div>
 
-            <div className="flex h-[190px] mt-10">
+            <div className="flex h-[190px] mt-16">
                 <Box 
                     component="div"
                     sx={{
@@ -89,7 +89,7 @@ const FirstSection: React.FC = () => {
                 <LightningBackground className="!relative !-left-60 !-top-[10.6px] !text-[150px] !w-full !max-w-[780px]"/>
             </div>
 
-            <div className='container mx-auto flex items-center justify-between max-w-[1139px] pt-[80px] pb-36 relative'>
+            <div className='container mx-auto flex items-center justify-between max-w-[1139px] pt-[50px] pb-36 relative'>
                 <div className='space-y-4 w-[715px]'>
                     <div>
                         <Typography
@@ -148,8 +148,8 @@ const FirstSection: React.FC = () => {
                         Know More
                     </Button>
                 </div>
-                <img alt="lightning" src={Lightning} className="absolute -top-28 right-12" />
-                <img alt="first section image 2" src={FirstSectionImage2} className="absolute -top-28 -right-[440px] scale-120 rounded-xl" />
+                <img alt="lightning" src={Lightning} className="absolute -top-40 right-12" />
+                <img alt="first section image 2" src={FirstSectionImage2} className="absolute -top-40 -right-[440px] scale-120 rounded-xl" />
             </div>
         </Box>
     )
