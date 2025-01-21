@@ -108,7 +108,6 @@ const Header: React.FC = () => {
             sx={{
               borderColor: theme.palette.secondary.main,
               color: theme.palette.text.secondary,
-              fontSize: "14px",
               width: 143,
               height: 39,
               padding: "7px 1.5rem",
