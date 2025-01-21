@@ -85,7 +85,7 @@ const FirstSection: React.FC = () => {
                     sx={{
                         backgroundColor: theme.palette.secondary.dark
                     }}
-                    className="!w-[calc(50%-500px)] !h-[8px] !mt-[27px] !-mr-[5px]" />
+                    className="!w-[calc(50%-500px)] !h-2 !mt-[27px] !-mr-[5px]" />
                 <LightningBackground className="!relative !-left-60 !-top-[10.6px] !text-[150px] !w-full !max-w-[780px]"/>
             </div>
 
