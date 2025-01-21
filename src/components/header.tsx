@@ -114,9 +114,8 @@ const Header: React.FC = () => {
               padding: "7px 1.5rem",
               display: "flex",
               justifyContent: "space-between",
-              borderRadius: "9999px"
             }}
-            className="!border-1 !shadow-md"
+            className="!rounded-full !border-1 !shadow-md"
           >
             <p className="font-bold capitalize">Let's Talk</p>
             <EastRounded className="!text-xl" />

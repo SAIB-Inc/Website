@@ -4,8 +4,8 @@ import { Box, Button, Typography, useTheme } from "@mui/material";
 import FirstSectionImage from "../../images/sections/first-section/first-section-image.webp";
 import FirstSectionImage2 from "../../images/sections/first-section/first-section-image2.webp";
 import LightningBackground from "../../images/sections/first-section/lightning-background";
-import Cursor from "../../images/sections/first-section/saib-cursor.svg";
-import Lightning from "../../images/sections/first-section/lightning.svg"
+import Lightning from "../../images/sections/first-section/lightning";
+import SaibCursor from "../../images/sections/first-section/saib-cursor";
 
 const FirstSection: React.FC = () => {
     const theme = useTheme()
@@ -63,17 +63,17 @@ const FirstSection: React.FC = () => {
                                 backgroundColor: theme.palette.secondary.main,
                                 fontSize: theme.typography.h6,
                                 color: "white",
-                                borderRadius: "9999px",
                                 padding: "9px 24px",
                                 marginTop: "2.25rem",
                                 height: 44,
                                 width: 163,
                                 textTransform: "capitalize"
                             }}
+                            className="!rounded-full"
                         >
                             Build With Us
                         </Button>
-                        <img src={Cursor} alt='Saib Cursor' className='absolute !left-[155px] top-14' />
+                        <SaibCursor className="absolute !left-[155px] top-14 !text-[53px]"/>
                     </div>
                 </div>
                 <img alt="first section image" src={FirstSectionImage} />
@@ -136,19 +136,18 @@ const FirstSection: React.FC = () => {
                             backgroundColor: theme.palette.primary.light,
                             color: theme.palette.text.secondary,
                             fontSize: theme.typography.h6,
-                            borderRadius: "9999px",
                             fontWeight: "bold",
                             padding: "8px 30px",
                             width: 163,
                             height: 44,
                             textTransform: "capitalize"
                         }}
-                        className="!shadow-md !mt-7"
+                        className="!rounded-full !shadow-md !mt-7"
                     >
                         Know More
                     </Button>
                 </div>
-                <img alt="lightning" src={Lightning} className="absolute -top-40 right-12" />
+                <Lightning className="absolute -top-40 right-12 !text-[69px]"/>
                 <img alt="first section image 2" src={FirstSectionImage2} className="absolute -top-40 -right-[440px] scale-120 rounded-xl" />
             </div>
         </Box>
