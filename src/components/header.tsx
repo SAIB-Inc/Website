@@ -56,7 +56,6 @@ const Header: React.FC = () => {
               component="li"
               key={item}
               sx={{
-                fontWeight: 500,
                 cursor: "pointer",
                 "& a": {
                   textDecoration: "none",
@@ -72,9 +71,6 @@ const Header: React.FC = () => {
               <Typography
                 component="a"
                 variant="body2"
-                sx={{
-                  fontWeight: "inherit",
-                }}
               >
                 {item}
               </Typography>
