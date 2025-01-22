@@ -6,6 +6,10 @@ declare module "@mui/material/styles" {
     gradient: {
       main: string;
       dark: string;
+    },
+    carouselButtons: {
+      active: string;
+      inActive: string;
     }
   }
 
@@ -13,6 +17,10 @@ declare module "@mui/material/styles" {
     gradient?: {
       main?: string;
       dark?: string;
+    },
+    carouselButtons?: {
+      active?: string;
+      inActive?: string;
     }
   }
 }
@@ -25,6 +33,7 @@ const theme = createTheme({
     primary: {
       light: "#EBE8FD",
       main: "#EBE8FF",
+      dark: "#EDEBFF"
     },
     secondary: {
       light: "#E7E1FF",
@@ -34,6 +43,10 @@ const theme = createTheme({
     gradient: {
       main: "#F3F1FF",
       dark: "#E4E1FA"
+    },
+    carouselButtons: {
+      active: "#6F03E0",
+      inActive: "#C8C0FD"
     },
     text: {
       primary: "#3A376A",
@@ -66,11 +79,18 @@ const theme = createTheme({
       fontSize: "16px",
       fontWeight: 700,
     },
+    subtitle1: {
+      fontSize: "56px",
+      fontWeight: 700
+    },
+    subtitle2: {
+      fontSize: "20px",
+      fontWeight: 700
+    },
     body1: {
       fontSize: "18px",
       fontWeight: 400,
       lineHeight: 1.825,
-      letterSpacing: "0.025em"
     },
     body2: {
       fontSize: "15px",

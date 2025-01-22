@@ -3,12 +3,14 @@ import type { HeadFC, PageProps } from "gatsby"
 import MainLayout from "../components/main-layout"
 import Header from "../components/header"
 import FirstSection from "../components/sections/first-section"
+import SecondSection from "../components/sections/second-section"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <MainLayout>
       <Header />
       <FirstSection />
+      <SecondSection />
     </MainLayout>
   )
 }
