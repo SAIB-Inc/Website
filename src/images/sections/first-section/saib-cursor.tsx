@@ -9,8 +9,8 @@ const SaibCursor = (props: SvgIconProps) => {
                     <path d="M14.0142 13.7216C12.0068 13.6022 10.8398 15.9517 12.1478 17.4792L28.8686 37.0051C30.3168 38.6962 33.0814 37.5209 32.8685 35.3047L32.0079 26.3462C31.9249 25.4816 32.3404 24.645 33.0795 24.1888L40.7378 19.4615C42.6324 18.292 41.8984 15.379 39.6759 15.2469L14.0142 13.7216Z" fill="#6F03E0" />
                 </g>
                 <defs>
-                    <filter id="filter0_dd_1553_4468" x="-9" y="-7" width="66.8726" height="64.481" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <filter id="filter0_dd_1553_4468" x="-9" y="-7" width="66.8726" height="64.481" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                         <feOffset dy="1" />
                         <feGaussianBlur stdDeviation="1.5" />
