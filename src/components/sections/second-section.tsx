@@ -79,7 +79,7 @@ const SecondSection: React.FC = () => {
 
     return (
         <section className="">
-            <div className="container mx-auto max-w-[1139px]">
+            <div className="container max-w-screen-xl mx-auto">
                 <Paper
                     elevation={3}
                     sx={{
@@ -89,13 +89,17 @@ const SecondSection: React.FC = () => {
                         alignItems: "center",
                         padding: "61px 60px",
                         borderRadius: "24px",
-                        marginTop: "100px"
+                        marginTop: "100px",
                     }}
                 >
-                    <div>
-                        <img alt="saib laptop" src={Laptop} />
+                    <div className="w-[300px] h-auto">
+                        <img
+                            alt="saib laptop"
+                            src={Laptop}
+                            className="w-full h-auto object-contain"
+                        />
                     </div>
-                    <div className="w-[604px] flex flex-col gap-5">
+                    <div className="flex flex-col gap-5 max-w-2xl">
                         <Typography
                             component="h3"
                             variant="h3"
@@ -193,7 +197,6 @@ const SecondSection: React.FC = () => {
                         />
                     </div>
                 </Paper>
-
                 <Paper
                     elevation={3}
                     sx={{
@@ -306,16 +309,6 @@ const SecondSection: React.FC = () => {
                     </div>
                 </Paper>
             </div>
-            <div className="flex h-[190px] mt-16">
-                <Box 
-                    component="div"
-                    sx={{
-                        backgroundColor: theme.palette.secondary.dark,
-                        transform: "rotate(-10deg)"
-                    }}
-                    className="!w-[calc(50%-650px)] !h-[9px] !mt-[7.7vh] !-mr-[70px]" />
-                <LightningBackgroundLeft className="!absolute !-left-[100px] !text-[120px] !w-full !max-w-[780px]"/>
-            </div>  
         </section>
     )
 }

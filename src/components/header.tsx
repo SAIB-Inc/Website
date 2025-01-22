@@ -48,7 +48,7 @@ const Header: React.FC = () => {
 
       }}
       className="!shadow-md !backdrop-blur-md">
-      <div className="w-[1139px] mx-auto flex justify-between items-center">
+      <div className="container max-w-screen-xl mx-auto flex justify-between items-center">
         <img src={Logo} alt="saib-logo" />
         <ul className="space-x-[46px]">
           {["Home", "About", "Services", "Our Work", "Our Team"].map((item) => (

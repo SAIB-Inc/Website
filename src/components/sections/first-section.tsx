@@ -17,8 +17,8 @@ const FirstSection: React.FC = () => {
                 background: `linear-gradient(to bottom, ${theme.palette.gradient.main} 60%, ${theme.palette.gradient.dark})`,
             }}
         >
-            <div className="container mx-auto flex items-center justify-between max-w-[1139px] pt-40">
-                <div className="w-[779px]">
+            <div className="container mx-auto flex items-center justify-between pt-40 max-w-screen-xl">
+                <div className="max-w-4xl">
                     <Typography
                         component="h2"
                         variant="h2"
@@ -73,24 +73,26 @@ const FirstSection: React.FC = () => {
                         >
                             Build With Us
                         </Button>
-                        <SaibCursor className="absolute !left-[155px] top-14 !text-[53px]"/>
+                        <SaibCursor className="absolute !left-[155px] top-14 !text-[53px]" />
                     </div>
                 </div>
-                <img alt="first section image" src={FirstSectionImage} />
+                <div className="w-80">
+                    <img alt="first section image" src={FirstSectionImage} />
+                </div>
             </div>
 
             <div className="flex h-[190px] mt-16">
-                <Box 
+                <Box
                     component="div"
                     sx={{
                         backgroundColor: theme.palette.secondary.dark
                     }}
                     className="!w-[calc(50%-500px)] !h-2 !mt-[27px] !-mr-[5px]" />
-                <LightningBackground className="!relative !-left-60 !-top-[10.6px] !text-[150px] !w-full !max-w-[780px]"/>
+                <LightningBackground className="!relative !-left-60 !-top-[10.6px] !text-[150px] !w-full !max-w-[780px]" />
             </div>
 
-            <div className="container mx-auto flex items-center justify-between max-w-[1139px] pt-[50px] pb-36 relative">
-                <div className="space-y-4 w-[715px]">
+            <div className="container mx-auto flex items-center justify-between pt-[50px] pb-36 relative max-w-screen-xl">
+                <div className="space-y-4 max-w-3xl">
                     <div>
                         <Typography
                             component="h6"
@@ -123,11 +125,15 @@ const FirstSection: React.FC = () => {
                             marginTop: "0.5rem"
                         }}
                     >
-                        We specialize in decentralized applications built on the
-                        <span className="font-bold"> Cardano </span> blockchain. We focus on creating
-                        <span className="font-bold"> secure, scalable, </span> and
+                        <span>We specialize in decentralized applications built on the</span>
+                        <span className="font-bold"> Cardano </span>
+                        <span>blockchain. We focus on creating</span>
+                        <span className="font-bold"> secure, scalable, </span>
+                        <span>and</span>
                         <span className="font-bold"> sustainable </span>
-                        solutions that leverage Cardano's proof-of-stake protocol to drive innovation in DeFi<br /> and enterprise blockchain solutions.
+                        <span>solutions that leverage Cardano's proof-of-stake protocol to drive innovation in DeFi</span>
+                        <br />
+                        <span>and enterprise blockchain solutions.</span>
                     </Typography>
                     <Button
                         variant="outlined"
@@ -147,8 +153,12 @@ const FirstSection: React.FC = () => {
                         Know More
                     </Button>
                 </div>
-                <Lightning className="absolute -top-40 right-12 !text-[69px]"/>
-                <img alt="first section image 2" src={FirstSectionImage2} className="absolute -top-40 -right-[440px] scale-120 rounded-xl" />
+                <div>
+                    <Lightning className="absolute -top-40 right-12 !text-[69px]" />
+                    <div>
+                        <img alt="first section image 2" src={FirstSectionImage2} className="absolute -top-40 -right-[440px] scale-120 rounded-xl" />
+                    </div>
+                </div>
             </div>
         </Box>
     )
