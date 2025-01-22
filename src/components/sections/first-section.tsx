@@ -17,8 +17,8 @@ const FirstSection: React.FC = () => {
                 background: `linear-gradient(to bottom, ${theme.palette.gradient.main} 60%, ${theme.palette.gradient.dark})`,
             }}
         >
-            <div className='container mx-auto flex items-center justify-between max-w-[1139px] pt-40'>
-                <div className='w-[779px]'>
+            <div className="container mx-auto flex items-center justify-between max-w-[1139px] pt-40">
+                <div className="w-[779px]">
                     <Typography
                         component="h2"
                         variant="h2"
@@ -56,9 +56,9 @@ const FirstSection: React.FC = () => {
                             {' '}Cardano.
                         </Typography>
                     </Typography>
-                    <div className='relative'>
+                    <div className="relative">
                         <Button
-                            variant='contained'
+                            variant="contained"
                             sx={{
                                 backgroundColor: theme.palette.secondary.main,
                                 fontSize: theme.typography.h6,
@@ -89,8 +89,8 @@ const FirstSection: React.FC = () => {
                 <LightningBackground className="!relative !-left-60 !-top-[10.6px] !text-[150px] !w-full !max-w-[780px]"/>
             </div>
 
-            <div className='container mx-auto flex items-center justify-between max-w-[1139px] pt-[50px] pb-36 relative'>
-                <div className='space-y-4 w-[715px]'>
+            <div className="container mx-auto flex items-center justify-between max-w-[1139px] pt-[50px] pb-36 relative">
+                <div className="space-y-4 w-[715px]">
                     <div>
                         <Typography
                             component="h6"
@@ -130,7 +130,7 @@ const FirstSection: React.FC = () => {
                         solutions that leverage Cardano's proof-of-stake protocol to drive innovation in DeFi<br /> and enterprise blockchain solutions.
                     </Typography>
                     <Button
-                        variant='outlined'
+                        variant="outlined"
                         sx={{
                             borderColor: theme.palette.secondary.main,
                             backgroundColor: theme.palette.primary.light,
