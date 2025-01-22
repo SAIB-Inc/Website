@@ -47,7 +47,7 @@ const FirstSection: React.FC = () => {
                         variant="body1"
                         className="!mt-4"
                     >
-                        We are a software development company based in Cebu, Philippines that has been established through connecting the dots of its founders' shared and common passion for
+                        We are a software development company based in Philippines that has been established through connecting the dots of its founders' shared and common passion for
                         <Typography
                             component="span"
                             variant="body1"
