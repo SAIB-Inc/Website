@@ -1,20 +1,7 @@
 @import 'tailwindcss';
 
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
-}
-
-:root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  font-family: "Poppins", sans-serif;
 }
 
 html,
@@ -23,4 +10,5 @@ body {
   overflow-x: hidden;
   padding-right: 0;
   background-color: #EBE9F8;
+  color: #3A376A;
 }

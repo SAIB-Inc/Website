@@ -11,7 +11,8 @@ const FirstSection: React.FC = () => {
             component="section"
             sx={{
                 background: `linear-gradient(to bottom, ${theme.palette.gradient.main} 60%, ${theme.palette.gradient.dark})`,
-                boxShadow: theme.shadows[1]
+                boxShadow: theme.shadows[1],
+                color: theme.palette.text.primary
             }}
         >
             <div className="mx-auto !pt-40 max-w-(--breakpoint-xl)">

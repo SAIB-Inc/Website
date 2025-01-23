@@ -156,7 +156,6 @@ const Offer: React.FC = () => {
                                                 display: "list-item",
                                                 paddingX: 0,
                                                 paddingY: "4px",
-                                                fontFamily: theme.typography.fontFamily
                                             }}
                                         >
                                             {listItems}
