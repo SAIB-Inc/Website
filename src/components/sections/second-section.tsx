@@ -79,7 +79,7 @@ const SecondSection: React.FC = () => {
 
     return (
         <section className="">
-            <div className="container max-w-screen-xl mx-auto">
+            <div className="container max-w-(--breakpoint-xl) mx-auto">
                 <Paper
                     elevation={3}
                     sx={{
@@ -135,7 +135,7 @@ const SecondSection: React.FC = () => {
                                 width: 163,
                                 height: 44
                             }}
-                            className="!rounded-full !shadow-md !mt-4"
+                            className="rounded-full! shadow-md! mt-4!"
                         >
                             Explore More
                         </Button>
@@ -230,7 +230,7 @@ const SecondSection: React.FC = () => {
                     <Typography
                         component="p"
                         variant="body1"
-                        className="w-[632px] !mt-4"
+                        className="w-[632px] mt-4!"
                     >
                         We offer development services on the
                         <span className="font-bold"> Cardano blockchain</span>,
@@ -245,7 +245,7 @@ const SecondSection: React.FC = () => {
                                     padding: "33px 25px",
                                     borderRadius: "24px",
                                 }}
-                                className="!shadow-lg"
+                                className="shadow-lg!"
                             >
                                 <CardContent sx={{ padding: "16px 16px 0 16px" }}>
                                     <div className="flex gap-4 items-center">
@@ -259,7 +259,7 @@ const SecondSection: React.FC = () => {
                                             {datum.title}
                                         </Typography>
                                     </div>
-                                    <div className="!text-left mt-5">
+                                    <div className="text-left! mt-5">
                                         <Typography
                                             component="p"
                                             variant="subtitle2"
@@ -299,7 +299,7 @@ const SecondSection: React.FC = () => {
                                             maxWidth: "163px",
                                             textTransform: "capitalize"
                                         }}
-                                        className="!rounded-full !shadow-md"
+                                        className="rounded-full! shadow-md!"
                                     >
                                         {datum.buttonTitle}
                                     </Button>

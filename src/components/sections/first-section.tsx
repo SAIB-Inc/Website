@@ -17,7 +17,7 @@ const FirstSection: React.FC = () => {
                 background: `linear-gradient(to bottom, ${theme.palette.gradient.main} 60%, ${theme.palette.gradient.dark})`,
             }}
         >
-            <div className="container mx-auto flex items-center justify-between pt-40 max-w-screen-xl">
+            <div className="mx-auto flex items-center justify-between !pt-40 max-w-(--breakpoint-xl)">
                 <div className="max-w-4xl">
                     <div>
                         <Typography
@@ -48,13 +48,13 @@ const FirstSection: React.FC = () => {
                         <Typography
                             component="p"
                             variant="body1"
-                            className="!mt-4"
+                            className="mt-4!"
                         >
                             <span>We are a software development company based in Philippines that has been established through connecting the dots of its founders' shared and common passion for </span>
                             <Typography
                                 component="span"
                                 variant="body1"
-                                className="!font-bold"
+                                className="font-bold!"
                             >
                                 Cardano.
                             </Typography>
@@ -73,14 +73,14 @@ const FirstSection: React.FC = () => {
                                 width: 163,
                                 textTransform: "capitalize"
                             }}
-                            className="!rounded-full"
+                            className="rounded-full!"
                         >
                             Build With Us
                         </Button>
-                        <SaibCursor className="absolute !left-[155px] top-14 !text-[53px]" />
+                        <SaibCursor className="absolute left-[155px]! top-14 text-[53px]!" />
                     </div>
                 </div>
-                <div className="flex-shrink-0 w-72">
+                <div className="shrink-0 w-72">
                     <img
                         alt="first section image"
                         src={FirstSectionImage}
@@ -95,11 +95,11 @@ const FirstSection: React.FC = () => {
                     sx={{
                         backgroundColor: theme.palette.secondary.dark
                     }}
-                    className="!w-[calc(50%-500px)] !h-2 !mt-[27px] !-mr-[5px]" />
-                <LightningBackground className="!relative !-left-60 !-top-[10.6px] !text-[150px] !w-full !max-w-[780px]" />
+                    className="w-[calc(50%-500px)]! h-2! mt-[27px]! -mr-[5px]!" />
+                <LightningBackground className="relative! -left-60! -top-[10.6px]! text-[150px]! w-full! max-w-[780px]!" />
             </div>
 
-            <div className="container mx-auto flex items-center justify-between pt-[50px] pb-36 relative max-w-screen-xl">
+            <div className="container mx-auto flex items-center justify-between pt-[50px] pb-36 relative max-w-(--breakpoint-xl)">
                 <div className="space-y-4 max-w-3xl">
                     <div>
                         <Typography
@@ -112,7 +112,7 @@ const FirstSection: React.FC = () => {
                         <Typography
                             component="h3"
                             variant="h3"
-                            className="!mt-2"
+                            className="mt-2!"
                         >
                             We make
                             <Typography
@@ -156,14 +156,14 @@ const FirstSection: React.FC = () => {
                             height: 44,
                             textTransform: "capitalize"
                         }}
-                        className="!rounded-full !shadow-md !mt-7"
+                        className="rounded-full! shadow-md! mt-7!"
                     >
                         Know More
                     </Button>
                 </div>
                 <div>
                     <div>
-                        <Lightning className="absolute -top-40 right-12 !text-[69px]" />
+                        <Lightning className="absolute -top-40 right-12 text-[69px]!" />
                     </div>
                     <div>
                         <img alt="first section image 2" src={FirstSectionImage2} className="absolute -top-40 -right-[440px] scale-120 rounded-xl" />

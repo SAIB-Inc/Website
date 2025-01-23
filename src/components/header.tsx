@@ -47,8 +47,8 @@ const Header: React.FC = () => {
         padding: 3,
 
       }}
-      className="!shadow-md !backdrop-blur-md">
-      <div className="container max-w-screen-xl mx-auto flex justify-between items-center">
+      className="shadow-md! backdrop-blur-md!">
+      <div className="container max-w-(--breakpoint-xl) mx-auto flex justify-between items-center">
         <div>
           <img src={Logo} alt="saib-logo" />
         </div>
@@ -93,16 +93,16 @@ const Header: React.FC = () => {
           </ul>
         </div>
         <div className="flex items-center gap-7">
-          <div className="space-x-4">
+          <div className="!space-x-4">
             {socials.map((datum, index) => (
               <IconButton
                 key={index}
                 href={datum.link}
                 target="_blank"
-                className="!text-white !p-0 shadow-md"
+                className="text-white! p-0! shadow-md"
               >
                 {React.createElement(datum.icon, {
-                  sx: { fontSize: 32 },
+                  sx: { fontSize: 16 },
                 })}
               </IconButton>
             ))}
@@ -119,10 +119,10 @@ const Header: React.FC = () => {
                 display: "flex",
                 justifyContent: "space-between",
               }}
-              className="!rounded-full !border-1 !shadow-md"
+              className="rounded-full! border-1! shadow-md!"
             >
               <p className="font-bold capitalize">Let's Talk</p>
-              <EastRounded className="!text-xl" />
+              <EastRounded className="text-xl!" />
             </Button>
           </div>
         </div>
