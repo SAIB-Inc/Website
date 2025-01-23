@@ -9,17 +9,17 @@ const Carousel: React.FC = () => {
             title: "Empowering your",
             highlight: "Digital Presence",
             content: [
-                { 
-                    text: "With blockchain, you gain ", 
-                    bold: false 
+                {
+                    text: "With blockchain, you gain ",
+                    bold: false
                 },
-                { 
-                    text: "greater ownership ", 
-                    bold: true 
+                {
+                    text: "greater ownership ",
+                    bold: true
                 },
-                { 
-                    text: "of your digital assets, from intellectual property to personal data.", 
-                    bold: false 
+                {
+                    text: "of your digital assets, from intellectual property to personal data.",
+                    bold: false
                 },
             ],
             buttonTitle: "Explore More",
@@ -29,9 +29,9 @@ const Carousel: React.FC = () => {
             title: "Frontend",
             highlight: "Excellence",
             content: [
-                { 
-                    text: "Transforming ideas into stunning, intuitive web experiences that captivate and engage.", 
-                    bold: false 
+                {
+                    text: "Transforming ideas into stunning, intuitive web experiences that captivate and engage.",
+                    bold: false
                 },
             ],
             buttonTitle: "Explore More",
@@ -41,9 +41,9 @@ const Carousel: React.FC = () => {
             title: "Backend",
             highlight: "Reliability",
             content: [
-                { 
-                    text: "Powering your platforms with secure, efficient, and scalable server solutions.", 
-                    bold: false 
+                {
+                    text: "Powering your platforms with secure, efficient, and scalable server solutions.",
+                    bold: false
                 },
             ],
             buttonTitle: "Explore More",
@@ -53,9 +53,9 @@ const Carousel: React.FC = () => {
             title: "Software",
             highlight: "Innovation",
             content: [
-                { 
-                    text: "Developing bespoke software solutions that drive growth and enhance productivity.", 
-                    bold: false 
+                {
+                    text: "Developing bespoke software solutions that drive growth and enhance productivity.",
+                    bold: false
                 },
             ],
             buttonTitle: "Explore More",
@@ -65,9 +65,9 @@ const Carousel: React.FC = () => {
             title: "Blockchain",
             highlight: "Mastery",
             content: [
-                { 
-                    text: "Leveraging blockchain technology to deliver decentralized, transparent, secure applications.", 
-                    bold: false 
+                {
+                    text: "Leveraging blockchain technology to deliver decentralized, transparent, secure applications.",
+                    bold: false
                 },
             ],
             buttonTitle: "Explore More",
@@ -77,9 +77,9 @@ const Carousel: React.FC = () => {
             title: "Smart",
             highlight: "Contracts",
             content: [
-                { 
-                    text: "Creating decentralized smart contracts for secure, trustless efficiency.", 
-                    bold: false 
+                {
+                    text: "Creating decentralized smart contracts for secure, trustless efficiency.",
+                    bold: false
                 },
             ],
             buttonTitle: "Explore More",
@@ -105,66 +105,64 @@ const Carousel: React.FC = () => {
                 alignItems: "center"
             }}
         >
-            <>
-                <div className="w-75 h-auto">
-                    <img
-                        alt="carousel item"
-                        src={CarouselItems[currentIndex].imageSrc}
-                        className="w-full h-auto object-contain"
-                    />
-                </div>
-                <div className="flex flex-col gap-5 w-2xl">
-                    <Typography 
-                        component="h3" 
-                        variant="h3" 
-                        className="mb-4"
+            <div className="w-75 h-auto">
+                <img
+                    alt="carousel item"
+                    src={CarouselItems[currentIndex].imageSrc}
+                    className="w-full h-auto object-contain"
+                />
+            </div>
+            <div className="flex flex-col gap-5 w-2xl">
+                <Typography
+                    component="h3"
+                    variant="h3"
+                    className="mb-4"
+                >
+                    <span className="font-bold">{CarouselItems[currentIndex].title} </span>
+                    <Typography
+                        component="span"
+                        variant="h3"
+                        color="secondary"
                     >
-                        <span className="font-bold">{CarouselItems[currentIndex].title} </span>
-                        <Typography 
-                            component="span" 
-                            variant="h3" 
-                            color="secondary"
-                        >
-                            {CarouselItems[currentIndex].highlight}
-                        </Typography>
+                        {CarouselItems[currentIndex].highlight}
                     </Typography>
-                    <Typography 
-                        component="p" 
-                        variant="body1"
-                    >
-                        {CarouselItems[currentIndex].content.map((part, idx) => (
-                            <span
-                                key={idx}
-                                className={part.bold ? "font-bold" : undefined}
-                            >
-                                {part.text}
-                            </span>
-                        ))}
-                    </Typography>
-                    <SaibButton variant="outlined">
-                        {CarouselItems[currentIndex].buttonTitle}
-                    </SaibButton>
-                </div>
-                <div className="space-y-2">
-                    {CarouselItems.map((_, idx) => (
-                        <Box
+                </Typography>
+                <Typography
+                    component="p"
+                    variant="body1"
+                >
+                    {CarouselItems[currentIndex].content.map((part, idx) => (
+                        <span
                             key={idx}
-                            component="div"
-                            sx={{
-                                width: 10,
-                                height: 62,
-                                backgroundColor:
-                                    currentIndex === idx
-                                        ? theme.palette.carouselButtons.active
-                                        : theme.palette.carouselButtons.inactive,
-                                borderRadius: 6,
-                                cursor: "pointer",
-                            }}
-                            onClick={() => setCurrentIndex(idx)}
-                        />
+                            className={part.bold ? "font-bold" : undefined}
+                        >
+                            {part.text}
+                        </span>
                     ))}
-                </div>
-            </>
+                </Typography>
+                <SaibButton variant="outlined">
+                    {CarouselItems[currentIndex].buttonTitle}
+                </SaibButton>
+            </div>
+            <div className="space-y-2">
+                {CarouselItems.map((_, idx) => (
+                    <Box
+                        key={idx}
+                        component="div"
+                        sx={{
+                            width: 10,
+                            height: 62,
+                            backgroundColor:
+                                currentIndex === idx
+                                    ? theme.palette.carouselButtons.active
+                                    : theme.palette.carouselButtons.inactive,
+                            borderRadius: 6,
+                            cursor: "pointer",
+                        }}
+                        onClick={() => setCurrentIndex(idx)}
+                    />
+                ))}
+            </div>
         </Paper>
     );
 };
