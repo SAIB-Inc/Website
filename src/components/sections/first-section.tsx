@@ -19,43 +19,47 @@ const FirstSection: React.FC = () => {
         >
             <div className="container mx-auto flex items-center justify-between pt-40 max-w-screen-xl">
                 <div className="max-w-4xl">
-                    <Typography
-                        component="h2"
-                        variant="h2"
-                        className="-tracking-[0.005em]"
-                    >
-                        We are...
-                        <br />
+                    <div>
                         <Typography
-                            component="span"
-                            variant="h1"
+                            component="h2"
+                            variant="h2"
+                            className="-tracking-[0.005em]"
                         >
-                            Softwarez,
-                        </Typography> {' '}
-                        at its {' '}
-                        <Typography
-                            component="span"
-                            variant="h1"
-                            color="secondary"
-                        >
-                            Best
+                            We are...
+                            <br />
+                            <Typography
+                                component="span"
+                                variant="h1"
+                            >
+                                Softwarez,
+                            </Typography> {' '}
+                            at its {' '}
+                            <Typography
+                                component="span"
+                                variant="h1"
+                                color="secondary"
+                            >
+                                Best
+                            </Typography>
+                            .
                         </Typography>
-                        .
-                    </Typography>
-                    <Typography
-                        component="p"
-                        variant="body1"
-                        className="!mt-4"
-                    >
-                        We are a software development company based in Philippines that has been established through connecting the dots of its founders' shared and common passion for
+                    </div>
+                    <div>
                         <Typography
-                            component="span"
+                            component="p"
                             variant="body1"
-                            className="!font-bold"
+                            className="!mt-4"
                         >
-                            {' '}Cardano.
+                            <span>We are a software development company based in Philippines that has been established through connecting the dots of its founders' shared and common passion for </span>
+                            <Typography
+                                component="span"
+                                variant="body1"
+                                className="!font-bold"
+                            >
+                                Cardano.
+                            </Typography>
                         </Typography>
-                    </Typography>
+                    </div>
                     <div className="relative">
                         <Button
                             variant="contained"
@@ -76,8 +80,12 @@ const FirstSection: React.FC = () => {
                         <SaibCursor className="absolute !left-[155px] top-14 !text-[53px]" />
                     </div>
                 </div>
-                <div className="w-80">
-                    <img alt="first section image" src={FirstSectionImage} />
+                <div className="flex-shrink-0 w-72">
+                    <img
+                        alt="first section image"
+                        src={FirstSectionImage}
+                        className="w-full h-full"
+                    />
                 </div>
             </div>
 
@@ -154,7 +162,9 @@ const FirstSection: React.FC = () => {
                     </Button>
                 </div>
                 <div>
-                    <Lightning className="absolute -top-40 right-12 !text-[69px]" />
+                    <div>
+                        <Lightning className="absolute -top-40 right-12 !text-[69px]" />
+                    </div>
                     <div>
                         <img alt="first section image 2" src={FirstSectionImage2} className="absolute -top-40 -right-[440px] scale-120 rounded-xl" />
                     </div>

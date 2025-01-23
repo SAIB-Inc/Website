@@ -49,45 +49,49 @@ const Header: React.FC = () => {
       }}
       className="!shadow-md !backdrop-blur-md">
       <div className="container max-w-screen-xl mx-auto flex justify-between items-center">
-        <img src={Logo} alt="saib-logo" />
-        <ul className="space-x-[46px]">
-          {["Home", "About", "Services", "Our Work", "Our Team"].map((item) => (
-            <Box
-              component="li"
-              key={item}
-              sx={{
-                display: "inline-block",
-                cursor: "pointer",
-                color: theme.palette.text.primary,
-                "& a": {
+        <div>
+          <img src={Logo} alt="saib-logo" />
+        </div>
+        <div>
+          <ul className="space-x-[46px]">
+            {["Home", "About", "Services", "Our Work", "Our Team"].map((item) => (
+              <Box
+                component="li"
+                key={item}
+                sx={{
                   display: "inline-block",
-                  textAlign: "center",
-                  position: "relative",
-                  transition: "color 0.15s ease, font-weight 0.15s ease",
-                  "&:before": {
-                    content: `"${item}"`,
-                    fontWeight: "bold",
-                    height: 0,
-                    overflow: "hidden",
-                    visibility: "hidden",
-                    display: "block",
+                  cursor: "pointer",
+                  color: theme.palette.text.primary,
+                  "& a": {
+                    display: "inline-block",
+                    textAlign: "center",
+                    position: "relative",
+                    transition: "color 0.15s ease, font-weight 0.15s ease",
+                    "&:before": {
+                      content: `"${item}"`,
+                      fontWeight: "bold",
+                      height: 0,
+                      overflow: "hidden",
+                      visibility: "hidden",
+                      display: "block",
+                    },
+                    "&:hover": {
+                      color: theme.palette.text.secondary,
+                      fontWeight: "bold",
+                    },
                   },
-                  "&:hover": {
-                    color: theme.palette.text.secondary,
-                    fontWeight: "bold",
-                  },
-                },
-              }}
-            >
-              <Typography
-                component="a"
-                variant="body2"
+                }}
               >
-                {item}
-              </Typography>
-            </Box>
-          ))}
-        </ul>
+                <Typography
+                  component="a"
+                  variant="body2"
+                >
+                  {item}
+                </Typography>
+              </Box>
+            ))}
+          </ul>
+        </div>
         <div className="flex items-center gap-7">
           <div className="space-x-4">
             {socials.map((datum, index) => (
@@ -103,22 +107,24 @@ const Header: React.FC = () => {
               </IconButton>
             ))}
           </div>
-          <Button
-            variant="outlined"
-            sx={{
-              borderColor: theme.palette.secondary.main,
-              color: theme.palette.text.secondary,
-              width: 143,
-              height: 39,
-              padding: "7px 1.5rem",
-              display: "flex",
-              justifyContent: "space-between",
-            }}
-            className="!rounded-full !border-1 !shadow-md"
-          >
-            <p className="font-bold capitalize">Let's Talk</p>
-            <EastRounded className="!text-xl" />
-          </Button>
+          <div>
+            <Button
+              variant="outlined"
+              sx={{
+                borderColor: theme.palette.secondary.main,
+                color: theme.palette.text.secondary,
+                width: 143,
+                height: 39,
+                padding: "7px 1.5rem",
+                display: "flex",
+                justifyContent: "space-between",
+              }}
+              className="!rounded-full !border-1 !shadow-md"
+            >
+              <p className="font-bold capitalize">Let's Talk</p>
+              <EastRounded className="!text-xl" />
+            </Button>
+          </div>
         </div>
       </div>
     </Box>

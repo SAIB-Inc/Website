@@ -104,7 +104,7 @@ const SecondSection: React.FC = () => {
                             component="h3"
                             variant="h3"
                         >
-                            Empowering your {' '}
+                            <span className="font-bold">Empowering your </span>
                             <Typography
                                 component="span"
                                 variant="h3"
@@ -117,11 +117,11 @@ const SecondSection: React.FC = () => {
                             component="p"
                             variant="body1"
                         >
-                            With blockchain, you gain
+                            <span>With blockchain, you gain</span>
                             <span className="font-bold"> greater ownership </span>
-                            of your digital assets, from intellectual property to personal data. Decentralized platforms enable you to
+                            <span>of your digital assets, from intellectual property to personal data. Decentralized platforms enable you to</span>
                             <span className="font-bold"> maintain control over how your information is shared and monetized. </span>
-                            This shift from centralized authorities to user-driven systems fosters autonomy and strengthens your online presence.
+                            <span>This shift from centralized authorities to user-driven systems fosters autonomy and strengthens your online presence.</span>
                         </Typography>
                         <Button
                             variant='outlined'
