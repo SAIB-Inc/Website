@@ -1,12 +1,8 @@
 import React from "react";
 import { EastRounded } from "@mui/icons-material";
-import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
-
+import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import { Facebook, LinkedIn, X, Github } from "../images/socials"
 import Logo from "../images/saib-logo.svg";
-import Facebook from "../images/socials/facebook";
-import LinkdIn from "../images/socials/linkedIn";
-import X from "../images/socials/x";
-import Github from "../images/socials/github";
 import SaibButton from "./common/saib-button";
 
 const Header: React.FC = () => {
@@ -19,7 +15,7 @@ const Header: React.FC = () => {
     },
     {
       label: "LinkedIn",
-      icon: LinkdIn,
+      icon: LinkedIn,
       link: "https://www.linkedin.com/company/saibllc/"
     },
     {
