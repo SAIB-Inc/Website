@@ -1,14 +1,9 @@
 import React from "react";
-import { Box, Card, CardActions, CardContent, List, ListItem, Paper, Typography, useTheme } from "@mui/material";
-import { Laptop, LightningBackgroundLeft, LightningBackgroundRight } from "../../../images/sections/second-section";
-
-import SaibButton from "../../common/saib-button";
+import { LightningBackgroundLeft, LightningBackgroundRight } from "../../../images/sections/second-section";
 import Offer from "./offer";
 import Carousel from "./carousel";
 
 const SecondSection: React.FC = () => {
-    const theme = useTheme();
-
     return (
         <section>
             <div className="container max-w-(--breakpoint-xl) mx-auto">

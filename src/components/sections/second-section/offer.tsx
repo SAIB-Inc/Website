@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Card, CardActions, CardContent, List, ListItem, Paper, Typography, useTheme } from "@mui/material";
+import { Card, CardActions, CardContent, List, ListItem, Paper, Typography, useTheme } from "@mui/material";
 import { DApp, Nft, SmartContract, Stake, Token, Wallet } from "../../../images/icons";
 import { CardanoBackground } from "../../../images/sections/second-section";
 import SaibButton from "../../common/saib-button";
@@ -84,30 +84,38 @@ const Offer: React.FC = () => {
                 position: "relative"
             }}
         >
-            <img src={CardanoBackground} alt="Cardano logo" className="absolute top-0 right-0" />
-            <Typography
-                component="h6"
-                variant="h6"
-                color="secondary"
-            >
-                What we offer...
-            </Typography>
-            <Typography
-                component="p"
-                variant="subtitle1"
-                lineHeight="70px"
-            >
-                Cardano
-            </Typography>
-            <Typography
-                component="p"
-                variant="body1"
-                className="w-[632px] mt-4!"
-            >
-                We offer development services on the
-                <span className="font-bold"> Cardano blockchain</span>,
-                delivering secure, scalable, and innovative solutions tailored to your needs.
-            </Typography>
+            <div>
+                <img 
+                    src={CardanoBackground} 
+                    alt="Cardano logo" 
+                    className="absolute top-0 right-0" 
+                />
+            </div>
+            <div>
+                <Typography
+                    component="h6"
+                    variant="h6"
+                    color="secondary"
+                >
+                    What we offer...
+                </Typography>
+                <Typography
+                    component="p"
+                    variant="subtitle1"
+                    lineHeight="70px"
+                >
+                    Cardano
+                </Typography>
+                <Typography
+                    component="p"
+                    variant="body1"
+                    className="w-[632px] mt-4!"
+                >
+                    <span>We offer development services on the</span>
+                    <span className="font-bold"> Cardano blockchain</span>,
+                    <span>delivering secure, scalable, and innovative solutions tailored to your needs.</span>
+                </Typography>
+            </div>
             <div className="grid grid-cols-2 gap-8 mt-14">
                 {offersData.map((datum, index) => (
                     <Card
@@ -121,9 +129,7 @@ const Offer: React.FC = () => {
                     >
                         <CardContent sx={{ padding: "16px 16px 0 16px" }}>
                             <div className="flex gap-4 items-center">
-                                {React.createElement(datum.icon, {
-                                    sx: { fontSize: 28 }
-                                })}
+                                {React.createElement(datum.icon)}
                                 <Typography
                                     component="h5"
                                     variant="h5"
@@ -149,7 +155,8 @@ const Offer: React.FC = () => {
                                             sx={{
                                                 display: "list-item",
                                                 paddingX: 0,
-                                                paddingY: "4px"
+                                                paddingY: "4px",
+                                                fontFamily: theme.typography.fontFamily
                                             }}
                                         >
                                             {listItems}

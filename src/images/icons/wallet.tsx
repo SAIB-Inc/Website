@@ -3,7 +3,7 @@ import React from "react";
 
 const Wallet = (props: SvgIconProps) => {
     return (
-        <SvgIcon {...props}>
+        <SvgIcon {...props} sx={{ fontSize: 28 }}>
             <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="34" height="34" rx="3.51759" fill="#6F03E0" />
                 <path d="M3.70117 6.34407C3.70117 5.468 4.41136 4.75781 5.28743 4.75781H28.5525C29.4286 4.75781 30.1388 5.468 30.1388 6.34407V8.98783H3.70117V6.34407Z" fill="#EBE9F8" />

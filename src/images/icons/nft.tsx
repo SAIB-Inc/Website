@@ -3,7 +3,7 @@ import React from "react";
 
 const Nft = (props: SvgIconProps) => {
     return (
-        <SvgIcon {...props}>
+        <SvgIcon {...props} sx={{ fontSize: 28 }}>
             <svg width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0.16347 11.4386C0.16347 8.92325 2.20254 6.88417 4.71787 6.88417H23.5619C26.0773 6.88417 28.1163 8.92325 28.1163 11.4386V30.2826C28.1163 32.798 26.0773 34.837 23.5619 34.837H7.46996C3.4347 34.837 0.16347 31.5658 0.16347 27.5306V11.4386Z" fill="#6F03E0" stroke="#EBE9F8" strokeWidth="0.32694" />
                 <rect x="4.57708" y="1.62396" width="28.7993" height="28.7993" rx="3.99156" fill="#6F03E0" stroke="#EBE9F8" strokeWidth="2.75209" />

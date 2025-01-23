@@ -4,16 +4,23 @@ import { Backend, Blockchain, Contract, Frontend, Laptop, Software } from "../..
 import SaibButton from "../../common/saib-button";
 
 const Carousel: React.FC = () => {
-    const theme = useTheme();
-
     const CarouselItems = [
         {
             title: "Empowering your",
             highlight: "Digital Presence",
             content: [
-                { text: "With blockchain, you gain ", bold: false },
-                { text: "greater ownership ", bold: true },
-                { text: "of your digital assets, from intellectual property to personal data.", bold: false },
+                { 
+                    text: "With blockchain, you gain ", 
+                    bold: false 
+                },
+                { 
+                    text: "greater ownership ", 
+                    bold: true 
+                },
+                { 
+                    text: "of your digital assets, from intellectual property to personal data.", 
+                    bold: false 
+                },
             ],
             buttonTitle: "Explore More",
             imageSrc: Laptop,
@@ -22,7 +29,10 @@ const Carousel: React.FC = () => {
             title: "Frontend",
             highlight: "Excellence",
             content: [
-                { text: "Transforming ideas into stunning, intuitive web experiences that captivate and engage.", bold: false },
+                { 
+                    text: "Transforming ideas into stunning, intuitive web experiences that captivate and engage.", 
+                    bold: false 
+                },
             ],
             buttonTitle: "Explore More",
             imageSrc: Frontend,
@@ -31,7 +41,10 @@ const Carousel: React.FC = () => {
             title: "Backend",
             highlight: "Reliability",
             content: [
-                { text: "Powering your platforms with secure, efficient, and scalable server solutions.", bold: false },
+                { 
+                    text: "Powering your platforms with secure, efficient, and scalable server solutions.", 
+                    bold: false 
+                },
             ],
             buttonTitle: "Explore More",
             imageSrc: Backend,
@@ -40,7 +53,10 @@ const Carousel: React.FC = () => {
             title: "Software",
             highlight: "Innovation",
             content: [
-                { text: "Developing bespoke software solutions that drive growth and enhance productivity.", bold: false },
+                { 
+                    text: "Developing bespoke software solutions that drive growth and enhance productivity.", 
+                    bold: false 
+                },
             ],
             buttonTitle: "Explore More",
             imageSrc: Software,
@@ -49,7 +65,10 @@ const Carousel: React.FC = () => {
             title: "Blockchain",
             highlight: "Mastery",
             content: [
-                { text: "Leveraging blockchain technology to deliver decentralized, transparent, secure applications.", bold: false },
+                { 
+                    text: "Leveraging blockchain technology to deliver decentralized, transparent, secure applications.", 
+                    bold: false 
+                },
             ],
             buttonTitle: "Explore More",
             imageSrc: Blockchain,
@@ -58,7 +77,10 @@ const Carousel: React.FC = () => {
             title: "Smart",
             highlight: "Contracts",
             content: [
-                { text: "Creating decentralized smart contracts for secure, trustless efficiency.", bold: false },
+                { 
+                    text: "Creating decentralized smart contracts for secure, trustless efficiency.", 
+                    bold: false 
+                },
             ],
             buttonTitle: "Explore More",
             imageSrc: Contract,
@@ -66,6 +88,7 @@ const Carousel: React.FC = () => {
     ];
 
     const [currentIndex, setCurrentIndex] = useState(0);
+    const theme = useTheme();
 
     return (
         <Paper
@@ -91,13 +114,24 @@ const Carousel: React.FC = () => {
                     />
                 </div>
                 <div className="flex flex-col gap-5 w-2xl">
-                    <Typography component="h3" variant="h3" className="mb-4">
+                    <Typography 
+                        component="h3" 
+                        variant="h3" 
+                        className="mb-4"
+                    >
                         <span className="font-bold">{CarouselItems[currentIndex].title} </span>
-                        <Typography component="span" variant="h3" color="secondary">
+                        <Typography 
+                            component="span" 
+                            variant="h3" 
+                            color="secondary"
+                        >
                             {CarouselItems[currentIndex].highlight}
                         </Typography>
                     </Typography>
-                    <Typography component="p" variant="body1">
+                    <Typography 
+                        component="p" 
+                        variant="body1"
+                    >
                         {CarouselItems[currentIndex].content.map((part, idx) => (
                             <span
                                 key={idx}
@@ -115,6 +149,7 @@ const Carousel: React.FC = () => {
                     {CarouselItems.map((_, idx) => (
                         <Box
                             key={idx}
+                            component="div"
                             sx={{
                                 width: 10,
                                 height: 62,
