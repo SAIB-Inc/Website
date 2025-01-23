@@ -7,6 +7,7 @@ import Facebook from "../images/socials/facebook";
 import LinkdIn from "../images/socials/linkedIn";
 import X from "../images/socials/x";
 import Github from "../images/socials/github";
+import SaibButton from "./common/saib-button";
 
 const Header: React.FC = () => {
 
@@ -45,7 +46,6 @@ const Header: React.FC = () => {
         width: "100%",
         zIndex: 50,
         padding: 3,
-
       }}
       className="shadow-md! backdrop-blur-md!">
       <div className="container max-w-(--breakpoint-xl) mx-auto flex justify-between items-center">
@@ -93,37 +93,33 @@ const Header: React.FC = () => {
           </ul>
         </div>
         <div className="flex items-center gap-7">
-          <div className="!space-x-4">
+          <div className="space-x-4!">
             {socials.map((datum, index) => (
               <IconButton
                 key={index}
                 href={datum.link}
+                aria-label={datum.label}
                 target="_blank"
                 className="text-white! p-0! shadow-md"
+                sx={{
+                  border: "1px solid #6F03E0",
+                  height: 32,
+                  width: 32
+                }}
               >
-                {React.createElement(datum.icon, {
-                  sx: { fontSize: 16 },
-                })}
+                {React.createElement(datum.icon)}
               </IconButton>
             ))}
           </div>
           <div>
-            <Button
+            <SaibButton 
               variant="outlined"
-              sx={{
-                borderColor: theme.palette.secondary.main,
-                color: theme.palette.text.secondary,
-                width: 143,
-                height: 39,
-                padding: "7px 1.5rem",
-                display: "flex",
-                justifyContent: "space-between",
-              }}
-              className="rounded-full! border-1! shadow-md!"
+              size="small"
+              className="gap-1.5"
             >
-              <p className="font-bold capitalize">Let's Talk</p>
-              <EastRounded className="text-xl!" />
-            </Button>
+              Let's Talk
+              <EastRounded fontSize="small" />
+            </SaibButton>
           </div>
         </div>
       </div>

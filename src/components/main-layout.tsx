@@ -9,10 +9,15 @@ declare module "@mui/material/styles" {
     },
     carouselButtons: {
       active: string;
-      inActive: string;
+      inactive: string;
+    }
+    button: {
+      default: string;
+      hover: string;
+      clicked: string;
+      disabled: string;
     }
   }
-
   interface PaletteOptions {
     gradient?: {
       main?: string;
@@ -20,7 +25,13 @@ declare module "@mui/material/styles" {
     },
     carouselButtons?: {
       active?: string;
-      inActive?: string;
+      inactive?: string;
+    },
+    button: {
+      default: string;
+      hover: string;
+      clicked: string;
+      disabled: string;
     }
   }
 }
@@ -46,12 +57,18 @@ const theme = createTheme({
     },
     carouselButtons: {
       active: "#6F03E0",
-      inActive: "#C8C0FD"
+      inactive: "#C8C0FD"
     },
     text: {
       primary: "#3A376A",
       secondary: "#6F03E0",
     },
+    button: {
+      default: "#6F03E0",
+      hover: "#9026FF",
+      clicked: "#5438DC",
+      disabled: "#CAC7DF"
+    }
   },
   typography: {
     fontFamily: ["Poppins", "serif"].join(","),
@@ -101,6 +118,33 @@ const theme = createTheme({
       fontWeight: 700
     }
   },
+  shadows: [
+    "none",
+    "0px 6px 10px 3px rgba(148, 142, 189, 0.25)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+  ],
 });
 
 const MainLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
