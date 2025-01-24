@@ -44,7 +44,6 @@ const theme = createTheme({
     primary: {
       light: "#EBE8FD",
       main: "#EBE8FF",
-      dark: "#EDEBFF"
     },
     secondary: {
       light: "#E7E1FF",
@@ -120,8 +119,8 @@ const theme = createTheme({
   },
   shadows: [
     "none",
+    "0px 3px 10px 0px rgba(148, 142, 189, 0.25)",
     "0px 6px 10px 3px rgba(148, 142, 189, 0.25)",
-    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
     "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
     "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
     "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",

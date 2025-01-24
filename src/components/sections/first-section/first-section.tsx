@@ -11,7 +11,7 @@ const FirstSection: React.FC = () => {
             component="section"
             sx={{
                 background: `linear-gradient(to bottom, ${theme.palette.gradient.main} 60%, ${theme.palette.gradient.dark})`,
-                boxShadow: theme.shadows[1],
+                boxShadow: theme.shadows[2],
                 color: theme.palette.text.primary
             }}
         >
@@ -60,7 +60,7 @@ const FirstSection: React.FC = () => {
                     </div>
                     <div className="shrink-0 w-72">
                         <img
-                            alt="first section image"
+                            alt="saib graphic"
                             src={FirstSectionImage}
                             className="w-full h-full"
                         />
@@ -68,7 +68,7 @@ const FirstSection: React.FC = () => {
                 </div>
                 <div className="h-47 mt-16 w-full relative">
                     <img
-                        alt="lighning background"
+                        alt="lightning background"
                         src={LightningBackground}
                         className="absolute -left-200 w-full"
                     />
@@ -126,7 +126,7 @@ const FirstSection: React.FC = () => {
                     </div>
                     <div>
                         <img
-                            alt="first section image 2"
+                            alt="saib code preview"
                             src={FirstSectionImage2}
                             className="absolute -top-64 -right-64 scale-150 rounded-xl"
                         />

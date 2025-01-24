@@ -70,7 +70,7 @@ const Offer: React.FC = () => {
     ]
     return (
         <Paper
-            elevation={1}
+            elevation={2}
             sx={{
                 background: theme.palette.gradient.dark,
                 padding: "60px 40px",
@@ -121,10 +121,10 @@ const Offer: React.FC = () => {
                     <Card
                         key={index}
                         sx={{
-                            backgroundColor: theme.palette.primary.dark,
+                            backgroundColor: theme.palette.primary.main,
                             padding: "33px 25px",
                             borderRadius: "24px",
-                            boxShadow: theme.shadows[2]
+                            boxShadow: theme.shadows[3]
                         }}
                     >
                         <CardContent sx={{ padding: "16px 16px 0 16px" }}>

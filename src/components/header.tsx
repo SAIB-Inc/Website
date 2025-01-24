@@ -42,8 +42,9 @@ const Header: React.FC = () => {
         width: "100%",
         zIndex: 50,
         padding: 3,
+        boxShadow: theme.shadows[1]
       }}
-      className="shadow-md! backdrop-blur-md!">
+      className="backdrop-blur-md!">
       <div className="container max-w-(--breakpoint-xl) mx-auto flex justify-between items-center">
         <div>
           <img src={Logo} alt="saib-logo" />
@@ -96,11 +97,14 @@ const Header: React.FC = () => {
                 href={datum.link}
                 aria-label={datum.label}
                 target="_blank"
-                className="text-white! p-0! shadow-md"
                 sx={{
-                  border: "1px solid #6F03E0",
+                  border: `1px solid ${theme.palette.button.default}`,
                   height: 32,
-                  width: 32
+                  width: 32,
+                  boxShadow: theme.shadows[0],
+                  '&:hover': {
+                    borderColor: theme.palette.button.hover 
+                  }
                 }}
               >
                 {React.createElement(datum.icon)}
@@ -108,7 +112,7 @@ const Header: React.FC = () => {
             ))}
           </div>
           <div>
-            <SaibButton 
+            <SaibButton
               variant="outlined"
               size="small"
               className="gap-1.5"
