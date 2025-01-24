@@ -3,7 +3,7 @@ import React from "react";
 
 const SaibCursor = (props: SvgIconProps) => {
     return (
-        <SvgIcon {...props}>
+        <SvgIcon {...props} sx={{ fontSize: "53px" }}>
             <svg width="53" height="53" viewBox="0 0 53 53" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_dd_1553_4468)">
                     <path d="M14.0142 13.7216C12.0068 13.6022 10.8398 15.9517 12.1478 17.4792L28.8686 37.0051C30.3168 38.6962 33.0814 37.5209 32.8685 35.3047L32.0079 26.3462C31.9249 25.4816 32.3404 24.645 33.0795 24.1888L40.7378 19.4615C42.6324 18.292 41.8984 15.379 39.6759 15.2469L14.0142 13.7216Z" fill="#6F03E0" />
@@ -26,6 +26,7 @@ const SaibCursor = (props: SvgIconProps) => {
                     </filter>
                 </defs>
             </svg>
+
         </SvgIcon>
     )
 }

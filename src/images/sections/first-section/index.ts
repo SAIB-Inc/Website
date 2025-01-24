@@ -1,0 +1,5 @@
+export { default as FirstSectionImage } from "./first-section-image.webp"
+export { default as FirstSectionImage2 } from "./first-section-image2.webp"
+export { default as LightningBackground } from "./lightning-background.svg"
+export { default as Lightning } from "./lightning"
+export { default as SaibCursor } from "./saib-cursor"

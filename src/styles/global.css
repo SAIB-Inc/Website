@@ -1,23 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-:root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import 'tailwindcss';
 
 * {
   font-family: "Poppins", sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit;
 }
 
 html,
@@ -26,5 +10,5 @@ body {
   overflow-x: hidden;
   padding-right: 0;
   background-color: #EBE9F8;
-  color: #44407D;
+  color: #3A376A;
 }

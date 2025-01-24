@@ -1,14 +1,16 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
-import MainLayout from "../components/main-layout"
-import Header from "../components/header"
-import FirstSection from "../components/sections/first-section"
+import MainLayout from "../components/common/main-layout"
+import Header from "../components/common/header"
+import FirstSection from "../components/sections/first-section/first-section"
+import SecondSection from "../components/sections/second-section/second-section"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <MainLayout>
       <Header />
       <FirstSection />
+      <SecondSection />
     </MainLayout>
   )
 }
