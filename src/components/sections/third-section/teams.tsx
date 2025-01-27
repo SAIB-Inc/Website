@@ -224,7 +224,7 @@ const Teams: React.FC = () => {
     ]
 
     return (
-        <section className="text-center py-25">
+        <div className="text-center py-25">
             <div className="w-full">
                 <Typography
                     component="h6"
@@ -240,11 +240,11 @@ const Teams: React.FC = () => {
                     Meet the team
                 </Typography>
             </div>
-            <div className="overflow-hidden max-w-[2500px] mx-auto px-6 space-y-6 mt-14">
+            <div className="overflow-hidden max-w-630 mx-auto px-6 space-y-6 mt-14">
                 <SaibChip icon={Command} content="The Command Deck" />
                 <TeamCard items={teamsData}/>
             </div>
-        </section>
+        </div>
     )
 }
 

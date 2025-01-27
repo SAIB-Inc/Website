@@ -3,6 +3,22 @@ import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import TechnologiesRow from "./technologies-row";
 
+interface TechnologyImage {
+    node: {
+        name: string;
+        childImageSharp: {
+            gatsbyImageData: any;
+        };
+    };
+}
+
+interface GraphQLQueryResponse {
+    allFile: {
+        edges: TechnologyImage[];
+    };
+}
+
+
 const TechCategories = { 
     languages: ['c#', 'f#', 'haskell', 'javascript', 'python', 'scala', 'typescript'],
     webApp: ['dotnet', 'nodejs'],
@@ -14,7 +30,7 @@ const TechCategories = {
 };
 
 const Technologies: React.FC = () => {
-    const technologyImages = useStaticQuery(graphql`
+    const technologyImages = useStaticQuery<GraphQLQueryResponse>(graphql`
         query {
             allFile(filter: { relativeDirectory: { eq: "technologies" }}) {
                 edges {
@@ -56,14 +72,12 @@ const Technologies: React.FC = () => {
         ...categorizedTechnologies.db
     ];
 
-    console.log(technologies)
-
     const infiniteScrollRow1 = [...row1, ...row1];
     const infiniteScrollRow2 = [...row2, ...row2];
     const infiniteScrollRow3 = [...row3, ...row3];
 
     return (
-        <section className="text-center py-25 h-screen flex flex-col items-center justify-center">
+        <div className="text-center py-25 h-screen flex flex-col items-center justify-center">
             <div className="w-full">
                 <Typography
                     component="h6"
@@ -84,7 +98,7 @@ const Technologies: React.FC = () => {
                 <TechnologiesRow items={infiniteScrollRow2} direction="reverse" />
                 <TechnologiesRow items={infiniteScrollRow3} />
             </div>
-        </section>
+        </div>
     );
 };
 

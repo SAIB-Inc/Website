@@ -4,10 +4,10 @@ import Teams from "./teams";
 
 const ThirdSection: React.FC = () => {
     return (
-        <>
+        <section>
             <Technologies />  
             <Teams />
-        </>
+        </section>
     )
 }
 
