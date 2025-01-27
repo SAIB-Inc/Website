@@ -144,14 +144,14 @@ const Carousel: React.FC = () => {
                     {CarouselItems[currentIndex].buttonTitle}
                 </SaibButton>
             </div>
-            <div className="space-y-2">
+            <div className="space-y-2 h-full flex flex-col">
                 {CarouselItems.map((_, idx) => (
                     <Box
                         key={idx}
                         component="div"
                         sx={{
                             width: 10,
-                            height: 62,
+                            flexGrow: 1,
                             backgroundColor:
                                 currentIndex === idx
                                     ? theme.palette.carouselButtons.active

@@ -19,10 +19,26 @@ const config: GatsbyConfig = {
       __key: "images"
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "technologies",
+        "path": "./src/images/technologies"
+      },
+      __key: "technologies"
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        "name": "team",
+        "path": "./src/images/team"
+      },
+      __key: "team"
+    },
+    {
       resolve: 'gatsby-plugin-google-fonts',
       options: {
         fonts: [
-          "poppins:100,200,300,400,500,600,700,800,900:latin,latin-ext", 
+          "poppins:100,200,300,400,500,600,700,800,900:latin,latin-ext",
         ],
         display: "swap",
       }

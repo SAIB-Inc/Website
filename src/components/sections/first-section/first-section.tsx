@@ -15,7 +15,7 @@ const FirstSection: React.FC = () => {
                 color: theme.palette.text.primary
             }}
         >
-            <div className="mx-auto !pt-40 max-w-(--breakpoint-xl) 2xl:h-[calc(100vh-150px)]">
+            <div className="mx-auto !pt-40 max-w-(--breakpoint-xl) 2xl:h-[calc(100vh-150px)] flex flex-col justify-center">
                 <div className="flex items-center justify-between">
                     <div className="max-w-200">
                         <div>
