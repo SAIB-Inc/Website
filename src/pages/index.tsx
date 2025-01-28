@@ -5,6 +5,7 @@ import Header from "../components/common/header"
 import FirstSection from "../components/sections/first-section/first-section"
 import SecondSection from "../components/sections/second-section/second-section"
 import ThirdSection from "../components/sections/third-section/third-section"
+import FourthSection from "../components/sections/fourth-section/fourth-section"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -13,6 +14,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <FirstSection />
       <SecondSection />
       <ThirdSection />
+      <FourthSection />
     </MainLayout>
   )
 }
