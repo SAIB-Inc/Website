@@ -3,7 +3,7 @@ import { SvgIcon, SvgIconProps, useTheme } from "@mui/material";
 
 const Ceo = (props: SvgIconProps) => {
     const { sx = {}, ...otherProps } = props;
-    const theme = useTheme()
+    const theme = useTheme();
 
     return (
         <SvgIcon
@@ -19,7 +19,7 @@ const Ceo = (props: SvgIconProps) => {
                 <path d="M23.8316 31.9951C23.7808 31.7915 22.2818 30.2898 22.4851 30.0862C22.9932 29.8825 24.416 29.7044 24.7971 29.4244C25.1782 29.1444 25.7117 27.8718 26.1436 27.49C26.4485 27.4137 27.2869 29.2208 27.5918 29.4244C27.8967 29.628 29.8276 29.9844 29.9038 30.0862C29.9038 30.4934 28.5573 31.8424 28.5573 31.9951V34.5403L26.1436 33.8022L23.857 34.5403C23.73 33.8786 24.0095 32.5805 23.857 31.9951H23.8316Z"/>
             </svg>
         </SvgIcon>
-    )
-}
+    );
+};
 
-export default Ceo
+export default Ceo;

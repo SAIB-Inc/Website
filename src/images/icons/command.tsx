@@ -3,7 +3,7 @@ import { SvgIcon, SvgIconProps, useTheme } from "@mui/material";
 
 const Command = (props: SvgIconProps) => {
     const { sx = {}, ...otherProps } = props;
-    const theme = useTheme()
+    const theme = useTheme();
 
     return (
         <SvgIcon
@@ -19,7 +19,7 @@ const Command = (props: SvgIconProps) => {
                 <path d="M70.9663 56.4692L60.5784 60.5725L56.4099 71.0324L43.5344 58.2181C48.0391 56.9401 52.1404 54.9557 55.8048 52.0296C57.7546 50.4825 59.6372 48.6663 61.0155 46.6146L70.9999 56.4692H70.9663Z"/>
             </svg>
         </SvgIcon>
-    )
-}
+    );
+};
 
-export default Command
+export default Command;

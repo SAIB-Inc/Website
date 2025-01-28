@@ -3,7 +3,7 @@ import { SvgIcon, SvgIconProps, useTheme } from "@mui/material";
 
 const Blockchain = (props: SvgIconProps) => {
     const { sx = {}, ...otherProps } = props;
-    const theme = useTheme()
+    const theme = useTheme();
 
     return (
         <SvgIcon
@@ -26,7 +26,7 @@ const Blockchain = (props: SvgIconProps) => {
                 </defs>
             </svg>
         </SvgIcon>
-    )
-}
+    );
+};
 
-export default Blockchain
+export default Blockchain;

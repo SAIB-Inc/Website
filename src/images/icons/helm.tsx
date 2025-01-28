@@ -3,7 +3,7 @@ import { SvgIcon, SvgIconProps, useTheme } from "@mui/material";
 
 const Helm = (props: SvgIconProps) => {
     const { sx = {}, ...otherProps } = props;
-    const theme = useTheme()
+    const theme = useTheme();
 
     return (
         <SvgIcon
@@ -19,7 +19,7 @@ const Helm = (props: SvgIconProps) => {
                 <path d="M25.4671 20.1267C33.9744 19.0071 34.6288 31.3498 26.6396 31.6163C19.3321 31.8563 18.4868 21.0598 25.4671 20.1267Z"/>
             </svg>
         </SvgIcon>
-    )
-}
+    );
+};
 
-export default Helm
+export default Helm;

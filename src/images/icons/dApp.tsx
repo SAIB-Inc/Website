@@ -12,7 +12,7 @@ const DApp = (props: SvgIconProps) => {
                 <rect x="16.2986" y="11.7017" width="6.68661" height="12.9553" rx="1" fill="#EBE9F8" />
             </svg>
         </SvgIcon>
-    )
-}
+    );
+};
 
-export default DApp
+export default DApp;
