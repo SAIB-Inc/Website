@@ -134,7 +134,7 @@ const FirstSection: React.FC = () => {
                 </div>
             </div>
         </Box>
-    )
-}
+    );
+};
 
-export default FirstSection
+export default FirstSection;

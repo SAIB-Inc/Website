@@ -124,7 +124,7 @@ const Header: React.FC = () => {
         </div>
       </div>
     </Box>
-  )
-}
+  );
+};
 
 export default Header

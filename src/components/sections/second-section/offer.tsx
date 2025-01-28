@@ -67,7 +67,8 @@ const Offer: React.FC = () => {
             ],
             buttonTitle: "Integrate Now"
         }
-    ]
+    ];
+    
     return (
         <Paper
             elevation={2}
@@ -175,7 +176,7 @@ const Offer: React.FC = () => {
                 ))}
             </div>
         </Paper>
-    )
-}
+    );
+};
 
-export default Offer
+export default Offer;

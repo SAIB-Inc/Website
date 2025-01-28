@@ -12,7 +12,7 @@ declare module "@mui/material/styles" {
       tintDark: string;
       main: string;
       dark: string;
-    }
+    },
     carouselButtons: {
       active: string;
       inactive: string;
@@ -35,7 +35,7 @@ declare module "@mui/material/styles" {
       tintDark?: string;
       main?: string;
       dark?: string;
-    }
+    },
     carouselButtons?: {
       active?: string;
       inactive?: string;
@@ -200,6 +200,6 @@ const MainLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
       {children}
     </ThemeProvider>
   );
-};;
+};
 
-export default MainLayout
+export default MainLayout;

@@ -19,7 +19,7 @@ const SecondSection: React.FC = () => {
                 </div>
             </div>
         </section>
-    )
-}
+    );
+};
 
 export default SecondSection;

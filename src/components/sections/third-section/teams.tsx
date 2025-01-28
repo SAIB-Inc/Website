@@ -172,7 +172,7 @@ const Teams: React.FC = () => {
                 Blockchain
             ]
         }
-    ]
+    ];
 
     return (
         <div className="text-center py-25">
@@ -196,7 +196,7 @@ const Teams: React.FC = () => {
                 <TeamCard items={teamsData} />
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default Teams
+export default Teams;

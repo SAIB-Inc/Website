@@ -8,7 +8,7 @@ const ThirdSection: React.FC = () => {
             <Technologies />  
             <Teams />
         </section>
-    )
-}
+    );
+};
 
-export default ThirdSection
+export default ThirdSection;
