@@ -11,8 +11,13 @@ export default [
   pluginJs.configs.recommended,
   ...tseslint.configs.recommended,
   pluginReact.configs.flat.recommended,
-  { ignores: [".cache", "gatsby-config.ts", "public/~partytown/**", "src/gatsby-types.d.ts"] },
+  { ignores: [".cache", "gatsby-config.ts", "public/**", "src/gatsby-types.d.ts"] },
   {
+    settings: {
+      react: {
+        version: "detect",
+      },
+    },
     rules: {
       "no-duplicate-imports": ["error", { "includeExports": true }],
       "no-useless-assignment": "error"

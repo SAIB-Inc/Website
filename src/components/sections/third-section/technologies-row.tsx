@@ -1,9 +1,10 @@
+import { IGatsbyImageData } from "gatsby-plugin-image";
 import React from "react";
 
 interface TechnologiesRowProps {
     items: {
         name: string;
-        gatsbyImageData: any;
+        gatsbyImageData: IGatsbyImageData;
     }[];
     direction?: "default" | "reverse";
 }
