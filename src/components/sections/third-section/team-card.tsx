@@ -1,8 +1,7 @@
 import React from "react";
-import { SvgIconProps, Typography, useTheme } from "@mui/material";
+import { Box, SvgIconProps, Typography, useTheme } from "@mui/material";
 import ImagePlaceholder from "../../../images/team/placeholder.webp";
 import SaibTeamBackground from "../../../images/team/saib-background.webp"
-import SaibLogoLight from "../../../images/saib-logo-light.svg"
 
 interface TeamCardProps {
     items: {
@@ -18,19 +17,37 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
     const theme = useTheme();
 
     return (
-        <div className="flex gap-x-5 overflow-auto w-max rounded-4x">
+        <Box
+            sx={{
+                display: "flex",
+                gap: 2.5,
+                overflow: "auto",
+                width: "max-content",
+            }}
+        >
             {items.map((datum, index) => (
-                <div
+                <Box
                     key={index}
-                    className="bg-cover bg-center w-65 rounded-4xl relative overflow-hidden"
-                    style={{
+                    component="div"
+                    sx={{
                         backgroundImage: `url(${SaibTeamBackground})`,
+                        backgroundSize: 'cover',
+                        backgroundPosition: 'center',
+                        position: 'relative',
+                        overflow: 'hidden',
+                        width: 260,
+                        borderRadius: 8,
                     }}
                 >
-                    <div className="w-[60px] absolute top-5 left-5">
-                        <img alt="saib logo light" src={SaibLogoLight} />
-                    </div>
-                    <div className="h-full flex items-center justify-center">
+                    <Box
+                        component="div"
+                        sx={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            height: "100%"
+                        }}
+                    >
                         {datum.imageSrc ? (
                             <img
                                 src={datum.imageSrc.childImageSharp.gatsbyImageData.images.fallback.src}
@@ -43,8 +60,27 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                                 className="absolute bottom-0"
                             />
                         )}
-                    </div>
-                    <div className="absolute bottom-6 z-10 text-center w-full flex flex-col gap-3 items-center justify-center">
+                    </Box>
+                    <Box
+                        component="div"
+                        sx={{
+                            background: `linear-gradient(to bottom, 
+                        ${theme.palette.teamCardGradient.tintLight}, 
+                        ${theme.palette.teamCardGradient.tintDark}
+                    )`,
+                            position: "absolute",
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            textAlign: "center",
+                            width: "100%",
+                            bottom: 0,
+                            paddingY: 3.5,
+                            zIndex: 10,
+                            gap: 1.5,
+                        }}
+                    >
                         <div>
                             <Typography
                                 component="h6"
@@ -69,10 +105,10 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                                 React.createElement(tag, { key: index, sx: { color: "white" } })
                             )}
                         </div>
-                    </div>
-                </div>
+                    </Box>
+                </Box>
             ))}
-        </div>
+        </Box>
     );
 };
 

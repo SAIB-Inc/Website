@@ -7,6 +7,12 @@ declare module "@mui/material/styles" {
       main: string;
       dark: string;
     },
+    teamCardGradient: {
+      tintLight: string;
+      tintDark: string;
+      main: string;
+      dark: string;
+    }
     carouselButtons: {
       active: string;
       inactive: string;
@@ -18,11 +24,18 @@ declare module "@mui/material/styles" {
       disabled: string;
     }
   }
+
   interface PaletteOptions {
     gradient?: {
       main?: string;
       dark?: string;
     },
+    teamCardGradient?: {
+      tintLight?: string;
+      tintDark?: string;
+      main?: string;
+      dark?: string;
+    }
     carouselButtons?: {
       active?: string;
       inactive?: string;
@@ -74,6 +87,12 @@ const theme = createTheme({
     gradient: {
       main: "#F3F1FF",
       dark: "#E4E1FA"
+    },
+    teamCardGradient: {
+      tintLight: "#8A85CA00",
+      tintDark: "#00000090",
+      main: "#5438DC",
+      dark: "#24126A"
     },
     carouselButtons: {
       active: "#6F03E0",

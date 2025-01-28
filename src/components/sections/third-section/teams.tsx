@@ -1,13 +1,9 @@
-import { Typography, useTheme } from "@mui/material";
 import React from "react";
+import TeamCard from "./team-card";
 import SaibChip from "../../common/saib-chip";
-import { Blockchain, Ceo, Command, Engine, Helm } from "../../../images/icons";
+import { Typography } from "@mui/material";
 import { graphql, useStaticQuery } from "gatsby";
-
-
-
-
-import TeamCard from "./teamCard";
+import { Blockchain, Ceo, Command, Engine, Helm } from "../../../images/icons";
 
 const Teams: React.FC = () => {
     const teamsImage = useStaticQuery(graphql`
@@ -22,7 +18,17 @@ const Teams: React.FC = () => {
                     gatsbyImageData(quality: 100)
                 }
             }
-            Misai: file(relativePath: {eq: "team/misai.webp"}) {
+            Cait: file(relativePath: {eq: "team/cait.webp"}) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100)
+                }
+            }
+            Kathea: file(relativePath: {eq: "team/kathea.webp"}) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100)
+                }
+            }
+            Rj: file(relativePath: {eq: "team/rj.webp"}) {
                 childImageSharp {
                     gatsbyImageData(quality: 100)
                 }
@@ -32,27 +38,7 @@ const Teams: React.FC = () => {
                     gatsbyImageData(quality: 100)
                 }
             }
-            Ivanne: file(relativePath: {eq: "team/ivanne.webp"}) {
-                childImageSharp {
-                    gatsbyImageData(quality: 100)
-                }
-            }
             Kiefer: file(relativePath: {eq: "team/kiefer.webp"}) {
-                childImageSharp {
-                    gatsbyImageData(quality: 100)
-                }
-            }
-            Lex: file(relativePath: {eq: "team/lex.webp"}) {
-                childImageSharp {
-                    gatsbyImageData(quality: 100)
-                }
-            }
-            Cait: file(relativePath: {eq: "team/cait.webp"}) {
-                childImageSharp {
-                    gatsbyImageData(quality: 100)
-                }
-            }
-            Kathea: file(relativePath: {eq: "team/kathea.webp"}) {
                 childImageSharp {
                     gatsbyImageData(quality: 100)
                 }
@@ -110,68 +96,6 @@ const Teams: React.FC = () => {
             ]
         },
         {
-            name: "RJ Lacanlale",
-            position: "Head of Software Engineering",
-            imageSrc: null,
-            group: "The Helm",
-            tags: [
-                Ceo,
-                Helm,
-                Engine,
-                Blockchain
-            ]
-        },
-        {
-            name: "Misai Legara",
-            position: "Head of Administration",
-            imageSrc: teamsImage.Misai,
-            group: "The Helm",
-            tags: [
-                Ceo,
-                Helm,
-            ]
-        },
-        {
-            name: "Kim Javier",
-            position: "Designer",
-            imageSrc: teamsImage.Kim,
-            group: "The Command Deck",
-            tags: [
-                Ceo,
-                Command
-            ]
-        },
-        {
-            name: "Ivanne Bayer",
-            position: "Engineer",
-            imageSrc: teamsImage.Ivanne,
-            group: "The Command Deck",
-            tags: [
-                Ceo,
-                Command
-            ]
-        },
-        {
-            name: "Kiefer Gallego",
-            position: "Engineer",
-            imageSrc: teamsImage.Kiefer,
-            group: "The Command Deck",
-            tags: [
-                Ceo,
-                Command
-            ]
-        },
-        {
-            name: "Jonh Alexis Buot",
-            position: "Engineer",
-            imageSrc: teamsImage.Lex,
-            group: "The Engine Room",
-            tags: [
-                Ceo,
-                Engine
-            ]
-        },
-        {
             name: "Caitlin Lindsay",
             position: "Engineer",
             imageSrc: teamsImage.Cait,
@@ -192,12 +116,41 @@ const Teams: React.FC = () => {
             ]
         },
         {
+            name: "RJ Lacanlale",
+            position: "Head of Software Engineering",
+            imageSrc: teamsImage.Rj,
+            group: "The Helm",
+            tags: [
+                Ceo,
+                Helm,
+                Engine,
+                Blockchain
+            ]
+        },
+        {
+            name: "Kim Javier",
+            position: "Designer",
+            imageSrc: teamsImage.Kim,
+            group: "The Command Deck",
+            tags: [
+                Command
+            ]
+        },
+        {
+            name: "Kiefer Gallego",
+            position: "Engineer",
+            imageSrc: teamsImage.Kiefer,
+            group: "The Command Deck",
+            tags: [
+                Command
+            ]
+        },
+        {
             name: "Wendell Tamayo",
             position: "Engineer",
             imageSrc: teamsImage.Wendell,
             group: "The Engine Room",
             tags: [
-                Ceo,
                 Engine
             ]
         },
@@ -207,7 +160,6 @@ const Teams: React.FC = () => {
             imageSrc: teamsImage.Tan,
             group: "The Blockchain Lab",
             tags: [
-                Ceo,
                 Blockchain
             ]
         },
@@ -217,7 +169,6 @@ const Teams: React.FC = () => {
             imageSrc: teamsImage.Rico,
             group: "The Blockchain Lab",
             tags: [
-                Ceo,
                 Blockchain
             ]
         }
@@ -242,7 +193,7 @@ const Teams: React.FC = () => {
             </div>
             <div className="overflow-hidden max-w-630 mx-auto px-6 space-y-6 mt-14">
                 <SaibChip icon={Command} content="The Command Deck" />
-                <TeamCard items={teamsData}/>
+                <TeamCard items={teamsData} />
             </div>
         </div>
     )

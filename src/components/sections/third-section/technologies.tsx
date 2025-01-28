@@ -4,30 +4,22 @@ import React from "react";
 import TechnologiesRow from "./technologies-row";
 
 interface TechnologyImage {
-    node: {
-        name: string;
-        childImageSharp: {
-            gatsbyImageData: any;
-        };
-    };
+    name: string;
+    gatsbyImageData: any;
 }
 
 interface GraphQLQueryResponse {
     allFile: {
-        edges: TechnologyImage[];
+        edges: {
+            node: {
+                name: string;
+                childImageSharp: {
+                    gatsbyImageData: any;
+                };
+            };
+        }[];
     };
 }
-
-
-const TechCategories = { 
-    languages: ['c#', 'f#', 'haskell', 'javascript', 'python', 'scala', 'typescript'],
-    webApp: ['dotnet', 'nodejs'],
-    os: ['android', 'ios', 'linux', 'windows', 'mac'],
-    cloud: ['azure', 'google-cloud', 'aws'],
-    db: ['MS SQL', 'mongodb', 'postgresql', 'mysqL'],
-    blockchain: ['cardano', 'demeter'],
-    container: ['docker', 'kubernetes']
-};
 
 const Technologies: React.FC = () => {
     const technologyImages = useStaticQuery<GraphQLQueryResponse>(graphql`
@@ -37,11 +29,7 @@ const Technologies: React.FC = () => {
                     node {
                         name
                         childImageSharp {
-                            gatsbyImageData(
-                                width: 150
-                                placeholder: NONE
-                                formats: [AUTO, WEBP]
-                            )
+                            gatsbyImageData(width: 150)
                         }
                     }
                 }
@@ -49,54 +37,40 @@ const Technologies: React.FC = () => {
         }
     `);
 
-    const technologies = technologyImages.allFile.edges;
+    const technologies = technologyImages.allFile.edges.map(({ node }) => ({
+        name: node.name,
+        gatsbyImageData: node.childImageSharp?.gatsbyImageData,
+    }));
 
-    const categorizedTechnologies = Object.entries(TechCategories).reduce((acc, [category, names]) => {
-        acc[category] = technologies.filter(({ node }) => names.includes(node.name));
-        return acc;
-    }, {} as Record<string, typeof technologies>);
+    function generateRandomizedRow(technologies: TechnologyImage[]): TechnologyImage[] {
+        const allTechnologies = [...technologies];
 
-    const row1 = [
-        ...categorizedTechnologies.languages, ...categorizedTechnologies.webApp, ...categorizedTechnologies.os,
-        ...categorizedTechnologies.cloud, ...categorizedTechnologies.db, ...categorizedTechnologies.blockchain,
-        ...categorizedTechnologies.container
-    ];
-    const row2 = [
-        ...categorizedTechnologies.container, ...categorizedTechnologies.db, ...categorizedTechnologies.languages,
-        ...categorizedTechnologies.blockchain, ...categorizedTechnologies.os, ...categorizedTechnologies.webApp,
-        ...categorizedTechnologies.cloud
-    ];
-    const row3 = [
-        ...categorizedTechnologies.os, ...categorizedTechnologies.blockchain, ...categorizedTechnologies.container,
-        ...categorizedTechnologies.webApp, ...categorizedTechnologies.languages, ...categorizedTechnologies.os,
-        ...categorizedTechnologies.db
-    ];
+        for (let i = allTechnologies.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [allTechnologies[i], allTechnologies[j]] = [allTechnologies[j], allTechnologies[i]];
+        }
 
-    const infiniteScrollRow1 = [...row1, ...row1];
-    const infiniteScrollRow2 = [...row2, ...row2];
-    const infiniteScrollRow3 = [...row3, ...row3];
+        return [...allTechnologies, ...allTechnologies];
+    }
+
+    const row1 = generateRandomizedRow(technologies);
+    const row2 = generateRandomizedRow(technologies);
+    const row3 = generateRandomizedRow(technologies);
 
     return (
-        <div className="text-center py-25 h-screen flex flex-col items-center justify-center">
+        <div className="text-center py-6 min-h-screen flex flex-col items-center justify-center">
             <div className="w-full">
-                <Typography
-                    component="h6"
-                    variant="h6"
-                    color="secondary"
-                >
+                <Typography component="h6" variant="h6" color="secondary">
                     What we are good at...
                 </Typography>
-                <Typography
-                    component="h3"
-                    variant="h3"
-                >
+                <Typography component="h3" variant="h3">
                     Technologies
                 </Typography>
             </div>
-            <div className="max-w-630 overflow-hidden mx-auto mt-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]">
-                <TechnologiesRow items={infiniteScrollRow1} />
-                <TechnologiesRow items={infiniteScrollRow2} direction="reverse" />
-                <TechnologiesRow items={infiniteScrollRow3} />
+            <div className="w-full max-w-630 overflow-hidden mx-auto mt-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]">
+                <TechnologiesRow items={row1} />
+                <TechnologiesRow items={row2} direction="reverse" />
+                <TechnologiesRow items={row3} />
             </div>
         </div>
     );
