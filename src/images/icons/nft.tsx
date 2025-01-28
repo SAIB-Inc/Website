@@ -11,7 +11,7 @@ const Nft = (props: SvgIconProps) => {
                 <circle cx="24.931" cy="10.4417" r="3.52445" fill="#EBE9F8" stroke="#EBE9F8" strokeWidth="0.393156" />
             </svg>
         </SvgIcon>
-    )
-}
+    );
+};
 
-export default Nft
+export default Nft;

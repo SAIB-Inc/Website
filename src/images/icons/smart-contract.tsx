@@ -11,7 +11,7 @@ const SmartContract = (props: SvgIconProps) => {
                 <rect x="3.47168" y="18.1287" width="8.1" height="4.62857" rx="1.28301" fill="#EBE9F8" />
             </svg>
         </SvgIcon>
-    )
-}
+    );
+};
 
-export default SmartContract
+export default SmartContract;

@@ -1,7 +1,32 @@
 @import 'tailwindcss';
 
+@theme {
+  --animate-scroll: scroll 35s linear infinite;
+  --animate-scroll-reverse: scroll-reverse 50s linear infinite;
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-reverse {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+}
+
 * {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
 }
 
 html,

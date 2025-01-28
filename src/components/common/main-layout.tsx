@@ -7,10 +7,16 @@ declare module "@mui/material/styles" {
       main: string;
       dark: string;
     },
+    teamCardGradient: {
+      tintLight: string;
+      tintDark: string;
+      main: string;
+      dark: string;
+    },
     carouselButtons: {
       active: string;
       inactive: string;
-    }
+    },
     button: {
       default: string;
       hover: string;
@@ -18,8 +24,15 @@ declare module "@mui/material/styles" {
       disabled: string;
     }
   }
+
   interface PaletteOptions {
     gradient?: {
+      main?: string;
+      dark?: string;
+    },
+    teamCardGradient?: {
+      tintLight?: string;
+      tintDark?: string;
       main?: string;
       dark?: string;
     },
@@ -34,6 +47,23 @@ declare module "@mui/material/styles" {
       disabled: string;
     }
   }
+
+  interface TypoGraphyVariants {
+    teamCardTitle: React.CSSProperties;
+    teamCardSubtitle: React.CSSProperties;
+  }
+
+  interface TypographyVariantsOptions {
+    teamCardTitle?: React.CSSProperties;
+    teamCardSubtitle?: React.CSSProperties; 
+  }
+}
+
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    teamCardTitle: true;
+    teamCardSubtitle: true;
+  }
 }
 
 const theme = createTheme({
@@ -44,15 +74,25 @@ const theme = createTheme({
     primary: {
       light: "#EBE8FD",
       main: "#EBE8FF",
+      dark: "#C0B6FF"
     },
     secondary: {
       light: "#E7E1FF",
       main: "#6F03E0",
       dark: "#7660E3"
     },
+    info: {
+      main: "#62EEFF"
+    },
     gradient: {
       main: "#F3F1FF",
       dark: "#E4E1FA"
+    },
+    teamCardGradient: {
+      tintLight: "#8A85CA00",
+      tintDark: "#00000090",
+      main: "#5438DC",
+      dark: "#24126A"
     },
     carouselButtons: {
       active: "#6F03E0",
@@ -115,6 +155,14 @@ const theme = createTheme({
     button: {
       fontSize: "14px",
       fontWeight: 700
+    },
+    teamCardTitle: {
+      fontSize: "18px",
+      fontWeight: 700
+    },
+    teamCardSubtitle: {
+      fontSize: "14px",
+      fontWeight: 700
     }
   },
   shadows: [
@@ -152,6 +200,6 @@ const MainLayout: React.FC<{ children: ReactNode }> = ({ children }) => {
       {children}
     </ThemeProvider>
   );
-};;
+};
 
-export default MainLayout
+export default MainLayout;
