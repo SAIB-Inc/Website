@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Paper, Typography, useTheme } from "@mui/material";
+import { Paper, Typography, useTheme } from "@mui/material";
 import { Backend, Blockchain, Contract, Frontend, Laptop, Software } from "../../../images/sections/second-section";
 import SaibButton from "../../common/saib-button";
 import SaibNavigation from "../../common/saib-navigation";

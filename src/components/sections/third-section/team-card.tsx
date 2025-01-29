@@ -65,8 +65,8 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                         component="div"
                         sx={{
                             background: `linear-gradient(to bottom, 
-                        ${theme.palette.teamCardGradient.tintLight},
-                        ${theme.palette.teamCardGradient.tintDark} 40%
+                        ${theme.palette.gradient.teamCardGradient.tintLight},
+                        ${theme.palette.gradient.teamCardGradient.tintDark} 40%
                     )`,
                             position: "absolute",
                             display: "flex",

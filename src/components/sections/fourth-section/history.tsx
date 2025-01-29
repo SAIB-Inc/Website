@@ -1,5 +1,5 @@
-import { Card, CardContent, Typography, useTheme } from "@mui/material";
 import React from "react";
+import { Card, CardContent, Typography, useTheme } from "@mui/material";
 import { CardanoFoundation, DcSpark } from "../../../images/brands";
 
 const History: React.FC = () => {

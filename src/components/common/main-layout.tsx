@@ -30,13 +30,13 @@ declare module "@mui/material/styles" {
       utxorpc: {
         main: string;
         secondary: string;
-      }
-    },
-    teamCardGradient: {
-      tintLight: string;
-      tintDark: string;
-      main: string;
-      dark: string;
+      },
+      teamCardGradient: {
+        tintLight: string;
+        tintDark: string;
+        main: string;
+        dark: string;
+      },
     },
     carouselButtons: {
       active: string;
@@ -78,13 +78,13 @@ declare module "@mui/material/styles" {
       utxorpc?: {
         main?: string;
         secondary?: string;
-      }
-    },
-    teamCardGradient?: {
-      tintLight?: string;
-      tintDark?: string;
-      main?: string;
-      dark?: string;
+      },
+      teamCardGradient?: {
+        tintLight?: string;
+        tintSecondary?: string;
+        main?: string;
+        secondary?: string;
+      },
     },
     carouselButtons?: {
       active?: string;
@@ -161,13 +161,13 @@ const theme = createTheme({
       utxorpc: {
         main: "#003C4F",
         secondary: "#06644C"
+      },
+      teamCardGradient: {
+        tintLight: "#8A85CA00",
+        tintSecondary: "#00000090",
+        main: "#5438DC",
+        secondary: "#24126A"
       }
-    },
-    teamCardGradient: {
-      tintLight: "#8A85CA00",
-      tintDark: "#00000090",
-      main: "#5438DC",
-      dark: "#24126A"
     },
     carouselButtons: {
       active: "#6F03E0",

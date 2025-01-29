@@ -1,5 +1,5 @@
-import { Box, Button, Typography, useTheme } from "@mui/material";
 import React, { useState } from "react";
+import { Button, Typography, useTheme } from "@mui/material";
 import { Demeter, DemeterLight, Levvy, LevvyLight, TxPipe, TxPipeLight, UtxoRpc, UtxoRpcLight } from "../../../images/brands";
 import { Browser, Github, X } from "../../../images/socials";
 import SaibNavigation from "../../common/saib-navigation";
@@ -7,6 +7,7 @@ import BrandCard from "./brand-card";
 
 const Partners: React.FC = () => {
     const theme = useTheme();
+    const [currentIndex, setCurrentIndex] = useState(0);
 
     const partnersData = [
         {
@@ -15,9 +16,9 @@ const Partners: React.FC = () => {
             name: "Demeter",
             description: "Build and deploy dApps on a single platform with Demeter - effortlessly scale to support millions of users.",
             gradient: `linear-gradient(to bottom right,
-            ${theme.palette.gradient.demeter.main},
-            ${theme.palette.gradient.demeter.secondary}
-        )`,
+                ${theme.palette.gradient.demeter.main},
+                ${theme.palette.gradient.demeter.secondary}
+            )`,
             socials: [
                 {
                     icon: Browser,
@@ -35,9 +36,9 @@ const Partners: React.FC = () => {
             name: "TxPipe",
             description: "Open-source software for a decentralized world.",
             gradient: `linear-gradient(to bottom right,
-            ${theme.palette.gradient.txpipe.main},
-            ${theme.palette.gradient.txpipe.secondary}
-        )`,
+                ${theme.palette.gradient.txpipe.main},
+                ${theme.palette.gradient.txpipe.secondary}
+            )`,
             socials: [
                 {
                     icon: Browser,
@@ -59,9 +60,9 @@ const Partners: React.FC = () => {
             name: "UTxORPC",
             description: "Interact with UTxO-based blockchains using a shared specification with focus on developer experience and performance.",
             gradient: `linear-gradient(to bottom right,
-            ${theme.palette.gradient.utxorpc.main},
-            ${theme.palette.gradient.utxorpc.secondary}
-        )`,
+                ${theme.palette.gradient.utxorpc.main},
+                ${theme.palette.gradient.utxorpc.secondary}
+            )`,
             socials: [
                 {
                     icon: Browser,
@@ -79,10 +80,10 @@ const Partners: React.FC = () => {
             name: "Levvy",
             description: "Effortless lending, instant liquidity. Maximize liquidity & earnings lending and borrowing tokens or NFTs.",
             gradient: `linear-gradient(to bottom right,
-            ${theme.palette.gradient.levvy.main},
-            ${theme.palette.gradient.levvy.secondary},
-            ${theme.palette.gradient.levvy.tertiary}
-        )`,
+                ${theme.palette.gradient.levvy.main},
+                ${theme.palette.gradient.levvy.secondary},
+                ${theme.palette.gradient.levvy.tertiary}
+            )`,
             socials: [
                 {
                     icon: Browser,
@@ -94,9 +95,7 @@ const Partners: React.FC = () => {
                 }
             ]
         },
-    ]
-
-    const [currentIndex, setCurrentIndex] = useState(0);
+    ];
 
     return (
         <div className="text-center py-25">
@@ -115,7 +114,7 @@ const Partners: React.FC = () => {
                     Building With
                 </Typography>
             </div>
-            <div className="flex mt-14 h-[420px] gap-20">
+            <div className="flex mt-14 h-105 gap-20">
                 <div className="h-full flex flex-col justify-evenly items-end">
                     {partnersData.map((datum, index) => (
                         <Button
@@ -136,7 +135,6 @@ const Partners: React.FC = () => {
                         </Button>
                     ))}
                 </div>
-
                 <SaibNavigation
                     buttonCount={partnersData.length}
                     currentIndex={currentIndex}

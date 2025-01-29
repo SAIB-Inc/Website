@@ -1,6 +1,6 @@
-import { Card, CardContent, CardProps, CardActions, Typography, Link, SvgIconProps, IconButton } from "@mui/material";
-import { SxProps, useTheme } from "@mui/system";
 import React from "react";
+import { Card, CardContent, CardProps, CardActions, Typography, Link, SvgIconProps, IconButton } from "@mui/material";
+import { SxProps } from "@mui/system";
 
 interface BrandCardProps extends CardProps {
     brand: string;
@@ -28,8 +28,6 @@ const BrandCard: React.FC<BrandCardProps> = ({
     iconSize = 22,
     ...rest
 }) => {
-    const theme = useTheme();
-
     return (
         <Card
             sx={{
@@ -81,7 +79,7 @@ const BrandCard: React.FC<BrandCardProps> = ({
                         target="_blank"
                         rel="noopener noreferrer"
                         sx={{
-                            border: bordered ? `1px solid white` : "none",
+                            border: bordered ? "1px solid white" : "none",
                             height: 40,
                             width: 40,
                         }}
