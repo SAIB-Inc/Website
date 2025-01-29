@@ -107,7 +107,7 @@ const Footer: React.FC = () => {
                                         aria-label={datum.label}
                                         target="_blank"
                                         sx={{
-                                            border: `1px solid white`,
+                                            border: "1px solid white",
                                             height: 32,
                                             width: 32,
                                         }}
