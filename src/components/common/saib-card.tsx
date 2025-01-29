@@ -1,5 +1,5 @@
-import { Card, CardContent, CardProps, CardActions, Typography, Link, SvgIconProps } from "@mui/material";
-import { SxProps } from "@mui/system";
+import { Card, CardContent, CardProps, CardActions, Typography, Link, SvgIconProps, IconButton } from "@mui/material";
+import { SxProps, useTheme } from "@mui/system";
 import { OpenInNew } from "@mui/icons-material";
 import React from "react";
 
@@ -24,6 +24,8 @@ const SaibCard: React.FC<SaibCardProps> = ({
     sx = {},
     ...rest
 }) => {
+    const theme = useTheme();
+
     return (
         <Card
             sx={{
@@ -62,9 +64,19 @@ const SaibCard: React.FC<SaibCardProps> = ({
             </CardContent>
             <CardActions>
                 {socials.map((datum, index) => (
-                    <Link key={index} href={datum.link} target="_blank" rel="noopener noreferrer">
-                        {React.createElement(datum.icon, { sx: { fontSize: 40 } })}
-                    </Link>
+                    <IconButton
+                        key={index}
+                        href={datum.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        sx={{
+                            border: `1px solid white`,
+                            height: 40,
+                            width: 40,
+                        }}
+                    >
+                        {React.createElement(datum.icon, { sx: { fontSize: 24, color: "white" } })}
+                    </IconButton>
                 ))}
             </CardActions>
         </Card>

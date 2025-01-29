@@ -1,7 +1,7 @@
 import { Box, Typography, useTheme } from "@mui/material";
 import React, { useState } from "react";
 import { Demeter, DemeterLight, Levvy, LevvyLight, TxPipe, TxPipeLight, UtxoRpc, UtxoRpcLight } from "../../../images/brands";
-import { Github, X } from "../../../images/socials";
+import { Browser, Github, X } from "../../../images/socials";
 import SaibCard from "../../common/saib-card";
 
 const Partners: React.FC = () => {
@@ -19,7 +19,7 @@ const Partners: React.FC = () => {
         )`,
             socials: [
                 {
-                    icon: X,
+                    icon: Browser,
                     link: "https://demeter.run",
                 },
                 {
@@ -39,7 +39,7 @@ const Partners: React.FC = () => {
         )`,
             socials: [
                 {
-                    icon: X,
+                    icon: Browser,
                     link: "https://txpipe.io",
                 },
                 {
@@ -63,7 +63,7 @@ const Partners: React.FC = () => {
         )`,
             socials: [
                 {
-                    icon: X,
+                    icon: Browser,
                     link: "https://utxorpc.org",
                 },
                 {
@@ -84,7 +84,7 @@ const Partners: React.FC = () => {
         )`,
             socials: [
                 {
-                    icon: X,
+                    icon: Browser,
                     link: "https://levvy.fi",
                 },
                 {
@@ -114,7 +114,7 @@ const Partners: React.FC = () => {
                     Building With
                 </Typography>
             </div>
-            <div className="flex mt-14 h-[360px] gap-20">
+            <div className="flex mt-14 h-[420px] gap-20">
                 <div className="h-full flex flex-col justify-evenly items-end">
                     {partnersData.map((datum, index) => (
                         <Box
