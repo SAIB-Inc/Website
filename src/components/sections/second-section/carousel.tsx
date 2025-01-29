@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Paper, Typography, useTheme } from "@mui/material";
 import { Backend, Blockchain, Contract, Frontend, Laptop, Software } from "../../../images/sections/second-section";
 import SaibButton from "../../common/saib-button";
+import SaibNavigation from "../../common/saib-navigation";
 
 const Carousel: React.FC = () => {
     const CarouselItems = [
@@ -144,25 +145,11 @@ const Carousel: React.FC = () => {
                     {CarouselItems[currentIndex].buttonTitle}
                 </SaibButton>
             </div>
-            <div className="space-y-2 h-full flex flex-col">
-                {CarouselItems.map((_, idx) => (
-                    <Box
-                        key={idx}
-                        component="div"
-                        sx={{
-                            width: 10,
-                            flexGrow: 1,
-                            backgroundColor:
-                                currentIndex === idx
-                                    ? theme.palette.carouselButtons.active
-                                    : theme.palette.carouselButtons.inactive,
-                            borderRadius: 6,
-                            cursor: "pointer",
-                        }}
-                        onClick={() => setCurrentIndex(idx)}
-                    />
-                ))}
-            </div>
+            <SaibNavigation
+                buttonCount={CarouselItems.length}
+                currentIndex={currentIndex}
+                setCurrentIndex={setCurrentIndex}
+            />
         </Paper>
     );
 };

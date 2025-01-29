@@ -62,7 +62,7 @@ const SaibCard: React.FC<SaibCardProps> = ({
                     </Typography>
                 </div>
             </CardContent>
-            <CardActions>
+            <CardActions sx={{ gap: 0.5 }}>
                 {socials.map((datum, index) => (
                     <IconButton
                         key={index}
@@ -75,7 +75,7 @@ const SaibCard: React.FC<SaibCardProps> = ({
                             width: 40,
                         }}
                     >
-                        {React.createElement(datum.icon, { sx: { fontSize: 24, color: "white" } })}
+                        {React.createElement(datum.icon, { sx: { fontSize: 22, color: "white" } })}
                     </IconButton>
                 ))}
             </CardActions>

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Demeter, DemeterLight, Levvy, LevvyLight, TxPipe, TxPipeLight, UtxoRpc, UtxoRpcLight } from "../../../images/brands";
 import { Browser, Github, X } from "../../../images/socials";
 import SaibCard from "../../common/saib-card";
+import SaibNavigation from "../../common/saib-navigation";
 
 const Partners: React.FC = () => {
     const theme = useTheme();
@@ -133,24 +134,11 @@ const Partners: React.FC = () => {
                         </Box>
                     ))}
                 </div>
-                <div className="flex flex-col gap-2">
-                    {partnersData.map((_, idx) => (
-                        <Box
-                            component="div"
-                            sx={{
-                                width: 10,
-                                flexGrow: 1,
-                                backgroundColor:
-                                    currentIndex === idx
-                                        ? theme.palette.carouselButtons.active
-                                        : theme.palette.carouselButtons.inactive,
-                                borderRadius: 6,
-                                cursor: "pointer",
-                            }}
-                            onClick={() => setCurrentIndex(idx)}
-                        />
-                    ))}
-                </div>
+                <SaibNavigation
+                    buttonCount={partnersData.length}
+                    currentIndex={currentIndex}
+                    setCurrentIndex={setCurrentIndex}
+                />
                 <SaibCard
                     brand={partnersData[currentIndex].brand}
                     name={partnersData[currentIndex].name}
