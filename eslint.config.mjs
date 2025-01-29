@@ -20,7 +20,8 @@ export default [
     },
     rules: {
       "no-duplicate-imports": ["error", { "includeExports": true }],
-      "no-useless-assignment": "error"
+      "no-useless-assignment": "error",
+      "capitalized-comments": ["error"]
     }
   }
 ];
