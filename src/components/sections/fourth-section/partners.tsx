@@ -1,9 +1,9 @@
-import { Box, Typography, useTheme } from "@mui/material";
+import { Box, Button, Typography, useTheme } from "@mui/material";
 import React, { useState } from "react";
 import { Demeter, DemeterLight, Levvy, LevvyLight, TxPipe, TxPipeLight, UtxoRpc, UtxoRpcLight } from "../../../images/brands";
 import { Browser, Github, X } from "../../../images/socials";
-import SaibCard from "../../common/saib-card";
 import SaibNavigation from "../../common/saib-navigation";
+import BrandCard from "./brand-card";
 
 const Partners: React.FC = () => {
     const theme = useTheme();
@@ -118,7 +118,7 @@ const Partners: React.FC = () => {
             <div className="flex mt-14 h-[420px] gap-20">
                 <div className="h-full flex flex-col justify-evenly items-end">
                     {partnersData.map((datum, index) => (
-                        <Box
+                        <Button
                             component="div"
                             key={index}
                             sx={{
@@ -126,20 +126,23 @@ const Partners: React.FC = () => {
                                 justifyContent: "flex-end",
                                 alignContent: "center",
                             }}
+                            onClick={() => setCurrentIndex(index)}
                         >
                             <img
                                 src={datum.brandAlternate}
                                 alt={datum.name}
+                                className={(currentIndex == index) ? "opacity-100" : "opacity-30"}
                             />
-                        </Box>
+                        </Button>
                     ))}
                 </div>
+
                 <SaibNavigation
                     buttonCount={partnersData.length}
                     currentIndex={currentIndex}
                     setCurrentIndex={setCurrentIndex}
                 />
-                <SaibCard
+                <BrandCard
                     brand={partnersData[currentIndex].brand}
                     name={partnersData[currentIndex].name}
                     description={partnersData[currentIndex].description}
@@ -150,7 +153,6 @@ const Partners: React.FC = () => {
                     }}
                 />
             </div>
-
         </div>
     );
 };

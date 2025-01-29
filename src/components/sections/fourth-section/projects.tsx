@@ -1,8 +1,8 @@
 import { Card, CardActions, CardContent, Link, Typography, useTheme } from "@mui/material";
 import React from "react";
-import SaibCard from "../../common/saib-card";
 import { Aegis, Argus } from "../../../images/brands";
 import { OpenInNew } from "@mui/icons-material";
+import BrandCard from "./brand-card";
 
 const Projects: React.FC = () => {
     const theme = useTheme()
@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
             </div>
             <div className="flex mt-14 gap-10">
                 {projectsData.map((datum, index) => (
-                    <SaibCard
+                    <BrandCard
                         key={index}
                         brand={datum.brand}
                         name={datum.name}
@@ -69,6 +69,8 @@ const Projects: React.FC = () => {
                         sx={{
                             width: 480,
                         }}
+                        bordered={false}
+                        iconSize={40}
                     />
                 ))}
             </div>

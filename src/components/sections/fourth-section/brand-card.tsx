@@ -1,27 +1,31 @@
 import { Card, CardContent, CardProps, CardActions, Typography, Link, SvgIconProps, IconButton } from "@mui/material";
 import { SxProps, useTheme } from "@mui/system";
-import { OpenInNew } from "@mui/icons-material";
 import React from "react";
 
-interface SaibCardProps extends CardProps {
+interface BrandCardProps extends CardProps {
     brand: string;
     name: string;
     description: string;
     background?: string;
     socials: {
-        icon: React.ComponentType<SvgIconProps>,
-        link: string
+        icon: React.ComponentType<SvgIconProps>;
+        link: string;
     }[];
     sx?: SxProps;
+    bordered?: boolean;
+    iconSize?: number;
 }
 
-const SaibCard: React.FC<SaibCardProps> = ({
+
+const BrandCard: React.FC<BrandCardProps> = ({
     brand,
     name,
     description,
     background,
     socials,
     sx = {},
+    bordered = true,
+    iconSize = 22,
     ...rest
 }) => {
     const theme = useTheme();
@@ -30,7 +34,8 @@ const SaibCard: React.FC<SaibCardProps> = ({
         <Card
             sx={{
                 borderRadius: "24px",
-                padding: "33px 25px",
+                paddingX: 5,
+                paddingY: 5,
                 background: (theme) => background || theme.palette.gradient.dark,
                 color: "white",
                 flexGrow: 1,
@@ -40,29 +45,35 @@ const SaibCard: React.FC<SaibCardProps> = ({
                 flexDirection: "column",
                 justifyContent: "space-between",
                 gap: 4,
-                boxShadow: (theme) => theme.shadows[2],
                 ...sx,
             }}
             {...rest}
         >
             <CardContent sx={{ padding: "16px 16px 0 16px" }}>
-                <div className="w-[135px] h-[36px]">
+                <div>
                     <img
                         src={brand}
                         alt={name}
-                        style={{ width: "135px", height: "auto" }}
+                        style={{ height: "36px" }}
                     />
                 </div>
                 <div className="mt-10">
-                    <Typography component="h3" variant="h3">
+                    <Typography
+                        component="h3"
+                        variant="h3"
+                    >
                         {name}
                     </Typography>
-                    <Typography component="p" variant="body1" className="!mt-[20px]">
+                    <Typography
+                        component="p"
+                        variant="body1"
+                        className="!mt-5"
+                    >
                         {description}
                     </Typography>
                 </div>
             </CardContent>
-            <CardActions sx={{ gap: 0.5 }}>
+            <CardActions sx={{ gap: 0.5, paddingX: 2 }}>
                 {socials.map((datum, index) => (
                     <IconButton
                         key={index}
@@ -70,12 +81,12 @@ const SaibCard: React.FC<SaibCardProps> = ({
                         target="_blank"
                         rel="noopener noreferrer"
                         sx={{
-                            border: `1px solid white`,
+                            border: bordered ? `1px solid white` : "none",
                             height: 40,
                             width: 40,
                         }}
                     >
-                        {React.createElement(datum.icon, { sx: { fontSize: 22, color: "white" } })}
+                        {React.createElement(datum.icon, { sx: { fontSize: iconSize, color: "white" } })}
                     </IconButton>
                 ))}
             </CardActions>
@@ -83,4 +94,4 @@ const SaibCard: React.FC<SaibCardProps> = ({
     );
 };
 
-export default SaibCard;
+export default BrandCard;
