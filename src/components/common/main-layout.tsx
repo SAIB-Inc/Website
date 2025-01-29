@@ -107,6 +107,11 @@ declare module "@mui/material/styles" {
     teamCardTitle?: React.CSSProperties;
     teamCardSubtitle?: React.CSSProperties;
   }
+
+  interface TypeBackground {
+    fifthSection?: string;
+    footer?: string;
+  }
 }
 
 declare module "@mui/material/Typography" {
@@ -119,7 +124,9 @@ declare module "@mui/material/Typography" {
 const theme = createTheme({
   palette: {
     background: {
-      default: "#F9F7FFE5"
+      default: "#F9F7FFE5",
+      fifthSection: "#F3F1FF70",
+      footer: "#211E4A"  
     },
     primary: {
       light: "#EBE8FD",
