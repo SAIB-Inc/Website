@@ -44,7 +44,7 @@ const FirstSection: React.FC = () => {
                                 variant="body1"
                                 className="mt-4!"
                             >
-                                <span>We are a software development company based in Philippines that has been established through connecting the dots of its founders' shared and common passion for </span>
+                                <span>We are a software development company based in Philippines that has been established through connecting the dots of its founders&apos; shared and common passion for </span>
                                 <span className="font-bold">Cardano.</span>
                             </Typography>
                         </div>
@@ -109,7 +109,7 @@ const FirstSection: React.FC = () => {
                         <span className="font-bold"> secure, scalable, </span>
                         <span>and</span>
                         <span className="font-bold"> sustainable </span>
-                        <span>solutions that leverage Cardano's proof-of-stake protocol to drive innovation in DeFi</span>
+                        <span>solutions that leverage Cardano&apos;s proof-of-stake protocol to drive innovation in DeFi</span>
                         <br />
                         <span>and enterprise blockchain solutions.</span>
                     </Typography>

@@ -2,12 +2,13 @@ import React from "react";
 import { Box, SvgIconProps, Typography, useTheme } from "@mui/material";
 import ImagePlaceholder from "../../../images/team/placeholder.webp";
 import SaibTeamBackground from "../../../images/team/saib-background.webp"
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
 interface TeamCardProps {
     items: {
         name: string;
         position: string;
-        imageSrc: any;
+        imageSrc: IGatsbyImageData;
         group: string;
         tags: React.ComponentType<SvgIconProps>[];
     }[];
@@ -50,7 +51,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                     >
                         {datum.imageSrc ? (
                             <img
-                                src={datum.imageSrc.childImageSharp.gatsbyImageData.images.fallback.src}
+                                src={datum.imageSrc.images?.fallback?.src}
                                 alt={datum.name}
                             />
                         ) : (
