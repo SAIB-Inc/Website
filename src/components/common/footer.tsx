@@ -96,7 +96,7 @@ const Footer: React.FC = () => {
                                     variant="h6"
                                     color="white"
                                 >
-                                    Let's keep in touch
+                                    Let&apos;s keep in touch
                                 </Typography>
                             </div>
                             <div className="space-x-4! mt-3">

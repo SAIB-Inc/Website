@@ -15,7 +15,7 @@ const FifthSection: React.FC = () => {
             }}
             className="2xl:h-screen"
         >
-            <div className="max-w-(--breakpoint-xl) mx-auto flex items-center justify-between h-full">
+            <div className="max-w-(--breakpoint-xl) mx-auto flex items-center justify-between h-full py-50">
                 <div className="space-y-3!">
                     <Typography
                         component="h6"
