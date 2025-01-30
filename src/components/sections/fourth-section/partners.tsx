@@ -114,23 +114,26 @@ const Partners: React.FC = () => {
                     Building With
                 </Typography>
             </div>
-            <div className="flex mt-14 h-105 gap-20">
-                <div className="h-full flex flex-col justify-evenly items-end">
+            <div className="flex mt-14 h-100 gap-20">
+                <div className="flex flex-1 flex-col justify-evenly items-end">
                     {partnersData.map((datum, index) => (
                         <Button
                             component="div"
                             key={index}
                             sx={{
-                                height: "100%",
+                                flexGrow: 1,  // Allows buttons to expand evenly
+                                display: "flex",
                                 justifyContent: "flex-end",
-                                alignContent: "center",
+                                alignItems: "center",
+                                transition: "ease"
                             }}
                             onClick={() => setCurrentIndex(index)}
                         >
                             <img
                                 src={datum.brandAlternate}
                                 alt={datum.name}
-                                className={(currentIndex == index) ? "opacity-100" : "opacity-30"}
+                                className={`transition-opacity duration-150 ${currentIndex === index ? "opacity-100" : "opacity-30 hover:opacity-100"
+                                    }`}
                             />
                         </Button>
                     ))}

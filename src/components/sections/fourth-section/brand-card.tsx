@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, CardProps, CardActions, Typography, Link, SvgIconProps, IconButton } from "@mui/material";
+import { Card, CardContent, CardProps, CardActions, Typography, SvgIconProps, IconButton } from "@mui/material";
 import { SxProps } from "@mui/system";
 
 interface BrandCardProps extends CardProps {
@@ -56,12 +56,6 @@ const BrandCard: React.FC<BrandCardProps> = ({
                     />
                 </div>
                 <div className="mt-10">
-                    <Typography
-                        component="h3"
-                        variant="h3"
-                    >
-                        {name}
-                    </Typography>
                     <Typography
                         component="p"
                         variant="body1"
