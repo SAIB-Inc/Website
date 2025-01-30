@@ -129,6 +129,7 @@ const Header: React.FC = () => {
                 >
                   {item.name}
                 </Typography>
+
               </Box>
             ))}
           </ul>
