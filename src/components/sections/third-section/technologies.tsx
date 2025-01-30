@@ -2,10 +2,11 @@ import { Typography } from "@mui/material";
 import { graphql, useStaticQuery } from "gatsby";
 import React from "react";
 import TechnologiesRow from "./technologies-row";
+import { IGatsbyImageData } from "gatsby-plugin-image";
 
 interface TechnologyImage {
     name: string;
-    gatsbyImageData: any;
+    gatsbyImageData: IGatsbyImageData;
 }
 
 interface GraphQLQueryResponse {
@@ -14,7 +15,7 @@ interface GraphQLQueryResponse {
             node: {
                 name: string;
                 childImageSharp: {
-                    gatsbyImageData: any;
+                    gatsbyImageData: IGatsbyImageData;
                 };
             };
         }[];

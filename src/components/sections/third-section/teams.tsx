@@ -65,7 +65,7 @@ const Teams: React.FC = () => {
         {
             name: "Clark Alesna",
             position: "Chief Executive Officer",
-            imageSrc: teamsImage.Clark,
+            imageSrc: teamsImage.Clark.childImageSharp.gatsbyImageData,
             group: "The Helm",
             tags: [
                 Ceo,
@@ -78,7 +78,7 @@ const Teams: React.FC = () => {
         {
             name: "Bern Villacura",
             position: "Chief of Staff",
-            imageSrc: teamsImage.Bern,
+            imageSrc: teamsImage.Bern.childImageSharp.gatsbyImageData,
             group: "The Helm",
             tags: [
                 Ceo,
@@ -98,7 +98,7 @@ const Teams: React.FC = () => {
         {
             name: "Caitlin Lindsay",
             position: "Engineer",
-            imageSrc: teamsImage.Cait,
+            imageSrc: teamsImage.Cait.childImageSharp.gatsbyImageData,
             group: "The Engine Room",
             tags: [
                 Ceo,
@@ -108,7 +108,7 @@ const Teams: React.FC = () => {
         {
             name: "Kathea Mayol",
             position: "Engineer",
-            imageSrc: teamsImage.Kathea,
+            imageSrc: teamsImage.Kathea.childImageSharp.gatsbyImageData,
             group: "The Engine Room",
             tags: [
                 Ceo,
@@ -118,7 +118,7 @@ const Teams: React.FC = () => {
         {
             name: "RJ Lacanlale",
             position: "Head of Software Engineering",
-            imageSrc: teamsImage.Rj,
+            imageSrc: teamsImage.Rj.childImageSharp.gatsbyImageData,
             group: "The Helm",
             tags: [
                 Ceo,
@@ -130,7 +130,7 @@ const Teams: React.FC = () => {
         {
             name: "Kim Javier",
             position: "Designer",
-            imageSrc: teamsImage.Kim,
+            imageSrc: teamsImage.Kim.childImageSharp.gatsbyImageData,
             group: "The Command Deck",
             tags: [
                 Command
@@ -139,7 +139,7 @@ const Teams: React.FC = () => {
         {
             name: "Kiefer Gallego",
             position: "Engineer",
-            imageSrc: teamsImage.Kiefer,
+            imageSrc: teamsImage.Kiefer.childImageSharp.gatsbyImageData,
             group: "The Command Deck",
             tags: [
                 Command
@@ -148,7 +148,7 @@ const Teams: React.FC = () => {
         {
             name: "Wendell Tamayo",
             position: "Engineer",
-            imageSrc: teamsImage.Wendell,
+            imageSrc: teamsImage.Wendell.childImageSharp.gatsbyImageData,
             group: "The Engine Room",
             tags: [
                 Engine
@@ -157,7 +157,7 @@ const Teams: React.FC = () => {
         {
             name: "Tan Gantuangco",
             position: "Engineer",
-            imageSrc: teamsImage.Tan,
+            imageSrc: teamsImage.Tan.childImageSharp.gatsbyImageData,
             group: "The Blockchain Lab",
             tags: [
                 Blockchain
@@ -166,7 +166,7 @@ const Teams: React.FC = () => {
         {
             name: "Rico Quiblat",
             position: "Engineer",
-            imageSrc: teamsImage.Rico,
+            imageSrc: teamsImage.Rico.childImageSharp.gatsbyImageData,
             group: "The Blockchain Lab",
             tags: [
                 Blockchain

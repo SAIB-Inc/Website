@@ -24,7 +24,7 @@ export default IndexPage
 export const Head: HeadFC = () => {
   return (
     <>
-      <title>SAIB · Softwarez, At It's Best - Where Software Meets Perfection</title>
+      <title>SAIB · Softwarez, At It&apos;s Best - Where Software Meets Perfection</title>
       <meta name="description" content="" />
       <meta property="og:title" content="SAIB | Softwarez, At It's Best - Where Software Meets Perfection" />
       <meta property="og:type" content="website" />
