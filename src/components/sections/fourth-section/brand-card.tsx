@@ -48,21 +48,23 @@ const BrandCard: React.FC<BrandCardProps> = ({
             {...rest}
         >
             <CardContent sx={{ padding: "16px 16px 0 16px" }}>
-                <div>
-                    <img
-                        src={brand}
-                        alt={name}
-                        style={{ height: "36px" }}
-                    />
-                </div>
                 <div className="mt-10">
-                    <Typography
-                        component="p"
-                        variant="body1"
-                        className="!mt-5"
-                    >
-                        {description}
-                    </Typography>
+                    <div>
+                        <img
+                            src={brand}
+                            alt={name}
+                            style={{ height: "36px" }}
+                        />
+                    </div>
+                    <div>
+                        <Typography
+                            component="p"
+                            variant="body1"
+                            className="!mt-5"
+                        >
+                            {description}
+                        </Typography>
+                    </div>
                 </div>
             </CardContent>
             <CardActions sx={{ gap: 0.5, paddingX: 2 }}>

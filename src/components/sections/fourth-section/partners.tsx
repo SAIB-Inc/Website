@@ -121,7 +121,7 @@ const Partners: React.FC = () => {
                             component="div"
                             key={index}
                             sx={{
-                                flexGrow: 1,  // Allows buttons to expand evenly
+                                flexGrow: 1,
                                 display: "flex",
                                 justifyContent: "flex-end",
                                 alignItems: "center",
