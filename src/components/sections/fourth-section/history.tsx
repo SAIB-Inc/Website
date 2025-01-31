@@ -19,7 +19,7 @@ const History: React.FC = () => {
     const theme = useTheme();
 
     return (
-        <div className="text-center py-25">
+        <div className="flex flex-col items-center justify-center text-center py-25">
             <div>
                 <Typography
                     component="h6"
@@ -35,7 +35,7 @@ const History: React.FC = () => {
                     Our History
                 </Typography>
             </div>
-            <div className="flex mt-14 gap-10">
+            <div className="flex mt-14 gap-10 w-full flex-wrap">
                 {historyData.map((datum, index) => (
                     <Card
                         key={index}
@@ -44,7 +44,7 @@ const History: React.FC = () => {
                             padding: "33px 25px",
                             background: "white",
                             flexGrow: 1,
-                            width: 560,
+                            width: 480,
                             gap: 4,
                             boxShadow: theme.shadows[4],
                         }}
@@ -65,7 +65,7 @@ const History: React.FC = () => {
                             <div className="max-w-90">
                                 <Typography 
                                     component="p" 
-                                    variant="body1" 
+                                    variant="body1"
                                 >
                                     {datum.description}
                                 </Typography>

@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
     ];
 
     return (
-        <div className="text-center py-25">
+        <div className="flex flex-col items-center justify-center text-center py-25">
             <div>
                 <Typography
                     component="h6"
@@ -57,7 +57,7 @@ const Projects: React.FC = () => {
                     Our Projects
                 </Typography>
             </div>
-            <div className="flex mt-14 gap-10">
+            <div className="flex mt-14 gap-10 w-full flex-wrap">
                 {projectsData.map((datum, index) => (
                     <BrandCard
                         key={index}
