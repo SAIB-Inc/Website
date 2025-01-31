@@ -125,7 +125,7 @@ const Partners = () => {
     }, [currentIndex, transitioning]);
 
     return (
-        <div className="text-center py-25">
+        <div className="flex flex-col items-stretch text-center py-25">
             <div>
                 <Typography
                     component="h6"
@@ -141,8 +141,8 @@ const Partners = () => {
                     Building With
                 </Typography>
             </div>
-            <div className="flex mt-14 h-100 gap-20">
-                <div className="flex flex-1 flex-col justify-evenly items-end">
+            <div className="flex flex-col-reverse items-center mt-14 gap-20 lg:flex-row lg:items-stretch lg:h-100">
+                <div className="hidden flex-1 flex-col justify-evenly items-end lg:flex">
                     {partnersData.map((datum, index) => (
                         <Button
                             component="div"

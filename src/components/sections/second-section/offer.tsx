@@ -83,6 +83,7 @@ const Offer: React.FC = () => {
                 textAlign: "center",
                 position: "relative"
             }}
+            className="!hidden lg:!flex"
         >
             <div>
                 <img
@@ -109,7 +110,7 @@ const Offer: React.FC = () => {
                 <Typography
                     component="p"
                     variant="body1"
-                    className="w-[632px] mt-4!"
+                    className="lg:w-158 mt-4!"
                 >
                     <span>We offer development services on the</span>
                     <span className="font-bold"> Cardano blockchain</span>,
