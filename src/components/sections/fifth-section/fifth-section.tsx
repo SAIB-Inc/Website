@@ -13,7 +13,7 @@ const FifthSection: React.FC = () => {
             sx={{
                 background: theme.palette.background.fifthSection,
             }}
-            className="2xl:h-screen"
+            className="2xl:!h-[calc(100vh-296px)]"
         >
             <div className="max-w-(--breakpoint-xl) mx-auto flex items-center justify-between h-full py-50">
                 <div className="space-y-3!">
