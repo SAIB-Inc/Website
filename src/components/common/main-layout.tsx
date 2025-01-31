@@ -6,12 +6,37 @@ declare module "@mui/material/styles" {
     gradient: {
       main: string;
       dark: string;
-    },
-    teamCardGradient: {
-      tintLight: string;
-      tintDark: string;
-      main: string;
-      dark: string;
+      aegis: {
+        main: string;
+        secondary: string;
+      },
+      argus: {
+        main: string;
+        secondary: string;
+      },
+      demeter: {
+        main: string;
+        secondary: string;
+      },
+      levvy: {
+        main: string;
+        secondary: string;
+        tertiary: string;
+      },
+      txpipe: {
+        main: string;
+        secondary: string;
+      },
+      utxorpc: {
+        main: string;
+        secondary: string;
+      },
+      teamCardGradient: {
+        tintLight: string;
+        tintDark: string;
+        main: string;
+        dark: string;
+      },
     },
     carouselButtons: {
       active: string;
@@ -29,23 +54,48 @@ declare module "@mui/material/styles" {
     gradient?: {
       main?: string;
       dark?: string;
-    },
-    teamCardGradient?: {
-      tintLight?: string;
-      tintDark?: string;
-      main?: string;
-      dark?: string;
+      aegis?: {
+        main?: string;
+        secondary?: string;
+      },
+      argus?: {
+        main?: string;
+        secondary?: string;
+      },
+      demeter?: {
+        main?: string;
+        secondary?: string;
+      },
+      levvy?: {
+        main?: string;
+        secondary?: string;
+        tertiary?: string;
+      },
+      txpipe?: {
+        main?: string;
+        secondary?: string;
+      },
+      utxorpc?: {
+        main?: string;
+        secondary?: string;
+      },
+      teamCardGradient?: {
+        tintLight?: string;
+        tintSecondary?: string;
+        main?: string;
+        secondary?: string;
+      },
     },
     carouselButtons?: {
       active?: string;
       inactive?: string;
     },
     button: {
-      default: string;
-      hover: string;
-      clicked: string;
-      disabled: string;
-    }
+      default?: string;
+      hover?: string;
+      clicked?: string;
+      disabled?: string;
+    },
   }
 
   interface TypoGraphyVariants {
@@ -55,7 +105,7 @@ declare module "@mui/material/styles" {
 
   interface TypographyVariantsOptions {
     teamCardTitle?: React.CSSProperties;
-    teamCardSubtitle?: React.CSSProperties; 
+    teamCardSubtitle?: React.CSSProperties;
   }
 }
 
@@ -86,13 +136,38 @@ const theme = createTheme({
     },
     gradient: {
       main: "#F3F1FF",
-      dark: "#E4E1FA"
-    },
-    teamCardGradient: {
-      tintLight: "#8A85CA00",
-      tintDark: "#00000090",
-      main: "#5438DC",
-      dark: "#24126A"
+      dark: "#E4E1FA",
+      aegis: {
+        main: "#1B2770",
+        secondary: "#000A65"
+      },
+      argus: {
+        main: "#1B003F",
+        secondary: "#4700A4"
+      },
+      demeter: {
+        main: "#CF4E78",
+        secondary: "#BC487F"
+      },
+      levvy: {
+        main: "#BDB138",
+        secondary: "#8BA750",
+        tertiary: "#45C186"
+      },
+      txpipe: {
+        main: "#255DC7",
+        secondary: "#BD458B"
+      },
+      utxorpc: {
+        main: "#003C4F",
+        secondary: "#06644C"
+      },
+      teamCardGradient: {
+        tintLight: "#8A85CA00",
+        tintSecondary: "#00000090",
+        main: "#5438DC",
+        secondary: "#24126A"
+      }
     },
     carouselButtons: {
       active: "#6F03E0",
