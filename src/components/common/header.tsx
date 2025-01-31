@@ -92,7 +92,7 @@ const Header: React.FC = () => {
             <img src={Logo} alt="saib-logo" />
           </a>
         </div>
-        <div className="max-lg:hidden">
+        <div className="hidden lg:block">
           <ul className="space-x-[46px]">
             {menuItems.map((item) => (
               <Box
@@ -134,7 +134,7 @@ const Header: React.FC = () => {
             ))}
           </ul>
         </div>
-        <div className="flex items-center gap-7 max-lg:hidden">
+        <div className="items-center gap-7 hidden lg:flex">
           <div className="space-x-4!">
             {socials.map((datum, index) => (
               <IconButton

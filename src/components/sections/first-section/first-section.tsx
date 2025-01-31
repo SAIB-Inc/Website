@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Typography, useTheme } from "@mui/material";
-import { FirstSectionImage2, LightningBackground, Lightning, SaibCursor, Hand, Cardano, Rust, CSharp, Haskell } from "../../../images/sections/first-section";
+import { FirstSectionImage2, LightningBackground, Lightning, SaibCursor, Hand, Cardano, Rust, CSharp, Haskell, LightningThree, LightningFour, FirstSectionImageMobile, LightningTwo } from "../../../images/sections/first-section";
 import SaibButton from "../../common/saib-button";
 
 const FirstSection: React.FC = () => {
@@ -18,14 +18,14 @@ const FirstSection: React.FC = () => {
             }}
         >
             <div className="mx-auto !pt-40 max-w-(--breakpoint-xl) 2xl:h-[calc(100vh-150px)] flex flex-col justify-center">
-                <div className="flex justify-center gap-24 items-center max-lg:flex-col max-lg:text-center max-lg:!justify-center max-lg:gap-10">
+                <div className="flex flex-col justify-between items-center text-center gap-10 lg:flex-row lg:text-left lg:!justify-between lg:gap-24">
                     <div className="max-w-200">
                         <div className="relative flex flex-col items-center justify-center">
                             <div>
                                 <Typography
                                     component="h2"
                                     variant="h2"
-                                    className="-tracking-[0.005em] max-sm:!text-[40px] max-sm:w-[245px]"
+                                    className="-tracking-[0.005em] max-sm:!text-[40px] w-61 sm:w-full"
                                 >
                                     <span>We are...</span>
                                     <br />
@@ -42,49 +42,51 @@ const FirstSection: React.FC = () => {
                                     <span>.</span>
                                 </Typography>
                             </div>
-                            <div>
-                                <img
-                                    alt="rust"
-                                    src={Rust}
-                                    className="absolute top-15 -left-3"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                    alt="haskell"
-                                    src={Haskell}
-                                    className="absolute top-28 -left-6"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                    alt="cardano"
-                                    src={Cardano}
-                                    className="absolute top-10 -right-3"
-                                />
-                            </div>
-                            <div>
-                                <img
-                                    alt="c#"
-                                    src={CSharp}
-                                    className="absolute top-22 -right-6"
-                                />
-                            </div>
-                            <div>
-                                <Lightning sx={{ fontSize: 44 }} className="absolute -top-2 -right-16 -rotate-60" />
-                            </div>
-                            <div>
-                                <LightningThree sx={{ fontSize: 250 }} className="absolute -top-50 -left-60" />
-                            </div>
-                            <div>
-                                <LightningFour sx={{ fontSize: 50 }} className="absolute -top-18 -right-17" />
+                            <div className="lg:hidden">
+                                <div>
+                                    <img
+                                        alt="rust"
+                                        src={Rust}
+                                        className="absolute top-15 -left-3"
+                                    />
+                                </div>
+                                <div>
+                                    <img
+                                        alt="haskell"
+                                        src={Haskell}
+                                        className="absolute top-28 -left-6"
+                                    />
+                                </div>
+                                <div>
+                                    <img
+                                        alt="cardano"
+                                        src={Cardano}
+                                        className="absolute top-10 -right-3"
+                                    />
+                                </div>
+                                <div>
+                                    <img
+                                        alt="c#"
+                                        src={CSharp}
+                                        className="absolute top-22 -right-6"
+                                    />
+                                </div>
+                                <div>
+                                    <Lightning sx={{ fontSize: 44 }} className="absolute -top-2 -right-16 -rotate-60" />
+                                </div>
+                                <div>
+                                    <LightningThree sx={{ fontSize: 250 }} className="absolute -top-50 -left-60" />
+                                </div>
+                                <div>
+                                    <LightningFour sx={{ fontSize: 50 }} className="absolute -top-18 -right-17" />
+                                </div>
                             </div>
                         </div>
                         <div className="w-full lg:max-w-170">
                             <Typography
                                 component="p"
                                 variant="body1"
-                                className="mt-4! max-sm:!text-[16px] w-[280px]"
+                                className="mt-4! max-sm:!text-[16px] max-sm:w-[280px]"
                             >
                                 <span>We are a software development company based in Philippines that has been established through connecting the dots of its founders&apos; shared and common passion for </span>
                                 <span className="font-bold">Cardano.</span>
@@ -147,7 +149,7 @@ const FirstSection: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="h-47 mt-16 w-full relative max-lg:hidden">
+                <div className="h-47 mt-16 w-full relative hidden lg:block">
                     <img
                         alt="lightning background"
                         src={LightningBackground}
@@ -157,10 +159,10 @@ const FirstSection: React.FC = () => {
 
             </div>
             <div
-                className="mx-auto flex items-center justify-between pt-13 pb-36 relative max-w-(--breakpoint-xl) max-lg:flex-col max-lg:text-center max-lg:gap-10"
+                className="mx-auto flex flex-col items-center justify-between gap-10 pt-13 pb-36 relative max-w-(--breakpoint-xl) lg:flex-row text-center lg:text-left lg:gap-0"
             >
-                <div className="space-y-4 max-w-175">
-                    <div className="relative">
+                <div className="space-y-4 max-w-175 flex flex-col items-center lg:block">
+                    <div className="relative w-max">
                         <Typography
                             component="h6"
                             variant="h6"
@@ -169,11 +171,13 @@ const FirstSection: React.FC = () => {
                         >
                             What we do best...
                         </Typography>
-                        <div>
-                            <LightningTwo className="absolute -top-3 right-10"/>
-                        </div>
-                        <div>
-                            <LightningTwo className="absolute -top-3 left-10 scale-y-[-1] rotate-180"/>
+                        <div className="lg:hidden">
+                            <div>
+                                <LightningTwo className="absolute -top-3 -right-12" />
+                            </div>
+                            <div>
+                                <LightningTwo className="absolute -top-3 -left-12 scale-y-[-1] rotate-180" />
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -189,7 +193,7 @@ const FirstSection: React.FC = () => {
                                 color="secondary"
                                 className="max-sm:!text-[32px]"
                             >
-                                <br /> Cardano
+                                Cardano
                             </Typography>
                             <span> Software</span>
                         </Typography>
@@ -198,7 +202,7 @@ const FirstSection: React.FC = () => {
                         <Typography
                             component="p"
                             variant="body1"
-                            className="max-sm:!text-[16px] max-sm:w-[323px] max-sm:!mt-5"
+                            className="max-sm:!text-[16px] w-81 sm:w-full !mt-5 sm:!mt-0"
                         >
                             <span>We specialize in decentralized applications built on the</span>
                             <span className="font-bold"> Cardano </span>
@@ -206,23 +210,22 @@ const FirstSection: React.FC = () => {
                             <span className="font-bold"> secure, scalable, </span>
                             <span>and</span>
                             <span className="font-bold"> sustainable </span>
-                            <span>solutions that leverage Cardano&apos;s proof-of-stake protocol to drive innovation in DeFi</span>
-                            <br />
+                            <span>solutions that leverage Cardano&apos;s proof-of-stake protocol to drive innovation in DeFi </span>
                             <span>and enterprise blockchain solutions.</span>
                         </Typography>
                     </div>
                     <SaibButton
                         variant="outlined"
-                        className="!mt-9"
+                        className="mt-7 xl:!mt-9"
                     >
                         Know More
                     </SaibButton>
                 </div>
                 <div className="relative w-125 shrink-0">
-                    <div className="max-lg:hidden">
+                    <div className="hidden lg:block">
                         <Lightning className="absolute -top-88 right-20" />
                     </div>
-                    <div className="lg:absolute -top-90 -right-96 scale-80 ">
+                    <div className="lg:absolute -top-90 -right-96 scale-60 sm:scale-80 lg:scale-100">
                         <img
                             alt="saib code preview"
                             src={FirstSectionImage2}
