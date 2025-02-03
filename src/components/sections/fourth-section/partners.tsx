@@ -131,12 +131,14 @@ const Partners = () => {
                     component="h6"
                     variant="h6"
                     color="secondary"
+                    className="max-sm:!text-sm"
                 >
                     We are proud to be...
                 </Typography>
                 <Typography
                     component="h3"
                     variant="h3"
+                    className="max-sm:!text-4xl"
                 >
                     Building With
                 </Typography>

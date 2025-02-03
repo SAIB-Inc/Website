@@ -78,6 +78,7 @@ const OfferMobile = () => {
                     component="h6"
                     variant="h6"
                     color="secondary"
+                    className="max-sm:!text-sm"
                 >
                     What we offer...
                 </Typography>
@@ -85,6 +86,7 @@ const OfferMobile = () => {
                     component="h3"
                     variant="h3"
                     lineHeight="70px"
+                    className="max-sm:!text-4xl"
                 >
                     Cardano
                 </Typography>

@@ -25,17 +25,19 @@ const History: React.FC = () => {
                     component="h6"
                     variant="h6"
                     color="secondary"
+                    className="max-sm:!text-sm"
                 >
                     Who we previously worked with...
                 </Typography>
                 <Typography
                     component="h3"
                     variant="h3"
+                    className="max-sm:!text-4xl"
                 >
                     Our History
                 </Typography>
             </div>
-            <div className="flex mt-14 gap-10 w-full flex-wrap">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full mt-14">
                 {historyData.map((datum, index) => (
                     <Card
                         key={index}
@@ -44,7 +46,8 @@ const History: React.FC = () => {
                             padding: "33px 25px",
                             background: "white",
                             flexGrow: 1,
-                            width: 480,
+                            width: "100%",
+                            height: "100%",
                             gap: 4,
                             boxShadow: theme.shadows[4],
                         }}
@@ -63,8 +66,8 @@ const History: React.FC = () => {
                                 />
                             </div>
                             <div className="max-w-90">
-                                <Typography 
-                                    component="p" 
+                                <Typography
+                                    component="p"
                                     variant="body1"
                                 >
                                     {datum.description}

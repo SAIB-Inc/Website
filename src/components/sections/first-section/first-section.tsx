@@ -2,6 +2,7 @@ import React from "react"
 import { Box, Typography, useTheme } from "@mui/material";
 import { FirstSectionImage2, LightningBackground, Lightning, SaibCursor, Hand, Cardano, Rust, CSharp, Haskell, LightningThree, LightningFour, FirstSectionImageMobile, LightningTwo } from "../../../images/sections/first-section";
 import SaibButton from "../../common/saib-button";
+import Carousel from "../second-section/carousel";
 
 const FirstSection: React.FC = () => {
     const theme = useTheme()
@@ -16,6 +17,7 @@ const FirstSection: React.FC = () => {
                 color: theme.palette.text.primary,
                 paddingX: "24px"
             }}
+            className="max-lg:!bg-none max-lg:!shadow-none"
         >
             <div className="mx-auto !pt-40 max-w-(--breakpoint-xl) 2xl:h-[calc(100vh-150px)] flex flex-col justify-center">
                 <div className="flex flex-col justify-between items-center text-center gap-10 lg:flex-row lg:text-left lg:!justify-between lg:gap-24">
@@ -25,7 +27,7 @@ const FirstSection: React.FC = () => {
                                 <Typography
                                     component="h2"
                                     variant="h2"
-                                    className="-tracking-[0.005em] max-sm:!text-[40px] w-61 sm:w-full"
+                                    className="-tracking-[0.005em] max-sm:!text-5xl max-lg:!text-5xl max-w-65 sm:max-w-none"
                                 >
                                     <span>We are...</span>
                                     <br />
@@ -35,7 +37,7 @@ const FirstSection: React.FC = () => {
                                         component="span"
                                         variant="h1"
                                         color="secondary"
-                                        className="max-sm:!text-[40px]"
+                                        className="max-lg:!text-5xl"
                                     >
                                         Best
                                     </Typography>
@@ -47,38 +49,38 @@ const FirstSection: React.FC = () => {
                                     <img
                                         alt="rust"
                                         src={Rust}
-                                        className="absolute top-15 -left-3"
+                                        className="absolute top-15 -left-10 w-8 sm:top-60 sm:left-30 sm:w-10"
                                     />
                                 </div>
                                 <div>
                                     <img
                                         alt="haskell"
                                         src={Haskell}
-                                        className="absolute top-28 -left-6"
+                                        className="absolute top-28 -left-15 w-8 sm:top-80 sm:left-20 sm:w-10"
                                     />
                                 </div>
                                 <div>
                                     <img
                                         alt="cardano"
                                         src={Cardano}
-                                        className="absolute top-10 -right-3"
+                                        className="absolute top-10 -right-8 w-9 sm:top-60 sm:right-24 sm:w-11"
                                     />
                                 </div>
                                 <div>
                                     <img
                                         alt="c#"
                                         src={CSharp}
-                                        className="absolute top-22 -right-6"
+                                        className="absolute top-22 -right-14 w-7 sm:top-80 sm:right-20 sm:w-9"
                                     />
                                 </div>
                                 <div>
-                                    <Lightning sx={{ fontSize: 44 }} className="absolute -top-2 -right-16 -rotate-60" />
+                                    <Lightning sx={{ fontSize: 44 }} className="absolute -top-2 -right-20 -rotate-60 sm:-right-10" />
                                 </div>
                                 <div>
                                     <LightningThree sx={{ fontSize: 250 }} className="absolute -top-50 -left-60" />
                                 </div>
                                 <div>
-                                    <LightningFour sx={{ fontSize: 50 }} className="absolute -top-18 -right-17" />
+                                    <LightningFour sx={{ fontSize: 50 }} className="absolute -top-18 -right-22 sm:-right-10" />
                                 </div>
                             </div>
                         </div>
@@ -86,7 +88,7 @@ const FirstSection: React.FC = () => {
                             <Typography
                                 component="p"
                                 variant="body1"
-                                className="mt-4! max-sm:!text-[16px] max-sm:w-[280px]"
+                                className="mt-4! max-sm:!text-base max-sm:leading-7 max-w-70 sm:max-w-140 lg:max-w-none"
                             >
                                 <span>We are a software development company based in Philippines that has been established through connecting the dots of its founders&apos; shared and common passion for </span>
                                 <span className="font-bold">Cardano.</span>
@@ -158,8 +160,11 @@ const FirstSection: React.FC = () => {
                 </div>
 
             </div>
+            <div className="lg:hidden">
+                <Carousel />
+            </div>
             <div
-                className="mx-auto flex flex-col items-center justify-between gap-10 pt-13 pb-36 relative max-w-(--breakpoint-xl) lg:flex-row text-center lg:text-left lg:gap-0"
+                className="mx-auto mt-25 flex flex-col items-center justify-between gap-10 pt-13 pb-36 relative max-w-(--breakpoint-xl) lg:flex-row text-center lg:text-left lg:gap-0 lg:mt-0"
             >
                 <div className="space-y-4 max-w-175 flex flex-col items-center lg:block">
                     <div className="relative w-max">
@@ -167,7 +172,7 @@ const FirstSection: React.FC = () => {
                             component="h6"
                             variant="h6"
                             color="secondary"
-                            className="max-sm:!text-[13px]"
+                            className="max-sm:!text-sm"
                         >
                             What we do best...
                         </Typography>
@@ -184,14 +189,14 @@ const FirstSection: React.FC = () => {
                         <Typography
                             component="h3"
                             variant="h3"
-                            className="mt-2! max-sm:!text-[32px]"
+                            className="mt-2! max-w-85 max-sm:!text-4xl sm:max-w-140 lg:max-w-none"
                         >
                             <span>We make </span>
                             <Typography
                                 component="span"
                                 variant="h3"
                                 color="secondary"
-                                className="max-sm:!text-[32px]"
+                                className="max-sm:!text-4xl"
                             >
                                 Cardano
                             </Typography>
@@ -202,7 +207,7 @@ const FirstSection: React.FC = () => {
                         <Typography
                             component="p"
                             variant="body1"
-                            className="max-sm:!text-[16px] w-81 sm:w-full !mt-5 sm:!mt-0"
+                            className="max-sm:!text-base max-sm:leading-7 !mt-5 max-w-70 sm:max-w-140 lg:max-w-none sm:!mt-0"
                         >
                             <span>We specialize in decentralized applications built on the</span>
                             <span className="font-bold"> Cardano </span>

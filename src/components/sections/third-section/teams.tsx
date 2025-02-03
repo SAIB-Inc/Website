@@ -435,12 +435,14 @@ const Teams: React.FC = () => {
                     component="h6"
                     variant="h6"
                     color="secondary"
+                    className="max-sm:!text-sm"
                 >
                     Who makes it happen...
                 </Typography>
                 <Typography
                     component="h3"
                     variant="h3"
+                    className="max-sm:!text-4xl"
                 >
                     Meet the team
                 </Typography>

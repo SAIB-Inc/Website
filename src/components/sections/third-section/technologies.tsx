@@ -61,10 +61,19 @@ const Technologies: React.FC = () => {
     return (
         <div className="text-center py-6 min-h-screen flex flex-col items-center justify-center">
             <div className="w-full">
-                <Typography component="h6" variant="h6" color="secondary">
+                <Typography 
+                    component="h6" 
+                    variant="h6" 
+                    color="secondary"
+                    className="max-sm:!text-sm"
+                >
                     What we are good at...
                 </Typography>
-                <Typography component="h3" variant="h3">
+                <Typography 
+                    component="h3" 
+                    variant="h3"
+                    className="max-sm:!text-4xl"
+                >
                     Technologies
                 </Typography>
             </div>
