@@ -88,7 +88,7 @@ const FirstSection: React.FC = () => {
                             <Typography
                                 component="p"
                                 variant="body1"
-                                className="mt-4! max-sm:!text-base max-sm:leading-7 max-w-70 sm:max-w-140 lg:max-w-none"
+                                className="mt-4! max-w-70 max-sm:!text-base max-sm:leading-7 sm:max-w-140 lg:max-w-none"
                             >
                                 <span>We are a software development company based in Philippines that has been established through connecting the dots of its founders&apos; shared and common passion for </span>
                                 <span className="font-bold">Cardano.</span>
@@ -207,7 +207,7 @@ const FirstSection: React.FC = () => {
                         <Typography
                             component="p"
                             variant="body1"
-                            className="max-sm:!text-base max-sm:leading-7 !mt-5 max-w-70 sm:max-w-140 lg:max-w-none sm:!mt-0"
+                            className="max-w-70 !mt-5 max-sm:!text-base max-sm:leading-7 sm:max-w-140 sm:!mt-0 lg:max-w-none"
                         >
                             <span>We specialize in decentralized applications built on the</span>
                             <span className="font-bold"> Cardano </span>
@@ -230,7 +230,7 @@ const FirstSection: React.FC = () => {
                     <div className="hidden lg:block">
                         <Lightning className="absolute -top-88 right-20" />
                     </div>
-                    <div className="lg:absolute -top-90 -right-96 scale-60 sm:scale-80 lg:scale-100">
+                    <div className="-top-90 -right-96 scale-60 sm:scale-80 lg:absolute lg:scale-100">
                         <img
                             alt="saib code preview"
                             src={FirstSectionImage2}

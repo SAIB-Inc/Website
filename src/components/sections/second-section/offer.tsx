@@ -110,7 +110,7 @@ const Offer: React.FC = () => {
                 <Typography
                     component="p"
                     variant="body1"
-                    className="lg:w-158 mt-4!"
+                    className="mt-4! lg:w-158"
                 >
                     <span>We offer development services on the</span>
                     <span className="font-bold"> Cardano blockchain</span>,

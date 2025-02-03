@@ -123,7 +123,7 @@ const OfferMobile = () => {
                             </Typography>
                         </div>
                     </div>
-                    <div className="text-center mt-5">
+                    <div className="mt-5">
                         <Typography
                             component="p"
                             variant="subtitle2"
@@ -144,7 +144,7 @@ const OfferMobile = () => {
                                         display: "list-item",
                                         textAlign: "center",
                                     }}
-                                    className="!max-w-60"
+                                    className="max-w-60"
                                 >
                                     {listItems}
                                 </ListItem>

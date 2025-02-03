@@ -59,7 +59,7 @@ const Projects: React.FC = () => {
                     Our Projects
                 </Typography>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full mt-14">
+            <div className="gap-10 w-full mt-14 grid grid-cols-1 md:grid-cols-2">
                 {projectsData.map((datum, index) => (
                     <BrandCard
                         key={index}

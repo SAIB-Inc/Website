@@ -11,7 +11,7 @@ const SaibNavigation: React.FC<SaibNavigationProps> = ({ buttonCount, currentInd
     const theme = useTheme();
 
     return (
-        <div className="flex gap-4 sm:gap-5 h-full w-full bg-white py-4 px-6 rounded-3xl transition-all lg:gap-2 lg:flex-col lg:bg-inherit lg:p-0">
+        <div className="flex gap-4 h-full w-full bg-white py-4 px-6 rounded-3xl transition-all sm:gap-5 lg:gap-2 lg:flex-col lg:bg-inherit lg:p-0">
             {Array.from({ length: buttonCount }, (_, idx) => (
                 <Box
                     key={idx}

@@ -37,7 +37,7 @@ const History: React.FC = () => {
                     Our History
                 </Typography>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full mt-14">
+            <div className="w-full mt-14 grid grid-cols-1 gap-10 md:grid-cols-2">
                 {historyData.map((datum, index) => (
                     <Card
                         key={index}
