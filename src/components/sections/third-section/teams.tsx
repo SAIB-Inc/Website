@@ -4,6 +4,7 @@ import SaibChip from "../../common/saib-chip";
 import { Typography } from "@mui/material";
 import { graphql, useStaticQuery } from "gatsby";
 import { Blockchain, Ceo, Command, Engine, Helm } from "../../../images/icons";
+import { LinkedIn, X } from "../../../images/socials";
 
 const Teams: React.FC = () => {
     const teamsImage = useStaticQuery(graphql`
@@ -67,19 +68,41 @@ const Teams: React.FC = () => {
             position: "Chief Executive Officer",
             imageSrc: teamsImage.Clark.childImageSharp.gatsbyImageData,
             group: "The Helm",
+            description: "",
+            skills: [
+                "Leadership",
+                "Cardano",
+                "Backend Development"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/clarkalesna"
+                },
+            ],
             tags: [
                 Ceo,
                 Helm,
                 Command,
                 Engine,
                 Blockchain
-            ]
+            ],
         },
         {
             name: "Bern Villacura",
             position: "Chief of Staff",
             imageSrc: teamsImage.Bern.childImageSharp.gatsbyImageData,
             group: "The Helm",
+            description: "",
+            skills: [],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/itsBarbieBern"
+                },
+            ],
             tags: [
                 Ceo,
                 Helm,
@@ -90,6 +113,9 @@ const Teams: React.FC = () => {
             position: "Chief Marketing Officer",
             imageSrc: null,
             group: "The Helm",
+            description: "",
+            skills: [],
+            socials: [],
             tags: [
                 Ceo,
                 Helm,
@@ -100,6 +126,24 @@ const Teams: React.FC = () => {
             position: "Engineer",
             imageSrc: teamsImage.Cait.childImageSharp.gatsbyImageData,
             group: "The Engine Room",
+            description: "Hi! I'm Caitlin. I enjoy learning and working in various discplines, from front-end engineering to back-end development. I've developed a newfound interest in blockchain technology, and am always eager to learn and improve myself.",
+            skills: [
+                "Presentation",
+                "Documentation",
+                "Backend Development"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/Caitlin44753320"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/caitlin-mariel-lindsay-7341a3323/"
+                }
+            ],
             tags: [
                 Ceo,
                 Engine
@@ -110,6 +154,24 @@ const Teams: React.FC = () => {
             position: "Engineer",
             imageSrc: teamsImage.Kathea.childImageSharp.gatsbyImageData,
             group: "The Engine Room",
+            description: "Good Day! I'm Kathea Mari, and I have a passion for technology and software solutions, particularly in web development and blockchain technologies. I thrive in collaborative environments where I can learn, contribute, and create meaningful value through innovation and teamwork.",
+            skills: [
+                "Frontend Development",
+                "Backend Development",
+                "Video and Photo Editing"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/aoikatteunari"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/kathea-mayol/"
+                }
+            ],
             tags: [
                 Ceo,
                 Engine
@@ -120,6 +182,24 @@ const Teams: React.FC = () => {
             position: "Head of Software Engineering",
             imageSrc: teamsImage.Rj.childImageSharp.gatsbyImageData,
             group: "The Helm",
+            description: "Hi, I'm RJ. I build innovative blockchain applications and design scalable backend systems. I love working with cutting-edge tech to create solutions that push boundaries, while driving engineering excellence through knowledge sharing and mentorship.",
+            skills: [
+                "Blockchain Onchain and Offchain Development",
+                "Backend Development",
+                "Mentorship"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/rjlacanlale"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/reza-jhay-lacanlale-6b8b62107/"
+                }
+            ],
             tags: [
                 Ceo,
                 Helm,
@@ -132,6 +212,24 @@ const Teams: React.FC = () => {
             position: "Designer",
             imageSrc: teamsImage.Kim.childImageSharp.gatsbyImageData,
             group: "The Command Deck",
+            description: "Hey there! I'm Kim and I'm a creative designer with a background of graphic design, UI/UX and project management. I help businesses to their success by creating quality and well-thought and user-centric designs and is always up to challenge to whatever is brought to the table.",
+            skills: [
+                "Creative Direction",
+                "Web UI/UX Desing",
+                "Branding"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/mikimoto_kem"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/kimberlyjavier98/"
+                }
+            ],
             tags: [
                 Command
             ]
@@ -141,6 +239,22 @@ const Teams: React.FC = () => {
             position: "Engineer",
             imageSrc: teamsImage.Kiefer.childImageSharp.gatsbyImageData,
             group: "The Command Deck",
+            description: "Hi! I'm Kief, a passionate frontend developer with experience in creating intuitive, user-friendly interfaces. I enjoy working with modern web technologies and continuously exploring new frameworks to improve my skill set. I'm always looking for new challenges and opportunities to grow both personally and professionally.",
+            skills: [
+                "Frontend Development",
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/keeeefG"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/kiefer-gallego/"
+                }
+            ],
             tags: [
                 Command
             ]
@@ -150,6 +264,22 @@ const Teams: React.FC = () => {
             position: "Engineer",
             imageSrc: teamsImage.Wendell.childImageSharp.gatsbyImageData,
             group: "The Engine Room",
+            description: "I'm Wendell, and I'm driven by how technology can transform challenges into opportunities. Constantly seeking new ways to innovate, I thrive on creating solutions that turn bold ideas into reality.",
+            skills: [
+                "Backend Development",
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/windss0501"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/wendell-mor-tamayo-41388b298"
+                }
+            ],
             tags: [
                 Engine
             ]
@@ -159,6 +289,22 @@ const Teams: React.FC = () => {
             position: "Engineer",
             imageSrc: teamsImage.Tan.childImageSharp.gatsbyImageData,
             group: "The Blockchain Lab",
+            description: "I'm Tan, and I develop software solutions with a focus on backend development, database design, web technologies, and blockchain systems. I thrive on creating efficient, scalable solutions tailored to modern technological needs.",
+            skills: [
+                "Backend Development",
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/krstng02k"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/christian-gantuangco/"
+                }
+            ],
             tags: [
                 Blockchain
             ]
@@ -168,6 +314,24 @@ const Teams: React.FC = () => {
             position: "Engineer",
             imageSrc: teamsImage.Rico.childImageSharp.gatsbyImageData,
             group: "The Blockchain Lab",
+            description: "Hi! I'm Caitlin. I enjoy learning and working in various discplines, from front-end engineering to back-end development. I've developed a newfound interest in blockchain technology, and am always eager to learn and improve myself.",
+            skills: [
+                "Presentation",
+                "Documentation",
+                "Backend Development"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/rcmls18"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/rico-miles-quiblat-34a6b7298/"
+                }
+            ],
             tags: [
                 Blockchain
             ]
