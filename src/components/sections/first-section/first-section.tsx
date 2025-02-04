@@ -2,7 +2,6 @@ import React from "react"
 import { Box, Typography, useTheme } from "@mui/material";
 import { FirstSectionImage2, LightningBackground, Lightning, SaibCursor, Hand, Cardano, Rust, CSharp, Haskell, LightningThree, LightningFour, FirstSectionImageMobile, LightningTwo } from "../../../images/sections/first-section";
 import SaibButton from "../../common/saib-button";
-import Carousel from "../second-section/carousel";
 
 const FirstSection: React.FC = () => {
     const theme = useTheme()
@@ -158,10 +157,6 @@ const FirstSection: React.FC = () => {
                         className="absolute -left-200 w-full"
                     />
                 </div>
-
-            </div>
-            <div className="lg:hidden">
-                <Carousel />
             </div>
             <div
                 className="mx-auto mt-25 flex flex-col items-center justify-between gap-10 pt-13 pb-36 relative max-w-(--breakpoint-xl) lg:flex-row text-center lg:text-left lg:gap-0 lg:mt-0"

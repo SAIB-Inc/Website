@@ -77,7 +77,7 @@ const Technologies: React.FC = () => {
                     Technologies
                 </Typography>
             </div>
-            <div className="w-full max-w-630 overflow-hidden mx-auto mt-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]">
+            <div className="w-full max-w-630 overflow-hidden mx-auto mt-14 sm:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]">
                 <TechnologiesRow items={row1} />
                 <TechnologiesRow items={row2} direction="reverse" />
                 <TechnologiesRow items={row3} />

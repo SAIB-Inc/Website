@@ -144,7 +144,7 @@ const Partners = () => {
                 </Typography>
             </div>
             <div className="flex flex-col-reverse items-center mt-14 gap-20 lg:flex-row lg:items-stretch lg:h-100">
-                <div className="hidden flex-1 flex-col justify-evenly items-end lg:flex">
+                <div className="hidden flex-1 flex-col justify-evenly items-end lg:flex !shrink-0">
                     {partnersData.map((datum, index) => (
                         <Button
                             component="div"
@@ -159,6 +159,7 @@ const Partners = () => {
                             onClick={() => handleCardChange(index)}
                         >
                             <img
+                                key={index}
                                 src={datum.brandAlternate}
                                 alt={datum.name}
                                 className={`transition-opacity duration-150 ${currentIndex === index ? "opacity-100" : "opacity-30 hover:opacity-100"}`}
