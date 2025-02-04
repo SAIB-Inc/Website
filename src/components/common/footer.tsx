@@ -68,18 +68,19 @@ const Footer: React.FC = () => {
             component="footer"
             sx={{
                 backgroundColor: theme.palette.background.footer,
-                height: 296,
-                position: "relative"
+                position: "relative",
+                paddingX: 3
             }}
+            className="!py-10 lg:!py-0 lg:!h-74"
         >
-            <div className="absolute top-0 left-0">
+            <div className="absolute -left-50 top-0 lg:left-0">
                 <img src={MeshLeft} className="z-10" />
             </div>
-            <div className="absolute top-0 right-0">
+            <div className="absolute -right-50 top-0 lg:right-0">
                 <img src={MeshRight} className="z-10" />
             </div>
             <div className="max-w-(--breakpoint-xl) mx-auto h-full relative z-40">
-                <div className="w-full flex items-center justify-between h-[70%] pt-12">
+                <div className="w-full flex flex-col items-center justify-between h-[70%] pt-12 lg:flex-row">
                     <div>
                         <a onClick={(e) => scrollToNextSection(e, "home")} className="cursor-pointer">
                             <img src={SaibIconLight} alt="saib-logo" />
@@ -123,7 +124,7 @@ const Footer: React.FC = () => {
                                 </Box>
                             ))}
                         </ul>
-                        <div>
+                        <div className="text-center lg:text-left">
                             <div>
                                 <Typography
                                     component="p"
@@ -153,11 +154,12 @@ const Footer: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div>
+                <div className="text-center mt-10 lg:text-left lg:mt-0">
                     <Typography
                         component="p"
                         variant="body2"
                         color="white"
+                        className="max-sm:!text-sm"
                     >
                         &copy; Softwarez At Its Best, Inc. 2025. All Rights Reserved
                     </Typography>
