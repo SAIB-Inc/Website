@@ -33,9 +33,9 @@ declare module "@mui/material/styles" {
       },
       teamCardGradient: {
         tintLight: string;
-        tintDark: string;
+        tintSecondary: string;
         main: string;
-        dark: string;
+        secondary: string;
       },
     },
     carouselButtons: {
