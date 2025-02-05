@@ -108,6 +108,10 @@ declare module "@mui/material/styles" {
     teamCardSubtitle?: React.CSSProperties;
   }
 
+  interface TypeText {
+    tertiary?: string;
+  }
+
   interface TypeBackground {
     fifthSection?: string;
     footer?: string;
@@ -183,6 +187,7 @@ const theme = createTheme({
     text: {
       primary: "#3A376A",
       secondary: "#6F03E0",
+      tertiary: "#E4DFFF"
     },
     button: {
       default: "#6F03E0",
