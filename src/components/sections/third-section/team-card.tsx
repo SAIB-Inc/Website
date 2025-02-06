@@ -7,12 +7,14 @@ import { Close } from "@mui/icons-material";
 import SaibChip from "../../common/saib-chip";
 import { Lightning1, Lightning2, Lightning3, Lightning4, Lightning5 } from "../../../images/sections/third-section";
 import { Blockchain, Command, Engine, Helm } from "../../../images/icons";
+import TeamModal from "./team-modal";
 
 interface TeamCardProps {
     items: {
         name: string;
         position: string;
         imageSrc: IGatsbyImageData;
+        modalImageSrc: IGatsbyImageData;
         group: string;
         description?: string;
         skills?: string[];
@@ -26,9 +28,11 @@ interface TeamCardProps {
 }
 
 const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
-    const theme = useTheme();
     const [cardIndex, setCardIndex] = useState<number | null>(null);
-    const [move, setMove] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [modalState, setModalState] = useState(false);
+
+    const theme = useTheme();
     const renderedGroups = new Set();
 
     const iconMap = {
@@ -48,7 +52,6 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                     overflow: "visible",
                     width: "max-content",
                     transition: "all 0.3s ease-in-out",
-                    transform: `translateX(-${120 * move}px)`
                 }}
             >
                 {items.map((datum, index) => {
@@ -87,24 +90,17 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                                     component="div"
                                     onClick={() => {
                                         const clickedIndex = items.indexOf(datum);
-                                        const cardWidth = 850;
-                                        const baseWidth = 260;
-                                        const availableWidth = window.innerWidth;
-                                        const expandedPos = clickedIndex * baseWidth + cardWidth;
+
+                                        if (window.innerWidth < 1024) {
+                                            setCurrentIndex(clickedIndex);
+                                            setModalState(true);
+                                            return;
+                                        }
 
                                         if (cardIndex === clickedIndex) {
                                             setCardIndex(null);
-                                            setMove(0);
                                         } else {
                                             setCardIndex(clickedIndex);
-
-                                            if (expandedPos > availableWidth) {
-                                                const maxMove = items.length - Math.floor(availableWidth / baseWidth);
-                                                const newMove = Math.min(clickedIndex - Math.floor(availableWidth / baseWidth) + 1, maxMove);
-                                                setMove(newMove);
-                                            } else {
-                                                setMove(0);
-                                            }
                                         }
                                     }}
                                     sx={{
@@ -229,24 +225,11 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                                         <IconButton
                                             onClick={() => {
                                                 const clickedIndex = items.indexOf(datum);
-                                                const cardWidth = 850;
-                                                const baseWidth = 260;
-                                                const availableWidth = window.innerWidth;
-                                                const expandedPos = clickedIndex * baseWidth + cardWidth;
 
                                                 if (cardIndex === clickedIndex) {
                                                     setCardIndex(null);
-                                                    setMove(0);
                                                 } else {
                                                     setCardIndex(clickedIndex);
-
-                                                    if (expandedPos > availableWidth) {
-                                                        const maxMove = items.length - Math.floor(availableWidth / baseWidth);
-                                                        const newMove = Math.min(clickedIndex - Math.floor(availableWidth / baseWidth) + 1, maxMove);
-                                                        setMove(newMove);
-                                                    } else {
-                                                        setMove(0);
-                                                    }
                                                 }
                                             }}>
                                             <Close sx={{ color: theme.palette.secondary.light }} />
@@ -334,20 +317,21 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                                                     aria-label={social.label}
                                                     target="_blank"
                                                     sx={{
-                                                        border: "1px solid white",
+                                                        border: `1px solid ${theme.palette.text.tertiary}`,
                                                         height: 32,
                                                         width: 32,
                                                         boxShadow: theme.shadows[0],
                                                         "&:hover": { borderColor: theme.palette.button.hover },
                                                     }}
                                                 >
-                                                    <social.icon sx={{ color: "white" }} />
+                                                    <social.icon sx={{ color: theme.palette.text.tertiary }} />
                                                 </IconButton>
                                             ))}
                                         </div>
                                     </div>
                                 </Box>
                             </Box>
+                            <TeamModal open={modalState} setOpen={setModalState} items={items[currentIndex]} />
                             <div className={isExpanded ? "absolute top-11 -right-[7px]" : "hidden"}>
                                 <img
                                     src={Lightning5}

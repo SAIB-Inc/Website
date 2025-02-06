@@ -101,11 +101,13 @@ declare module "@mui/material/styles" {
   interface TypoGraphyVariants {
     teamCardTitle: React.CSSProperties;
     teamCardSubtitle: React.CSSProperties;
+    body3: React.CSSProperties;
   }
 
   interface TypographyVariantsOptions {
     teamCardTitle?: React.CSSProperties;
     teamCardSubtitle?: React.CSSProperties;
+    body3?: React.CSSProperties;
   }
 
   interface TypeText {
@@ -122,6 +124,7 @@ declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     teamCardTitle: true;
     teamCardSubtitle: true;
+    body3: true;
   }
 }
 
@@ -237,6 +240,10 @@ const theme = createTheme({
     },
     body2: {
       fontSize: "15px",
+      fontWeight: 500
+    },
+    body3: {
+      fontSize: "12px",
       fontWeight: 500
     },
     button: {

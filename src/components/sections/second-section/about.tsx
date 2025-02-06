@@ -69,7 +69,7 @@ const About: React.FC = () => {
                 >
                     <span>Empowering your</span>
                     <Typography
-                        component="h3"
+                        component="span"
                         variant="h3"
                         color="secondary"
                     >
