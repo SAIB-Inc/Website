@@ -8,6 +8,8 @@ import BrandCard from "./brand-card";
 const Partners = () => {
     const theme = useTheme();
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState('enter'); // 'enter' or 'exit'
+    const [transitioning, setTransitioning] = useState(false);
 
     const partnersData = [
         {
@@ -97,13 +99,30 @@ const Partners = () => {
         },
     ];
 
+    const handleCardChange = (newIndex: number) => {
+        if (transitioning) return;
+        
+        setTransitioning(true);
+        setDirection('exit');
+        
+        setTimeout(() => {
+            setCurrentIndex(newIndex);
+            setDirection('enter');
+            setTimeout(() => {
+                setTransitioning(false);
+            }, 300);
+        }, 300);
+    };
+
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentIndex((prevIndex) => (prevIndex + 1) % partnersData.length);
-        }, 3000);
+            if (!transitioning) {
+                handleCardChange((currentIndex + 1) % partnersData.length);
+            }
+        }, 4000);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [currentIndex, transitioning]);
 
     return (
         <div className="text-center py-25">
@@ -123,7 +142,7 @@ const Partners = () => {
                 </Typography>
             </div>
             <div className="flex mt-14 h-100 gap-20">
-                <div className="flex flex-1 flex-col justify-evenly items-end !shrink-0">
+                <div className="flex flex-1 flex-col justify-evenly items-end">
                     {partnersData.map((datum, index) => (
                         <Button
                             component="div"
@@ -135,7 +154,7 @@ const Partners = () => {
                                 alignItems: "center",
                                 transition: "ease"
                             }}
-                            onClick={() => setCurrentIndex(index)}
+                            onClick={() => handleCardChange(index)}
                         >
                             <img
                                 src={datum.brandAlternate}
@@ -148,29 +167,24 @@ const Partners = () => {
                 <SaibNavigation
                     buttonCount={partnersData.length}
                     currentIndex={currentIndex}
-                    setCurrentIndex={setCurrentIndex}
+                    setCurrentIndex={handleCardChange}
                 />
-                <div className="relative w-200 h-full overflow-hidden flex flex-col">
-                    {partnersData.map((partner, index) => (
-                        <div
-                            key={index}
-                            className="absolute w-full h-full transition-transform duration-300 ease-in-out flex"
-                            style={{
-                                transform: `translateY(${(index - currentIndex) * 100}%)`,
+                <div className="relative h-full w-200">
+                    <div
+                        className={`absolute w-full h-full flex transition-all duration-200 ease-in-out
+                            ${direction === 'enter' ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
+                    >
+                        <BrandCard
+                            brand={partnersData[currentIndex].brand}
+                            name={partnersData[currentIndex].name}
+                            description={partnersData[currentIndex].description}
+                            background={partnersData[currentIndex].gradient}
+                            socials={partnersData[currentIndex].socials}
+                            sx={{
+                                width: 480,
                             }}
-                        >
-                            <BrandCard
-                                brand={partner.brand}
-                                name={partner.name}
-                                description={partner.description}
-                                background={partner.gradient}
-                                socials={partner.socials}
-                                sx={{
-                                    width: 480,
-                                }}
-                            />
-                        </div>
-                    ))}
+                        />
+                    </div>
                 </div>
             </div>
         </div>
