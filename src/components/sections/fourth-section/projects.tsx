@@ -41,7 +41,7 @@ const Projects: React.FC = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center text-center py-25">
+        <div className="flex flex-col items-center justify-center text-center py-15 lg:py-25">
             <div>
                 <Typography
                     component="h6"

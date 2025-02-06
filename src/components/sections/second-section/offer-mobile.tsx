@@ -85,7 +85,6 @@ const OfferMobile = () => {
                 <Typography
                     component="h3"
                     variant="h3"
-                    lineHeight="70px"
                     className="max-sm:!text-4xl"
                 >
                     Cardano
