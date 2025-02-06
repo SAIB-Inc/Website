@@ -9,6 +9,7 @@ const FirstSection: React.FC = () => {
     return (
         <Box
             component="section"
+            id="home"
             sx={{
                 background: `linear-gradient(to bottom, ${theme.palette.gradient.main} 60%, ${theme.palette.gradient.dark})`,
                 boxShadow: theme.shadows[2],
@@ -58,29 +59,29 @@ const FirstSection: React.FC = () => {
                             <SaibCursor className="absolute left-[155px]! top-14" />
                         </div>
                     </div>
-                    <div className="shrink-0 relative flex flex-col justify-center items-center gap-20">
-                        <div className="w-47">
+                    <div className="shrink-0 relative flex flex-col justify-center items-center gap-22">
+                        <div className="w-47 animate-float">
                             <img
                                 alt="saib graphic"
                                 src={Cardano}
                                 className="w-full h-full"
                             />
                         </div>
-                        <div className="w-11 absolute left-3 top-40">
+                        <div className="w-11 absolute left-3 top-40 animate-float" style={{ animationDelay: "0.8s" }}>
                             <img
                                 alt="saib graphic"
                                 src={CSharp}
                                 className="w-full h-full"
                             />
                         </div>
-                        <div className="w-11 absolute">
+                        <div className="w-11 absolute top-50 animate-float" style={{ animationDelay: "0.2s" }}>
                             <img
                                 alt="saib graphic"
                                 src={Rust}
                                 className="w-full h-full"
                             />
                         </div>
-                        <div className="w-14 absolute right-5 top-40">
+                        <div className="w-14 absolute right-5 top-40 animate-float !delay-200" style={{ animationDelay: "0.5s" }}>
                             <img
                                 alt="saib graphic"
                                 src={Haskell}

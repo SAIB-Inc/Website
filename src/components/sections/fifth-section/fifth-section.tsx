@@ -3,6 +3,7 @@ import { Box, Typography, useTheme } from "@mui/material";
 import { SaibCursor } from "../../../images/sections/first-section";
 import SaibButton from "../../../components/common/saib-button";
 import FifthSectionImage from "../../../images/sections/fifth-section/fifth-section-image.webp"
+import { CardanoPurple, CSharpPurple, HaskellPurple, RustPurple } from "../../../images/sections/fifth-section";
 
 const FifthSection: React.FC = () => {
     const theme = useTheme();
@@ -65,8 +66,38 @@ const FifthSection: React.FC = () => {
                         <SaibCursor className="absolute left-[155px]! top-14" />
                     </div>
                 </div>
-                <div>
-                    <img src={FifthSectionImage} alt="last section image" />
+                <div className="shrink-0 relative flex flex-col justify-center items-center">
+                    <div className="w-13 absolute top-17 left-38 animate-float">
+                        <img
+                            alt="saib graphic"
+                            src={CardanoPurple}
+                            className="w-full h-full"
+                        />
+                    </div>
+                    <div className="w-11 absolute left-8 top-40 animate-float" style={{ animationDelay: "0.8s" }}>
+                        <img
+                            alt="saib graphic"
+                            src={CSharpPurple}
+                            className="w-full h-full"
+                        />
+                    </div>
+                    <div className="w-12 absolute top-54 right-12 animate-float" style={{ animationDelay: "0.2s" }}>
+                        <img
+                            alt="saib graphic"
+                            src={RustPurple}
+                            className="w-full h-full"
+                        />
+                    </div>
+                    <div className="w-12 absolute right-30 bottom-36 animate-float !delay-200" style={{ animationDelay: "0.5s" }}>
+                        <img
+                            alt="saib graphic"
+                            src={HaskellPurple}
+                            className="w-full h-full"
+                        />
+                    </div>
+                    <div>
+                        <img src={FifthSectionImage} alt="last section image" />
+                    </div>
                 </div>
             </div>
         </Box>

@@ -5,7 +5,7 @@ import { Browser, Github, X } from "../../../images/socials";
 import SaibNavigation from "../../common/saib-navigation";
 import BrandCard from "./brand-card";
 
-const Partners: React.FC = () => {
+const Partners = () => {
     const theme = useTheme();
     const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -97,13 +97,11 @@ const Partners: React.FC = () => {
         },
     ];
 
-    // Auto change index every 2 seconds
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % partnersData.length);
-        }, 2000); // 2 seconds
+        }, 3000);
 
-        // Cleanup interval on component unmount
         return () => clearInterval(interval);
     }, []);
 
@@ -125,7 +123,7 @@ const Partners: React.FC = () => {
                 </Typography>
             </div>
             <div className="flex mt-14 h-100 gap-20">
-                <div className="flex flex-1 flex-col justify-evenly items-end">
+                <div className="flex flex-1 flex-col justify-evenly items-end !shrink-0">
                     {partnersData.map((datum, index) => (
                         <Button
                             component="div"
@@ -142,8 +140,7 @@ const Partners: React.FC = () => {
                             <img
                                 src={datum.brandAlternate}
                                 alt={datum.name}
-                                className={`transition-opacity duration-150 ${currentIndex === index ? "opacity-100" : "opacity-30 hover:opacity-100"
-                                    }`}
+                                className={`transition-opacity duration-150 ${currentIndex === index ? "opacity-100" : "opacity-30 hover:opacity-100"}`}
                             />
                         </Button>
                     ))}
@@ -153,16 +150,28 @@ const Partners: React.FC = () => {
                     currentIndex={currentIndex}
                     setCurrentIndex={setCurrentIndex}
                 />
-                <BrandCard
-                    brand={partnersData[currentIndex].brand}
-                    name={partnersData[currentIndex].name}
-                    description={partnersData[currentIndex].description}
-                    background={partnersData[currentIndex].gradient}
-                    socials={partnersData[currentIndex].socials}
-                    sx={{
-                        width: 480,
-                    }}
-                />
+                <div className="relative w-200 h-full overflow-hidden flex flex-col">
+                    {partnersData.map((partner, index) => (
+                        <div
+                            key={index}
+                            className="absolute w-full h-full transition-transform duration-300 ease-in-out flex"
+                            style={{
+                                transform: `translateY(${(index - currentIndex) * 100}%)`,
+                            }}
+                        >
+                            <BrandCard
+                                brand={partner.brand}
+                                name={partner.name}
+                                description={partner.description}
+                                background={partner.gradient}
+                                socials={partner.socials}
+                                sx={{
+                                    width: 480,
+                                }}
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

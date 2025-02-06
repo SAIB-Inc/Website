@@ -257,7 +257,7 @@ const theme = createTheme({
     "0px 3px 10px 0px rgba(148, 142, 189, 0.25)",
     "0px 6px 10px 3px rgba(148, 142, 189, 0.25)",
     "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
-    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 30px 0px rgba(148, 142, 189, 0.1)",
     "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
     "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
     "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",

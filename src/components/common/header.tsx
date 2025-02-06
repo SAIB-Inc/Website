@@ -32,6 +32,19 @@ const Header: React.FC = () => {
 
   const theme = useTheme();
 
+  const scrollToNextSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+    const nextSection = document.getElementById(id);
+    if (nextSection) {
+      setTimeout(() => {
+        nextSection.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
+
   return (
     <Box
       component="header"
@@ -82,6 +95,7 @@ const Header: React.FC = () => {
                 <Typography
                   component="a"
                   variant="body2"
+                  onClick={(e) => scrollToNextSection(e, "home")}
                 >
                   {item}
                 </Typography>
@@ -103,7 +117,7 @@ const Header: React.FC = () => {
                   width: 32,
                   boxShadow: theme.shadows[0],
                   '&:hover': {
-                    borderColor: theme.palette.button.hover 
+                    borderColor: theme.palette.button.hover
                   }
                 }}
               >
