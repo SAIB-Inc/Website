@@ -14,11 +14,10 @@ const FirstSection: React.FC = () => {
                 background: `linear-gradient(to bottom, ${theme.palette.gradient.main} 60%, ${theme.palette.gradient.dark})`,
                 boxShadow: theme.shadows[2],
                 color: theme.palette.text.primary,
-                paddingX: "24px"
             }}
-            className="max-lg:!bg-none max-lg:!shadow-none"
+            className="max-lg:!bg-none max-lg:!shadow-none !px-6"
         >
-            <div className="mx-auto !pt-40 max-w-(--breakpoint-xl) 2xl:h-[calc(100vh-150px)] flex flex-col justify-center">
+            <div className="mx-auto !pt-40 max-w-(--breakpoint-xl) max-lg:h-dvh 2xl:h-[calc(100vh-150px)] flex flex-col justify-center">
                 <div className="flex flex-col justify-between items-center text-center gap-10 lg:flex-row lg:text-left lg:!justify-between lg:gap-24">
                     <div className="max-w-200">
                         <div className="relative flex flex-col items-center justify-center">
@@ -150,7 +149,7 @@ const FirstSection: React.FC = () => {
                         />
                     </div>
                 </div>
-                <div className="h-47 mt-16 w-full relative hidden lg:block">
+                <div className="h-47 w-full relative hidden lg:block lg:mt-16">
                     <img
                         alt="lightning background"
                         src={LightningBackground}

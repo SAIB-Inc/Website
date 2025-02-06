@@ -142,7 +142,7 @@ const OfferMobile = () => {
                                         display: "list-item",
                                         textAlign: "center",
                                     }}
-                                    className="max-w-60"
+                                    className="!w-auto"
                                 >
                                     {listItems}
                                 </ListItem>
