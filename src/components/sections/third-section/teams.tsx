@@ -59,6 +59,11 @@ const Teams: React.FC = () => {
                     gatsbyImageData(quality: 100)
                 }
             }
+            Lance: file(relativePath: {eq: "team/lance.webp"}) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100)
+                }
+            }
         }
     `);
 
@@ -314,10 +319,8 @@ const Teams: React.FC = () => {
             position: "Engineer",
             imageSrc: teamsImage.Rico.childImageSharp.gatsbyImageData,
             group: "The Blockchain Lab",
-            description: "Hi! I'm Caitlin. I enjoy learning and working in various discplines, from front-end engineering to back-end development. I've developed a newfound interest in blockchain technology, and am always eager to learn and improve myself.",
+            description: "I'm Rico, and I have a deep passion for technology and solving problems. I enjoy tackling challenges and finding solutions. Bringing ideas to life through technology excites me every day.",
             skills: [
-                "Presentation",
-                "Documentation",
                 "Backend Development"
             ],
             socials: [
@@ -330,6 +333,32 @@ const Teams: React.FC = () => {
                     label: "LinkedIn",
                     icon: LinkedIn,
                     link: "https://www.linkedin.com/in/rico-miles-quiblat-34a6b7298/"
+                }
+            ],
+            tags: [
+                Blockchain
+            ]
+        },
+        {
+            name: "Lance Salera",
+            position: "Engineer",
+            imageSrc: teamsImage.Lance.childImageSharp.gatsbyImageData,
+            group: "The Blockchain Lab",
+            description: "Nice to meet you, I'm Lance! I find fulfillment in sharing my knowledge to other people and I enjoy dealing with problems that require logic and critical thinking. Currently, I am immersing myself with blockchain technology, aiming to confidently showcase this as one of my key technical skills.",
+            skills: [
+                "Mentoring",
+                "Backend Development"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/smerlux"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/lance-vincent-salera-4a99b62bb/"
                 }
             ],
             tags: [

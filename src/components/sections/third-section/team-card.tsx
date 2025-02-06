@@ -30,7 +30,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
     const [move, setMove] = useState(0);
 
     return (
-        <div className="overflow-auto w-full h-130">
+        <div className="overflow-auto w-full h-130 custom-scrollbar">
             <Box
                 sx={{
                     display: "flex",
