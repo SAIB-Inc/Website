@@ -1,6 +1,5 @@
 import React from "react";
 import TeamCard from "./team-card";
-import SaibChip from "../../common/saib-chip";
 import { Typography } from "@mui/material";
 import { graphql, useStaticQuery } from "gatsby";
 import { Blockchain, Ceo, Command, Engine, Helm } from "../../../images/icons";
@@ -128,9 +127,9 @@ const Teams: React.FC = () => {
         },
         {
             name: "Caitlin Lindsay",
-            position: "Engineer",
+            position: "The Helm",
             imageSrc: teamsImage.Cait.childImageSharp.gatsbyImageData,
-            group: "The Engine Room",
+            group: "The Helm",
             description: "Hi! I'm Caitlin. I enjoy learning and working in various discplines, from front-end engineering to back-end development. I've developed a newfound interest in blockchain technology, and am always eager to learn and improve myself.",
             skills: [
                 "Presentation",
@@ -158,7 +157,7 @@ const Teams: React.FC = () => {
             name: "Kathea Mayol",
             position: "Engineer",
             imageSrc: teamsImage.Kathea.childImageSharp.gatsbyImageData,
-            group: "The Engine Room",
+            group: "The Helm",
             description: "Good Day! I'm Kathea Mari, and I have a passion for technology and software solutions, particularly in web development and blockchain technologies. I thrive in collaborative environments where I can learn, contribute, and create meaningful value through innovation and teamwork.",
             skills: [
                 "Frontend Development",
@@ -368,7 +367,7 @@ const Teams: React.FC = () => {
     ];
 
     return (
-        <div className="text-center py-25">
+        <div id="our-team" className="text-center py-25">
             <div className="w-full">
                 <Typography
                     component="h6"
@@ -384,8 +383,7 @@ const Teams: React.FC = () => {
                     Meet the team
                 </Typography>
             </div>
-            <div className="overflow-hidden max-w-630 mx-auto px-6 space-y-6 mt-14">
-                <SaibChip icon={Command} content="The Command Deck" />
+            <div className="overflow-auto max-w-630 mx-auto px-6 space-y-6 mt-14">
                 <TeamCard items={teamsData} />
             </div>
         </div>

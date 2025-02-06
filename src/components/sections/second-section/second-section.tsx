@@ -6,7 +6,7 @@ import About from "./about";
 const SecondSection: React.FC = () => {
     return (
         <section>
-            <div className="container max-w-(--breakpoint-xl) mx-auto">
+            <div id="about" className="container max-w-(--breakpoint-xl) mx-auto pt-10">
                 <About />
                 <Offer />
             </div>

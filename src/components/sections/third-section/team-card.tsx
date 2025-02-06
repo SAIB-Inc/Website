@@ -6,6 +6,7 @@ import { IGatsbyImageData } from "gatsby-plugin-image";
 import { Close } from "@mui/icons-material";
 import SaibChip from "../../common/saib-chip";
 import { Lightning1, Lightning2, Lightning3, Lightning4, Lightning5 } from "../../../images/sections/third-section";
+import { Blockchain, Command, Engine, Helm } from "../../../images/icons";
 
 interface TeamCardProps {
     items: {
@@ -28,9 +29,17 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
     const theme = useTheme();
     const [cardIndex, setCardIndex] = useState<number | null>(null);
     const [move, setMove] = useState(0);
+    const renderedGroups = new Set();
+
+    const iconMap = {
+        "The Helm": Helm,
+        "The Command Deck": Command,
+        "The Engine Room": Engine,
+        "The Blockchain Lab": Blockchain
+    };
 
     return (
-        <div className="overflow-auto w-full h-130 custom-scrollbar">
+        <div className="overflow-auto w-full h-145 custom-scrollbar">
             <Box
                 sx={{
                     display: "flex",
@@ -39,17 +48,28 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                     overflow: "visible",
                     width: "max-content",
                     transition: "all 0.3s ease-in-out",
-                    transform: `translateX(-${150 * move}px)`
+                    transform: `translateX(-${120 * move}px)`
                 }}
             >
                 {items.map((datum, index) => {
                     const isExpanded = cardIndex === index;
 
+                    const icon = iconMap[datum.group as keyof typeof iconMap] || null;
+
+                    const shouldRenderChip = !renderedGroups.has(datum.group);
+                    if (shouldRenderChip) {
+                        renderedGroups.add(datum.group);
+                    }
                     return (
-                        <div
-                            className="relative"
-                            key={datum.name}
-                        >
+                        <div className="relative" key={datum.name}>
+                            {shouldRenderChip && (
+                                <SaibChip
+                                    key={`chip-${datum.group}`}
+                                    icon={icon}
+                                    content={datum.group}
+                                    className="mb-4 absolute"
+                                />
+                            )}
                             <Box
                                 component="div"
                                 sx={{
@@ -60,6 +80,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                                     borderRadius: 8,
                                     transition: "width 0.3s ease-in-out",
                                     display: "flex",
+                                    marginTop: "60px"
                                 }}
                             >
                                 <Box
@@ -327,7 +348,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                                     </div>
                                 </Box>
                             </Box>
-                            <div className={isExpanded ? "absolute -top-[16px] -right-[7px]" : "hidden"}>
+                            <div className={isExpanded ? "absolute top-11 -right-[7px]" : "hidden"}>
                                 <img
                                     src={Lightning5}
                                     alt="lightning 5"
