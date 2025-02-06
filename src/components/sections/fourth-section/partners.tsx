@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Typography, useTheme } from "@mui/material";
 import { Demeter, DemeterLight, Levvy, LevvyLight, TxPipe, TxPipeLight, UtxoRpc, UtxoRpcLight } from "../../../images/brands";
 import { Browser, Github, X } from "../../../images/socials";
@@ -96,6 +96,16 @@ const Partners: React.FC = () => {
             ]
         },
     ];
+
+    // Auto change index every 2 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % partnersData.length);
+        }, 2000); // 2 seconds
+
+        // Cleanup interval on component unmount
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <div className="text-center py-25">

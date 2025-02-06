@@ -39,7 +39,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                     overflow: "visible",
                     width: "max-content",
                     transition: "all 0.3s ease-in-out",
-                    transform: `translateX(-${148 * move}px)`
+                    transform: `translateX(-${150 * move}px)`
                 }}
             >
                 {items.map((datum, index) => {
@@ -189,11 +189,11 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                                         width: isExpanded ? 600 : 100,
                                         minWidth: isExpanded ? 630 : 100,
                                         opacity: isExpanded ? 1 : 0,
-                                        transition: "all 0.3s ease-in-out",
+                                        transition: "all 0.2s ease-in-out",
                                         background: `linear-gradient(to top left, 
-                                    ${theme.palette.gradient.teamCardGradient.main}, 
-                                    ${theme.palette.gradient.teamCardGradient.secondary}
-                                )`,
+                                            ${theme.palette.gradient.teamCardGradient.main}, 
+                                            ${theme.palette.gradient.teamCardGradient.secondary}
+                                        )`,
                                         padding: isExpanded ? 3 : 0,
                                         textAlign: "left",
                                         zIndex: isExpanded ? 30 : -10,

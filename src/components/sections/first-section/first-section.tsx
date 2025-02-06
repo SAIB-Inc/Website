@@ -1,6 +1,6 @@
 import React from "react"
 import { Box, Typography, useTheme } from "@mui/material";
-import { FirstSectionImage, FirstSectionImage2, LightningBackground, Lightning, SaibCursor } from "../../../images/sections/first-section";
+import { FirstSectionImage2, LightningBackground, Lightning, SaibCursor, Hand, Cardano, Rust, CSharp, Haskell } from "../../../images/sections/first-section";
 import SaibButton from "../../common/saib-button";
 
 const FirstSection: React.FC = () => {
@@ -58,12 +58,42 @@ const FirstSection: React.FC = () => {
                             <SaibCursor className="absolute left-[155px]! top-14" />
                         </div>
                     </div>
-                    <div className="shrink-0 w-72">
-                        <img
-                            alt="saib graphic"
-                            src={FirstSectionImage}
-                            className="w-full h-full"
-                        />
+                    <div className="shrink-0 relative flex flex-col justify-center items-center gap-20">
+                        <div className="w-47">
+                            <img
+                                alt="saib graphic"
+                                src={Cardano}
+                                className="w-full h-full"
+                            />
+                        </div>
+                        <div className="w-11 absolute left-3 top-40">
+                            <img
+                                alt="saib graphic"
+                                src={CSharp}
+                                className="w-full h-full"
+                            />
+                        </div>
+                        <div className="w-11 absolute">
+                            <img
+                                alt="saib graphic"
+                                src={Rust}
+                                className="w-full h-full"
+                            />
+                        </div>
+                        <div className="w-14 absolute right-5 top-40">
+                            <img
+                                alt="saib graphic"
+                                src={Haskell}
+                                className="w-full h-full"
+                            />
+                        </div>
+                        <div className="w-72">
+                            <img
+                                alt="saib graphic"
+                                src={Hand}
+                                className="w-full h-full"
+                            />
+                        </div>
                     </div>
                 </div>
                 <div className="h-47 mt-16 w-full relative">
@@ -73,7 +103,7 @@ const FirstSection: React.FC = () => {
                         className="absolute -left-200 w-full"
                     />
                 </div>
-                
+
             </div>
             <div className="container mx-auto flex items-center justify-between pt-13 pb-36 relative max-w-(--breakpoint-xl)">
                 <div className="space-y-4 max-w-175">
