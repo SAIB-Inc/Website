@@ -159,7 +159,7 @@ const FirstSection: React.FC = () => {
                 </div>
             </div>
             <div
-                className="mx-auto mt-25 flex flex-col items-center justify-between gap-10 pt-13 pb-36 relative max-w-(--breakpoint-xl) lg:flex-row text-center lg:text-left lg:gap-0 lg:mt-0"
+                className="mx-auto mt-10 flex flex-col items-center justify-between gap-10 py-13 relative max-w-(--breakpoint-xl) lg:flex-row text-center lg:text-left lg:gap-0 lg:mt-0 lg:pb-36"
             >
                 <div className="space-y-4 max-w-175 flex flex-col items-center lg:block">
                     <div className="relative w-max">

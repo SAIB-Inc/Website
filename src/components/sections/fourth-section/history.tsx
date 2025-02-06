@@ -19,7 +19,7 @@ const History: React.FC = () => {
     const theme = useTheme();
 
     return (
-        <div className="flex flex-col items-center justify-center text-center py-25">
+        <div className="flex flex-col items-center justify-center text-center pb-25 lg:py-25">
             <div>
                 <Typography
                     component="h6"

@@ -125,7 +125,7 @@ const Partners = () => {
     }, [currentIndex, transitioning]);
 
     return (
-        <div className="flex flex-col items-stretch text-center py-25">
+        <div className="flex flex-col items-stretch text-center lg:py-25">
             <div>
                 <Typography
                     component="h6"

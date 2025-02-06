@@ -72,7 +72,7 @@ const OfferMobile = () => {
     const theme = useTheme();
 
     return (
-        <div className="flex flex-col items-center justify-center text-center my-20 w-full lg:hidden">
+        <div className="flex flex-col items-center justify-center text-center w-full lg:hidden">
             <div>
                 <Typography
                     component="h6"
@@ -95,7 +95,6 @@ const OfferMobile = () => {
                 <Paper
                     sx={{
                         background: theme.palette.gradient.dark,
-                        maxWidth: 500,
                         height: 700,
                         flexGrow: 1,
                         borderRadius: "16px",

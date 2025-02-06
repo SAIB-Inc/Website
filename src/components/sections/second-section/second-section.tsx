@@ -14,7 +14,7 @@ const SecondSection: React.FC = () => {
                     <Offer />
                 </div>
             </div>
-            <div className="flex h-[190px] mx-auto my-16 relative max-w-(--breakpoint-xl)">
+            <div className="flex h-50 mx-auto relative mt-30 max-w-(--breakpoint-xl)">
                 <div className="absolute -left-[500px] w-4xl">
                     <img alt="lightning background" src={LightningBackgroundLeft} className=" w-full!" />
                 </div>

@@ -16,7 +16,7 @@ const FifthSection: React.FC = () => {
             }}
             className="2xl:!h-[calc(100vh-296px)] !px-6"
         >
-            <div className="max-w-(--breakpoint-xl) mx-auto flex flex-col text-center items-center justify-between h-full py-50 lg:flex-row lg:text-left">
+            <div className="max-w-(--breakpoint-xl) mx-auto flex flex-col text-center items-center justify-between h-full py-25 lg:py-50 lg:flex-row lg:text-left">
                 <div className="space-y-3! flex flex-col items-center lg:items-start max-w-65 sm:max-w-140 lg:max-w-none">
                     <Typography
                         component="h6"
@@ -31,7 +31,6 @@ const FifthSection: React.FC = () => {
                         sx={{
                             fontWeight: 500
                         }}
-                        className="max-sm:!text-5xl max-lg:!text-5xl"
                     >
                         <span>Ready to work with the </span>
                         <Typography
