@@ -127,6 +127,11 @@ const Header: React.FC = () => {
                   component="a"
                   variant="body2"
                   onClick={(e) => scrollToNextSection(e, item.link)}
+                  sx={{
+                    "&:active": {
+                      color: "white"
+                    }
+                  }}
                 >
                   {item.name}
                 </Typography>
@@ -193,6 +198,12 @@ const Header: React.FC = () => {
                         component="a"
                         variant="body2"
                         onClick={(e) => scrollToNextSection(e, datum.link)}
+                        sx={{
+                          '&:active': {
+                            color: theme.palette.secondary.main,
+                            fontWeight:700
+                          }
+                        }}
                       >
                         {datum.name}
                       </Typography>
