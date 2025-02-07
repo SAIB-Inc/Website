@@ -1,7 +1,7 @@
 import { SvgIcon, SvgIconProps, useTheme } from "@mui/material";
 import React from "react";
 
-const Lightning = (props: SvgIconProps) => {
+const LightningTwo = (props: SvgIconProps) => {
     const { sx = {}, ...otherProps } = props;
     const theme = useTheme();
 
@@ -10,15 +10,15 @@ const Lightning = (props: SvgIconProps) => {
             {...otherProps}
             sx={{
                 color: theme.palette.secondary.dark,
-                fontSize: 69,
+                fontSize: 40,
                 ...sx
             }}
         >
-            <svg width="69" height="55" viewBox="0 0 69 55" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                <path d="M68.3521 52.5784L43.654 27.5839L31.3405 36.3639L0.440514 0.463016L26.324 54.0949L42.7146 38.1973L68.3521 52.5784Z"/>
+            <svg width="30" height="36" viewBox="0 0 30 36" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M-0.000235426 35.8887L10.0768 19.6896L21 17.5L29.7022 0.142011L22.5 25.1965L11.8482 25.1965L-0.000235426 35.8887Z"/>
             </svg>
         </SvgIcon>
     );
 };
 
-export default Lightning;
+export default LightningTwo;

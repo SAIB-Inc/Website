@@ -70,7 +70,6 @@ const Offer: React.FC = () => {
 
     return (
         <Paper
-            elevation={2}
             sx={{
                 background: theme.palette.gradient.dark,
                 padding: "60px 40px",
@@ -81,8 +80,10 @@ const Offer: React.FC = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 textAlign: "center",
-                position: "relative"
+                position: "relative",
+                boxShadow: theme.shadows[4]
             }}
+            className="!hidden lg:!flex"
         >
             <div>
                 <img
@@ -109,7 +110,7 @@ const Offer: React.FC = () => {
                 <Typography
                     component="p"
                     variant="body1"
-                    className="w-[632px] mt-4!"
+                    className="mt-4! lg:w-158"
                 >
                     <span>We offer development services on the</span>
                     <span className="font-bold"> Cardano blockchain</span>,
@@ -129,10 +130,11 @@ const Offer: React.FC = () => {
                     >
                         <CardContent sx={{ padding: "16px 16px 0 16px" }}>
                             <div className="flex gap-4 items-center relative">
-                                <div className="absolute -top-4 right-0">
+                                <div className="absolute -top-4 right-0 h-20">
                                     <img
                                         src={datum.icon}
                                         alt={datum.title}
+                                        className="w-full h-full"
                                     />
                                 </div>
                                 <Typography

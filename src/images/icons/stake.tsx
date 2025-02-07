@@ -1,9 +1,19 @@
-import { SvgIcon, SvgIconProps } from "@mui/material";
+import { SvgIcon, SvgIconProps, useTheme } from "@mui/material";
 import React from "react";
 
 const Stake = (props: SvgIconProps) => {
+    const { sx = {}, ...otherProps } = props;
+    const theme = useTheme();
+
     return (
-        <SvgIcon {...props} sx={{ fontSize: 28 }}>
+        <SvgIcon
+            {...otherProps}
+            sx={{
+                color: theme.palette.secondary.main,
+                fontSize: 28,
+                ...sx
+            }}
+        >
             <svg width="31" height="34" viewBox="0 0 31 34" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16.5675 0.588365C15.9509 0.225265 15.1859 0.225265 14.5694 0.588364L1.3807 8.35567C-0.347068 9.37322 0.374601 12.0207 2.37974 12.0207H28.7571C30.7623 12.0207 31.4839 9.37322 29.7562 8.35567L16.5675 0.588365Z" fill="#6F03E0" />
                 <path d="M2.74812 15.2656C2.74812 14.7219 3.18882 14.2812 3.73245 14.2812H6.80692C7.35055 14.2812 7.79125 14.7219 7.79125 15.2656V26.1131C7.79125 26.6567 7.35055 27.0974 6.80692 27.0974H3.73245C3.18882 27.0974 2.74812 26.6567 2.74812 26.1131V15.2656Z" fill="#6F03E0" />

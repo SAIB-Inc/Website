@@ -11,14 +11,19 @@ const SaibNavigation: React.FC<SaibNavigationProps> = ({ buttonCount, currentInd
     const theme = useTheme();
 
     return (
-        <div className="flex flex-col gap-2 h-full">
+        <Box 
+            component="div"
+            sx={{
+                backgroundColor: theme.palette.gradient.main
+            }}
+            className="!flex !gap-4 !h-full !w-full !py-4 !px-6 !rounded-3xl !transition-all sm:!gap-5 lg:!gap-2 lg:!flex-col lg:!bg-inherit lg:!p-0">
             {Array.from({ length: buttonCount }, (_, idx) => (
                 <Box
                     key={idx}
                     component="div"
                     sx={{
                         width: 10,
-                        flexGrow: 1,
+                        height: 10,
                         backgroundColor:
                             currentIndex === idx
                                 ? theme.palette.carouselButtons.active
@@ -26,10 +31,11 @@ const SaibNavigation: React.FC<SaibNavigationProps> = ({ buttonCount, currentInd
                         borderRadius: 6,
                         cursor: "pointer",
                     }}
+                    className={`!aspect-square flex-grow ${(currentIndex === idx)? "": "max-lg:grow-0 duration-100"}`}
                     onClick={() => setCurrentIndex(idx)}
                 />
             ))}
-        </div>
+        </Box>
     );
 };
 

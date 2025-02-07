@@ -29,7 +29,7 @@ interface TeamModalProps extends TeamCardProps {
 
 const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
     const theme = useTheme();
-    
+
     return (
         <Modal
             open={open}
@@ -68,17 +68,19 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                             <GatsbyImage
                                 image={items.modalImageSrc}
                                 alt={items.name}
+                                loading="eager"
                             />
                         </div>
                         <div className="flex flex-col flex-wrap gap-3 h-20 w-10 absolute top-3 left-3 sm:gap-4 sm:top-6 sm:left-6 sm:h-40">
                             {items.tags.map((TagIcon, idx) => (
                                 <TagIcon
                                     key={idx}
-                                    sx={{ color: theme.palette.text.tertiary }}
+                                    sx={{ color: theme.palette.text.tertiary, fontSize: 30 }}
+                                    className="max-sm:!text-sm"
                                 />
                             ))}
                         </div>
-                        <div className="absolute right-6 top-6">
+                        <div className="absolute top-1 right-3 sm:gap-4 sm:top-6 sm:right-6 h-20">
                             <IconButton
                                 onClick={() => {
                                     setOpen(false);
@@ -87,7 +89,7 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                                     p: 0
                                 }}
                             >
-                                <Close sx={{ color: theme.palette.secondary.light }} />
+                                <Close sx={{ color: theme.palette.secondary.light }} className="max-sm:!text-sm" />
                             </IconButton>
                         </div>
                     </div>

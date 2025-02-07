@@ -41,23 +41,25 @@ const Projects: React.FC = () => {
     ];
 
     return (
-        <div className="text-center py-25">
+        <div className="flex flex-col items-center justify-center text-center py-25 lg:py-25">
             <div>
                 <Typography
                     component="h6"
                     variant="h6"
                     color="secondary"
+                    className="max-sm:!text-sm"
                 >
                     Tools we developed...
                 </Typography>
                 <Typography
                     component="h3"
                     variant="h3"
+                    className="max-sm:!text-4xl"
                 >
                     Our Projects
                 </Typography>
             </div>
-            <div className="flex mt-14 gap-10">
+            <div className="gap-10 w-full mt-14 grid grid-cols-1 md:grid-cols-2">
                 {projectsData.map((datum, index) => (
                     <BrandCard
                         key={index}
@@ -67,13 +69,18 @@ const Projects: React.FC = () => {
                         background={datum.gradient}
                         socials={datum.socials}
                         sx={{
-                            width: 480,
+                            width: "100%",
+                            display: "flex",
+                            flexDirection: "column",
+                            flexGrow: 1,
+                            minHeight: "100%",
                         }}
                         bordered={false}
-                        iconSize={40}
+                        iconSize={32}
                     />
                 ))}
             </div>
+
         </div>
     );
 };

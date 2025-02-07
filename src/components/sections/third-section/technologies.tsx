@@ -59,16 +59,25 @@ const Technologies: React.FC = () => {
     const row3 = generateRandomizedRow(technologies);
 
     return (
-        <div className="text-center py-6 min-h-screen flex flex-col items-center justify-center">
+        <div className="text-center py-6 h-[calc(100vh-300px)] flex flex-col items-center justify-center mt-16 sm:mt-0">
             <div className="w-full">
-                <Typography component="h6" variant="h6" color="secondary">
+                <Typography 
+                    component="h6" 
+                    variant="h6" 
+                    color="secondary"
+                    className="max-sm:!text-sm"
+                >
                     What we are good at...
                 </Typography>
-                <Typography component="h3" variant="h3">
+                <Typography 
+                    component="h3" 
+                    variant="h3"
+                    className="max-sm:!text-4xl"
+                >
                     Technologies
                 </Typography>
             </div>
-            <div className="w-full max-w-630 overflow-hidden mx-auto mt-14 [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]">
+            <div className="w-full max-w-630 overflow-hidden mx-auto mt-14 sm:[mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-100px),transparent_100%)]">
                 <TechnologiesRow items={row1} />
                 <TechnologiesRow items={row2} direction="reverse" />
                 <TechnologiesRow items={row3} />

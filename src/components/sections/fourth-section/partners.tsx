@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Button, Typography, useTheme } from "@mui/material";
 import { Demeter, DemeterLight, Levvy, LevvyLight, TxPipe, TxPipeLight, UtxoRpc, UtxoRpcLight } from "../../../images/brands";
 import { Browser, Github, X } from "../../../images/socials";
@@ -7,9 +7,6 @@ import BrandCard from "./brand-card";
 
 const Partners = () => {
     const theme = useTheme();
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const [direction, setDirection] = useState('enter'); // 'enter' or 'exit'
-    const [transitioning, setTransitioning] = useState(false);
 
     const partnersData = [
         {
@@ -99,12 +96,35 @@ const Partners = () => {
         },
     ];
 
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState('enter');
+    const [transitioning, setTransitioning] = useState(false);
+    const touchStartX = useRef(0);
+    const touchEndX = useRef(0);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        touchEndX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        const deltaX = touchEndX.current - touchStartX.current;
+        if (deltaX > 50) {
+            setCurrentIndex((prev) => Math.max(prev - 1, 0));
+        } else if (deltaX < -50) {
+            setCurrentIndex((prev) => Math.min(prev + 1, partnersData.length - 1));
+        }
+    };
+
     const handleCardChange = (newIndex: number) => {
         if (transitioning) return;
-        
+
         setTransitioning(true);
         setDirection('exit');
-        
+
         setTimeout(() => {
             setCurrentIndex(newIndex);
             setDirection('enter');
@@ -125,24 +145,26 @@ const Partners = () => {
     }, [currentIndex, transitioning]);
 
     return (
-        <div className="text-center py-25">
+        <div className="flex flex-col items-stretch text-center lg:py-25">
             <div>
                 <Typography
                     component="h6"
                     variant="h6"
                     color="secondary"
+                    className="max-sm:!text-sm"
                 >
                     We are proud to be...
                 </Typography>
                 <Typography
                     component="h3"
                     variant="h3"
+                    className="max-sm:!text-4xl"
                 >
                     Building With
                 </Typography>
             </div>
-            <div className="flex mt-14 h-100 gap-20">
-                <div className="flex flex-1 flex-col justify-evenly items-end">
+            <div className="flex flex-col-reverse items-center mt-14 gap-10 lg:flex-row lg:items-stretch lg:gap-20 lg:h-100">
+                <div className="hidden flex-1 flex-col justify-evenly items-end lg:flex">
                     {partnersData.map((datum, index) => (
                         <Button
                             component="div"
@@ -152,26 +174,30 @@ const Partners = () => {
                                 display: "flex",
                                 justifyContent: "flex-end",
                                 alignItems: "center",
-                                transition: "ease"
+                                transition: "ease",
+                                width: 200
                             }}
                             onClick={() => handleCardChange(index)}
                         >
                             <img
+                                key={index}
                                 src={datum.brandAlternate}
                                 alt={datum.name}
-                                className={`transition-opacity duration-150 ${currentIndex === index ? "opacity-100" : "opacity-30 hover:opacity-100"}`}
+                                className={`transition-opacity duration-150 ${currentIndex === index ? "opacity-100" : "opacity-50 hover:opacity-100"}`}
                             />
                         </Button>
                     ))}
                 </div>
-                <SaibNavigation
-                    buttonCount={partnersData.length}
-                    currentIndex={currentIndex}
-                    setCurrentIndex={handleCardChange}
-                />
-                <div className="relative h-full w-200">
+                <div className="h-full w-full lg:w-auto max-w-50">
+                    <SaibNavigation
+                        buttonCount={partnersData.length}
+                        currentIndex={currentIndex}
+                        setCurrentIndex={handleCardChange}
+                    />
+                </div>
+                <div className="relative h-full w-full max-w-200 hidden lg:block">
                     <div
-                        className={`absolute w-full h-full flex transition-all duration-200 ease-in-out
+                        className={`w-full h-full transition-all duration-200 ease-in-out flex 
                             ${direction === 'enter' ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
                     >
                         <BrandCard
@@ -184,6 +210,29 @@ const Partners = () => {
                                 width: 480,
                             }}
                         />
+                    </div>
+                </div>
+                <div
+                    className="lg:hidden w-full overflow-hidden rounded-3xl relative"
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleTouchEnd}
+                >
+                    <div
+                        className="flex transition-transform duration-500"
+                        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+                    >
+                        {partnersData.map((datum, index) => (
+                            <div key={index} className="min-w-full h-110 flex justify-center">
+                                <BrandCard
+                                    brand={datum.brand}
+                                    name={datum.name}
+                                    description={datum.description}
+                                    background={datum.gradient}
+                                    socials={datum.socials}
+                                />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

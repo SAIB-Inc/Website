@@ -18,11 +18,14 @@ import {
     SoftwareHovered
 } from "../../../images/sections/second-section";
 import SaibButton from "../../common/saib-button";
+import SaibNavigation from "../../common/saib-navigation";
 
 const About: React.FC = () => {
     const AboutItems = [
         {
             title: "Frontend Excellence",
+            modalTitle: "Frontend",
+            modalHighlight: "Excellence",
             content: "Transforming ideas into stunning, intuitive web experiences that captivate and engage.",
             buttonTitle: "Explore More",
             imageSrc: Frontend,
@@ -30,6 +33,8 @@ const About: React.FC = () => {
         },
         {
             title: "Backend Reliability",
+            modalTitle: "Backend",
+            modalHighlight: "Reliability",
             content: "Powering your platforms with secure, efficient, and scalable server solutions.",
             buttonTitle: "Explore More",
             imageSrc: Backend,
@@ -37,6 +42,8 @@ const About: React.FC = () => {
         },
         {
             title: "Software Innovation",
+            modalTitle: "Software",
+            modalHighlight: "Innovation",
             content: "Developing bespoke software solutions that drive growth and enhance productivity.",
             buttonTitle: "Explore More",
             imageSrc: Software,
@@ -44,6 +51,8 @@ const About: React.FC = () => {
         },
         {
             title: "Blockchain Mastery",
+            modalTitle: "Blockchain",
+            modalHighlight: "Mastery",
             content: "Leveraging blockchain technology to deliver decentralized, transparent, secure applications.",
             buttonTitle: "Explore More",
             imageSrc: Blockchain,
@@ -51,6 +60,8 @@ const About: React.FC = () => {
         },
         {
             title: "Smart Contracts",
+            modalTitle: "Smart",
+            modalHighlight: "Contracts",
             content: "Creating decentralized smart contracts for secure, trustless efficiency.",
             buttonTitle: "Explore More",
             imageSrc: Contract,
@@ -58,8 +69,9 @@ const About: React.FC = () => {
         },
     ];
 
-    const theme = useTheme();
     const [index, setIndex] = useState(0);
+
+    const theme = useTheme();
     const touchStartX = useRef(0);
     const touchEndX = useRef(0);
 
@@ -81,8 +93,8 @@ const About: React.FC = () => {
     };
 
     return (
-        <div className="pt-25 flex flex-col justify-center items-center">
-            <div className="w-full text-center max-w-130">
+        <div className="flex flex-col justify-center items-center lg:pt-25">
+            <div className="w-full text-center max-w-130 hidden lg:block">
                 <Typography
                     component="h3"
                     variant="h3"
@@ -126,7 +138,6 @@ const About: React.FC = () => {
                                     className="w-full h-full object-cover"
                                 />
                             </div>
-
                             <div className="relative z-20 flex flex-col items-center justify-center gap-6">
                                 <div className="w-40 h-40 shrink-0 flex items-center justify-center relative">
                                     <img
@@ -141,10 +152,18 @@ const About: React.FC = () => {
                                     />
                                 </div>
                                 <div className={`${(index === 0 || index === 1) ? "" : "h-55"}`}>
-                                    <Typography component="h4" variant="h4">
+                                    <Typography
+                                        component="h4"
+                                        variant="h4"
+                                        className="max-xl:!text-3xl"
+                                    >
                                         {datum.title}
                                     </Typography>
-                                    <Typography component="p" variant="body1" className="!mt-2">
+                                    <Typography
+                                        component="p"
+                                        variant="body1"
+                                        className="!mt-2 max-xl:!text-base"
+                                    >
                                         {datum.content}
                                     </Typography>
                                 </div>
@@ -153,8 +172,15 @@ const About: React.FC = () => {
                     );
                 })}
             </div>
+            <div className="w-full max-w-60 lg:hidden">
+                <SaibNavigation
+                    buttonCount={AboutItems.length}
+                    currentIndex={index}
+                    setCurrentIndex={setIndex}
+                />
+            </div>
             <div
-                className="lg:hidden mt-14 w-full overflow-hidden relative"
+                className="lg:hidden mt-10 w-full overflow-hidden rounded-3xl relative"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
@@ -169,35 +195,45 @@ const About: React.FC = () => {
                                 sx={{
                                     background: "white",
                                     textAlign: "center",
-                                    padding: "40px 60px",
+                                    padding: "60px 60px",
                                     boxShadow: theme.shadows[4]
                                 }}
-                                className="!rounded-3xl relative overflow-hidden w-full max-w-md mx-auto"
+                                className="!rounded-3xl relative overflow-hidden w-full mx-auto flex flex-col items-center gap-10"
                             >
+                                <div>
+                                    <Typography
+                                        component="h3"
+                                        variant="h3"
+                                        className="mb-4 max-lg:!text-4xl"
+                                    >
+                                        <span className="font-bold">{datum.modalTitle} </span>
+                                        <Typography
+                                            component="span"
+                                            variant="h3"
+                                            color="secondary"
+                                            className="max-lg:!text-4xl"
+                                        >
+                                            {datum.modalHighlight}
+                                        </Typography>
+                                    </Typography>
+                                </div>
+                                <div>
+                                    <Typography component="p" variant="body1" className="!-mt-5">
+                                        {datum.content}
+                                    </Typography>
+                                </div>
+                                <div>
+                                    <SaibButton variant="outlined">
+                                        {datum.buttonTitle}
+                                    </SaibButton>
+                                </div>
                                 <div className="w-40 h-40 mx-auto flex items-center justify-center relative">
                                     <img alt={datum.title} src={datum.imageSrc} className="absolute w-full h-full transition-opacity duration-300" />
-                                    <img alt={datum.title} src={datum.hovered} className="absolute w-full h-full opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                                 </div>
-                                <Typography component="h4" variant="h4">
-                                    {datum.title}
-                                </Typography>
-                                <Typography component="p" variant="body1" className="!mt-2">
-                                    {datum.content}
-                                </Typography>
                             </Paper>
                         </div>
                     ))}
                 </div>
-            </div>
-            <div className="lg:hidden flex justify-center gap-2 mt-4">
-                {AboutItems.map((_, i) => (
-                    <span key={i} className={`w-2 h-2 rounded-full transition-all duration-300 ${i === index ? "bg-gray-900" : "bg-gray-400"}`} />
-                ))}
-            </div>
-            <div className="mt-14">
-                <SaibButton variant="outlined" size="medium">
-                    Explore More
-                </SaibButton>
             </div>
         </div>
     );

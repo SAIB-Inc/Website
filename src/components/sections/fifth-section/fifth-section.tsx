@@ -14,10 +14,10 @@ const FifthSection: React.FC = () => {
             sx={{
                 background: theme.palette.background.fifthSection,
             }}
-            className="2xl:!h-[calc(100vh-296px)]"
+            className="2xl:!h-[calc(100vh-296px)] !px-6"
         >
-            <div className="max-w-(--breakpoint-xl) mx-auto flex items-center justify-between h-full py-50">
-                <div className="space-y-3!">
+            <div className="max-w-(--breakpoint-xl) mx-auto flex flex-col text-center items-center justify-between h-full py-25 lg:py-50 lg:flex-row lg:text-left">
+                <div className="space-y-3! flex flex-col items-center lg:items-start max-w-65 sm:max-w-180 lg:max-w-none">
                     <Typography
                         component="h6"
                         variant="h6"
@@ -49,7 +49,7 @@ const FifthSection: React.FC = () => {
                         component="p"
                         variant="body1"
                         sx={{
-                            width: 663
+                            maxWidth: 663
                         }}
                     >
                         <span>Transform your business with </span>
@@ -69,35 +69,35 @@ const FifthSection: React.FC = () => {
                     </div>
                 </div>
                 <div className="shrink-0 relative flex flex-col justify-center items-center">
-                    <div className="w-13 absolute top-17 left-38 animate-float">
+                    <div className="w-9 absolute left-24 top-10 sm:w-13 sm:top-17 sm:left-38 animate-float">
                         <img
                             alt="saib graphic"
                             src={CardanoPurple}
                             className="w-full h-full"
                         />
                     </div>
-                    <div className="w-11 absolute left-8 top-40 animate-float" style={{ animationDelay: "0.8s" }}>
+                    <div className="w-7 absolute left-8 top-25 sm:w-11 sm:left-8 sm:top-40 animate-float" style={{ animationDelay: "0.8s" }}>
                         <img
                             alt="saib graphic"
                             src={CSharpPurple}
                             className="w-full h-full"
                         />
                     </div>
-                    <div className="w-12 absolute top-54 right-12 animate-float" style={{ animationDelay: "0.2s" }}>
+                    <div className="w-8 absolute right-10 top-33 sm:w-12 sm:top-54 sm:right-12 animate-float" style={{ animationDelay: "0.2s" }}>
                         <img
                             alt="saib graphic"
                             src={RustPurple}
                             className="w-full h-full"
                         />
                     </div>
-                    <div className="w-12 absolute right-30 bottom-36 animate-float !delay-200" style={{ animationDelay: "0.5s" }}>
+                    <div className="w-8 absolute right-17 bottom-22 sm:w-12 sm:right-30 sm:bottom-36 animate-float !delay-200" style={{ animationDelay: "0.5s" }}>
                         <img
                             alt="saib graphic"
                             src={HaskellPurple}
                             className="w-full h-full"
                         />
                     </div>
-                    <div>
+                    <div className="max-w-90 sm:max-w-none">
                         <img src={FifthSectionImage} alt="last section image" />
                     </div>
                 </div>

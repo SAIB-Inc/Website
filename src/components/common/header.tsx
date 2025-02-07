@@ -1,6 +1,6 @@
-import React from "react";
-import { EastRounded } from "@mui/icons-material";
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
+import React, { useState } from "react";
+import { Close, EastRounded, Menu } from "@mui/icons-material";
+import { Box, Drawer, IconButton, List, ListItem, ListItemButton, Typography, useTheme } from "@mui/material";
 import { Facebook, LinkedIn, X, Github } from "../../images/socials";
 import Logo from "../../images/saib-logo.svg";
 import SaibButton from "./saib-button";
@@ -28,7 +28,7 @@ const Header: React.FC = () => {
       icon: Github,
       link: "https://github.com/SAIB-Inc"
     }
-  ]
+  ];
 
   const menuItems = [
     {
@@ -54,12 +54,18 @@ const Header: React.FC = () => {
   ];
 
   const theme = useTheme();
+  const [open, setOpen] = useState(false);
+
+  const toggleDrawer = (openState: boolean) => () => {
+    setOpen(openState);
+  }
 
   const scrollToNextSection = (
     e: React.MouseEvent<HTMLAnchorElement>,
     id: string
   ) => {
     e.preventDefault();
+    setOpen(false);
     const nextSection = document.getElementById(id);
     if (nextSection) {
       setTimeout(() => {
@@ -87,7 +93,7 @@ const Header: React.FC = () => {
             <img src={Logo} alt="saib-logo" />
           </a>
         </div>
-        <div>
+        <div className="hidden lg:block">
           <ul className="space-x-[46px]">
             {menuItems.map((item) => (
               <Box
@@ -121,14 +127,20 @@ const Header: React.FC = () => {
                   component="a"
                   variant="body2"
                   onClick={(e) => scrollToNextSection(e, item.link)}
+                  sx={{
+                    "&:active": {
+                      color: "white"
+                    }
+                  }}
                 >
                   {item.name}
                 </Typography>
+
               </Box>
             ))}
           </ul>
         </div>
-        <div className="flex items-center gap-7">
+        <div className="items-center gap-7 hidden lg:flex">
           <div className="space-x-4!">
             {socials.map((datum, index) => (
               <IconButton
@@ -162,6 +174,77 @@ const Header: React.FC = () => {
               <EastRounded fontSize="small" />
             </SaibButton>
           </div>
+        </div>
+        <div className="lg:hidden">
+          <IconButton onClick={toggleDrawer(true)}>
+            <Menu sx={{ color: theme.palette.secondary.main }} />
+          </IconButton>
+          <Drawer
+            anchor="right"
+            open={open}
+            onClose={toggleDrawer(false)}
+          >
+            <div className="p-6">
+              <div className="flex items-center justify-end">
+                <IconButton onClick={toggleDrawer(false)} sx={{ justifyContent: "end" }}>
+                  <Close color="secondary" sx={{ fontSize: 30 }} />
+                </IconButton>
+              </div>
+              <List sx={{ width: 272 }} className="space-y-5">
+                {menuItems.map((datum, index) => (
+                  <ListItem key={index} sx={{ paddingX: 1 }}>
+                    <ListItemButton disableRipple sx={{ padding: 0 }}>
+                      <Typography
+                        component="a"
+                        variant="body2"
+                        onClick={(e) => scrollToNextSection(e, datum.link)}
+                        sx={{
+                          '&:active': {
+                            color: theme.palette.secondary.main,
+                            fontWeight:700
+                          }
+                        }}
+                      >
+                        {datum.name}
+                      </Typography>
+                    </ListItemButton>
+                  </ListItem>
+                ))}
+              </List>
+              <div className="p-2 mt-8">
+                <div>
+                  <Typography
+                    component="p"
+                    variant="body2"
+                    color="secondary"
+                  >
+                    Let&apos;s keep in touch
+                  </Typography>
+                </div>
+                <div className="space-x-4! mt-4">
+                  {socials.map((datum, index) => (
+                    <IconButton
+                      key={index}
+                      href={datum.link}
+                      aria-label={datum.label}
+                      target="_blank"
+                      sx={{
+                        border: `1px solid ${theme.palette.button.default}`,
+                        height: 32,
+                        width: 32,
+                        boxShadow: theme.shadows[0],
+                        '&:hover': {
+                          borderColor: theme.palette.button.hover
+                        }
+                      }}
+                    >
+                      {React.createElement(datum.icon)}
+                    </IconButton>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </Drawer>
         </div>
       </div>
     </Box>
