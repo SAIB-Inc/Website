@@ -32,8 +32,7 @@ const BrandCard: React.FC<BrandCardProps> = ({
         <Card
             sx={{
                 borderRadius: "24px",
-                paddingX: 5,
-                paddingY: 5,
+                padding: 5,
                 background: (theme) => background || theme.palette.gradient.dark,
                 color: "white",
                 flexGrow: 1,
@@ -61,7 +60,7 @@ const BrandCard: React.FC<BrandCardProps> = ({
                         <Typography
                             component="p"
                             variant="body1"
-                            className="!mt-5"
+                            className="!mt-5 max-sm:!text-base"
                         >
                             {description}
                         </Typography>

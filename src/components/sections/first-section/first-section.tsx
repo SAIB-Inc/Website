@@ -19,7 +19,7 @@ const FirstSection: React.FC = () => {
             }}
             className="max-lg:!bg-none max-lg:!shadow-none !px-6"
         >
-            <div className="mx-auto !pt-40 max-w-(--breakpoint-xl) h-dvh lg:h-auto 2xl:h-[calc(100vh-150px)] flex flex-col justify-center">
+            <div className="mx-auto !pt-24 max-w-(--breakpoint-xl) min-h-220 h-screen lg:min-h-200 lg:h-[calc(100vh-126px)] flex flex-col justify-center">
                 <div className="flex flex-col justify-between items-center text-center gap-10 lg:flex-row lg:text-left lg:!justify-between lg:gap-24">
                     <div className="max-w-200">
                         <div className="relative flex flex-col items-center justify-center">
@@ -124,7 +124,7 @@ const FirstSection: React.FC = () => {
                         </div>
                     </div>
                 </div>
-                <div className="h-47 w-full relative hidden lg:block lg:mt-16">
+                <div className="h-47 w-full relative hidden lg:block">
                     <img
                         alt="lightning background"
                         src={LightningBackground}
@@ -136,7 +136,7 @@ const FirstSection: React.FC = () => {
                 <About/>
             </div>
             <div
-                className="mx-auto mt-10 flex flex-col items-center justify-between gap-0 py-13 relative max-w-(--breakpoint-xl) sm:gap-10 lg:flex-row text-center lg:text-left lg:gap-0 lg:mt-0 lg:pb-36"
+                className="mx-auto py-20 flex flex-col items-center justify-between gap-0 relative max-w-(--breakpoint-xl) sm:gap-10 lg:flex-row text-center lg:text-left lg:gap-0 lg:mt-0 lg:pb-36 lg:pt-8 lg:pb-13 2xl:pt-8 2xl:pb-30"
             >
                 <div className="space-y-4 max-w-175 flex flex-col items-center lg:block">
                     <div className="relative w-max">

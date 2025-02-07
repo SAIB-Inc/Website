@@ -39,7 +39,7 @@ export const Head: HeadFC = () => {
       <meta property="og:title" content="SAIB | Softwarez, At It's Best - Where Software Meets Perfection" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://saib.dev/" />
-      <meta property="og:image" content="https://raw.githubusercontent.com/SAIB-Inc/Assets/main/saib-mission.png" />
+      <meta property="og:image" content="http://localhost:8000/saib-og.png" />
       <meta property="og:image:alt" content="Softwarez, At It's Best" />
       <meta property="og:description" content="We are a software development company based in Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano." />
 
@@ -47,7 +47,7 @@ export const Head: HeadFC = () => {
       <meta name="twitter:url" content="https://saib.dev/" />
       <meta name="twitter:title" content="SAIB | Global Blockchain & Software Innovation" />
       <meta name="twitter:description" content="SAIB delivers blockchain-powered platforms, cutting-edge digital products, and transformative software solutions to clients worldwide." />
-      <meta name="twitter:image" content="https://saib.dev/path-to-og-image.jpg" />
+      <meta name="twitter:image" content="https://saib.dev/saib-og.png" />
       <meta name="twitter:site" content="https://x.com/saibdev" />
 
       <meta name="apple-mobile-web-app-capable" content="yes" />

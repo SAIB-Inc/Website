@@ -5,10 +5,11 @@ interface SaibChipProps extends BoxProps {
     content: string;
     fontSize?: string | number;
     fontWeight?: string | number;
+    childClassName?: string;
     icon?: React.ComponentType<SvgIconProps>;
 }
 
-const SaibChip: React.FC<SaibChipProps> = ({ icon, content, sx, fontSize, fontWeight, ...otherProps }) => {
+const SaibChip: React.FC<SaibChipProps> = ({ icon, content, sx, fontSize, fontWeight, childClassName, ...otherProps }) => {
     const theme = useTheme();
 
     return (
@@ -38,6 +39,7 @@ const SaibChip: React.FC<SaibChipProps> = ({ icon, content, sx, fontSize, fontWe
                 component="p"
                 variant="subtitle2"
                 sx={{ fontSize: fontSize, fontWeight: fontWeight }}
+                className={childClassName}
             >
                 {content}
             </Typography>
