@@ -276,7 +276,7 @@ const Teams: React.FC = () => {
             description: "Hey there! I'm Kim and I'm a creative designer with a background of graphic design, UI/UX and project management. I help businesses to their success by creating quality and well-thought and user-centric designs and is always up to challenge to whatever is brought to the table.",
             skills: [
                 "Creative Direction",
-                "Web UI/UX Desing",
+                "Web UI/UX Design",
                 "Branding"
             ],
             socials: [
@@ -445,7 +445,7 @@ const Teams: React.FC = () => {
                     Meet the team
                 </Typography>
             </div>
-            <div className="overflow-auto max-w-630 mx-auto px-6 space-y-6 mt-14">
+            <div className="overflow-auto max-w-630 mx-auto px-6 space-y-6 mt-10">
                 <TeamCard items={teamsData} />
             </div>
         </div>

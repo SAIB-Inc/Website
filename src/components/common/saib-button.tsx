@@ -4,16 +4,30 @@ import { Button, ButtonProps, useTheme } from "@mui/material";
 type ButtonVariant = "outlined" | "contained" | "text";
 type ButtonSize = "small" | "medium";
 
-interface BaseButtonProps extends ButtonProps {
+interface ButtonOnlyProps extends Omit<ButtonProps, 'href'> {
   variant?: ButtonVariant;
   size?: ButtonSize;
   children: ReactNode;
+  href?: never;
+  target?: never;
 }
+
+interface LinkButtonProps extends Omit<ButtonProps, 'href'> {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  children: ReactNode;
+  href: string;
+  target?: string;
+}
+
+type BaseButtonProps = ButtonOnlyProps | LinkButtonProps;
 
 const SaibButton: React.FC<BaseButtonProps> = ({
   variant = "contained",
   size = "medium",
   children,
+  href,
+  target,
   ...props
 }) => {
   const theme = useTheme();
@@ -67,8 +81,11 @@ const SaibButton: React.FC<BaseButtonProps> = ({
 
   return (
     <Button
+      component={href ? 'a' : 'button'}
       variant={variant}
       sx={variantStyles[variant]}
+      href={href}
+      target={target}
       {...props}
     >
       {children}

@@ -67,7 +67,7 @@ const Offer: React.FC = () => {
             buttonTitle: "Integrate Now"
         }
     ];
-    
+
     return (
         <Paper
             elevation={2}
@@ -75,7 +75,7 @@ const Offer: React.FC = () => {
                 background: theme.palette.gradient.dark,
                 padding: "60px 40px",
                 borderRadius: "24px",
-                marginY: "60px",
+                marginBottom: "60px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -85,10 +85,10 @@ const Offer: React.FC = () => {
             }}
         >
             <div>
-                <img 
-                    src={CardanoBackground} 
-                    alt="Cardano logo" 
-                    className="absolute top-0 right-0" 
+                <img
+                    src={CardanoBackground}
+                    alt="Cardano logo"
+                    className="absolute top-0 right-0"
                 />
             </div>
             <div>
@@ -172,6 +172,8 @@ const Offer: React.FC = () => {
                         <CardActions sx={{ padding: "8px 16px 16px 16px" }}>
                             <SaibButton
                                 variant="outlined"
+                                href="https://calendly.com/saibdev"
+                                target="_blank"
                             >
                                 {datum.buttonTitle}
                             </SaibButton>

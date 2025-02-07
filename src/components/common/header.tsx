@@ -30,7 +30,7 @@ const Header: React.FC = () => {
     }
   ]
 
-  const headerLinks = [
+  const menuItems = [
     {
       name: "Home",
       link: "home"
@@ -83,11 +83,13 @@ const Header: React.FC = () => {
       className="backdrop-blur-md!">
       <div className="container max-w-(--breakpoint-xl) mx-auto flex justify-between items-center">
         <div>
-          <img src={Logo} alt="saib-logo" />
+          <a onClick={(e) => scrollToNextSection(e, "home")} className="cursor-pointer">
+            <img src={Logo} alt="saib-logo" />
+          </a>
         </div>
         <div>
           <ul className="space-x-[46px]">
-            {headerLinks.map((item) => (
+            {menuItems.map((item) => (
               <Box
                 component="li"
                 key={item.name}
@@ -153,6 +155,8 @@ const Header: React.FC = () => {
               variant="outlined"
               size="small"
               className="gap-1.5"
+              href="https://calendly.com/saibdev"
+              target="_blank"
             >
               Let&apos;s Talk
               <EastRounded fontSize="small" />

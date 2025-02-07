@@ -30,7 +30,38 @@ const Footer: React.FC = () => {
         }
     ]
 
+    const menuItems = [
+        {
+            name: "About",
+            link: "about"
+        },
+        {
+            name: "Services",
+            link: "services"
+        },
+        {
+            name: "Our Team",
+            link: "our-team"
+        },
+        {
+            name: "Our Work",
+            link: "our-work"
+        }
+    ];
+
     const theme = useTheme();
+    const scrollToNextSection = (
+        e: React.MouseEvent<HTMLAnchorElement>,
+        id: string
+    ) => {
+        e.preventDefault();
+        const nextSection = document.getElementById(id);
+        if (nextSection) {
+            setTimeout(() => {
+                nextSection.scrollIntoView({ behavior: "smooth" });
+            }, 100);
+        }
+    };
 
     return (
         <Box
@@ -50,14 +81,16 @@ const Footer: React.FC = () => {
             <div className="max-w-(--breakpoint-xl) mx-auto h-full relative z-40">
                 <div className="w-full flex items-center justify-between h-[70%] pt-12">
                     <div>
-                        <img src={SaibIconLight} alt="saib-logo" />
+                        <a onClick={(e) => scrollToNextSection(e, "home")} className="cursor-pointer">
+                            <img src={SaibIconLight} alt="saib-logo" />
+                        </a>
                     </div>
                     <div className="flex gap-20">
                         <ul className="space-y-5">
-                            {["About", "Services", "Our Work", "Our Team"].map((item) => (
+                            {menuItems.map((item) => (
                                 <Box
                                     component="li"
-                                    key={item}
+                                    key={item.name}
                                     sx={{
                                         cursor: "pointer",
                                         color: "white",
@@ -66,7 +99,7 @@ const Footer: React.FC = () => {
                                             position: "relative",
                                             transition: "color 0.15s ease, font-weight 0.15s ease",
                                             "&:before": {
-                                                content: `"${item}"`,
+                                                content: `"${item.name}"`,
                                                 fontWeight: "bold",
                                                 height: 0,
                                                 overflow: "hidden",
@@ -83,8 +116,9 @@ const Footer: React.FC = () => {
                                     <Typography
                                         component="a"
                                         variant="body2"
+                                        onClick={(e) => scrollToNextSection(e, item.link)}
                                     >
-                                        {item}
+                                        {item.name}
                                     </Typography>
                                 </Box>
                             ))}

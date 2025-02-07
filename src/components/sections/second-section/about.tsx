@@ -61,13 +61,13 @@ const About: React.FC = () => {
     const theme = useTheme();
 
     return (
-        <div className="mt-25 flex flex-col justify-center items-center">
-            <div className="w-full text-center">
+        <div className="pt-25 flex flex-col justify-center items-center">
+            <div className="w-full text-center max-w-130">
                 <Typography
                     component="h3"
                     variant="h3"
                 >
-                    <span>Empowering your</span>
+                    <span>Empowering your </span>
                     <Typography
                         component="span"
                         variant="h3"
@@ -139,7 +139,7 @@ const About: React.FC = () => {
                     )
                 })}
             </div>
-            <div className="my-14">
+            <div className="mt-14">
                 <SaibButton
                     variant="outlined"
                     size="medium"
