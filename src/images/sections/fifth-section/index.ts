@@ -1,0 +1,5 @@
+export { default as CSharpPurple } from "./c-sharp-purple.webp"
+export { default as CardanoPurple } from "./cardano-purple.webp"
+export { default as FifthSectionImage } from "./fifth-section-image.webp"
+export { default as HaskellPurple } from "./haskell-purple.webp"
+export { default as RustPurple } from "./rust-purple.webp"

@@ -1,161 +1,74 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-@keyframes backgroundPulse {
-    0%,
+@theme {
+  --text-sm: 13px;
+  --animate-scroll: scroll 35s linear infinite;
+  --animate-scroll-reverse: scroll-reverse 50s linear infinite;
+  --animate-float: float 2s ease-in-out infinite;
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+
     100% {
-        background-size: 40%;
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scroll-reverse {
+    0% {
+      transform: translateX(-50%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateY(0);
     }
 
     50% {
-        background-size: 30%;
+      transform: translateY(-5px);
     }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
 }
 
+* {
+  font-family: "Poppins", sans-serif !important;
+}
+
+html,
 body {
-    font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding-right: 0;
+  background-color: #EBE9F8;
+  color: #3A376A;
 }
 
-.backgroundImage {
-    background-color: #101010;
-    background-image: url('../images/bg-top.png'), url('../images/bg-bottom.png');
-    background-position: right top, left bottom;
-    background-repeat: no-repeat, no-repeat;
-    background-attachment: fixed;
-    background-size: 40%;
-    animation: backgroundPulse 40s infinite ease-in-out;
+.custom-scrollbar::-webkit-scrollbar {
+  width: 3px;
+  height: 7px;
 }
 
-.backgroundImage2 {
-    background-image: url('../images/saib_bg2.png');
-    background-position: right -300px bottom -150px;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 550px;
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #C8C0FD;
+  border-radius: 8px;
+  height: 2px;
 }
 
-.backgroundImage3 {
-    background-image: url('../images/saib_bg.png');
-    background-position: right -950px bottom -600px;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 1800px;
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #6F03E0;
 }
 
-.backgroundImage4 {
-    background-image: 
-        url('../images/saib_bg2.png'),  
-        url('../images/saib_bg.png'), 
-        url('../images/saib_bg.png'),
-        url('../images/saib_bg2.png');
-    background-position: 
-        left -550px top 800px,
-        right -420px top 1100px, 
-        left -550px top 1800px,
-        right -520px top 1800px;
-    background-repeat: no-repeat;
-    background-size: 40%;
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
 }
-
-.menuImage {
-    background-color: #101010;
-    background-image: url('../images/bg-top.png'), url('../images/bg-bottom.png');
-    background-position: right top -200px, left -300px bottom -250px;
-    background-repeat: no-repeat, no-repeat;
-    background-size: 500px, 1000px;
-}
-
-@media screen and (max-width: 1460px) {
-    .backgroundImage3 {
-        background-image: url('../images/saib_bg.png');
-        background-position: right -1350px bottom -600px;
-        background-repeat: no-repeat, no-repeat;
-        background-size: 1800px;
-    }
-    .backgroundImage4 {
-        background-image: 
-            url('../images/saib_bg2.png'),  
-            url('../images/saib_bg.png'), 
-            url('../images/saib_bg.png'),
-            url('../images/saib_bg2.png');
-        background-position: 
-            left -480px top 300px,
-            right -570px top 700px, 
-            left -480px top 1500px,
-            right -520px top 1700px;
-        background-repeat: no-repeat;
-        background-size: 650px;
-    }
-}
-
-@media screen and (max-width: 855px) {
-    .backgroundImage2 {
-        background-image: url('../images/saib_bg2.png');
-        background-position: right -300px bottom -320px;
-        background-repeat: no-repeat, no-repeat;
-        background-size: 550px;
-    }
-
-    .backgroundImage3 {
-        background-image: url('../images/saib_bg.png');
-        background-position: right -800px bottom -600px;
-        background-repeat: no-repeat, no-repeat;
-        background-size: 1800px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        background-size: 70%;
-        animation: backgroundPulse 40s infinite ease-in-out;
-    }
-    @keyframes backgroundPulse {
-        0%,
-        100% {
-            background-size: 80%;
-        }
-    
-        50% {
-            background-size: 70%;
-        }
-    }
-
-    .backgroundImage4 {
-        background-image: 
-            url('../images/saib_bg2.png'),  
-            url('../images/saib_bg.png'), 
-            url('../images/saib_bg.png'),
-            url('../images/saib_bg2.png');
-        background-position: 
-            left -600px top 300px,
-            right -550px top 700px, 
-            left -480px top 1500px,
-            right -540px top 1800px;
-        background-repeat: no-repeat;
-        background-size: 650px;
-    }
-}
-
-@media screen and (max-width: 639px) {
-    .backgroundImage2 {
-        background-image: url('../images/saib_bg2.png'), url('../images/saib_bg.png');
-        background-position: right -150px bottom -550px, right 260px bottom 250px;
-        background-repeat: no-repeat, no-repeat;
-        background-size: 550px;
-    }
-    
-    .backgroundImage4 {
-        background-image: 
-            url('../images/saib_bg2.png'),  
-            url('../images/saib_bg.png'), 
-            url('../images/saib_bg.png'),
-            url('../images/saib_bg2.png');
-        background-position: 
-            left -600px top 300px,
-            right -590px top 700px, 
-            left -580px top 1500px,
-            right -590px top 1600px;
-        background-repeat: no-repeat;
-        background-size: 650px;
-    }
-}
-
