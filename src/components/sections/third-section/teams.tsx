@@ -180,7 +180,7 @@ const Teams: React.FC = () => {
         },
         {
             name: "Caitlin Lindsay",
-            position: "The Helm",
+            position: "Technical Administrator",
             imageSrc: teamsImage.Cait.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.CaitModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
@@ -209,7 +209,7 @@ const Teams: React.FC = () => {
         },
         {
             name: "Kathea Mayol",
-            position: "Engineer",
+            position: "Technical Administrator",
             imageSrc: teamsImage.Kathea.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.KatheaModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
