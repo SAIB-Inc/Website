@@ -145,7 +145,7 @@ const OfferMobile = () => {
                                         {datum.title}
                                     </Typography>
                                 </div>
-                                <div className="!h-50 md:mt-5">
+                                <div className="!h-50 sm:!h-40 md:mt-5">
                                     <Typography
                                         component="p"
                                         variant="subtitle2"
@@ -166,7 +166,7 @@ const OfferMobile = () => {
                                                     display: "list-item",
                                                     textAlign: "center",
                                                 }}
-                                                className="!w-auto max-md:text-sm"
+                                                className="!w-auto max-sm:text-sm"
                                             >
                                                 {listItems}
                                             </ListItem>
@@ -180,7 +180,7 @@ const OfferMobile = () => {
                                         {datum.buttonTitle}
                                     </SaibButton>
                                 </div>
-                                <div className="h-24 md:h-34">
+                                <div className="h-26 md:h-34">
                                     <img
                                         src={datum.icon}
                                         alt={datum.title}

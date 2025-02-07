@@ -74,7 +74,8 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                             {items.tags.map((TagIcon, idx) => (
                                 <TagIcon
                                     key={idx}
-                                    sx={{ color: theme.palette.text.tertiary }}
+                                    sx={{ color: theme.palette.text.tertiary, fontSize: 40 }}
+                                    className="max-sm:!text-sm"
                                 />
                             ))}
                         </div>
