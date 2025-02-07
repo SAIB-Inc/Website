@@ -140,7 +140,7 @@ const About: React.FC = () => {
                                         className="absolute w-full h-full opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                                     />
                                 </div>
-                                <div className="h-55">
+                                <div className={`${(index === 0 || index === 1) ? "" : "h-55"}`}>
                                     <Typography component="h4" variant="h4">
                                         {datum.title}
                                     </Typography>
