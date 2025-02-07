@@ -59,7 +59,7 @@ const Technologies: React.FC = () => {
     const row3 = generateRandomizedRow(technologies);
 
     return (
-        <div className="text-center py-6 h-[calc(100vh-300px)]  flex flex-col items-center justify-center">
+        <div className="text-center py-6 h-[calc(100vh-300px)] flex flex-col items-center justify-center mt-16 sm:mt-0">
             <div className="w-full">
                 <Typography 
                     component="h6" 

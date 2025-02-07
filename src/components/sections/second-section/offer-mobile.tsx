@@ -1,8 +1,9 @@
 import React, { useRef, useState } from "react";
-import { List, ListItem, Paper, Typography, useTheme } from "@mui/material";
+import { List, ListItem, ListItemIcon, Paper, Typography, useTheme } from "@mui/material";
 import { Dapp, Minting, SmartContract, Staking, Token, Wallet } from "../../../images/sections/second-section";
 import SaibButton from "../../common/saib-button";
 import SaibNavigation from "../../common/saib-navigation";
+import { Circle } from "@mui/icons-material";
 
 const OfferMobile = () => {
     const offersData = [
@@ -145,7 +146,7 @@ const OfferMobile = () => {
                                         {datum.title}
                                     </Typography>
                                 </div>
-                                <div className="!h-50 sm:!h-40 md:mt-5">
+                                <div className="!h-60 sm:!h-40 md:mt-5">
                                     <Typography
                                         component="p"
                                         variant="subtitle2"
@@ -155,7 +156,6 @@ const OfferMobile = () => {
                                     </Typography>
                                     <List
                                         sx={{
-                                            listStyleType: "disc",
                                         }}
                                         className="!flex !flex-col !items-center !justify-center"
                                     >
@@ -166,9 +166,14 @@ const OfferMobile = () => {
                                                     display: "list-item",
                                                     textAlign: "center",
                                                 }}
-                                                className="!w-auto max-sm:text-sm"
+                                                className="!w-auto max-sm:text-sm !flex"
                                             >
-                                                {listItems}
+                                                <ListItemIcon sx={{ minWidth: 20 }} className="!flex !items-end">
+                                                    <Circle sx={{ fontSize: 6, color: theme.palette.text.primary }} />
+                                                </ListItemIcon>
+                                                <div>
+                                                    <p>{listItems}</p>
+                                                </div>
                                             </ListItem>
                                         ))}
                                     </List>

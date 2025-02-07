@@ -163,7 +163,7 @@ const Partners = () => {
                     Building With
                 </Typography>
             </div>
-            <div className="flex flex-col-reverse items-center mt-14 gap-20 lg:flex-row lg:items-stretch lg:h-100">
+            <div className="flex flex-col-reverse items-center mt-14 gap-10 lg:flex-row lg:items-stretch lg:gap-20 lg:h-100">
                 <div className="hidden flex-1 flex-col justify-evenly items-end lg:flex">
                     {partnersData.map((datum, index) => (
                         <Button
