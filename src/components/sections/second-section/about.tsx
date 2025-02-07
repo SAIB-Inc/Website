@@ -152,16 +152,16 @@ const About: React.FC = () => {
                                     />
                                 </div>
                                 <div className={`${(index === 0 || index === 1) ? "" : "h-55"}`}>
-                                    <Typography 
-                                        component="h4" 
+                                    <Typography
+                                        component="h4"
                                         variant="h4"
                                         className="max-xl:!text-3xl"
                                     >
                                         {datum.title}
                                     </Typography>
-                                    <Typography 
-                                        component="p" 
-                                        variant="body1" 
+                                    <Typography
+                                        component="p"
+                                        variant="body1"
                                         className="!mt-2 max-xl:!text-base"
                                     >
                                         {datum.content}
@@ -172,8 +172,15 @@ const About: React.FC = () => {
                     );
                 })}
             </div>
+            <div className="w-full max-w-60 lg:hidden">
+                <SaibNavigation
+                    buttonCount={AboutItems.length}
+                    currentIndex={index}
+                    setCurrentIndex={setIndex}
+                />
+            </div>
             <div
-                className="lg:hidden mt-14 w-full overflow-hidden rounded-3xl relative"
+                className="lg:hidden mt-10 w-full overflow-hidden rounded-3xl relative"
                 onTouchStart={handleTouchStart}
                 onTouchMove={handleTouchMove}
                 onTouchEnd={handleTouchEnd}
@@ -193,13 +200,6 @@ const About: React.FC = () => {
                                 }}
                                 className="!rounded-3xl relative overflow-hidden w-full mx-auto flex flex-col items-center gap-10"
                             >
-                                <div className="w-full max-w-60 lg:w-auto lg:h-full">
-                                    <SaibNavigation
-                                        buttonCount={AboutItems.length}
-                                        currentIndex={index}
-                                        setCurrentIndex={setIndex}
-                                    />
-                                </div>
                                 <div>
                                     <Typography
                                         component="h3"
@@ -218,7 +218,7 @@ const About: React.FC = () => {
                                     </Typography>
                                 </div>
                                 <div>
-                                    <Typography component="p" variant="body1" className="!mt-2">
+                                    <Typography component="p" variant="body1" className="!-mt-5">
                                         {datum.content}
                                     </Typography>
                                 </div>

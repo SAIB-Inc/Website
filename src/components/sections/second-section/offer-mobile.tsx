@@ -111,6 +111,13 @@ const OfferMobile = () => {
                     Cardano
                 </Typography>
             </div>
+            <div className="max-w-60 w-full mt-10">
+                <SaibNavigation
+                    buttonCount={offersData.length}
+                    currentIndex={currentIndex}
+                    setCurrentIndex={setCurrentIndex}
+                />
+            </div>
             <div
                 className="mt-10 w-full overflow-hidden rounded-3xl relative"
                 onTouchStart={handleTouchStart}
@@ -129,15 +136,8 @@ const OfferMobile = () => {
                                     textAlign: "center",
                                     boxShadow: theme.shadows[4]
                                 }}
-                                className="!rounded-3xl relative overflow-hidden w-full mx-auto !flex !flex-col !items-center gap-10 p-10 md:!p-15"
+                                className="!rounded-3xl relative overflow-hidden w-full mx-auto !flex !flex-col !items-center gap-2 p-10 md:!p-15"
                             >
-                                <div className="max-w-60 w-full">
-                                    <SaibNavigation
-                                        buttonCount={offersData.length}
-                                        currentIndex={currentIndex}
-                                        setCurrentIndex={setCurrentIndex}
-                                    />
-                                </div>
                                 <div className="h-18 md:h-auto">
                                     <Typography
                                         component="h5"
@@ -178,14 +178,14 @@ const OfferMobile = () => {
                                         ))}
                                     </List>
                                 </div>
-                                <div>
+                                <div className="mt-3">
                                     <SaibButton
                                         variant="outlined"
                                     >
                                         {datum.buttonTitle}
                                     </SaibButton>
                                 </div>
-                                <div className="h-26 md:h-34">
+                                <div className="mt-3 h-26 md:h-34">
                                     <img
                                         src={datum.icon}
                                         alt={datum.title}

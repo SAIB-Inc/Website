@@ -75,12 +75,12 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                             {items.tags.map((TagIcon, idx) => (
                                 <TagIcon
                                     key={idx}
-                                    sx={{ color: theme.palette.text.tertiary, fontSize: 40 }}
+                                    sx={{ color: theme.palette.text.tertiary, fontSize: 30 }}
                                     className="max-sm:!text-sm"
                                 />
                             ))}
                         </div>
-                        <div className="absolute right-6 top-6">
+                        <div className="absolute top-1 right-3 sm:gap-4 sm:top-6 sm:right-6 h-20">
                             <IconButton
                                 onClick={() => {
                                     setOpen(false);
@@ -89,7 +89,7 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                                     p: 0
                                 }}
                             >
-                                <Close sx={{ color: theme.palette.secondary.light }} />
+                                <Close sx={{ color: theme.palette.secondary.light }} className="max-sm:!text-sm" />
                             </IconButton>
                         </div>
                     </div>
