@@ -86,8 +86,8 @@ const Footer: React.FC = () => {
                             <img src={SaibIconLight} alt="saib-logo" />
                         </a>
                     </div>
-                    <div className="flex gap-20">
-                        <ul className="space-y-5">
+                    <div className="flex flex-col items-center gap-20 lg:flex-row lg:items-start">
+                        <ul className="space-y-5 text-center mt-10 lg:text-left lg:mt-0">
                             {menuItems.map((item) => (
                                 <Box
                                     component="li"

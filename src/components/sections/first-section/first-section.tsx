@@ -1,7 +1,9 @@
 import React from "react"
 import { Box, Typography, useTheme } from "@mui/material";
-import { FirstSectionImage2, LightningBackground, Lightning, SaibCursor, Hand, Cardano, Rust, CSharp, Haskell, LightningThree, LightningFour, FirstSectionImageMobile, LightningTwo } from "../../../images/sections/first-section";
+import { FirstSectionImage2, LightningBackground, Lightning, SaibCursor, Hand, Cardano, Rust, CSharp, Haskell, LightningThree, LightningFour, LightningTwo } from "../../../images/sections/first-section";
 import SaibButton from "../../common/saib-button";
+import { CardanoPurple } from "../../../images/sections/fifth-section";
+import About from "../second-section/about";
 
 const FirstSection: React.FC = () => {
     const theme = useTheme()
@@ -12,12 +14,12 @@ const FirstSection: React.FC = () => {
             id="home"
             sx={{
                 background: `linear-gradient(to bottom, ${theme.palette.gradient.main} 60%, ${theme.palette.gradient.dark})`,
-                boxShadow: theme.shadows[2],
+                boxShadow: theme.shadows[4],
                 color: theme.palette.text.primary,
             }}
             className="max-lg:!bg-none max-lg:!shadow-none !px-6"
         >
-            <div className="mx-auto !pt-40 max-w-(--breakpoint-xl) max-lg:h-dvh 2xl:h-[calc(100vh-150px)] flex flex-col justify-center">
+            <div className="mx-auto !pt-40 max-w-(--breakpoint-xl) h-dvh lg:h-auto 2xl:h-[calc(100vh-150px)] flex flex-col justify-center">
                 <div className="flex flex-col justify-between items-center text-center gap-10 lg:flex-row lg:text-left lg:!justify-between lg:gap-24">
                     <div className="max-w-200">
                         <div className="relative flex flex-col items-center justify-center">
@@ -44,34 +46,6 @@ const FirstSection: React.FC = () => {
                             </div>
                             <div className="lg:hidden">
                                 <div>
-                                    <img
-                                        alt="rust"
-                                        src={Rust}
-                                        className="absolute top-15 -left-10 w-8 sm:top-60 sm:left-30 sm:w-10"
-                                    />
-                                </div>
-                                <div>
-                                    <img
-                                        alt="haskell"
-                                        src={Haskell}
-                                        className="absolute top-28 -left-15 w-8 sm:top-80 sm:left-20 sm:w-10"
-                                    />
-                                </div>
-                                <div>
-                                    <img
-                                        alt="cardano"
-                                        src={Cardano}
-                                        className="absolute top-10 -right-8 w-9 sm:top-60 sm:right-24 sm:w-11"
-                                    />
-                                </div>
-                                <div>
-                                    <img
-                                        alt="c#"
-                                        src={CSharp}
-                                        className="absolute top-22 -right-14 w-7 sm:top-80 sm:right-20 sm:w-9"
-                                    />
-                                </div>
-                                <div>
                                     <Lightning sx={{ fontSize: 44 }} className="absolute -top-2 -right-20 -rotate-60 sm:-right-10" />
                                 </div>
                                 <div>
@@ -92,7 +66,7 @@ const FirstSection: React.FC = () => {
                                 <span className="font-bold">Cardano.</span>
                             </Typography>
                         </div>
-                        <div className="relative">
+                        <div className="relative inline-flex">
                             <SaibButton
                                 variant="contained"
                                 className="!mt-9"
@@ -106,28 +80,35 @@ const FirstSection: React.FC = () => {
 
                     </div>
                     <div className="shrink-0 relative flex flex-col justify-center items-center gap-22">
-                        <div className="w-47 animate-float">
+                        <div className="w-47 animate-float hidden lg:block">
                             <img
                                 alt="saib graphic"
+                                src={CardanoPurple}
+                                className="w-full h-full"
+                            />
+                        </div>
+                        <div className="animate-float absolute w-9 -right-7 -top-102 sm:-right-10 sm:-top-31 sm:w-11 lg:hidden">
+                            <img
+                                alt="cardano"
                                 src={Cardano}
                                 className="w-full h-full"
                             />
                         </div>
-                        <div className="w-11 absolute left-3 top-40 animate-float" style={{ animationDelay: "0.8s" }}>
+                        <div className="animate-float absolute w-7 -right-13 -top-90 sm:-right-14 sm:-top-11 sm:w-9 lg:left-3 lg:top-40 lg:w-11" style={{ animationDelay: "0.8s" }}>
                             <img
                                 alt="saib graphic"
                                 src={CSharp}
                                 className="w-full h-full"
                             />
                         </div>
-                        <div className="w-11 absolute top-50 animate-float" style={{ animationDelay: "0.2s" }}>
+                        <div className="animate-float absolute w-8 -top-97 -left-9 sm:-left-4 sm:-top-30 sm:w-10 lg:left-auto lg:top-50 lg:w-11" style={{ animationDelay: "0.2s" }}>
                             <img
                                 alt="saib graphic"
                                 src={Rust}
                                 className="w-full h-full"
                             />
                         </div>
-                        <div className="w-14 absolute right-5 top-40 animate-float !delay-200" style={{ animationDelay: "0.5s" }}>
+                        <div className="animate-float absolute w-8 -top-84 -left-14 sm:w-10 sm:-left-14 sm:-top-10 lg:left-auto lg:top-40 lg:right-5 lg:w-14" style={{ animationDelay: "0.5s" }}>
                             <img
                                 alt="saib graphic"
                                 src={Haskell}
@@ -142,12 +123,6 @@ const FirstSection: React.FC = () => {
                             />
                         </div>
                     </div>
-                    <div className="lg:hidden">
-                        <img
-                            alt="saib graphic"
-                            src={FirstSectionImageMobile}
-                        />
-                    </div>
                 </div>
                 <div className="h-47 w-full relative hidden lg:block lg:mt-16">
                     <img
@@ -156,6 +131,9 @@ const FirstSection: React.FC = () => {
                         className="absolute -left-200 w-full"
                     />
                 </div>
+            </div>
+            <div className="lg:hidden">
+                <About/>
             </div>
             <div
                 className="mx-auto mt-10 flex flex-col items-center justify-between gap-10 py-13 relative max-w-(--breakpoint-xl) lg:flex-row text-center lg:text-left lg:gap-0 lg:mt-0 lg:pb-36"

@@ -1,13 +1,13 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { List, ListItem, Paper, Typography, useTheme } from "@mui/material";
-import { DApp, Nft, SmartContract, Stake, Token, Wallet } from "../../../images/icons";
+import { Dapp, Minting, SmartContract, Staking, Token, Wallet } from "../../../images/sections/second-section";
 import SaibButton from "../../common/saib-button";
 import SaibNavigation from "../../common/saib-navigation";
 
 const OfferMobile = () => {
     const offersData = [
         {
-            icon: DApp,
+            icon: Dapp,
             title: "dApp Development",
             services: [
                 "Innovative dApp development",
@@ -27,7 +27,7 @@ const OfferMobile = () => {
             buttonTitle: "Build Now"
         },
         {
-            icon: Nft,
+            icon: Minting,
             title: "NFT Minting",
             services: [
                 "Mint and Manage NFTs",
@@ -47,7 +47,7 @@ const OfferMobile = () => {
             buttonTitle: "Create Now"
         },
         {
-            icon: Stake,
+            icon: Staking,
             title: "Staking Solutions",
             services: [
                 "Staking pools and platforms to engage users",
@@ -71,6 +71,26 @@ const OfferMobile = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const theme = useTheme();
 
+    const touchStartX = useRef(0);
+    const touchEndX = useRef(0);
+
+    const handleTouchStart = (e: React.TouchEvent) => {
+        touchStartX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchMove = (e: React.TouchEvent) => {
+        touchEndX.current = e.touches[0].clientX;
+    };
+
+    const handleTouchEnd = () => {
+        const deltaX = touchEndX.current - touchStartX.current;
+        if (deltaX > 50) {
+            setCurrentIndex((prev) => Math.max(prev - 1, 0));
+        } else if (deltaX < -50) {
+            setCurrentIndex((prev) => Math.min(prev + 1, offersData.length - 1));
+        }
+    };
+
     return (
         <div className="flex flex-col items-center justify-center text-center w-full lg:hidden">
             <div>
@@ -90,76 +110,89 @@ const OfferMobile = () => {
                     Cardano
                 </Typography>
             </div>
-            <div className="w-full mt-9 flex items-center justify-center">
-                <Paper
-                    sx={{
-                        background: theme.palette.gradient.dark,
-                        height: 700,
-                        flexGrow: 1,
-                        borderRadius: "16px",
-                        display: "flex",
-                        flexDirection: "column",
-                        justifyContent: "space-between",
-                        alignItems: "center"
-                    }}
-                    className="!p-10"
+            <div
+                className="mt-10 w-full overflow-hidden rounded-3xl relative"
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
+            >
+                <div
+                    className="flex transition-transform duration-500"
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}
                 >
-                    <div className="max-w-60 w-full">
-                        <SaibNavigation
-                            buttonCount={offersData.length}
-                            currentIndex={currentIndex}
-                            setCurrentIndex={setCurrentIndex}
-                        />
-                    </div>
-                    <div>
-                        <div>
-                            <Typography
-                                component="h5"
-                                variant="h5"
+                    {offersData.map((datum, index) => (
+                        <div key={index} className="min-w-full flex justify-center">
+                            <Paper
+                                sx={{
+                                    background: "white",
+                                    textAlign: "center",
+                                    padding: "60px 60px",
+                                    boxShadow: theme.shadows[4]
+                                }}
+                                className="!rounded-3xl relative overflow-hidden w-full mx-auto flex flex-col items-center gap-10"
                             >
-                                {offersData[currentIndex].title}
-                            </Typography>
+                                <div className="max-w-60 w-full">
+                                    <SaibNavigation
+                                        buttonCount={offersData.length}
+                                        currentIndex={currentIndex}
+                                        setCurrentIndex={setCurrentIndex}
+                                    />
+                                </div>
+                                <div>
+                                    <div>
+                                        <Typography
+                                            component="h5"
+                                            variant="h5"
+                                        >
+                                            {datum.title}
+                                        </Typography>
+                                    </div>
+                                </div>
+                                <div className="mt-5">
+                                    <Typography
+                                        component="p"
+                                        variant="subtitle2"
+                                        color="secondary"
+                                    >
+                                        SERVICES
+                                    </Typography>
+                                    <List
+                                        sx={{
+                                            listStyleType: "disc",
+                                        }}
+                                        className="!flex !flex-col !items-center !justify-center"
+                                    >
+                                        {datum.services.map((listItems, index) => (
+                                            <ListItem
+                                                key={index}
+                                                sx={{
+                                                    display: "list-item",
+                                                    textAlign: "center",
+                                                }}
+                                                className="!w-auto"
+                                            >
+                                                {listItems}
+                                            </ListItem>
+                                        ))}
+                                    </List>
+                                </div>
+                                <div>
+                                    <SaibButton
+                                        variant="outlined"
+                                    >
+                                        {datum.buttonTitle}
+                                    </SaibButton>
+                                </div>
+                                <div>
+                                    <img
+                                        src={datum.icon}
+                                        alt={datum.title}
+                                    />
+                                </div>
+                            </Paper>
                         </div>
-                    </div>
-                    <div className="mt-5">
-                        <Typography
-                            component="p"
-                            variant="subtitle2"
-                            color="secondary"
-                        >
-                            SERVICES
-                        </Typography>
-                        <List
-                            sx={{
-                                listStyleType: "disc",
-                            }}
-                            className="!flex !flex-col !items-center !justify-center"
-                        >
-                            {offersData[currentIndex].services.map((listItems, index) => (
-                                <ListItem
-                                    key={index}
-                                    sx={{
-                                        display: "list-item",
-                                        textAlign: "center",
-                                    }}
-                                    className="!w-auto"
-                                >
-                                    {listItems}
-                                </ListItem>
-                            ))}
-                        </List>
-                    </div>
-                    <div>
-                        <SaibButton
-                            variant="outlined"
-                        >
-                            {offersData[currentIndex].buttonTitle}
-                        </SaibButton>
-                    </div>
-                    <div>
-                        {React.createElement(offersData[currentIndex].icon, { sx: { fontSize: 80 } })}
-                    </div>
-                </Paper>
+                    ))}
+                </div>
             </div>
         </div>
     );

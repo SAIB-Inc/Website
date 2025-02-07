@@ -53,6 +53,11 @@ const Teams: React.FC = () => {
                     gatsbyImageData(quality: 100)
                 }
             }
+            RjModal: file(relativePath: { eq: "team/modal/rj-modal.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100)
+                }
+            }
             Kim: file(relativePath: { eq: "team/kim.webp" }) {
                 childImageSharp {
                     gatsbyImageData(quality: 100)
@@ -113,6 +118,11 @@ const Teams: React.FC = () => {
                     gatsbyImageData(quality: 100)
                 }
             }
+            PlaceholderModal: file(relativePath: { eq: "team/modal/placeholder-modal.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100)
+                }
+            }
         }
     `);
 
@@ -127,7 +137,7 @@ const Teams: React.FC = () => {
             skills: [
                 "Leadership",
                 "Cardano",
-                "Backend Development"
+                "Backend"
             ],
             socials: [
                 {
@@ -151,7 +161,9 @@ const Teams: React.FC = () => {
             modalImageSrc: teamsImage.BernModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
             description: "",
-            skills: [],
+            skills: [
+                "Management"
+            ],
             socials: [
                 {
                     label: "X",
@@ -160,7 +172,6 @@ const Teams: React.FC = () => {
                 },
             ],
             tags: [
-                Ceo,
                 Helm,
             ]
         },
@@ -168,13 +179,20 @@ const Teams: React.FC = () => {
             name: "Ben Jules Dico",
             position: "Chief Marketing Officer",
             imageSrc: null,
-            modalImageSrc: null,
+            modalImageSrc: teamsImage.PlaceholderModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
             description: "",
-            skills: [],
-            socials: [],
+            skills: [
+                "Marketing"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/Benjdico"
+                }
+            ],
             tags: [
-                Ceo,
                 Helm,
             ]
         },
@@ -188,7 +206,7 @@ const Teams: React.FC = () => {
             skills: [
                 "Presentation",
                 "Documentation",
-                "Backend Development"
+                "Backend"
             ],
             socials: [
                 {
@@ -203,8 +221,7 @@ const Teams: React.FC = () => {
                 }
             ],
             tags: [
-                Ceo,
-                Engine
+                Helm,
             ]
         },
         {
@@ -215,9 +232,9 @@ const Teams: React.FC = () => {
             group: "The Helm",
             description: "Good Day! I'm Kathea Mari, and I have a passion for technology and software solutions, particularly in web development and blockchain technologies. I thrive in collaborative environments where I can learn, contribute, and create meaningful value through innovation and teamwork.",
             skills: [
-                "Frontend Development",
-                "Backend Development",
-                "Video and Photo Editing"
+                "Frontend",
+                "Backend",
+                "Media Editing"
             ],
             socials: [
                 {
@@ -232,20 +249,19 @@ const Teams: React.FC = () => {
                 }
             ],
             tags: [
-                Ceo,
-                Engine
+                Helm
             ]
         },
         {
             name: "RJ Lacanlale",
             position: "Head of Software Engineering",
             imageSrc: teamsImage.Rj.childImageSharp.gatsbyImageData,
-            modalImageSrc: null,
+            modalImageSrc: teamsImage.RjModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
             description: "Hi, I'm RJ. I build innovative blockchain applications and design scalable backend systems. I love working with cutting-edge tech to create solutions that push boundaries, while driving engineering excellence through knowledge sharing and mentorship.",
             skills: [
-                "Blockchain Onchain and Offchain Development",
-                "Backend Development",
+                "Blockchain",
+                "Backend",
                 "Mentorship"
             ],
             socials: [
@@ -261,10 +277,7 @@ const Teams: React.FC = () => {
                 }
             ],
             tags: [
-                Ceo,
                 Helm,
-                Engine,
-                Blockchain
             ]
         },
         {
@@ -303,7 +316,7 @@ const Teams: React.FC = () => {
             group: "The Command Deck",
             description: "Hi! I'm Kief, a passionate frontend developer with experience in creating intuitive, user-friendly interfaces. I enjoy working with modern web technologies and continuously exploring new frameworks to improve my skill set. I'm always looking for new challenges and opportunities to grow both personally and professionally.",
             skills: [
-                "Frontend Development",
+                "Frontend",
             ],
             socials: [
                 {
@@ -329,7 +342,7 @@ const Teams: React.FC = () => {
             group: "The Engine Room",
             description: "I'm Wendell, and I'm driven by how technology can transform challenges into opportunities. Constantly seeking new ways to innovate, I thrive on creating solutions that turn bold ideas into reality.",
             skills: [
-                "Backend Development",
+                "Backend",
             ],
             socials: [
                 {
@@ -348,37 +361,11 @@ const Teams: React.FC = () => {
             ]
         },
         {
-            name: "Tan Gantuangco",
-            position: "Engineer",
-            imageSrc: teamsImage.Tan.childImageSharp.gatsbyImageData,
-            modalImageSrc: teamsImage.TanModal.childImageSharp.gatsbyImageData,
-            group: "The Blockchain Lab",
-            description: "I'm Tan, and I develop software solutions with a focus on backend development, database design, web technologies, and blockchain systems. I thrive on creating efficient, scalable solutions tailored to modern technological needs.",
-            skills: [
-                "Backend Development",
-            ],
-            socials: [
-                {
-                    label: "X",
-                    icon: X,
-                    link: "https://x.com/krstng02k"
-                },
-                {
-                    label: "LinkedIn",
-                    icon: LinkedIn,
-                    link: "https://www.linkedin.com/in/christian-gantuangco/"
-                }
-            ],
-            tags: [
-                Blockchain
-            ]
-        },
-        {
             name: "Rico Quiblat",
             position: "Engineer",
             imageSrc: teamsImage.Rico.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.RicoModal.childImageSharp.gatsbyImageData,
-            group: "The Blockchain Lab",
+            group: "The Engine Room",
             description: "I'm Rico, and I have a deep passion for technology and solving problems. I enjoy tackling challenges and finding solutions. Bringing ideas to life through technology excites me every day.",
             skills: [
                 "Backend Development"
@@ -400,6 +387,32 @@ const Teams: React.FC = () => {
             ]
         },
         {
+            name: "Tan Gantuangco",
+            position: "Engineer",
+            imageSrc: teamsImage.Tan.childImageSharp.gatsbyImageData,
+            modalImageSrc: teamsImage.TanModal.childImageSharp.gatsbyImageData,
+            group: "The Blockchain Lab",
+            description: "I'm Tan, and I develop software solutions with a focus on backend development, database design, web technologies, and blockchain systems. I thrive on creating efficient, scalable solutions tailored to modern technological needs.",
+            skills: [
+                "Backend",
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/krstng02k"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/christian-gantuangco/"
+                }
+            ],
+            tags: [
+                Blockchain
+            ]
+        },
+        {
             name: "Lance Salera",
             position: "Engineer",
             imageSrc: teamsImage.Lance.childImageSharp.gatsbyImageData,
@@ -408,7 +421,7 @@ const Teams: React.FC = () => {
             description: "Nice to meet you, I'm Lance! I find fulfillment in sharing my knowledge to other people and I enjoy dealing with problems that require logic and critical thinking. Currently, I am immersing myself with blockchain technology, aiming to confidently showcase this as one of my key technical skills.",
             skills: [
                 "Mentoring",
-                "Backend Development"
+                "Backend"
             ],
             socials: [
                 {

@@ -29,7 +29,7 @@ interface TeamModalProps extends TeamCardProps {
 
 const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
     const theme = useTheme();
-    
+
     return (
         <Modal
             open={open}

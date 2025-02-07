@@ -70,7 +70,6 @@ const Offer: React.FC = () => {
 
     return (
         <Paper
-            elevation={2}
             sx={{
                 background: theme.palette.gradient.dark,
                 padding: "60px 40px",
@@ -81,7 +80,8 @@ const Offer: React.FC = () => {
                 alignItems: "center",
                 justifyContent: "center",
                 textAlign: "center",
-                position: "relative"
+                position: "relative",
+                boxShadow: theme.shadows[4]
             }}
             className="!hidden lg:!flex"
         >
