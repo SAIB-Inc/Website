@@ -68,6 +68,7 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                             <GatsbyImage
                                 image={items.modalImageSrc}
                                 alt={items.name}
+                                loading="eager"
                             />
                         </div>
                         <div className="flex flex-col flex-wrap gap-3 h-20 w-10 absolute top-3 left-3 sm:gap-4 sm:top-6 sm:left-6 sm:h-40">

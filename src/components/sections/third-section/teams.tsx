@@ -10,121 +10,121 @@ const Teams: React.FC = () => {
         query {
             Clark: file(relativePath: { eq: "team/clark.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             ClarkModal: file(relativePath: { eq: "team/modal/clark-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             Bern: file(relativePath: { eq: "team/bern.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             BernModal: file(relativePath: { eq: "team/modal/bern-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             Cait: file(relativePath: { eq: "team/cait.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             CaitModal: file(relativePath: { eq: "team/modal/cait-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             Kathea: file(relativePath: { eq: "team/kathea.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             KatheaModal: file(relativePath: { eq: "team/modal/kathea-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             Rj: file(relativePath: { eq: "team/rj.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             RjModal: file(relativePath: { eq: "team/modal/rj-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             Kim: file(relativePath: { eq: "team/kim.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             KimModal: file(relativePath: { eq: "team/modal/kim-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             Kiefer: file(relativePath: { eq: "team/kiefer.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             KieferModal: file(relativePath: { eq: "team/modal/kiefer-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             Wendell: file(relativePath: { eq: "team/wendell.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             WendellModal: file(relativePath: { eq: "team/modal/wendell-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             Tan: file(relativePath: { eq: "team/tan.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             TanModal: file(relativePath: { eq: "team/modal/tan-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             Rico: file(relativePath: { eq: "team/rico.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             RicoModal: file(relativePath: { eq: "team/modal/rico-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             Lance: file(relativePath: { eq: "team/lance.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             LanceModal: file(relativePath: { eq: "team/modal/lance-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             PlaceholderModal: file(relativePath: { eq: "team/modal/placeholder-modal.webp" }) {
                 childImageSharp {
-                    gatsbyImageData(quality: 100)
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
         }
-    `);
+    `)
 
     const teamsData = [
         {
