@@ -110,7 +110,7 @@ const Partners = () => {
             setDirection('enter');
             setTimeout(() => {
                 setTransitioning(false);
-            }, 300);
+            }, 100);
         }, 300);
     };
 
