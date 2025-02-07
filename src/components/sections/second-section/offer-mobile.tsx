@@ -126,10 +126,9 @@ const OfferMobile = () => {
                                 sx={{
                                     background: "white",
                                     textAlign: "center",
-                                    padding: "60px 60px",
                                     boxShadow: theme.shadows[4]
                                 }}
-                                className="!rounded-3xl relative overflow-hidden w-full mx-auto flex flex-col items-center gap-10"
+                                className="!rounded-3xl relative overflow-hidden w-full mx-auto !flex !flex-col !items-center gap-10 p-10 md:!p-15"
                             >
                                 <div className="max-w-60 w-full">
                                     <SaibNavigation
@@ -138,17 +137,15 @@ const OfferMobile = () => {
                                         setCurrentIndex={setCurrentIndex}
                                     />
                                 </div>
-                                <div>
-                                    <div>
-                                        <Typography
-                                            component="h5"
-                                            variant="h5"
-                                        >
-                                            {datum.title}
-                                        </Typography>
-                                    </div>
+                                <div className="h-18 md:h-auto">
+                                    <Typography
+                                        component="h5"
+                                        variant="h5"
+                                    >
+                                        {datum.title}
+                                    </Typography>
                                 </div>
-                                <div className="mt-5">
+                                <div className="!h-50 md:mt-5">
                                     <Typography
                                         component="p"
                                         variant="subtitle2"
@@ -169,7 +166,7 @@ const OfferMobile = () => {
                                                     display: "list-item",
                                                     textAlign: "center",
                                                 }}
-                                                className="!w-auto"
+                                                className="!w-auto max-md:text-sm"
                                             >
                                                 {listItems}
                                             </ListItem>
@@ -183,10 +180,11 @@ const OfferMobile = () => {
                                         {datum.buttonTitle}
                                     </SaibButton>
                                 </div>
-                                <div>
+                                <div className="h-24 md:h-34">
                                     <img
                                         src={datum.icon}
                                         alt={datum.title}
+                                        className="w-full h-full"
                                     />
                                 </div>
                             </Paper>

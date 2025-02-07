@@ -130,10 +130,11 @@ const Offer: React.FC = () => {
                     >
                         <CardContent sx={{ padding: "16px 16px 0 16px" }}>
                             <div className="flex gap-4 items-center relative">
-                                <div className="absolute -top-4 right-0">
+                                <div className="absolute -top-4 right-0 h-20">
                                     <img
                                         src={datum.icon}
                                         alt={datum.title}
+                                        className="w-full h-full"
                                     />
                                 </div>
                                 <Typography
