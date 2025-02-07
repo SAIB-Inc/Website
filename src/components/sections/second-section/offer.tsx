@@ -1,14 +1,13 @@
 import React from "react";
 import { Card, CardActions, CardContent, List, ListItem, Paper, Typography, useTheme } from "@mui/material";
-import { DApp, Nft, SmartContract, Stake, Token, Wallet } from "../../../images/icons";
-import { CardanoBackground } from "../../../images/sections/second-section";
+import { CardanoBackground, Dapp, Minting, SmartContract, Staking, Token, Wallet } from "../../../images/sections/second-section";
 import SaibButton from "../../common/saib-button";
 
 const Offer: React.FC = () => {
     const theme = useTheme();
     const offersData = [
         {
-            icon: DApp,
+            icon: Dapp,
             title: "dApp Development",
             services: [
                 "Innovative dApp development",
@@ -28,7 +27,7 @@ const Offer: React.FC = () => {
             buttonTitle: "Build Now"
         },
         {
-            icon: Nft,
+            icon: Minting,
             title: "NFT Minting",
             services: [
                 "Mint and Manage NFTs",
@@ -48,7 +47,7 @@ const Offer: React.FC = () => {
             buttonTitle: "Create Now"
         },
         {
-            icon: Stake,
+            icon: Staking,
             title: "Staking Solutions",
             services: [
                 "Staking pools and platforms to engage users",
@@ -68,7 +67,7 @@ const Offer: React.FC = () => {
             buttonTitle: "Integrate Now"
         }
     ];
-    
+
     return (
         <Paper
             elevation={2}
@@ -76,7 +75,7 @@ const Offer: React.FC = () => {
                 background: theme.palette.gradient.dark,
                 padding: "60px 40px",
                 borderRadius: "24px",
-                marginY: "60px",
+                marginBottom: "60px",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -86,10 +85,10 @@ const Offer: React.FC = () => {
             }}
         >
             <div>
-                <img 
-                    src={CardanoBackground} 
-                    alt="Cardano logo" 
-                    className="absolute top-0 right-0" 
+                <img
+                    src={CardanoBackground}
+                    alt="Cardano logo"
+                    className="absolute top-0 right-0"
                 />
             </div>
             <div>
@@ -122,15 +121,20 @@ const Offer: React.FC = () => {
                     <Card
                         key={index}
                         sx={{
-                            backgroundColor: theme.palette.primary.main,
+                            backgroundColor: "white",
                             padding: "33px 25px",
                             borderRadius: "24px",
-                            boxShadow: theme.shadows[3]
+                            boxShadow: theme.shadows[4]
                         }}
                     >
                         <CardContent sx={{ padding: "16px 16px 0 16px" }}>
-                            <div className="flex gap-4 items-center">
-                                {React.createElement(datum.icon)}
+                            <div className="flex gap-4 items-center relative">
+                                <div className="absolute -top-4 right-0">
+                                    <img
+                                        src={datum.icon}
+                                        alt={datum.title}
+                                    />
+                                </div>
                                 <Typography
                                     component="h5"
                                     variant="h5"
@@ -168,6 +172,8 @@ const Offer: React.FC = () => {
                         <CardActions sx={{ padding: "8px 16px 16px 16px" }}>
                             <SaibButton
                                 variant="outlined"
+                                href="https://calendly.com/saibdev"
+                                target="_blank"
                             >
                                 {datum.buttonTitle}
                             </SaibButton>

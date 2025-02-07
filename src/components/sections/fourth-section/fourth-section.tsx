@@ -5,9 +5,9 @@ import History from "./history";
 
 const FourthSection: React.FC = () => {
     return (
-        <section className="max-w-(--breakpoint-xl) mx-auto">
+        <section id="our-work" className="max-w-(--breakpoint-xl) mx-auto">
             <Partners />
-            <Projects />
+            <Projects />    
             <History />
         </section>
     );

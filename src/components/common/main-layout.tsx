@@ -33,9 +33,9 @@ declare module "@mui/material/styles" {
       },
       teamCardGradient: {
         tintLight: string;
-        tintDark: string;
+        tintSecondary: string;
         main: string;
-        dark: string;
+        secondary: string;
       },
     },
     carouselButtons: {
@@ -101,11 +101,17 @@ declare module "@mui/material/styles" {
   interface TypoGraphyVariants {
     teamCardTitle: React.CSSProperties;
     teamCardSubtitle: React.CSSProperties;
+    body3: React.CSSProperties;
   }
 
   interface TypographyVariantsOptions {
     teamCardTitle?: React.CSSProperties;
     teamCardSubtitle?: React.CSSProperties;
+    body3?: React.CSSProperties;
+  }
+
+  interface TypeText {
+    tertiary?: string;
   }
 
   interface TypeBackground {
@@ -118,6 +124,7 @@ declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
     teamCardTitle: true;
     teamCardSubtitle: true;
+    body3: true;
   }
 }
 
@@ -134,7 +141,7 @@ const theme = createTheme({
       dark: "#C0B6FF"
     },
     secondary: {
-      light: "#E7E1FF",
+      light: "#7458FF",
       main: "#6F03E0",
       dark: "#7660E3"
     },
@@ -183,6 +190,7 @@ const theme = createTheme({
     text: {
       primary: "#3A376A",
       secondary: "#6F03E0",
+      tertiary: "#E4DFFF"
     },
     button: {
       default: "#6F03E0",
@@ -234,6 +242,10 @@ const theme = createTheme({
       fontSize: "15px",
       fontWeight: 500
     },
+    body3: {
+      fontSize: "12px",
+      fontWeight: 500
+    },
     button: {
       fontSize: "14px",
       fontWeight: 700
@@ -252,7 +264,7 @@ const theme = createTheme({
     "0px 3px 10px 0px rgba(148, 142, 189, 0.25)",
     "0px 6px 10px 3px rgba(148, 142, 189, 0.25)",
     "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
-    "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
+    "0px 6px 30px 0px rgba(148, 142, 189, 0.1)",
     "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
     "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",
     "0px 6px 10px 0px rgba(148, 142, 189, 0.5)",

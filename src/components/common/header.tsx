@@ -30,7 +30,43 @@ const Header: React.FC = () => {
     }
   ]
 
+  const menuItems = [
+    {
+      name: "Home",
+      link: "home"
+    },
+    {
+      name: "About",
+      link: "about"
+    },
+    {
+      name: "Services",
+      link: "services"
+    },
+    {
+      name: "Our Team",
+      link: "our-team"
+    },
+    {
+      name: "Our Work",
+      link: "our-work"
+    }
+  ];
+
   const theme = useTheme();
+
+  const scrollToNextSection = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    id: string
+  ) => {
+    e.preventDefault();
+    const nextSection = document.getElementById(id);
+    if (nextSection) {
+      setTimeout(() => {
+        nextSection.scrollIntoView({ behavior: "smooth" });
+      }, 100);
+    }
+  };
 
   return (
     <Box
@@ -47,14 +83,16 @@ const Header: React.FC = () => {
       className="backdrop-blur-md!">
       <div className="container max-w-(--breakpoint-xl) mx-auto flex justify-between items-center">
         <div>
-          <img src={Logo} alt="saib-logo" />
+          <a onClick={(e) => scrollToNextSection(e, "home")} className="cursor-pointer">
+            <img src={Logo} alt="saib-logo" />
+          </a>
         </div>
         <div>
           <ul className="space-x-[46px]">
-            {["Home", "About", "Services", "Our Work", "Our Team"].map((item) => (
+            {menuItems.map((item) => (
               <Box
                 component="li"
-                key={item}
+                key={item.name}
                 sx={{
                   display: "inline-block",
                   cursor: "pointer",
@@ -65,7 +103,7 @@ const Header: React.FC = () => {
                     position: "relative",
                     transition: "color 0.15s ease, font-weight 0.15s ease",
                     "&:before": {
-                      content: `"${item}"`,
+                      content: `"${item.name}"`,
                       fontWeight: "bold",
                       height: 0,
                       overflow: "hidden",
@@ -82,8 +120,9 @@ const Header: React.FC = () => {
                 <Typography
                   component="a"
                   variant="body2"
+                  onClick={(e) => scrollToNextSection(e, item.link)}
                 >
-                  {item}
+                  {item.name}
                 </Typography>
               </Box>
             ))}
@@ -103,7 +142,7 @@ const Header: React.FC = () => {
                   width: 32,
                   boxShadow: theme.shadows[0],
                   '&:hover': {
-                    borderColor: theme.palette.button.hover 
+                    borderColor: theme.palette.button.hover
                   }
                 }}
               >
@@ -116,6 +155,8 @@ const Header: React.FC = () => {
               variant="outlined"
               size="small"
               className="gap-1.5"
+              href="https://calendly.com/saibdev"
+              target="_blank"
             >
               Let&apos;s Talk
               <EastRounded fontSize="small" />

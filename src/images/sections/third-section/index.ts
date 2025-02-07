@@ -1,0 +1,5 @@
+export { default as Lightning1 } from "./lightning1.svg"
+export { default as Lightning2 } from "./lightning2.svg"
+export { default as Lightning3 } from "./lightning3.svg"
+export { default as Lightning4 } from "./lightning4.svg"
+export { default as Lightning5 } from "./lightning5.svg"

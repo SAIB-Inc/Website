@@ -42,11 +42,11 @@ const History: React.FC = () => {
                         sx={{
                             borderRadius: "24px",
                             padding: "33px 25px",
-                            background: theme.palette.gradient.dark,
+                            background: "white",
                             flexGrow: 1,
                             width: 560,
                             gap: 4,
-                            boxShadow: (theme) => theme.shadows[2],
+                            boxShadow: theme.shadows[4],
                         }}
                     >
                         <CardContent sx={{

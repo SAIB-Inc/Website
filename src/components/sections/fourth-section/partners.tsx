@@ -1,13 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Typography, useTheme } from "@mui/material";
 import { Demeter, DemeterLight, Levvy, LevvyLight, TxPipe, TxPipeLight, UtxoRpc, UtxoRpcLight } from "../../../images/brands";
 import { Browser, Github, X } from "../../../images/socials";
 import SaibNavigation from "../../common/saib-navigation";
 import BrandCard from "./brand-card";
 
-const Partners: React.FC = () => {
+const Partners = () => {
     const theme = useTheme();
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [direction, setDirection] = useState('enter'); // 'enter' or 'exit'
+    const [transitioning, setTransitioning] = useState(false);
 
     const partnersData = [
         {
@@ -97,6 +99,31 @@ const Partners: React.FC = () => {
         },
     ];
 
+    const handleCardChange = (newIndex: number) => {
+        if (transitioning) return;
+        
+        setTransitioning(true);
+        setDirection('exit');
+        
+        setTimeout(() => {
+            setCurrentIndex(newIndex);
+            setDirection('enter');
+            setTimeout(() => {
+                setTransitioning(false);
+            }, 100);
+        }, 300);
+    };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (!transitioning) {
+                handleCardChange((currentIndex + 1) % partnersData.length);
+            }
+        }, 4000);
+
+        return () => clearInterval(interval);
+    }, [currentIndex, transitioning]);
+
     return (
         <div className="text-center py-25">
             <div>
@@ -127,13 +154,12 @@ const Partners: React.FC = () => {
                                 alignItems: "center",
                                 transition: "ease"
                             }}
-                            onClick={() => setCurrentIndex(index)}
+                            onClick={() => handleCardChange(index)}
                         >
                             <img
                                 src={datum.brandAlternate}
                                 alt={datum.name}
-                                className={`transition-opacity duration-150 ${currentIndex === index ? "opacity-100" : "opacity-30 hover:opacity-100"
-                                    }`}
+                                className={`transition-opacity duration-150 ${currentIndex === index ? "opacity-100" : "opacity-30 hover:opacity-100"}`}
                             />
                         </Button>
                     ))}
@@ -141,18 +167,25 @@ const Partners: React.FC = () => {
                 <SaibNavigation
                     buttonCount={partnersData.length}
                     currentIndex={currentIndex}
-                    setCurrentIndex={setCurrentIndex}
+                    setCurrentIndex={handleCardChange}
                 />
-                <BrandCard
-                    brand={partnersData[currentIndex].brand}
-                    name={partnersData[currentIndex].name}
-                    description={partnersData[currentIndex].description}
-                    background={partnersData[currentIndex].gradient}
-                    socials={partnersData[currentIndex].socials}
-                    sx={{
-                        width: 480,
-                    }}
-                />
+                <div className="relative h-full w-200">
+                    <div
+                        className={`absolute w-full h-full flex transition-all duration-200 ease-in-out
+                            ${direction === 'enter' ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
+                    >
+                        <BrandCard
+                            brand={partnersData[currentIndex].brand}
+                            name={partnersData[currentIndex].name}
+                            description={partnersData[currentIndex].description}
+                            background={partnersData[currentIndex].gradient}
+                            socials={partnersData[currentIndex].socials}
+                            sx={{
+                                width: 480,
+                            }}
+                        />
+                    </div>
+                </div>
             </div>
         </div>
     );
