@@ -65,6 +65,7 @@ const Header: React.FC = () => {
     id: string
   ) => {
     e.preventDefault();
+    setOpen(false);
     const nextSection = document.getElementById(id);
     if (nextSection) {
       setTimeout(() => {
@@ -191,6 +192,7 @@ const Header: React.FC = () => {
                       <Typography
                         component="a"
                         variant="body2"
+                        onClick={(e) => scrollToNextSection(e, datum.link)}
                       >
                         {datum.name}
                       </Typography>

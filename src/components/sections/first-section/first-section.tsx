@@ -191,12 +191,6 @@ const FirstSection: React.FC = () => {
                             <span>and enterprise blockchain solutions.</span>
                         </Typography>
                     </div>
-                    <SaibButton
-                        variant="outlined"
-                        className="mt-7 xl:!mt-9"
-                    >
-                        Know More
-                    </SaibButton>
                 </div>
                 <div className="relative w-125 shrink-0">
                     <div className="hidden lg:block">
