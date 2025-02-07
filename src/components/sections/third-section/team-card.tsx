@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Box, IconButton, SvgIconProps, Typography, useTheme } from "@mui/material";
 import ImagePlaceholder from "../../../images/team/placeholder.webp";
 import SaibTeamBackground from "../../../images/team/saib-background.webp";
@@ -41,6 +41,20 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
         "The Engine Room": Engine,
         "The Blockchain Lab": Blockchain
     };
+
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 1024) {
+                setCardIndex(null);
+            } else {
+                setModalState(false);
+            }
+        };
+        handleResize();
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
 
     return (
         <div className="overflow-auto w-full h-145 custom-scrollbar">
@@ -321,7 +335,6 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                                                         height: 32,
                                                         width: 32,
                                                         boxShadow: theme.shadows[0],
-                                                        "&:hover": { borderColor: theme.palette.button.hover },
                                                     }}
                                                 >
                                                     <social.icon sx={{ color: theme.palette.text.tertiary }} />
