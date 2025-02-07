@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Box, IconButton, SvgIconProps, Typography, useTheme } from "@mui/material";
 import ImagePlaceholder from "../../../images/team/placeholder.webp";
 import SaibTeamBackground from "../../../images/team/saib-background.webp";
@@ -34,6 +34,7 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
 
     const theme = useTheme();
     const renderedGroups = new Set();
+    const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
     const iconMap = {
         "The Helm": Helm,
@@ -41,6 +42,25 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
         "The Engine Room": Engine,
         "The Blockchain Lab": Blockchain
     };
+
+    useEffect(() => {
+        const container = scrollContainerRef.current;
+
+        if (!container) return;
+
+        const handleWheel = (e: WheelEvent) => {
+            e.preventDefault();
+            container.scrollLeft += e.deltaY;
+        };
+
+        container.addEventListener('wheel', handleWheel, { passive: false });
+
+        return () => {
+            if (container) {
+                container.removeEventListener('wheel', handleWheel);
+            }
+        };
+    }, []);
 
     useEffect(() => {
         const handleResize = () => {
@@ -57,7 +77,10 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
     }, []);
 
     return (
-        <div className="overflow-auto w-full h-145 custom-scrollbar">
+        <div
+            ref={scrollContainerRef}
+            className="overflow-auto w-full h-145 custom-scrollbar"
+        >
             <Box
                 sx={{
                     display: "flex",
