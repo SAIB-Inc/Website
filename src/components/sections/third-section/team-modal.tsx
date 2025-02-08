@@ -52,8 +52,8 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                     transform: 'translate(-50%, -50%)',
                     width: "100%",
                     textAlign: "center",
-                    p: 6
                 }}
+                className="sm:!p-6"
             >
                 <Box
                     sx={{
@@ -75,12 +75,11 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                             {items.tags.map((TagIcon, idx) => (
                                 <TagIcon
                                     key={idx}
-                                    sx={{ color: theme.palette.text.tertiary, fontSize: 30 }}
-                                    className="max-sm:!text-sm"
+                                    sx={{ color: theme.palette.text.tertiary, fontSize: 28 }}
                                 />
                             ))}
                         </div>
-                        <div className="absolute top-1 right-3 sm:gap-4 sm:top-6 sm:right-6 h-20">
+                        <div className="absolute top-2 right-3 sm:gap-4 sm:top-6 sm:right-6 h-20">
                             <IconButton
                                 onClick={() => {
                                     setOpen(false);
@@ -89,7 +88,7 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                                     p: 0
                                 }}
                             >
-                                <Close sx={{ color: theme.palette.secondary.light }} className="max-sm:!text-sm" />
+                                <Close sx={{ color: theme.palette.secondary.light }}/>
                             </IconButton>
                         </div>
                     </div>
@@ -101,7 +100,6 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                                 variant="h4"
                                 component="h4"
                                 color={theme.palette.info.main}
-                                className="max-sm:!text-2xl"
                             >
                                 {items.name}
                             </Typography>
@@ -109,7 +107,6 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                                 variant="subtitle2"
                                 component="p"
                                 color={theme.palette.text.tertiary}
-                                className="max-sm:!text-base"
                             >
                                 {items.position}
                             </Typography>
@@ -119,7 +116,7 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                                 variant="body2"
                                 component="p"
                                 color={theme.palette.text.tertiary}
-                                className="max-sm:!text-xs"
+
                             >
                                 {items.description}
                             </Typography>
@@ -144,6 +141,8 @@ const TeamModal: React.FC<TeamModalProps> = ({ open, setOpen, items }) => {
                                             }}
                                             fontSize={theme.typography.button.fontSize}
                                             fontWeight={400}
+                                            className="max-sm:!px-3"
+                                            childClassName="max-sm:!text-sm"
                                         />
                                     ))}
                                 </div>
