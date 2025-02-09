@@ -39,7 +39,7 @@ export const Head: HeadFC = () => {
       <meta property="og:title" content="SAIB | Softwarez, At It's Best - Where Software Meets Perfection" />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://saib.dev/" />
-      <meta property="og:image" content="http://localhost:8000/saib-og.png" />
+      <meta property="og:image" content="https://saib.dev/saib-og.png" />
       <meta property="og:image:alt" content="Softwarez, At It's Best" />
       <meta property="og:description" content="We are a software development company based in Philippines that has been established through connecting the dots of its founders' shared and common passion for Cardano." />
 
