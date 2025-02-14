@@ -62,7 +62,7 @@ const FirstSection: React.FC = () => {
                                 variant="body1"
                                 className="mt-4! max-w-70 max-sm:!text-base max-sm:leading-7 sm:max-w-140 lg:max-w-none"
                             >
-                                <span>We are a software development company based in Philippines that has been established through connecting the dots of its founders&apos; shared and common passion for </span>
+                                <span>We are a software development company based in the Philippines, established by connecting the dots of its founders&apos; shared passion for </span>
                                 <span className="font-bold">Cardano.</span>
                             </Typography>
                         </div>
