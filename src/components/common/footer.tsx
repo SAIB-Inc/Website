@@ -161,7 +161,7 @@ const Footer: React.FC = () => {
                         color="white"
                         className="max-sm:!text-sm"
                     >
-                        &copy; Softwarez at its Best, Inc.
+                        &copy; Softwarez at its Best, Inc. 2025. All Rights Reserved
                     </Typography>
                 </div>
             </div>
