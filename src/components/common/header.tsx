@@ -7,6 +7,8 @@ import SaibButton from "./saib-button";
 
 const Header: React.FC = () => {
 
+  const hello = "hello";
+
   const socials = [
     {
       label: "Facebook",
