@@ -185,7 +185,7 @@ const Teams: React.FC = () => {
             imageSrc: teamsImage.Bern.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.BernModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
-            description: "Hi! I'm Bern Villacura, a detail-oriented manager who takes pride in ensuring our team's performance and well-being. I ensure operations run smoothly. I enjoy sharing conversations with the team.",
+            description: "Hi! I'm Bern, a detail-oriented manager who takes pride in ensuring our team's performance and well-being. I ensure operations run smoothly. I enjoy sharing conversations with the team.",
             skills: [
                 "Management"
             ],
