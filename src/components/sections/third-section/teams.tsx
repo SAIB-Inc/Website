@@ -28,22 +28,22 @@ const Teams: React.FC = () => {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
+            Jet: file(relativePath: { eq: "team/jet.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
+            JetModal: file(relativePath: { eq: "team/modal/jet-modal.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
             Cait: file(relativePath: { eq: "team/cait.webp" }) {
                 childImageSharp {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             CaitModal: file(relativePath: { eq: "team/modal/cait-modal.webp" }) {
-                childImageSharp {
-                    gatsbyImageData(quality: 100, placeholder: BLURRED)
-                }
-            }
-            Kathea: file(relativePath: { eq: "team/kathea.webp" }) {
-                childImageSharp {
-                    gatsbyImageData(quality: 100, placeholder: BLURRED)
-                }
-            }
-            KatheaModal: file(relativePath: { eq: "team/modal/kathea-modal.webp" }) {
                 childImageSharp {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
@@ -64,6 +64,16 @@ const Teams: React.FC = () => {
                 }
             }
             KimModal: file(relativePath: { eq: "team/modal/kim-modal.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
+            Bryan: file(relativePath: { eq: "team/bryan.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
+            BryanModal: file(relativePath: { eq: "team/modal/bryan-modal.webp" }) {
                 childImageSharp {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
@@ -118,6 +128,16 @@ const Teams: React.FC = () => {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
+            Hermi: file(relativePath: { eq: "team/hermi.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
+            HermiModal: file(relativePath: { eq: "team/modal/hermi-modal.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
             PlaceholderModal: file(relativePath: { eq: "team/modal/placeholder-modal.webp" }) {
                 childImageSharp {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
@@ -133,7 +153,7 @@ const Teams: React.FC = () => {
             imageSrc: teamsImage.Clark.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.ClarkModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
-            description: "",
+            description: "I'm Clark Alesna, CEO and founder of SAIB Inc., a Philippine-based company driving innovation in blockchain development. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology and building a strong community of Filipino blockchain engineers. I'm committed to engineering well-structured, high-quality systems and constantly push boundaries—both in tech and with my team.",
             skills: [
                 "Leadership",
                 "Cardano",
@@ -197,6 +217,32 @@ const Teams: React.FC = () => {
             ]
         },
         {
+            name: "Jet Acido",
+            position: "Technical Administrator",
+            imageSrc: teamsImage.Jet.childImageSharp.gatsbyImageData,
+            modalImageSrc: teamsImage.JetModal.childImageSharp.gatsbyImageData,
+            group: "The Helm",
+            description: "Hi, I'm Jet. I'm deeply passionate about innovation and technology, constantly exploring how new ideas and emerging tools can create meaningful impact. In my spare time, I'm an ultra trail runner who thrives on pushing limits.",
+            skills: [
+                "Corporate Executive Assistant"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/jetacido"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/jetacido/"
+                }
+            ],
+            tags: [
+                Helm,
+            ]
+        },
+        {
             name: "Caitlin Lindsay",
             position: "Technical Administrator",
             imageSrc: teamsImage.Cait.childImageSharp.gatsbyImageData,
@@ -222,34 +268,6 @@ const Teams: React.FC = () => {
             ],
             tags: [
                 Helm,
-            ]
-        },
-        {
-            name: "Kathea Mayol",
-            position: "Technical Administrator",
-            imageSrc: teamsImage.Kathea.childImageSharp.gatsbyImageData,
-            modalImageSrc: teamsImage.KatheaModal.childImageSharp.gatsbyImageData,
-            group: "The Helm",
-            description: "Good Day! I'm Kathea Mari, and I have a passion for technology and software solutions, particularly in web development and blockchain technologies. I thrive in collaborative environments where I can learn, contribute, and create meaningful value through innovation and teamwork.",
-            skills: [
-                "Frontend",
-                "Backend",
-                "Media Editing"
-            ],
-            socials: [
-                {
-                    label: "X",
-                    icon: X,
-                    link: "https://x.com/aoikatteunari"
-                },
-                {
-                    label: "LinkedIn",
-                    icon: LinkedIn,
-                    link: "https://www.linkedin.com/in/kathea-mayol/"
-                }
-            ],
-            tags: [
-                Helm
             ]
         },
         {
@@ -302,6 +320,33 @@ const Teams: React.FC = () => {
                     label: "LinkedIn",
                     icon: LinkedIn,
                     link: "https://www.linkedin.com/in/kimberlyjavier98/"
+                }
+            ],
+            tags: [
+                Command
+            ]
+        },
+        {
+            name: "Bryan Padayao",
+            position: "Designer",
+            imageSrc: teamsImage.Bryan.childImageSharp.gatsbyImageData,
+            modalImageSrc: teamsImage.BryanModal.childImageSharp.gatsbyImageData,
+            group: "The Command Deck",
+            description: "Hey! I'm Kim Bryan Padayao, a UI/UX designer with a passion for creating clean, user-friendly experiences. I also have a background in video editing and a genuine love for video and photography, anything that lets me be creative and tell stories visually.",
+            skills: [
+                "UI/UX Designer",
+                "Motion Graphics"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/kimz301020"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/kim-bryan-padayao-00190a23b"
                 }
             ],
             tags: [
@@ -383,7 +428,7 @@ const Teams: React.FC = () => {
                 }
             ],
             tags: [
-                Blockchain
+                Engine
             ]
         },
         {
@@ -433,6 +478,32 @@ const Teams: React.FC = () => {
                     label: "LinkedIn",
                     icon: LinkedIn,
                     link: "https://www.linkedin.com/in/lance-vincent-salera-4a99b62bb/"
+                }
+            ],
+            tags: [
+                Blockchain
+            ]
+        },
+        {
+            name: "Hermi Timtim",
+            position: "Engineer",
+            imageSrc: teamsImage.Hermi.childImageSharp.gatsbyImageData,
+            modalImageSrc: teamsImage.HermiModal.childImageSharp.gatsbyImageData,
+            group: "The Blockchain Lab",
+            description: "Hi! I'm Hermi, a passionate backend developer. I enjoy working with modern backend technologies and always explore to sharpen my skills. I'm always looking for fresh challenges and ways to grow both personally and professionally.",
+            skills: [
+                "Backend"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/hrmtm23"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/herminigildo-timtim-43a7b0298/"
                 }
             ],
             tags: [
