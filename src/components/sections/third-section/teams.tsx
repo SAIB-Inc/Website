@@ -153,7 +153,7 @@ const Teams: React.FC = () => {
             imageSrc: teamsImage.Clark.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.ClarkModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
-            description: "I'm Clark Alesna, a visionary and innovative developer from the Philippines. My team and I are currently focused on blockchain development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology and building a strong community of Filipino blockchain engineers. I'm committed to engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
+            description: "I'm Clark Alesna, a visionary and innovative developer from the Philippines. We are currently focused on blockchain development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
             skills: [
                 "Leadership",
                 "Cardano",
@@ -185,7 +185,7 @@ const Teams: React.FC = () => {
             imageSrc: teamsImage.Bern.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.BernModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
-            description: "Hi! I'm Bern Villacura, a detail-oriented manager who takes pride in ensuring our team's performance and well-being. I ensure operations run smoothly. I enjoy sharing conversations with the team, and in my spare time, reading books.",
+            description: "Hi! I'm Bern Villacura, a detail-oriented manager who takes pride in ensuring our team's performance and well-being. I ensure operations run smoothly. I enjoy sharing conversations with the team.",
             skills: [
                 "Management"
             ],
