@@ -234,7 +234,7 @@ const Teams: React.FC = () => {
             group: "The Helm",
             description: "Hi, I'm Jet. I'm deeply passionate about innovation and technology, constantly exploring how new ideas and emerging tools can create meaningful impact. In my spare time, I'm an ultra trail runner who thrives on pushing limits.",
             skills: [
-                "Manager"
+                "Management"
             ],
             socials: [
                 {
