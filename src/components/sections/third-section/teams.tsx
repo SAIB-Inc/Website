@@ -153,7 +153,7 @@ const Teams: React.FC = () => {
             imageSrc: teamsImage.Clark.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.ClarkModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
-            description: "I'm Clark Alesna, CEO and founder of SAIB Inc., a Philippine-based company driving innovation in blockchain development. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology and building a strong community of Filipino blockchain engineers. I'm committed to engineering well-structured, high-quality systems and constantly push boundaries—both in tech and with my team.",
+            description: "I'm Clark Alesna, a visionary and innovative developer from the Philippines. My team and I are currently focused on blockchain development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology and building a strong community of Filipino blockchain engineers. I'm committed to engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
             skills: [
                 "Leadership",
                 "Cardano",
@@ -165,6 +165,11 @@ const Teams: React.FC = () => {
                     icon: X,
                     link: "https://x.com/clarkalesna"
                 },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/clarkalesna/"
+                }
             ],
             tags: [
                 Ceo,
@@ -180,7 +185,7 @@ const Teams: React.FC = () => {
             imageSrc: teamsImage.Bern.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.BernModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
-            description: "",
+            description: "Hi! I'm Bern Villacura, a detail-oriented manager who takes pride in ensuring our team's performance and well-being. I ensure operations run smoothly. I enjoy sharing conversations with the team, and in my spare time, reading books.",
             skills: [
                 "Management"
             ],
@@ -190,6 +195,11 @@ const Teams: React.FC = () => {
                     icon: X,
                     link: "https://x.com/itsBarbieBern"
                 },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/barbiebern/"
+                }
             ],
             tags: [
                 Helm,
@@ -201,7 +211,7 @@ const Teams: React.FC = () => {
             imageSrc: null,
             modalImageSrc: teamsImage.PlaceholderModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
-            description: "",
+            description: "Hi! I'm Ben, a dynamic thinker who blends creativity with analytical insights to drive impactful campaigns and fuel brand growth. I value clear communication, effectively engage diverse audiences, and am passionate about cultivating strong, lasting customer relationships.",
             skills: [
                 "Marketing"
             ],
@@ -218,13 +228,13 @@ const Teams: React.FC = () => {
         },
         {
             name: "Jet Acido",
-            position: "Technical Administrator",
+            position: "Corporate Executive Assistant",
             imageSrc: teamsImage.Jet.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.JetModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
             description: "Hi, I'm Jet. I'm deeply passionate about innovation and technology, constantly exploring how new ideas and emerging tools can create meaningful impact. In my spare time, I'm an ultra trail runner who thrives on pushing limits.",
             skills: [
-                "Corporate Executive Assistant"
+                "Manager"
             ],
             socials: [
                 {
@@ -334,7 +344,7 @@ const Teams: React.FC = () => {
             group: "The Command Deck",
             description: "Hey! I'm Kim Bryan Padayao, a UI/UX designer with a passion for creating clean, user-friendly experiences. I also have a background in video editing and a genuine love for video and photography, anything that lets me be creative and tell stories visually.",
             skills: [
-                "UI/UX Designer",
+                "UI/UX Design",
                 "Motion Graphics"
             ],
             socials: [
@@ -413,7 +423,7 @@ const Teams: React.FC = () => {
             group: "The Engine Room",
             description: "I'm Rico, and I have a deep passion for technology and solving problems. I enjoy tackling challenges and finding solutions. Bringing ideas to life through technology excites me every day.",
             skills: [
-                "Backend Development"
+                "Backend"
             ],
             socials: [
                 {
