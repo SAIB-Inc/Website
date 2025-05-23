@@ -323,46 +323,48 @@ const TeamCard: React.FC<TeamCardProps> = ({ items }) => {
                                                 {datum.description || "No given description"}
                                             </Typography>
                                         </div>
-                                        <div>
-                                            <Typography
-                                                component="p"
-                                                variant="subtitle2"
-                                                color={theme.palette.text.tertiary}
-                                            >
-                                                Skills
-                                            </Typography>
-                                            <div className="flex flex-wrap gap-2 mt-2">
-                                                {datum.skills?.map((skill, index) => (
-                                                    <SaibChip
-                                                        key={index}
-                                                        content={skill}
+                                        <div className="flex flex-col gap-6">
+                                            <div>
+                                                <Typography
+                                                    component="p"
+                                                    variant="subtitle2"
+                                                    color={theme.palette.text.tertiary}
+                                                >
+                                                    Skills
+                                                </Typography>
+                                                <div className="flex flex-wrap gap-2 mt-2">
+                                                    {datum.skills?.map((skill, index) => (
+                                                        <SaibChip
+                                                            key={index}
+                                                            content={skill}
+                                                            sx={{
+                                                                color: theme.palette.text.tertiary,
+                                                                backgroundColor: "none",
+                                                            }}
+                                                            fontSize={theme.typography.h6.fontSize}
+                                                            fontWeight={400}
+                                                        />
+                                                    ))}
+                                                </div>
+                                            </div>
+                                            <div className="space-x-2!">
+                                                {datum.socials?.map((social, idx) => (
+                                                    <IconButton
+                                                        key={idx}
+                                                        href={social.link}
+                                                        aria-label={social.label}
+                                                        target="_blank"
                                                         sx={{
-                                                            color: theme.palette.text.tertiary,
-                                                            backgroundColor: "none",
+                                                            border: `1px solid ${theme.palette.text.tertiary}`,
+                                                            height: 32,
+                                                            width: 32,
+                                                            boxShadow: theme.shadows[0],
                                                         }}
-                                                        fontSize={theme.typography.h6.fontSize}
-                                                        fontWeight={400}
-                                                    />
+                                                    >
+                                                        <social.icon sx={{ color: theme.palette.text.tertiary }} />
+                                                    </IconButton>
                                                 ))}
                                             </div>
-                                        </div>
-                                        <div className="space-x-2!">
-                                            {datum.socials?.map((social, idx) => (
-                                                <IconButton
-                                                    key={idx}
-                                                    href={social.link}
-                                                    aria-label={social.label}
-                                                    target="_blank"
-                                                    sx={{
-                                                        border: `1px solid ${theme.palette.text.tertiary}`,
-                                                        height: 32,
-                                                        width: 32,
-                                                        boxShadow: theme.shadows[0],
-                                                    }}
-                                                >
-                                                    <social.icon sx={{ color: theme.palette.text.tertiary }} />
-                                                </IconButton>
-                                            ))}
                                         </div>
                                     </div>
                                 </Box>

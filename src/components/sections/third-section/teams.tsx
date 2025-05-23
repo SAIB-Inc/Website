@@ -28,22 +28,22 @@ const Teams: React.FC = () => {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
+            Jet: file(relativePath: { eq: "team/jet.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
+            JetModal: file(relativePath: { eq: "team/modal/jet-modal.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
             Cait: file(relativePath: { eq: "team/cait.webp" }) {
                 childImageSharp {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
             CaitModal: file(relativePath: { eq: "team/modal/cait-modal.webp" }) {
-                childImageSharp {
-                    gatsbyImageData(quality: 100, placeholder: BLURRED)
-                }
-            }
-            Kathea: file(relativePath: { eq: "team/kathea.webp" }) {
-                childImageSharp {
-                    gatsbyImageData(quality: 100, placeholder: BLURRED)
-                }
-            }
-            KatheaModal: file(relativePath: { eq: "team/modal/kathea-modal.webp" }) {
                 childImageSharp {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
@@ -64,6 +64,16 @@ const Teams: React.FC = () => {
                 }
             }
             KimModal: file(relativePath: { eq: "team/modal/kim-modal.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
+            Bryan: file(relativePath: { eq: "team/bryan.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
+            BryanModal: file(relativePath: { eq: "team/modal/bryan-modal.webp" }) {
                 childImageSharp {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
@@ -118,6 +128,16 @@ const Teams: React.FC = () => {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
                 }
             }
+            Hermi: file(relativePath: { eq: "team/hermi.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
+            HermiModal: file(relativePath: { eq: "team/modal/hermi-modal.webp" }) {
+                childImageSharp {
+                    gatsbyImageData(quality: 100, placeholder: BLURRED)
+                }
+            }
             PlaceholderModal: file(relativePath: { eq: "team/modal/placeholder-modal.webp" }) {
                 childImageSharp {
                     gatsbyImageData(quality: 100, placeholder: BLURRED)
@@ -133,7 +153,7 @@ const Teams: React.FC = () => {
             imageSrc: teamsImage.Clark.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.ClarkModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
-            description: "",
+            description: "I'm Clark Alesna, a visionary and innovative developer from the Philippines. We are currently focused on blockchain development, particularly on the Cardano blockchain. As a developer and Cardano enthusiast, I'm passionate about advancing decentralized technology, engineering well-structured, high-quality systems and continuously pushing boundaries—both in technology and with my team.",
             skills: [
                 "Leadership",
                 "Cardano",
@@ -145,6 +165,11 @@ const Teams: React.FC = () => {
                     icon: X,
                     link: "https://x.com/clarkalesna"
                 },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/clarkalesna/"
+                }
             ],
             tags: [
                 Ceo,
@@ -160,7 +185,7 @@ const Teams: React.FC = () => {
             imageSrc: teamsImage.Bern.childImageSharp.gatsbyImageData,
             modalImageSrc: teamsImage.BernModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
-            description: "",
+            description: "Hi! I'm Bern, a detail-oriented manager who takes pride in ensuring our team's performance and well-being. I ensure operations run smoothly. I enjoy sharing conversations with the team.",
             skills: [
                 "Management"
             ],
@@ -170,6 +195,11 @@ const Teams: React.FC = () => {
                     icon: X,
                     link: "https://x.com/itsBarbieBern"
                 },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/barbiebern/"
+                }
             ],
             tags: [
                 Helm,
@@ -181,7 +211,7 @@ const Teams: React.FC = () => {
             imageSrc: null,
             modalImageSrc: teamsImage.PlaceholderModal.childImageSharp.gatsbyImageData,
             group: "The Helm",
-            description: "",
+            description: "Hi! I'm Ben, a dynamic thinker who blends creativity with analytical insights to drive impactful campaigns and fuel brand growth. I value clear communication, effectively engage diverse audiences, and am passionate about cultivating strong, lasting customer relationships.",
             skills: [
                 "Marketing"
             ],
@@ -190,6 +220,32 @@ const Teams: React.FC = () => {
                     label: "X",
                     icon: X,
                     link: "https://x.com/Benjdico"
+                }
+            ],
+            tags: [
+                Helm,
+            ]
+        },
+        {
+            name: "Jet Acido",
+            position: "Corporate Executive Assistant",
+            imageSrc: teamsImage.Jet.childImageSharp.gatsbyImageData,
+            modalImageSrc: teamsImage.JetModal.childImageSharp.gatsbyImageData,
+            group: "The Helm",
+            description: "Hi, I'm Jet. I'm deeply passionate about innovation and technology, constantly exploring how new ideas and emerging tools can create meaningful impact. In my spare time, I'm an ultra trail runner who thrives on pushing limits.",
+            skills: [
+                "Management"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/jetacido"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/jetacido/"
                 }
             ],
             tags: [
@@ -222,34 +278,6 @@ const Teams: React.FC = () => {
             ],
             tags: [
                 Helm,
-            ]
-        },
-        {
-            name: "Kathea Mayol",
-            position: "Technical Administrator",
-            imageSrc: teamsImage.Kathea.childImageSharp.gatsbyImageData,
-            modalImageSrc: teamsImage.KatheaModal.childImageSharp.gatsbyImageData,
-            group: "The Helm",
-            description: "Good Day! I'm Kathea Mari, and I have a passion for technology and software solutions, particularly in web development and blockchain technologies. I thrive in collaborative environments where I can learn, contribute, and create meaningful value through innovation and teamwork.",
-            skills: [
-                "Frontend",
-                "Backend",
-                "Media Editing"
-            ],
-            socials: [
-                {
-                    label: "X",
-                    icon: X,
-                    link: "https://x.com/aoikatteunari"
-                },
-                {
-                    label: "LinkedIn",
-                    icon: LinkedIn,
-                    link: "https://www.linkedin.com/in/kathea-mayol/"
-                }
-            ],
-            tags: [
-                Helm
             ]
         },
         {
@@ -302,6 +330,33 @@ const Teams: React.FC = () => {
                     label: "LinkedIn",
                     icon: LinkedIn,
                     link: "https://www.linkedin.com/in/kimberlyjavier98/"
+                }
+            ],
+            tags: [
+                Command
+            ]
+        },
+        {
+            name: "Bryan Padayao",
+            position: "Designer",
+            imageSrc: teamsImage.Bryan.childImageSharp.gatsbyImageData,
+            modalImageSrc: teamsImage.BryanModal.childImageSharp.gatsbyImageData,
+            group: "The Command Deck",
+            description: "Hey! I'm Kim Bryan Padayao, a UI/UX designer with a passion for creating clean, user-friendly experiences. I also have a background in video editing and a genuine love for video and photography, anything that lets me be creative and tell stories visually.",
+            skills: [
+                "UI/UX Design",
+                "Motion Graphics"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/kimz301020"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/kim-bryan-padayao-00190a23b"
                 }
             ],
             tags: [
@@ -368,7 +423,7 @@ const Teams: React.FC = () => {
             group: "The Engine Room",
             description: "I'm Rico, and I have a deep passion for technology and solving problems. I enjoy tackling challenges and finding solutions. Bringing ideas to life through technology excites me every day.",
             skills: [
-                "Backend Development"
+                "Backend"
             ],
             socials: [
                 {
@@ -383,7 +438,7 @@ const Teams: React.FC = () => {
                 }
             ],
             tags: [
-                Blockchain
+                Engine
             ]
         },
         {
@@ -433,6 +488,32 @@ const Teams: React.FC = () => {
                     label: "LinkedIn",
                     icon: LinkedIn,
                     link: "https://www.linkedin.com/in/lance-vincent-salera-4a99b62bb/"
+                }
+            ],
+            tags: [
+                Blockchain
+            ]
+        },
+        {
+            name: "Hermi Timtim",
+            position: "Engineer",
+            imageSrc: teamsImage.Hermi.childImageSharp.gatsbyImageData,
+            modalImageSrc: teamsImage.HermiModal.childImageSharp.gatsbyImageData,
+            group: "The Blockchain Lab",
+            description: "Hi! I'm Hermi, a passionate backend developer. I enjoy working with modern backend technologies and always explore to sharpen my skills. I'm always looking for fresh challenges and ways to grow both personally and professionally.",
+            skills: [
+                "Backend"
+            ],
+            socials: [
+                {
+                    label: "X",
+                    icon: X,
+                    link: "https://x.com/hrmtm23"
+                },
+                {
+                    label: "LinkedIn",
+                    icon: LinkedIn,
+                    link: "https://www.linkedin.com/in/herminigildo-timtim-43a7b0298/"
                 }
             ],
             tags: [
