@@ -1,24 +1,10 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import MainLayout from "../components/common/main-layout"
-import Header from "../components/common/header"
-import FirstSection from "../components/sections/first-section/first-section"
-import SecondSection from "../components/sections/second-section/second-section"
-import ThirdSection from "../components/sections/third-section/third-section"
-import FourthSection from "../components/sections/fourth-section/fourth-section"
-import FifthSection from "../components/sections/fifth-section/fifth-section"
-import Footer from "../components/common/footer"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <MainLayout>
-      <Header />
-      <FirstSection />
-      <SecondSection />
-      <ThirdSection />
-      <FourthSection />
-      <FifthSection />
-      <Footer />
     </MainLayout>
   )
 }
