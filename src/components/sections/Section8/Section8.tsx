@@ -1,4 +1,5 @@
-import { Box, Button, Card, Chip, Typography } from "@mui/material"
+import { Box, Card, Chip, Typography } from "@mui/material"
+import SaibButton from "../../common/SaibButton"
 import { useTheme } from "@mui/material/styles"
 import React, { useState } from "react"
 
@@ -116,7 +117,7 @@ const Section8: React.FC = () => {
         >
             <div className="container mx-auto py-30 px-9 flex flex-col items-center">
                 <div className="flex flex-col items-center gap-6">
-                    <Chip label="Innovation Lab" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="px-3! py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
+                    <Chip label="Innovation Lab" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
                     <Typography className="text-[60px]! leading-[1.1]!">
                         <span style={{ color: theme.palette.text.primary }}>Our Open </span>
                         <span style={{ color: theme.palette.primary.main }}>Projects</span>
@@ -138,16 +139,19 @@ const Section8: React.FC = () => {
                             return (
                                 <Card
                                     key={item.name}
-                                    sx={{ backgroundColor: item.theme }}
                                     className="absolute! top-0! left-0! w-[842px]! h-[542px]! rounded-xl! p-14! transition-all! duration-300! overflow-hidden! flex flex-col justify-between"
                                     style={{
+                                        backgroundColor: index === activeIndex ? item.theme : "#2E2C7E",
                                         zIndex: style.zIndex,
                                         transform: style.transform,
                                         transformOrigin: "bottom left",
                                     }}
                                 >
                                     {index !== activeIndex && (
-                                        <div className="absolute inset-0 bg-white/50 z-20 rounded-xl" />
+                                        <>
+                                            <div className="absolute inset-0 z-20 rounded-xl" style={{ backgroundColor: "rgba(46, 44, 126, 0.6)" }} />
+                                            <div className="absolute inset-0 z-20 rounded-xl" style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }} />
+                                        </>
                                     )}
                                     <div className={`absolute ${item.bgPosition}`}>
                                         <img
@@ -160,10 +164,10 @@ const Section8: React.FC = () => {
                                         <img src={item.brand} alt={`${item.name} brand`} className={item.brandSize} />
                                     </div>
                                     <div className="relative z-10 max-w-98.5 flex flex-col gap-6">
-                                        <Typography sx={{ fontWeight: 600, color: "#FFFFFF" }} className="text-[40px]! leading-12!">
+                                        <Typography sx={{ fontWeight: 600, color: "primary.contrastText" }} className="text-[40px]! leading-12!">
                                             {item.description}
                                         </Typography>
-                                        <Button sx={{ bgcolor: "text.primary" }} className="px-4! py-2! rounded-xl! w-max">See Documentation</Button>
+                                        <SaibButton variant="dark" sx={{ bgcolor: "text.primary" }} className="px-4! py-2! rounded-xl! w-max">See Documentation</SaibButton>
                                     </div>
                                 </Card>
                             );
@@ -173,14 +177,23 @@ const Section8: React.FC = () => {
                         {projectItems.map((item, index) => (
                             <div
                                 key={item.name}
-                                className={`w-[129px] h-[129px] rounded-[7px] flex items-center justify-center cursor-pointer transition-all duration-300 ${
+                                className={`w-[129px] h-[129px] rounded-[7px] flex items-center justify-center cursor-pointer transition-all duration-300 relative overflow-hidden ${
                                     index === activeIndex
-                                        ? "ring-2 ring-white opacity-100 scale-105"
-                                        : "opacity-60 hover:opacity-80"
+                                        ? "outline-2 outline scale-105"
+                                        : "hover:opacity-80"
                                 }`}
-                                style={{ backgroundColor: item.theme }}
+                                style={{
+                                    backgroundColor: index === activeIndex ? item.theme : "#2E2C7E",
+                                    outlineColor: theme.palette.background.default,
+                                }}
                                 onClick={() => setActiveIndex(index)}
                             >
+                                {index !== activeIndex && (
+                                    <>
+                                        <div className="absolute inset-0 rounded-[7px]" style={{ backgroundColor: "rgba(46, 44, 126, 0.6)" }} />
+                                        <div className="absolute inset-0 rounded-[7px]" style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }} />
+                                    </>
+                                )}
                                 <item.logo sx={{ fontSize: 60 }} />
                             </div>
                         ))}

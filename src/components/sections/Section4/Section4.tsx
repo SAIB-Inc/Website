@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, Button, Card, Chip, Typography } from "@mui/material";
+import { Box, Card, Chip, Typography } from "@mui/material";
+import SaibButton from "../../common/SaibButton";
 import { useTheme } from "@mui/material/styles";
 
 import Background from "../../../images/background/background-light.webp"
@@ -26,7 +27,7 @@ const Section4: React.FC = () => {
         >
             <div className="container mx-auto py-32 px-9 flex flex-col gap-16 items-center">
                 <div className="flex flex-col items-center gap-6">
-                    <Chip label="Our Expertise" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="px-3! py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
+                    <Chip label="Our Expertise" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
                     <Typography className="text-[60px]! leading-[1.1]!">
                         <span style={{ color: theme.palette.text.primary }}>The </span>
                         <span style={{ color: theme.palette.primary.main }}>Innovation </span>
@@ -61,9 +62,9 @@ const Section4: React.FC = () => {
                                     </Typography>
                                 </div>
                                 <div className="flex-1 flex items-end">
-                                    <Button sx={{ color: "primary.dark", textTransform: "none", fontWeight: 500 }} className="text-base! p-0! w-max!">
+                                    <SaibButton variant="text" className="text-base! w-max!">
                                         Explore Web3
-                                    </Button>
+                                    </SaibButton>
                                 </div>
                             </div>
                             <div className="absolute -top-23 -right-8">
@@ -87,9 +88,9 @@ const Section4: React.FC = () => {
                                     </Typography>
                                 </div>
                                 <div className="flex-1 flex items-end">
-                                    <Button sx={{ color: "primary.dark", textTransform: "none", fontWeight: 500 }} className="text-base! p-0! w-max!">
+                                    <SaibButton variant="text" className="text-base! w-max!">
                                         Automate now
-                                    </Button>
+                                    </SaibButton>
                                 </div>
                             </div>
                             <div className="absolute -bottom-30 right-0 ">
@@ -113,9 +114,9 @@ const Section4: React.FC = () => {
                                     </Typography>
                                 </div>
                                 <div>
-                                    <Button sx={{ color: "primary.dark", textTransform: "none", fontWeight: 500 }} className="text-base! p-0! w-max!">
+                                    <SaibButton variant="text" className="text-base! w-max!">
                                         Launch app
-                                    </Button>
+                                    </SaibButton>
                                 </div>
                             </div>
                             <div className="absolute -bottom-20 -right-4">
@@ -146,9 +147,9 @@ const Section4: React.FC = () => {
                                     </Typography>
                                 </div>
                                 <div>
-                                    <Button sx={{ color: "primary.dark", textTransform: "none", fontWeight: 500 }} className="text-base! p-0! w-max!">
+                                    <SaibButton variant="text" className="text-base! w-max!">
                                         Secure your code
-                                    </Button>
+                                    </SaibButton>
                                 </div>
                             </div>
                             <div className="flex-1 flex flex-col gap-3.5 mt-7">
@@ -205,9 +206,9 @@ const Section4: React.FC = () => {
                                     </Typography>
                                 </div>
                                 <div>
-                                    <Button sx={{ color: "primary.dark", textTransform: "none", fontWeight: 500 }} className="text-base! p-0! w-max!">
+                                    <SaibButton variant="text" className="text-base! w-max!">
                                         Start designing
-                                    </Button>
+                                    </SaibButton>
                                 </div>
                             </div>
                             <div className="absolute -bottom-40 -right-10 z-10">
@@ -241,9 +242,9 @@ const Section4: React.FC = () => {
                                     </Typography>
                                 </div>
                                 <div>
-                                    <Button sx={{ color: "primary.dark", textTransform: "none", fontWeight: 500 }} className="text-base! p-0! w-max!">
+                                    <SaibButton variant="text" className="text-base! w-max!">
                                         Design economy
-                                    </Button>
+                                    </SaibButton>
                                 </div>
                             </div>
                             <div className="absolute -bottom-1 -right-8">

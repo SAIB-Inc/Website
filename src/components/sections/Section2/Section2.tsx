@@ -15,17 +15,17 @@ const Section2: React.FC = () => {
     const businessValues = [
         {
             title: "Security First",
-            icon: <Security sx={{ color: "white", fontSize: 20 }} />,
+            icon: <Security sx={{ color: "primary.contrastText", fontSize: 20 }} />,
             description: "Built on Cardano's peer-reviewed, formally verified protocols"
         },
         {
             title: "Sustainable",
-            icon: <Sustainable sx={{ color: "white", fontSize: 20 }} />,
+            icon: <Sustainable sx={{ color: "primary.contrastText", fontSize: 20 }} />,
             description: "Built on Cardano's peer-reviewed, formally verified protocols"
         },
         {
             title: "Scalable",
-            icon: <Scalable sx={{ color: "white", fontSize: 20 }} />,
+            icon: <Scalable sx={{ color: "primary.contrastText", fontSize: 20 }} />,
             description: "Built on Cardano's peer-reviewed, formally verified protocols"
         },
     ]
@@ -43,7 +43,7 @@ const Section2: React.FC = () => {
             <div className="container mx-auto flex items-center justify-between py-40 px-9">
                 <div className="h-full flex flex-col justify-between">
                     <div>
-                        <Chip label="Why we exist" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="px-3! py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
+                        <Chip label="Why we exist" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
                         <Typography className="text-[60px]! leading-[1.1]! mt-4!">
                             <span style={{ color: theme.palette.text.primary }}>Engineering</span><br/>
                             <span style={{ color: theme.palette.primary.main }}>Business Value</span>
@@ -58,7 +58,7 @@ const Section2: React.FC = () => {
                                     onClick={() => setExpandedIndex(index)}
                                     className={`flex gap-3 p-4 rounded-[20px] cursor-pointer transition-all max-w-154.75 ${
                                         isExpanded
-                                            ? "text-white"
+                                            ? ""
                                             : "bg-transparent border"
                                     }`}
                                     style={{
@@ -74,13 +74,13 @@ const Section2: React.FC = () => {
                                     </div>
                                     <div>
                                         <Typography
-                                            className={`text-2xl! leading-10! ${isExpanded ? "text-white!" : ""}`}
-                                            style={{ color: isExpanded ? undefined : theme.palette.text.primary }}
+                                            className="text-2xl! leading-10!"
+                                            style={{ color: isExpanded ? theme.palette.primary.contrastText : theme.palette.text.primary }}
                                         >
                                             {item.title}
                                         </Typography>
                                         {isExpanded && (
-                                            <Typography className="text-white/80! text-xl! mt-1! font-light!">
+                                            <Typography className="text-xl! mt-1! font-light!" style={{ color: theme.palette.primary.contrastText, opacity: 0.8 }}>
                                                 {item.description}
                                             </Typography>
                                         )}

@@ -69,7 +69,7 @@ const Section3: React.FC = () => {
         <div className="container mx-auto py-30 px-9 space-y-16!">
             <div>
                 <div>
-                    <Chip label="Why we exist" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="px-3! py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
+                    <Chip label="Why we exist" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
                 </div>
                 <div className="w-full flex justify-between mt-6">
                     <Typography className="text-[60px]! leading-[1.1]!">
@@ -96,7 +96,7 @@ const Section3: React.FC = () => {
                                     {item.image && (
                                         <img src={item.image} alt={item.title} className="w-full object-cover" />
                                     )}
-                                    <div className={`absolute left-0 right-0 ${item.gradientClassName} bg-linear-to-t from-white to-transparent backdrop-blur-sm`} style={{ maskImage: "linear-gradient(to top, black, transparent)" }} />
+                                    <div className={`absolute left-0 right-0 ${item.gradientClassName} backdrop-blur-sm`} style={{ background: `linear-gradient(to top, ${theme.palette.background.default}, transparent)`, maskImage: "linear-gradient(to top, black, transparent)" }} />
                                 </div>
                             </div>
                             <div className="relative p-8! pt-0! space-y-4! z-10!">

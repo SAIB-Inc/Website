@@ -103,7 +103,7 @@ const Section5: React.FC = () => {
                 ))}
             </div>
             <div className="container h-full mx-auto py-30 px-9 flex flex-col gap-6 items-center justify-center relative z-10">
-                <Chip label="Our Aresenal" sx={{ borderColor: theme.palette.brand.lightText, color: theme.palette.brand.lightText }} className="px-3! py-2.5 border! bg-transparent! text-base! h-10! w-max! rounded-full!" />
+                <Chip label="Our Aresenal" sx={{ borderColor: theme.palette.brand.lightText, color: theme.palette.brand.lightText }} className="py-2.5 border! bg-transparent! text-base! h-10! w-max! rounded-full!" />
                 <Typography className="text-[60px]! leading-[1.1]! text-center!">
                     <span style={{ color: theme.palette.brand.lightText }}>Powered by </span><br/>
                     <span style={{ color: theme.palette.primary.main }}>Best-in-Class </span>

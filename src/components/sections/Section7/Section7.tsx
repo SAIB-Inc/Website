@@ -65,7 +65,7 @@ const Section7: React.FC = () => {
         >
             <div className="container mx-auto py-30 px-9 flex flex-col gap-16 items-center">
                 <div className="flex flex-col items-center gap-6">
-                    <Chip label="Integration partners" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="px-3! py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
+                    <Chip label="Integration partners" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
                     <Typography className="text-[60px]! leading-[1.1]!">
                         <span style={{ color: theme.palette.text.primary }}>Building with the </span>
                         <span style={{ color: theme.palette.primary.main }}>Giants</span>
@@ -86,7 +86,7 @@ const Section7: React.FC = () => {
                                 <div className={`absolute ${item.lineClassName}`}>
                                     <img src={item.line} alt="w-full h-full object-cover" />
                                 </div>
-                                <Card className={`bg-white! rounded-2xl! p-4! w-[282px] h-[261px]! gap-3! flex flex-col text-center! items-center justify-center ${item.cardClassName}`}>
+                                <Card sx={{ bgcolor: "background.default" }} className={`rounded-2xl! p-4! w-[282px] h-[261px]! gap-3! flex flex-col text-center! items-center justify-center ${item.cardClassName}`}>
                                     <div>
                                         <img src={item.logo} alt={item.title} className={item.logoHeight} />
                                     </div>

@@ -130,11 +130,12 @@ const Footer: React.FC = () => {
                                     <li key={item.title}>
                                         <Link
                                             href={item.link || "#"}
+                                            underline="none"
                                             sx={{
                                                 fontWeight: 300,
                                                 color: "text.primary",
                                             }}
-                                            className="text-sm opacity-70! hover:underline"
+                                            className="text-sm opacity-70!"
                                         >
                                             {item.title}
                                         </Link>
@@ -152,7 +153,7 @@ const Footer: React.FC = () => {
                     </div>
                     <div className="flex items-center gap-10">
                         {socialItems.map((item) => (
-                            <Link key={item.title} href={item.link || "#"} sx={{ color: "text.primary" }}>
+                            <Link key={item.title} href={item.link || "#"} underline="none" sx={{ color: "text.primary" }}>
                                 {item.icon}
                             </Link>
                         ))}
