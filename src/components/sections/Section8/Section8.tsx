@@ -45,7 +45,7 @@ const projectItems = [
         brand: BurizaBrand,
         brandSize: "h-[116.82px]",
         bg: BurizaBg,
-        bgPosition: "w-[360px] -rotate-90 bottom-10 -right-50 lg:-bottom-8 lg:-right-24 lg:w-[540px]",
+        bgPosition: "max-lg:-rotate-90 w-[360px] bottom-10 -right-50 lg:-bottom-8 lg:-right-24 lg:w-[540px]",
         description: "Cross-Platform, Open-Source Wallet Built for Security",
         smDescClassName: "max-sm:w-33.5!",
     },

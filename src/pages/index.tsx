@@ -41,8 +41,11 @@ export const Head: HeadFC = () => {
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href="https://saib.dev/" />
 
-      <meta name="theme-color" content="#6F03E0" media="(prefers-color-scheme: light)" />
-      <meta name="theme-color" content="#6F03E0" media="(prefers-color-scheme: dark)" />
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+
+      <meta name="theme-color" content="#646FFF" media="(prefers-color-scheme: light)" />
+      <meta name="theme-color" content="#646FFF" media="(prefers-color-scheme: dark)" />
 
       <meta property="og:title" content="SAIB | Softwarez, at its Best - Where Software Meets Perfection" />
       <meta property="og:type" content="website" />
