@@ -21,7 +21,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Section2 />
       <Section3 />
       <Section4 />
-      <Section5 /> {/* To finish */}
+      <Section5 />
       <Section6 />
       <Section7 />
       <Section8 />

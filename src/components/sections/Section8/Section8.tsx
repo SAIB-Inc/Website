@@ -1,5 +1,6 @@
 import { Box, Card, Chip, Typography } from "@mui/material"
 import SaibButton from "../../common/SaibButton"
+import SaibPageIndicator from "../../common/SaibPageIndicator"
 import { useTheme } from "@mui/material/styles"
 import React, { useState } from "react"
 
@@ -33,8 +34,9 @@ const projectItems = [
         brand: ArgusBrand,
         brandSize: "h-22.5",
         bg: ArgusBg,
-        bgPosition: "-bottom-12 -right-72 w-[642px]",
-        description: "Cardano Blockchain Indexer for .NET"
+        bgPosition: "w-[110%] top-12 -right-28 lg:-bottom-12 lg:-right-72 lg:w-[642px]",
+        description: "Cardano Blockchain Indexer for .NET",
+        smDescClassName: "",
     },
     {
         logo: BurizaLogo,
@@ -43,8 +45,9 @@ const projectItems = [
         brand: BurizaBrand,
         brandSize: "h-[116.82px]",
         bg: BurizaBg,
-        bgPosition: "-bottom-8 -right-24 w-[540px]",
-        description: "Cross-Platform, Open-Source Wallet Built for Security"
+        bgPosition: "w-[360px] -rotate-90 bottom-10 -right-50 lg:-bottom-8 lg:-right-24 lg:w-[540px]",
+        description: "Cross-Platform, Open-Source Wallet Built for Security",
+        smDescClassName: "max-sm:w-33.5!",
     },
     {
         logo: ChrysalisLogo,
@@ -53,8 +56,9 @@ const projectItems = [
         brand: ChrysalisBrand,
         brandSize: "h-[87px]",
         bg: ChrysalisBg,
-        bgPosition: "-bottom-8 -right-152 w-[1007px]",
-        description: "Core Building-Block Library for .NET Cardano Development"
+        bgPosition: "w-[427px] -right-55 top-0 lg:-bottom-8 lg:-right-152 lg:w-[1007px]",
+        description: "Core Building-Block Library for .NET Cardano Development",
+        smDescClassName: "",
     },
     {
         logo: RazorLogo,
@@ -63,8 +67,9 @@ const projectItems = [
         brand: RazorBrand,
         brandSize: "h-[119.99px]",
         bg: RazorBg,
-        bgPosition: "-bottom-18 -right-28 w-[368px]",
-        description: "Fully Open-Source .NET Implementation of a Cardano Node"
+        bgPosition: "w-[226px] -bottom-24 -right-34 lg:-bottom-18 lg:-right-28 lg:w-[368px]",
+        description: "Fully Open-Source .NET Implementation of a Cardano Node",
+        smDescClassName: "max-sm:w-33!",
     },
     {
         logo: FuturaLogo,
@@ -73,8 +78,9 @@ const projectItems = [
         brand: FuturaBrand,
         brandSize: "h-[102px]",
         bg: FuturaBg,
-        bgPosition: "-bottom-21 -right-68 w-[674px]",
-        description: "DSL That Compiles UPLC - Cardano Smart Contract Development on .NET"
+        bgPosition: "w-[305px] -right-40 -bottom-8 lg:-bottom-21 lg:-right-68 lg:w-[674px]",
+        description: "DSL That Compiles UPLC - Cardano Smart Contract Development on .NET",
+        smDescClassName: "",
     },
     {
         logo: CompLogo,
@@ -83,8 +89,9 @@ const projectItems = [
         brand: CompBrand,
         brandSize: "h-[102px]",
         bg: CompBg,
-        bgPosition: "-bottom-20 -right-78 w-[674px]",
-        description: "COMP Sets Metadata Standards for the Cardano Ecosystem"
+        bgPosition: "w-[385px] -right-40 -bottom-8 lg:-bottom-20 lg:-right-78 lg:w-[674px]",
+        description: "COMP Sets Metadata Standards for the Cardano Ecosystem",
+        smDescClassName: "",
     },
 ];
 
@@ -115,10 +122,10 @@ const Section8: React.FC = () => {
                 backgroundRepeat: "repeat",
             }}
         >
-            <div className="container mx-auto py-30 px-9 flex flex-col items-center">
+            <div className="container mx-auto max-sm:py-16 py-30 px-4 lg:px-9 flex flex-col items-center">
                 <div className="flex flex-col items-center gap-6">
                     <Chip label="Innovation Lab" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
-                    <Typography className="text-[60px]! leading-[1.1]!">
+                    <Typography className="text-[32px]! sm:text-[48px]! lg:text-[60px]! leading-[1.1]! text-center!">
                         <span style={{ color: theme.palette.text.primary }}>Our Open </span>
                         <span style={{ color: theme.palette.primary.main }}>Projects</span>
                     </Typography>
@@ -127,19 +134,70 @@ const Section8: React.FC = () => {
                             fontWeight: 300,
                             color: "text.primary",
                         }}
-                        className="text-xl! text-center! max-w-162.5!"
+                        className="text-sm! sm:text-base! lg:text-xl! text-center! max-w-162.5!"
                     >
                         Explore SAIB&apos;s innovative projects, built to enhance scalability, efficiency, and accessibility within the Cardano ecosystem.
                     </Typography>
                 </div>
-                <div className="w-full mt-16 flex justify-center gap-70">
+
+                {/* Mobile: stacked cards + pagination below lg */}
+                <div className="w-full mt-10 flex flex-col gap-8 lg:hidden">
+                    <div className="max-lg:mb-36! relative w-65 sm:w-75 md:w-85 h-100 sm:h-110 md:h-120">
+                        {projectItems.map((item, index) => {
+                            const style = getCardStyle(index);
+                            return (
+                                <Card
+                                    key={item.name}
+                                    className="absolute! top-0! left-0! w-[260px]! sm:w-[300px]! md:w-[340px]! h-[400px]! sm:h-[440px]! md:h-[480px]! rounded-xl! p-6! sm:p-8! transition-all! duration-300! overflow-hidden! flex flex-col justify-between"
+                                    style={{
+                                        backgroundColor: index === activeIndex ? item.theme : "#2E2C7E",
+                                        zIndex: style.zIndex,
+                                        transform: style.transform,
+                                        transformOrigin: "bottom left",
+                                    }}
+                                >
+                                    {index !== activeIndex && (
+                                        <>
+                                            <div className="absolute inset-0 z-20 rounded-xl" style={{ backgroundColor: "rgba(46, 44, 126, 0.6)" }} />
+                                            <div className="absolute inset-0 z-20 rounded-xl" style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }} />
+                                        </>
+                                    )}
+                                    <div className={`absolute ${item.bgPosition}`}>
+                                        <img
+                                            src={item.bg}
+                                            alt={`${item.name} background`}
+                                            className="pointer-events-none"
+                                        />
+                                    </div>
+                                    <div className="relative z-10">
+                                        <img src={item.brand} alt={`${item.name} brand`} className="h-14 sm:h-18" />
+                                    </div>
+                                    <div className="relative z-10 flex flex-col gap-4">
+                                        <Typography sx={{ fontWeight: 600, color: "primary.contrastText" }} className={`text-xl! sm:text-2xl! leading-7! ${item.smDescClassName}`}>
+                                            {item.description}
+                                        </Typography>
+                                        <SaibButton variant="dark" sx={{ bgcolor: "text.primary" }} className="px-4! py-2! rounded-xl! w-max text-sm!">See Documentation</SaibButton>
+                                    </div>
+                                </Card>
+                            );
+                        })}
+                    </div>
+                    <SaibPageIndicator
+                        count={projectItems.length}
+                        activeIndex={activeIndex}
+                        onSelect={setActiveIndex}
+                    />
+                </div>
+
+                {/* Desktop: stacked cards + icon buttons at lg and above */}
+                <div className="hidden lg:flex w-full mt-16 justify-center gap-70">
                     <div className="relative w-[842px] h-[542px]">
                         {projectItems.map((item, index) => {
                             const style = getCardStyle(index);
                             return (
                                 <Card
                                     key={item.name}
-                                    className="absolute! top-0! left-0! w-[842px]! h-[542px]! rounded-xl! p-14! transition-all! duration-300! overflow-hidden! flex flex-col justify-between"
+                                    className="absolute! top-0! left-0! w-210.5! h-135.5! rounded-xl! p-14! transition-all! duration-300! overflow-hidden! flex flex-col justify-between"
                                     style={{
                                         backgroundColor: index === activeIndex ? item.theme : "#2E2C7E",
                                         zIndex: style.zIndex,

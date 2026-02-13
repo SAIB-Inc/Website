@@ -5,6 +5,7 @@ import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import React, { useState } from "react";
 
 import Background from "../../../images/background/background-light.webp";
+import SaibPageIndicator from "../../common/SaibPageIndicator";
 
 import ClarkImg from "../../../images/team/clark.webp";
 import BernImg from "../../../images/team/bern.webp";
@@ -19,6 +20,7 @@ import PerseImg from "../../../images/team/perse.webp";
 const Section6: React.FC = () => {
     const theme = useTheme();
     const [activeGroup, setActiveGroup] = useState(0);
+    const [activeMember, setActiveMember] = useState(0);
 
     const teamGroups = [
         {
@@ -47,6 +49,10 @@ const Section6: React.FC = () => {
         },
     ];
 
+    const allMembers = teamGroups.flatMap((g) =>
+        g.members.map((m) => ({ ...m, group: g.group }))
+    );
+
     return (
         <Box
             component="section"
@@ -57,7 +63,41 @@ const Section6: React.FC = () => {
             }}
             className="h-screen"
         >
-            <div className="container mx-auto h-full py-30 px-9 flex flex-col items-center justify-center">
+            {/* Mobile: individual carousel below lg */}
+            <div className="lg:hidden container mx-auto h-full max-sm:py-16 py-30 px-4 lg:px-9 flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center gap-6">
+                    <Chip label="The minds behind the code" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
+                    <Typography className="text-[32px]! sm:text-[48px]! leading-[1.1]! text-center!">
+                        <span style={{ color: theme.palette.text.primary }}>Meet </span>
+                        <span style={{ color: theme.palette.primary.main }}>{allMembers[activeMember].group}</span>
+                    </Typography>
+                </div>
+                <div
+                    key={activeMember}
+                    className="flex flex-col items-center gap-4 mt-10 animate-fade-in"
+                >
+                    <img
+                        src={allMembers[activeMember].image}
+                        alt={allMembers[activeMember].name}
+                        className="w-60 h-72 sm:w-73 sm:h-84 rounded-[20px] object-cover"
+                    />
+                    <div className="flex flex-col items-center gap-2">
+                        <Chip label={allMembers[activeMember].name} sx={{ fontWeight: 800, borderColor: "primary.dark", color: "primary.dark" }} className="w-max! py-0.5! border! bg-transparent! text-base! h-6! rounded-full!" />
+                        <Typography sx={{ fontWeight: 300, color: "text.disabled" }} className="text-lg!">
+                            {allMembers[activeMember].role}
+                        </Typography>
+                    </div>
+                </div>
+                <SaibPageIndicator
+                    count={allMembers.length}
+                    activeIndex={activeMember}
+                    onSelect={setActiveMember}
+                    className="mt-10"
+                />
+            </div>
+
+            {/* Desktop: group carousel at lg and above */}
+            <div className="hidden lg:flex container mx-auto h-full py-30 px-9 flex-col items-center justify-center">
                 <div className="flex flex-col items-center gap-6">
                     <Chip label="The minds behind the code" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
                     <Typography className="text-[60px]! leading-[1.1]!">
@@ -105,19 +145,12 @@ const Section6: React.FC = () => {
                         </IconButton>
                     </div>
                 </div>
-                <div className="flex items-center justify-center gap-1.25 mt-26">
-                    {teamGroups.map((_, index) => (
-                        <div
-                            key={index}
-                            className="h-2.75 transition-all duration-300 cursor-pointer w-20"
-                            style={{
-                                backgroundColor: index === activeGroup ? theme.palette.primary.main : theme.palette.primary.light,
-                                ...(index === 0 ? { clipPath: "polygon(8px 0, 100% 0, 100% 100%, 0 100%)" } : {}),
-                            }}
-                            onClick={() => setActiveGroup(index)}
-                        />
-                    ))}
-                </div>
+                <SaibPageIndicator
+                    count={teamGroups.length}
+                    activeIndex={activeGroup}
+                    onSelect={setActiveGroup}
+                    className="mt-26"
+                />
             </div>
         </Box>
     );

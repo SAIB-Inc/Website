@@ -107,45 +107,47 @@ const Footer: React.FC = () => {
                 backgroundImage: `url(${Background})`,
                 backgroundRepeat: "repeat",
             }}
-            className="p-32!"
+            className="max-lg:p-4! p-32!"
         >
-            <div className="container mx-auto flex flex-col gap-[63px]">
-                <div className="w-full flex justify-between">
+            <div className="container mx-auto flex flex-col gap-15.75">
+                <div className="w-full flex max-lg:flex-col justify-between gap-10">
                     <div>
-                        <img src={SaibBrand} alt="SAIB" className="w-73"/>
+                        <img src={SaibBrand} alt="SAIB" className="w-37.75 lg:w-73"/>
                     </div>
-                    {footerItems.map((group) => (
-                        <div key={group.category}>
-                            <Typography
-                                sx={{
-                                    fontWeight: 500,
-                                    textTransform: "uppercase",
-                                    color: "text.secondary",
-                                }}
-                                className="text-[15px]! opacity-70! mb-4">
-                                    {group.category}
-                                </Typography>
-                            <ul className="space-y-5 mt-5">
-                                {group.items.map((item) => (
-                                    <li key={item.title}>
-                                        <Link
-                                            href={item.link || "#"}
-                                            underline="none"
-                                            sx={{
-                                                fontWeight: 300,
-                                                color: "text.primary",
-                                            }}
-                                            className="text-sm opacity-70!"
-                                        >
-                                            {item.title}
-                                        </Link>
-                                    </li>
-                                ))}
-                            </ul>
-                        </div>
-                    ))}
+                    <div className="flex max-lg:flex-wrap max-lg:justify-between lg:gap-64">
+                        {footerItems.map((group) => (
+                            <div key={group.category}>
+                                <Typography
+                                    sx={{
+                                        fontWeight: 500,
+                                        textTransform: "uppercase",
+                                        color: "text.secondary",
+                                    }}
+                                    className="max-md:text-xs! text-[15px]! opacity-70! mb-4">
+                                        {group.category}
+                                    </Typography>
+                                <ul className="space-y-5 mt-5">
+                                    {group.items.map((item) => (
+                                        <li key={item.title}>
+                                            <Link
+                                                href={item.link || "#"}
+                                                underline="none"
+                                                sx={{
+                                                    fontWeight: 300,
+                                                    color: "text.primary",
+                                                }}
+                                                className="max-md:text-xs! text-sm! opacity-70!"
+                                            >
+                                                {item.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
                 </div>
-                <div className="w-full flex items-center justify-between">
+                <div className="max-lg:flex-col max-lg:gap-3 w-full flex lg:items-center lg:justify-between">
                     <div>
                         <Typography sx={{ fontWeight: 300, color: "text.secondary" }} className="text-[15px]!">
                             &copy; SAIB Inc 2026. All Right Reserved.

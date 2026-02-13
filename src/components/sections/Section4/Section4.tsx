@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Card, Chip, Typography } from "@mui/material";
 import SaibButton from "../../common/SaibButton";
+import SaibPageIndicator from "../../common/SaibPageIndicator";
 import { useTheme } from "@mui/material/styles";
 
 import Background from "../../../images/background/background-light.webp"
@@ -13,8 +14,47 @@ import Filler1Img from "../../../images/sections/section4/Filler1.webp";
 import Filler2Img from "../../../images/sections/section4/Filler2.webp";
 import Filler3Img from "../../../images/sections/section4/Filler3.webp";
 
+const carouselItems = [
+    {
+        title: "Advanced Blockchain Solutions",
+        description: "Chain-agnostic development for DeFi, dApps, and Layer 1/2 infrastructure for your security.",
+        cta: "Explore Web3",
+        image: BlockchainSolutionsImg,
+    },
+    {
+        title: "AI Development & Research",
+        description: "From Natural Language Processing (NLP) to predictive analytics, we integrate smart technologies that evolve with your business.",
+        cta: "Automate now",
+        image: AIDevelopmentImg,
+    },
+    {
+        title: "Mobile App Architecture",
+        description: "High-performance iOS and Android applications built with modern frameworks for speed and reliability.",
+        cta: "Launch app",
+        image: MobileArchitectureImg,
+    },
+    {
+        title: "Smart Contract Development",
+        description: "Secure, auditable smart contracts built with best practices for gas optimization and formal verification.",
+        cta: "Secure your code",
+    },
+    {
+        title: "Product Strategy & Design",
+        description: "We validate your product from wireframing to high-fidelity prototyping before coding.",
+        cta: "Start designing",
+        image: ProductStrategyImg,
+    },
+    {
+        title: "Tokenomics & Asset Management",
+        description: "Create digital assets, NFTs, and tokens for strong economic models.",
+        cta: "Design economy",
+        image: TokenomicsImg,
+    },
+];
+
 const Section4: React.FC = () => {
     const theme = useTheme();
+    const [activeIndex, setActiveIndex] = useState(0);
 
     return (
         <Box
@@ -25,10 +65,10 @@ const Section4: React.FC = () => {
                 backgroundRepeat: "repeat",
             }}
         >
-            <div className="container mx-auto py-32 px-9 flex flex-col gap-16 items-center">
+            <div className="container mx-auto max-sm:py-16 py-32 px-4 lg:px-9 flex flex-col gap-16 items-center">
                 <div className="flex flex-col items-center gap-6">
                     <Chip label="Our Expertise" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
-                    <Typography className="text-[60px]! leading-[1.1]!">
+                    <Typography className="text-[32px]! sm:text-[48px]! lg:text-[60px] leading-[1.1]!">
                         <span style={{ color: theme.palette.text.primary }}>The </span>
                         <span style={{ color: theme.palette.primary.main }}>Innovation </span>
                         <span style={{ color: theme.palette.text.primary }}>Suite </span>
@@ -38,12 +78,44 @@ const Section4: React.FC = () => {
                             fontWeight: 300,
                             color: "text.primary",
                         }}
-                        className="text-xl! text-center! max-w-167!"
+                        className="text-center! max-w-167! text-sm! sm:text-base! lg:text-xl!"
                     >
                         Whether leveraging the transparency of blockchain or the predictive power of AI, our specialized teams provide end-to-end development tailored to your sector.
                     </Typography>
                 </div>
-                <div className="flex flex-col gap-[21.33px]!">
+                {/* Mobile/tablet carousel */}
+                <div className="lg:hidden flex flex-col items-center gap-6 w-full">
+                    <Card
+                        key={activeIndex}
+                        sx={{ bgcolor: "background.paper" }}
+                        className="relative overflow-hidden rounded-[28px]! w-full animate-fade-in p-8! h-75.5  max-md:h-79.5 max-lg:h-73.5"
+                    >
+                        <div className="flex flex-col gap-4 relative z-10">
+                            <Typography sx={{ fontWeight: 600, color: "text.primary" }} className="text-2xl!">
+                                {carouselItems[activeIndex].title}
+                            </Typography>
+                            <Typography sx={{ fontWeight: 300, color: "text.primary" }} className="text-base!">
+                                {carouselItems[activeIndex].description}
+                            </Typography>
+                            <SaibButton variant="text" className="text-base! w-max!">
+                                {carouselItems[activeIndex].cta}
+                            </SaibButton>
+                        </div>
+                        {carouselItems[activeIndex].image && (
+                            <div className="mt-4 flex justify-center">
+                                <img src={carouselItems[activeIndex].image} alt={carouselItems[activeIndex].title} className="w-full max-w-80 object-cover" />
+                            </div>
+                        )}
+                    </Card>
+                    <SaibPageIndicator
+                        count={carouselItems.length}
+                        activeIndex={activeIndex}
+                        onSelect={setActiveIndex}
+                    />
+                </div>
+
+                {/* Desktop grid */}
+                <div className="hidden lg:flex flex-col gap-[21.33px]!">
                     <div className="w-full grid grid-cols-4 grid-rows-6 gap-[21.33px]! h-167">
                         {/* Advanced Blockchain Solutions */}
                         <Card

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Box, Card, Chip, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import SaibIcon from "../../../images/icons/SaibIcon";
@@ -9,10 +9,12 @@ import LevvyLogo from "../../../images/partners/levvy.webp";
 import Background from "../../../images/background/background-light.webp";
 import Line1 from "../../../images/sections/section7/line-1.svg";
 import Line2 from "../../../images/sections/section7/line-2.svg";
+import SaibPageIndicator from "../../common/SaibPageIndicator";
 
 
 const Section7: React.FC = () => {
     const theme = useTheme();
+    const [activeIndex, setActiveIndex] = useState(0);
 
     const partnerItems = [
         {
@@ -61,9 +63,55 @@ const Section7: React.FC = () => {
                 backgroundImage: `url(${Background})`,
                 backgroundRepeat: "repeat",
             }}
-            className="h-screen"
+            className="lg:h-screen"
         >
-            <div className="container mx-auto py-30 px-9 flex flex-col gap-16 items-center">
+            {/* Mobile carousel below lg */}
+            <div className="lg:hidden container mx-auto max-sm:py-16 py-30 flex flex-col items-center justify-center h-full px-4 lg:px-9">
+                <div className="flex flex-col items-center gap-6">
+                    <Chip label="Integration partners" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
+                    <Typography className="text-[32px]! sm:text-[48px]! leading-[1.1]! text-center!">
+                        <span style={{ color: theme.palette.text.primary }}>Building with the </span>
+                        <span style={{ color: theme.palette.primary.main }}>Giants</span>
+                    </Typography>
+                </div>
+                <div className="flex items-center justify-center mt-10">
+                    <div
+                        className="w-[120px] h-[120px] sm:w-[140px] sm:h-[140px] rounded-full flex items-center justify-center"
+                        style={{ backgroundColor: theme.palette.secondary.main }}
+                    >
+                        <SaibIcon sx={{ fontSize: 64, color: theme.palette.brand.softPurple }} />
+                    </div>
+                </div>
+                <div
+                    className="w-0.5 h-20"
+                    style={{
+                        backgroundImage: `repeating-linear-gradient(to bottom, ${theme.palette.brand.line} 0px, ${theme.palette.brand.line} 6px, transparent 6px, transparent 12px)`,
+                    }}
+                />
+                <Card
+                    key={activeIndex}
+                    sx={{ bgcolor: "background.default" }}
+                    className="max-lg:h-62.25 rounded-2xl! p-6! w-full gap-3! flex flex-col text-center! items-center justify-center animate-fade-in"
+                >
+                    <div>
+                        <img src={partnerItems[activeIndex].logo} alt={partnerItems[activeIndex].title} className={partnerItems[activeIndex].logoHeight} />
+                    </div>
+                    <div>
+                        <Typography sx={{ color: "text.primary" }} className="font-light! text-base! mt-4!">
+                            {partnerItems[activeIndex].desciption}
+                        </Typography>
+                    </div>
+                </Card>
+                <SaibPageIndicator
+                    count={partnerItems.length}
+                    activeIndex={activeIndex}
+                    onSelect={setActiveIndex}
+                    className="mt-10"
+                />
+            </div>
+
+            {/* Desktop layout at lg and above */}
+            <div className="hidden lg:flex container mx-auto py-30 px-9 flex-col gap-16 items-center">
                 <div className="flex flex-col items-center gap-6">
                     <Chip label="Integration partners" sx={{ borderColor: "primary.dark", color: "primary.dark" }} className="py-2.5 border! bg-transparent! text-base! h-10! rounded-full!" />
                     <Typography className="text-[60px]! leading-[1.1]!">

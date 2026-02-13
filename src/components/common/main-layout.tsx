@@ -9,6 +9,7 @@ declare module "@mui/material/styles" {
       decorative: string;
       lightText: string;
       softPurple: string;
+      line: string;
       gradient: {
         iconStart: string;
         iconEnd: string;
@@ -24,6 +25,7 @@ declare module "@mui/material/styles" {
       decorative?: string;
       lightText?: string;
       softPurple?: string;
+      line?: string;
       gradient?: {
         iconStart?: string;
         iconEnd?: string;
@@ -67,6 +69,7 @@ const theme = createTheme({
       decorative: "#F4F6FA",
       lightText: "#F3F3FF",
       softPurple: "#E8E8FF",
+      line: "#9D8FFD",
       gradient: {
         iconStart: "#C5BBEB",
         iconEnd: "#C0CDE3",
