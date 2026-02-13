@@ -1,10 +1,32 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import MainLayout from "../components/common/main-layout"
+import Header from "../components/common/header"
+import Section1 from "../components/sections/Section1/Section1"
+import Section2 from "../components/sections/Section2/Section2"
+import Section3 from "../components/sections/Section3/Section3"
+import Footer from "../components/common/footer"
+import Section7 from "../components/sections/Section7/Section7"
+import Section4 from "../components/sections/Section4/Section4"
+import Section5 from "../components/sections/Section5/Section5"
+import Section8 from "../components/sections/Section8/Section8"
+import Section6 from "../components/sections/Section6/Section6"
+import Section9 from "../components/sections/Section9/Section9"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <MainLayout>
+      <Header />
+      <Section1 />
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Section5 /> {/* To finish */}
+      <Section6 />
+      <Section7 />
+      <Section8 />
+      <Section9 />
+      <Footer />
     </MainLayout>
   )
 }
