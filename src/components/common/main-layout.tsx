@@ -3,204 +3,82 @@ import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 declare module "@mui/material/styles" {
   interface Palette {
-    gradient: {
-      main: string;
-      dark: string;
-      aegis: {
-        main: string;
-        secondary: string;
-      },
-      argus: {
-        main: string;
-        secondary: string;
-      },
-      demeter: {
-        main: string;
-        secondary: string;
-      },
-      levvy: {
-        main: string;
-        secondary: string;
-        tertiary: string;
-      },
-      txpipe: {
-        main: string;
-        secondary: string;
-      },
-      utxorpc: {
-        main: string;
-        secondary: string;
-      },
-      teamCardGradient: {
-        tintLight: string;
-        tintSecondary: string;
-        main: string;
-        secondary: string;
-      },
-    },
-    carouselButtons: {
-      active: string;
-      inactive: string;
-    },
-    button: {
-      default: string;
-      hover: string;
-      clicked: string;
-      disabled: string;
-    }
+    brand: {
+      navy: string;
+      accent: string;
+      decorative: string;
+      lightText: string;
+      softPurple: string;
+      line: string;
+      gradient: {
+        iconStart: string;
+        iconEnd: string;
+        strategy: string;
+      };
+    };
   }
 
   interface PaletteOptions {
-    gradient?: {
-      main?: string;
-      dark?: string;
-      aegis?: {
-        main?: string;
-        secondary?: string;
-      },
-      argus?: {
-        main?: string;
-        secondary?: string;
-      },
-      demeter?: {
-        main?: string;
-        secondary?: string;
-      },
-      levvy?: {
-        main?: string;
-        secondary?: string;
-        tertiary?: string;
-      },
-      txpipe?: {
-        main?: string;
-        secondary?: string;
-      },
-      utxorpc?: {
-        main?: string;
-        secondary?: string;
-      },
-      teamCardGradient?: {
-        tintLight?: string;
-        tintSecondary?: string;
-        main?: string;
-        secondary?: string;
-      },
-    },
-    carouselButtons?: {
-      active?: string;
-      inactive?: string;
-    },
-    button: {
-      default?: string;
-      hover?: string;
-      clicked?: string;
-      disabled?: string;
-    },
-  }
-
-  interface TypoGraphyVariants {
-    teamCardTitle: React.CSSProperties;
-    teamCardSubtitle: React.CSSProperties;
-    body3: React.CSSProperties;
-  }
-
-  interface TypographyVariantsOptions {
-    teamCardTitle?: React.CSSProperties;
-    teamCardSubtitle?: React.CSSProperties;
-    body3?: React.CSSProperties;
-  }
-
-  interface TypeText {
-    tertiary?: string;
+    brand?: {
+      navy?: string;
+      accent?: string;
+      decorative?: string;
+      lightText?: string;
+      softPurple?: string;
+      line?: string;
+      gradient?: {
+        iconStart?: string;
+        iconEnd?: string;
+        strategy?: string;
+      };
+    };
   }
 
   interface TypeBackground {
-    fifthSection?: string;
-    footer?: string;
-  }
-}
-
-declare module "@mui/material/Typography" {
-  interface TypographyPropsVariantOverrides {
-    teamCardTitle: true;
-    teamCardSubtitle: true;
-    body3: true;
+    dark?: string;
   }
 }
 
 const theme = createTheme({
   palette: {
-    background: {
-      default: "#F9F7FFE5",
-      fifthSection: "#F3F1FF70",
-      footer: "#211E4A"  
-    },
     primary: {
-      light: "#EBE8FD",
-      main: "#EBE8FF",
-      dark: "#C0B6FF"
+      main: "#646FFF",
+      dark: "#2E0F9F",
+      light: "#AFAFE8",
+      contrastText: "#FFFFFF",
     },
     secondary: {
-      light: "#7458FF",
-      main: "#6F03E0",
-      dark: "#7660E3"
-    },
-    info: {
-      main: "#62EEFF"
-    },
-    gradient: {
-      main: "#F3F1FF",
-      dark: "#E4E1FA",
-      aegis: {
-        main: "#1B2770",
-        secondary: "#000A65"
-      },
-      argus: {
-        main: "#1B003F",
-        secondary: "#4700A4"
-      },
-      demeter: {
-        main: "#CF4E78",
-        secondary: "#BC487F"
-      },
-      levvy: {
-        main: "#BDB138",
-        secondary: "#8BA750",
-        tertiary: "#45C186"
-      },
-      txpipe: {
-        main: "#255DC7",
-        secondary: "#BD458B"
-      },
-      utxorpc: {
-        main: "#003C4F",
-        secondary: "#06644C"
-      },
-      teamCardGradient: {
-        tintLight: "#8A85CA00",
-        tintSecondary: "#00000090",
-        main: "#5438DC",
-        secondary: "#24126A"
-      }
-    },
-    carouselButtons: {
-      active: "#6F03E0",
-      inactive: "#C8C0FD"
+      main: "#3517A2",
+      dark: "#5F4AF3",
+      light: "#BFC4FF",
     },
     text: {
-      primary: "#3A376A",
-      secondary: "#6F03E0",
-      tertiary: "#E4DFFF"
+      primary: "#140E34",
+      secondary: "#161C2D",
+      disabled: "#5F6155",
     },
-    button: {
-      default: "#6F03E0",
-      hover: "#9026FF",
-      clicked: "#5438DC",
-      disabled: "#CAC7DF"
-    }
+    background: {
+      default: "#FFFFFF",
+      paper: "#F8FAFB",
+      dark: "#221658",
+    },
+    divider: "#F1F3F7",
+    brand: {
+      navy: "#221658",
+      accent: "#4D4DFF",
+      decorative: "#F4F6FA",
+      lightText: "#F3F3FF",
+      softPurple: "#E8E8FF",
+      line: "#9D8FFD",
+      gradient: {
+        iconStart: "#C5BBEB",
+        iconEnd: "#C0CDE3",
+        strategy: "#C0D3FF",
+      },
+    },
   },
   typography: {
-    fontFamily: ["Poppins", "serif"].join(","),
+    fontFamily: ["Geologica", "sans-serif"].join(","),
     h1: {
       fontSize: "72px",
       fontWeight: 700,
@@ -227,11 +105,11 @@ const theme = createTheme({
     },
     subtitle1: {
       fontSize: "56px",
-      fontWeight: 700
+      fontWeight: 700,
     },
     subtitle2: {
       fontSize: "20px",
-      fontWeight: 700
+      fontWeight: 700,
     },
     body1: {
       fontSize: "18px",
@@ -240,24 +118,12 @@ const theme = createTheme({
     },
     body2: {
       fontSize: "15px",
-      fontWeight: 500
-    },
-    body3: {
-      fontSize: "12px",
-      fontWeight: 500
+      fontWeight: 500,
     },
     button: {
       fontSize: "14px",
-      fontWeight: 700
+      fontWeight: 700,
     },
-    teamCardTitle: {
-      fontSize: "18px",
-      fontWeight: 700
-    },
-    teamCardSubtitle: {
-      fontSize: "14px",
-      fontWeight: 700
-    }
   },
   shadows: [
     "none",

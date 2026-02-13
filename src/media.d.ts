@@ -4,12 +4,12 @@ declare module '*.webm' {
 }
 
 declare module "*.png" {
-    const value: string;
+    const src: string;
     export default src;
 }
 
 declare module "*.webp" {
-    const value: string;
+    const src: string;
     export default src;
 }
 

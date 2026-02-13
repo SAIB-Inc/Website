@@ -2,22 +2,30 @@ import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import MainLayout from "../components/common/main-layout"
 import Header from "../components/common/header"
-import FirstSection from "../components/sections/first-section/first-section"
-import SecondSection from "../components/sections/second-section/second-section"
-import ThirdSection from "../components/sections/third-section/third-section"
-import FourthSection from "../components/sections/fourth-section/fourth-section"
-import FifthSection from "../components/sections/fifth-section/fifth-section"
+import Section1 from "../components/sections/Section1/Section1"
+import Section2 from "../components/sections/Section2/Section2"
+import Section3 from "../components/sections/Section3/Section3"
 import Footer from "../components/common/footer"
+import Section7 from "../components/sections/Section7/Section7"
+import Section4 from "../components/sections/Section4/Section4"
+import Section5 from "../components/sections/Section5/Section5"
+import Section8 from "../components/sections/Section8/Section8"
+import Section6 from "../components/sections/Section6/Section6"
+import Section9 from "../components/sections/Section9/Section9"
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <MainLayout>
       <Header />
-      <FirstSection />
-      <SecondSection />
-      <ThirdSection />
-      <FourthSection />
-      <FifthSection />
+      <Section1 />
+      <Section2 />
+      <Section3 />
+      <Section4 />
+      <Section5 />
+      <Section6 />
+      <Section7 />
+      <Section8 />
+      <Section9 />
       <Footer />
     </MainLayout>
   )
@@ -33,8 +41,11 @@ export const Head: HeadFC = () => {
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href="https://saib.dev/" />
 
-      <meta name="theme-color" content="#6F03E0" media="(prefers-color-scheme: light)" />
-      <meta name="theme-color" content="#6F03E0" media="(prefers-color-scheme: dark)" />
+      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+      <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+
+      <meta name="theme-color" content="#646FFF" media="(prefers-color-scheme: light)" />
+      <meta name="theme-color" content="#646FFF" media="(prefers-color-scheme: dark)" />
 
       <meta property="og:title" content="SAIB | Softwarez, at its Best - Where Software Meets Perfection" />
       <meta property="og:type" content="website" />

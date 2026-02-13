@@ -1,168 +1,165 @@
+import { Box, Link, Typography } from "@mui/material";
+import XIcon from "@mui/icons-material/X";
+import FacebookIcon from "@mui/icons-material/FacebookRounded";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import React from "react";
-import SaibIconLight from "../../images/saib-logo-light.svg";
-import MeshLeft from "../../images/sections/footer/mesh-left.webp"
-import MeshRight from "../../images/sections/footer/mesh-right.webp"
-import { Box, IconButton, Typography, useTheme } from "@mui/material";
-import { Facebook, Github, LinkedIn, X } from "../../images/socials";
+
+import SaibBrand from "../../images/brand/saib-brand.webp";
+import Background from "../../images/background/background-light.webp";
 
 const Footer: React.FC = () => {
+    const footerItems = [
+        {
+            category: "Company",
+            items: [
+                {
+                    title: "About us",
+                    link: ""
+                },
+                {
+                    title: "Contact us",
+                    link: ""
+                },
+                {
+                    title: "Articles",
+                    link: ""
+                },
+                {
+                    title: "Careers",
+                    link: ""
+                },
+                {
+                    title: "Sitemap",
+                    link: ""
+                }
+            ]
+        },
+        {
+            category: "Products & Services",
+            items: [
+                {
+                    title: "Our services",
+                    link: ""
+                },
+                {
+                    title: "Documentation",
+                    link: ""
+                },
+                {
+                    title: "Get a quote",
+                    link: ""
+                },
+                {
+                    title: "Help desk",
+                    link: ""
+                },
+                {
+                    title: "Support",
+                    link: ""
+                }
+            ]
+        },
+        {
+            category: "Legal",
+            items: [
+                {
+                    title: "Privacy Policy",
+                    link: ""
+                },
+                {
+                    title: "Terms & Conditions",
+                    link: ""
+                }
+            ]
+        }
 
-    const socials = [
+    ];
+
+    const socialItems = [
         {
-            label: "Facebook",
-            icon: Facebook,
-            link: "https://www.facebook.com/saibllc"
+            title: "x",
+            icon: <XIcon />,
+            link: ""
         },
         {
-            label: "LinkedIn",
-            icon: LinkedIn,
-            link: "https://www.linkedin.com/company/saibllc/"
+            title: "facebook",
+            icon: <FacebookIcon />,
+            link: ""
         },
         {
-            label: "X",
-            icon: X,
-            link: "https://x.com/saibdev"
+            title: "github",
+            icon: <GitHubIcon />,
+            link: ""
         },
         {
-            label: "Github",
-            icon: Github,
-            link: "https://github.com/SAIB-Inc"
+            title: "linkedin",
+            icon: <LinkedInIcon />,
+            link: ""
         }
     ]
 
-    const menuItems = [
-        {
-            name: "About",
-            link: "about"
-        },
-        {
-            name: "Services",
-            link: "services"
-        },
-        {
-            name: "Our Team",
-            link: "our-team"
-        },
-        {
-            name: "Our Work",
-            link: "our-work"
-        }
-    ];
-
-    const theme = useTheme();
-    const scrollToNextSection = (
-        e: React.MouseEvent<HTMLAnchorElement>,
-        id: string
-    ) => {
-        e.preventDefault();
-        const nextSection = document.getElementById(id);
-        if (nextSection) {
-            setTimeout(() => {
-                nextSection.scrollIntoView({ behavior: "smooth" });
-            }, 100);
-        }
-    };
-
-    return (
+    return(
         <Box
             component="footer"
             sx={{
-                backgroundColor: theme.palette.background.footer,
-                position: "relative",
-                paddingX: 3
+                bgcolor: "background.default",
+                backgroundImage: `url(${Background})`,
+                backgroundRepeat: "repeat",
             }}
-            className="!py-10 lg:!py-0 lg:!h-74"
+            className="max-lg:p-4! p-32!"
         >
-            <div className="absolute -left-50 top-0 lg:left-0">
-                <img src={MeshLeft} className="z-10" />
-            </div>
-            <div className="absolute -right-50 top-0 lg:right-0">
-                <img src={MeshRight} className="z-10" />
-            </div>
-            <div className="max-w-(--breakpoint-xl) mx-auto h-full relative z-40">
-                <div className="w-full flex flex-col items-center justify-between h-[70%] pt-12 lg:flex-row">
+            <div className="container mx-auto flex flex-col gap-15.75">
+                <div className="w-full flex max-lg:flex-col justify-between gap-10">
                     <div>
-                        <a onClick={(e) => scrollToNextSection(e, "home")} className="cursor-pointer">
-                            <img src={SaibIconLight} alt="saib-logo" />
-                        </a>
+                        <img src={SaibBrand} alt="SAIB" className="w-37.75 lg:w-73"/>
                     </div>
-                    <div className="flex flex-col items-center gap-20 lg:flex-row lg:items-start">
-                        <ul className="space-y-5 text-center mt-10 lg:text-left lg:mt-0">
-                            {menuItems.map((item) => (
-                                <Box
-                                    component="li"
-                                    key={item.name}
-                                    sx={{
-                                        cursor: "pointer",
-                                        color: "white",
-                                        "& a": {
-                                            textAlign: "center",
-                                            position: "relative",
-                                            transition: "color 0.15s ease, font-weight 0.15s ease",
-                                            "&:before": {
-                                                content: `"${item.name}"`,
-                                                fontWeight: "bold",
-                                                height: 0,
-                                                overflow: "hidden",
-                                                visibility: "hidden",
-                                                display: "block",
-                                            },
-                                            "&:hover": {
-                                                color: theme.palette.text.secondary,
-                                                fontWeight: "bold",
-                                            },
-                                        },
-                                    }}
-                                >
-                                    <Typography
-                                        component="a"
-                                        variant="body2"
-                                        onClick={(e) => scrollToNextSection(e, item.link)}
-                                    >
-                                        {item.name}
-                                    </Typography>
-                                </Box>
-                            ))}
-                        </ul>
-                        <div className="text-center lg:text-left">
-                            <div>
+                    <div className="flex max-lg:flex-wrap max-lg:justify-between lg:gap-64">
+                        {footerItems.map((group) => (
+                            <div key={group.category}>
                                 <Typography
-                                    component="p"
-                                    variant="h6"
-                                    color="white"
-                                >
-                                    Let&apos;s keep in touch
-                                </Typography>
+                                    sx={{
+                                        fontWeight: 500,
+                                        textTransform: "uppercase",
+                                        color: "text.secondary",
+                                    }}
+                                    className="max-md:text-xs! text-[15px]! opacity-70! mb-4">
+                                        {group.category}
+                                    </Typography>
+                                <ul className="space-y-5 mt-5">
+                                    {group.items.map((item) => (
+                                        <li key={item.title}>
+                                            <Link
+                                                href={item.link || "#"}
+                                                underline="none"
+                                                sx={{
+                                                    fontWeight: 300,
+                                                    color: "text.primary",
+                                                }}
+                                                className="max-md:text-xs! text-sm! opacity-70!"
+                                            >
+                                                {item.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
-                            <div className="space-x-4! mt-3">
-                                {socials.map((datum, index) => (
-                                    <IconButton
-                                        key={index}
-                                        href={datum.link}
-                                        aria-label={datum.label}
-                                        target="_blank"
-                                        sx={{
-                                            border: "1px solid white",
-                                            height: 32,
-                                            width: 32,
-                                        }}
-                                    >
-                                        {React.createElement(datum.icon, { sx: { color: "white" } })}
-                                    </IconButton>
-                                ))}
-                            </div>
-                        </div>
+                        ))}
                     </div>
                 </div>
-                <div className="text-center mt-10 lg:text-left lg:mt-0">
-                    <Typography
-                        component="p"
-                        variant="body2"
-                        color="white"
-                        className="max-sm:!text-sm"
-                    >
-                        &copy; Softwarez at its Best, Inc. 2025. All Rights Reserved
-                    </Typography>
+                <div className="max-lg:flex-col max-lg:gap-3 w-full flex lg:items-center lg:justify-between">
+                    <div>
+                        <Typography sx={{ fontWeight: 300, color: "text.secondary" }} className="text-[15px]!">
+                            &copy; SAIB Inc 2026. All Right Reserved.
+                        </Typography>
+                    </div>
+                    <div className="flex items-center gap-10">
+                        {socialItems.map((item) => (
+                            <Link key={item.title} href={item.link || "#"} underline="none" sx={{ color: "text.primary" }}>
+                                {item.icon}
+                            </Link>
+                        ))}
+                    </div>
                 </div>
             </div>
         </Box>

@@ -1,254 +1,153 @@
-import React, { useState } from "react";
-import { Close, EastRounded, Menu } from "@mui/icons-material";
-import { Box, Drawer, IconButton, List, ListItem, ListItemButton, Typography, useTheme } from "@mui/material";
-import { Facebook, LinkedIn, X, Github } from "../../images/socials";
-import Logo from "../../images/saib-logo.svg";
-import SaibButton from "./saib-button";
+import { Box, Drawer, IconButton, Link, List, ListItem } from "@mui/material";
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import React, { useEffect, useState } from "react";
+
+import LogoLight from "../../images/brand/saib-logo-light.svg";
+import LogoDark from "../../images/brand/saib-logo-dark.svg";
+import SaibButton from "./SaibButton";
 
 const Header: React.FC = () => {
+    const [scrolled, setScrolled] = useState(false);
+    const [drawerOpen, setDrawerOpen] = useState(false);
+    // TODO: use currentPath for active nav matching once distinct routes are set up
+    // Const currentPath = typeof window !== "undefined" ? window.location.pathname : "/";
 
-  const socials = [
-    {
-      label: "Facebook",
-      icon: Facebook,
-      link: "https://www.facebook.com/saibllc"
-    },
-    {
-      label: "LinkedIn",
-      icon: LinkedIn,
-      link: "https://www.linkedin.com/company/saibllc/"
-    },
-    {
-      label: "X",
-      icon: X,
-      link: "https://x.com/saibdev"
-    },
-    {
-      label: "Github",
-      icon: Github,
-      link: "https://github.com/SAIB-Inc"
-    }
-  ];
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrolled(window.scrollY >= window.innerHeight);
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
-  const menuItems = [
-    {
-      name: "Home",
-      link: "home"
-    },
-    {
-      name: "About",
-      link: "about"
-    },
-    {
-      name: "Services",
-      link: "services"
-    },
-    {
-      name: "Our Team",
-      link: "our-team"
-    },
-    {
-      name: "Our Work",
-      link: "our-work"
-    }
-  ];
+    const navigationItems = [
+        {
+            name: "Home",
+            href: "/",
+        },
+        {
+            name: "About",
+            href: "/",
+        },
+        {
+            name: "Services",
+            href: "/",
+        },
+        {
+            name: "Documentation",
+            href: "/",
+        },
+        {
+            name: "Articles",
+            href: "/",
+        },
+        {
+            name: "Careers",
+            href: "/",
+        },
+    ]
 
-  const theme = useTheme();
-  const [open, setOpen] = useState(false);
-
-  const toggleDrawer = (openState: boolean) => () => {
-    setOpen(openState);
-  }
-
-  const scrollToNextSection = (
-    e: React.MouseEvent<HTMLAnchorElement>,
-    id: string
-  ) => {
-    e.preventDefault();
-    setOpen(false);
-    const nextSection = document.getElementById(id);
-    if (nextSection) {
-      setTimeout(() => {
-        nextSection.scrollIntoView({ behavior: "smooth" });
-      }, 100);
-    }
-  };
-
-  return (
-    <Box
-      component="header"
-      sx={{
-        backgroundColor: theme.palette.background.default,
-        position: "fixed",
-        display: "flex",
-        width: "100%",
-        zIndex: 50,
-        padding: 3,
-        boxShadow: theme.shadows[1]
-      }}
-      className="backdrop-blur-md!">
-      <div className="container max-w-(--breakpoint-xl) mx-auto flex justify-between items-center">
-        <div>
-          <a onClick={(e) => scrollToNextSection(e, "home")} className="cursor-pointer">
-            <img src={Logo} alt="saib-logo" />
-          </a>
-        </div>
-        <div className="hidden lg:block">
-          <ul className="space-x-[46px]">
-            {menuItems.map((item) => (
-              <Box
-                component="li"
-                key={item.name}
-                sx={{
-                  display: "inline-block",
-                  cursor: "pointer",
-                  color: theme.palette.text.primary,
-                  "& a": {
-                    display: "inline-block",
-                    textAlign: "center",
-                    position: "relative",
-                    transition: "color 0.15s ease, font-weight 0.15s ease",
-                    "&:before": {
-                      content: `"${item.name}"`,
-                      fontWeight: "bold",
-                      height: 0,
-                      overflow: "hidden",
-                      visibility: "hidden",
-                      display: "block",
-                    },
-                    "&:hover": {
-                      color: theme.palette.text.secondary,
-                      fontWeight: "bold",
-                    },
-                  },
-                }}
-              >
-                <Typography
-                  component="a"
-                  variant="body2"
-                  onClick={(e) => scrollToNextSection(e, item.link)}
-                  sx={{
-                    "&:active": {
-                      color: "white"
-                    }
-                  }}
-                >
-                  {item.name}
-                </Typography>
-
-              </Box>
-            ))}
-          </ul>
-        </div>
-        <div className="items-center gap-7 hidden lg:flex">
-          <div className="space-x-4!">
-            {socials.map((datum, index) => (
-              <IconButton
-                key={index}
-                href={datum.link}
-                aria-label={datum.label}
-                target="_blank"
-                sx={{
-                  border: `1px solid ${theme.palette.button.default}`,
-                  height: 32,
-                  width: 32,
-                  boxShadow: theme.shadows[0],
-                  '&:hover': {
-                    borderColor: theme.palette.button.hover
-                  }
-                }}
-              >
-                {React.createElement(datum.icon)}
-              </IconButton>
-            ))}
-          </div>
-          <div>
-            <SaibButton
-              variant="outlined"
-              size="small"
-              className="gap-1.5"
-              href="https://calendly.com/saibdev"
-              target="_blank"
-            >
-              Let&apos;s Talk
-              <EastRounded fontSize="small" />
-            </SaibButton>
-          </div>
-        </div>
-        <div className="lg:hidden">
-          <IconButton onClick={toggleDrawer(true)}>
-            <Menu sx={{ color: theme.palette.secondary.main }} />
-          </IconButton>
-          <Drawer
-            anchor="right"
-            open={open}
-            onClose={toggleDrawer(false)}
-          >
-            <div className="p-6">
-              <div className="flex items-center justify-end">
-                <IconButton onClick={toggleDrawer(false)} sx={{ justifyContent: "end" }}>
-                  <Close color="secondary" sx={{ fontSize: 30 }} />
-                </IconButton>
-              </div>
-              <List sx={{ width: 272 }} className="space-y-5">
-                {menuItems.map((datum, index) => (
-                  <ListItem key={index} sx={{ paddingX: 1 }}>
-                    <ListItemButton disableRipple sx={{ padding: 0 }}>
-                      <Typography
-                        component="a"
-                        variant="body2"
-                        onClick={(e) => scrollToNextSection(e, datum.link)}
-                        sx={{
-                          '&:active': {
-                            color: theme.palette.secondary.main,
-                            fontWeight:700
-                          }
-                        }}
-                      >
-                        {datum.name}
-                      </Typography>
-                    </ListItemButton>
-                  </ListItem>
-                ))}
-              </List>
-              <div className="p-2 mt-8">
+    return (
+        <Box
+            component="header"
+            sx={{
+                bgcolor: scrolled ? "brand.lightText" : "transparent",
+                transition: "background-color 0.3s ease",
+            }}
+            className="fixed z-100 w-full backdrop-blur-md"
+        >
+            <div className="container mx-auto! flex items-center justify-between py-3.5 px-4 md:px-9">
                 <div>
-                  <Typography
-                    component="p"
-                    variant="body2"
-                    color="secondary"
-                  >
-                    Let&apos;s keep in touch
-                  </Typography>
+                    <img src={scrolled ? LogoDark : LogoLight} alt="saib-logo" />
                 </div>
-                <div className="space-x-4! mt-4">
-                  {socials.map((datum, index) => (
-                    <IconButton
-                      key={index}
-                      href={datum.link}
-                      aria-label={datum.label}
-                      target="_blank"
-                      sx={{
-                        border: `1px solid ${theme.palette.button.default}`,
-                        height: 32,
-                        width: 32,
-                        boxShadow: theme.shadows[0],
-                        '&:hover': {
-                          borderColor: theme.palette.button.hover
-                        }
-                      }}
-                    >
-                      {React.createElement(datum.icon)}
-                    </IconButton>
-                  ))}
+                {/* Desktop nav */}
+                <div className="hidden lg:block">
+                    <ul className="space-x-6 flex items-center">
+                        {navigationItems.map((item) => (
+                            <Box
+                                component={"li"}
+                                key={item.name}
+                            >
+                                <Link
+                                    href={item.href}
+                                    underline="none"
+                                    sx={{
+                                        color: scrolled ? "text.primary" : "brand.lightText",
+                                        fontWeight: item.name === "Home" ? 700 : 400,
+                                        transition: "color 0.3s ease",
+                                    }}
+                                >
+                                    {item.name}
+                                </Link>
+                            </Box>
+                        )
+                        )}
+                    </ul>
                 </div>
-              </div>
+                <div className="hidden lg:block">
+                    <SaibButton className="w-35.5 h-10">
+                        Start your project
+                    </SaibButton>
+                </div>
+                {/* Mobile hamburger */}
+                <IconButton
+                    className="lg:hidden!"
+                    onClick={() => setDrawerOpen(true)}
+                    sx={{ color: scrolled ? "text.primary" : "brand.lightText" }}
+                >
+                    <MenuIcon />
+                </IconButton>
             </div>
-          </Drawer>
-        </div>
-      </div>
-    </Box>
-  );
+
+            {/* Mobile drawer */}
+            <Drawer
+                anchor="right"
+                open={drawerOpen}
+                onClose={() => setDrawerOpen(false)}
+                slotProps={{
+                    paper: {
+                        sx: {
+                            bgcolor: "background.default",
+                            width: "100%",
+                            maxWidth: 320,
+                            boxShadow: "none",
+                        },
+                    },
+                }}
+            >
+                <div className="flex items-center justify-end p-4">
+                    <IconButton onClick={() => setDrawerOpen(false)} sx={{ color: "text.primary" }}>
+                        <CloseIcon />
+                    </IconButton>
+                </div>
+                <List className="px-4!">
+                    {navigationItems.map((item) => (
+                        <ListItem key={item.name} className="px-0!">
+                            <Link
+                                href={item.href}
+                                underline="none"
+                                onClick={() => setDrawerOpen(false)}
+                                sx={{
+                                    color: "text.primary",
+                                    fontWeight: item.name === "Home" ? 700 : 400,
+                                    fontSize: "1.125rem",
+                                    py: 1,
+                                }}
+                            >
+                                {item.name}
+                            </Link>
+                        </ListItem>
+                    ))}
+                </List>
+                <div className="px-4 mt-4">
+                    <SaibButton className="w-full h-10" onClick={() => setDrawerOpen(false)}>
+                        Start your project
+                    </SaibButton>
+                </div>
+            </Drawer>
+        </Box>
+    );
 };
 
-export default Header
+export default Header;
